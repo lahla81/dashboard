@@ -19,7 +19,7 @@ $(document).ready(function () {
         gradient2.addColorStop(1, '#E50497');
         
         Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-        Chart.defaults.global.defaultFontSize = 20;
+        // Chart.defaults.global.defaultFontSize = 12;
         
         var myChart = new Chart(ctx, {
             type: 'bar',
@@ -44,15 +44,47 @@ $(document).ready(function () {
                 }]
             },
             options: {
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 30,
+                        bottom: 10
+                    }
+                },
                 legend: {
                     display : false
                 },
+                plugins: {
+                    
+                },
+                "animation": {
+                    "duration": 1,
+                    "onComplete": function() {
+                      var chartInstance = this.chart,
+                        ctx = chartInstance.ctx;
+              
+                      ctx.font = Chart.helpers.fontString(40, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+                      ctx.textAlign = 'center';
+                      ctx.textBaseline = 'bottom';
+                      ctx.fillStyle = "white";
+              
+                      this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(bar, index) {
+                          var data = dataset.data[index];
+                          ctx.fillText(data, bar._model.x, bar._model.y + 60);
+                        });
+                      });
+                    }
+                  },
                 scales: {
                     pointLabels :{
                         fontColor: "red",
                     },
                     yAxes: [{
                         ticks: {
+                            display: false,
                             beginAtZero:true
                         },
                         gridLines: {
@@ -78,6 +110,8 @@ $(document).ready(function () {
                 }          
             }
         });
+
+        
 
     })();
 
