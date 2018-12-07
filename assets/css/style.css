@@ -546,9 +546,39 @@ input#customCheck-lines:checked ~ #label-lines {
   .card-warning .card-title {
     color: #E5A100; }
 
+.bar-chart-col, .curve-chart-col {
+  margin-top: 32px; }
+
 .chart-small {
   box-shadow: 3px 3px 20px #6f42c1;
   border-radius: 14px; }
+
+.curve-chart-col {
+  display: none; }
+
+.chart-row.curveChart .bar-chart-col {
+  display: none; }
+
+.chart-row.curveChart .curve-chart-col {
+  display: block !important; }
+
+.chart-row.curveChart .circle-chart-col {
+  display: none; }
+
+.chart-row.curveChart .half-chart-col {
+  display: none; }
+
+.chart-row.barChart .bar-chart-col {
+  display: block !important; }
+
+.chart-row.barChart .curve-chart-col {
+  display: none; }
+
+.chart-row.barChart .circle-chart-col {
+  display: none; }
+
+.chart-row.barChart .half-chart-col {
+  display: none; }
 
 .table-responsive .modal {
   top: 50%;
