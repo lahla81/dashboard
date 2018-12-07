@@ -64,7 +64,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(40, Chart.defaults.global.defaultFontStyle, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = Chart.helpers.fontString(25, 700, Chart.defaults.global.defaultFontFamily);
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = "white";
@@ -73,7 +73,7 @@ $(document).ready(function () {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(bar, index) {
                           var data = dataset.data[index];
-                          ctx.fillText(data, bar._model.x, bar._model.y + 60);
+                          ctx.fillText(data, bar._model.x, bar._model.y + 35);
                         });
                       });
                     }
