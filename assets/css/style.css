@@ -1,0 +1,603 @@
+body {
+  direction: rtl;
+  font-family: "JF-Flat-regular", sans-serif;
+  text-align: right; }
+
+.ltr {
+  direction: ltr; }
+
+::placeholder {
+  color: #969696 !important; }
+
+.bg-none {
+  background-color: transparent; }
+
+.shadow-bottom {
+  box-shadow: 0px 3px 0.5rem 0.25rem rgba(225, 225, 225, 0.7); }
+
+.shadow-around {
+  box-shadow: 0 0 0.5rem 0.25rem rgba(225, 225, 225, 0.7); }
+
+.shadow-around-lg {
+  box-shadow: 0 0 1rem 0.25rem rgba(225, 225, 225, 0.7); }
+
+.no-decoration {
+  text-decoration: none !important; }
+
+.rounded-lg {
+  border-radius: 10px; }
+
+.rounded-top-lg {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px; }
+
+.rounded-bottom-lg {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.rounded-curved {
+  border-radius: 1.5rem; }
+
+.overflow-hidden {
+  overflow: hidden; }
+
+.cursor {
+  cursor: pointer; }
+
+html,
+body {
+  font-size: 16px; }
+
+.font-size-base {
+  font-size: 16px; }
+
+h1,
+.h1 {
+  font-size: 1.7rem; }
+
+h2,
+.h2 {
+  font-size: 1.5rem; }
+
+h3,
+.h3 {
+  font-size: 1.3rem; }
+
+h4,
+.h4 {
+  font-size: 1.1rem; }
+
+h5,
+.h5 {
+  font-size: 0.9rem; }
+
+h6,
+.h6 {
+  font-size: 0.8rem; }
+
+.text-sm {
+  font-size: 0.7rem; }
+
+.font-body {
+  font-family: "JF-Flat-regular", sans-serif; }
+
+.font-body-ultra-lt {
+  font-family: "Din Next UltraLight", sans-serif; }
+
+.font-body-lt {
+  font-family: "Din Next Light", sans-serif; }
+
+.font-body-md {
+  font-family: "Din Next Medium", sans-serif; }
+
+.font-body-bold {
+  font-family: "SourceSansPro Bold", sans-serif; }
+
+.font-body-black {
+  font-family: "Din Next Black", sans-serif; }
+
+.font-body-heavy {
+  font-family: "Din Next Heavy", sans-serif; }
+
+.font-body,
+.font-body-ultra-lt,
+.font-body-lt,
+.font-body-md,
+.font-body-bold,
+.font-body-black,
+.font-body-heavy {
+  font-weight: normal; }
+
+.row {
+  padding: 0 !important;
+  margin: 0 !important; }
+
+.main-page {
+  min-height: 100vh; }
+
+.main-body {
+  background: #37B26F;
+  background-image: url(../img/01/Group-4.png), linear-gradient(-135deg, #37B26F 10%, #201E52 90%);
+  background-position: center center, center center;
+  background-size: cover , cover;
+  background-repeat: no-repeat, no-repeat;
+  flex: 0 0 73%;
+  max-width: 73%; }
+
+.main-sidebar {
+  flex: 0 0 27%;
+  max-width: 27%; }
+
+.login-head {
+  font-size: 24px;
+  margin-top: 120px; }
+
+.login-form {
+  margin-top: 120px; }
+  .login-form input {
+    border-bottom: 2px solid #E9E9F0 !important;
+    font-size: 15px; }
+  .login-form input::placeholder {
+    color: #43425D !important;
+    font-size: 15px; }
+
+.checkbox {
+  margin-top: 64px !important;
+  font-size: 12px; }
+  .checkbox .custom-control-label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+.custom-control-label:before {
+  display: none; }
+
+/* Hide the browser's default checkbox */
+input.custom-control-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  height: 13px;
+  width: 13px;
+  border-radius: 4px;
+  border: 1px solid #808495;
+  background-color: #fff; }
+
+/* On mouse-over, add a grey background color */
+.custom-control-label:hover input ~ .checkmark {
+  background-color: #FFFFFF;
+  border: 3px solid #37B26F; }
+
+/* When the checkbox is checked, add a blue background */
+.custom-control-label input:checked ~ .checkmark {
+  background-color: #37B26F;
+  border: 3px solid #37B26F; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.custom-control-label input:checked ~ .checkmark:after {
+  display: block; }
+
+.log-button {
+  margin-top: 78px !important; }
+  .log-button .login-btn {
+    height: 56px;
+    width: 142px;
+    font-size: 12px !important;
+    border: none;
+    box-shadow: 0 3px 6px 0 #37B26F; }
+  .log-button .register-link {
+    font-size: 12px !important;
+    line-height: 42px;
+    height: 56px;
+    width: 142px;
+    color: #4D4F5C;
+    border: 1px solid #43425D; }
+
+.zaid-img {
+  margin-top: 60px; }
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch; }
+
+#content {
+  min-height: 100vh;
+  transition: all 0.3s; }
+
+#sidebar {
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 100vh;
+  background-image: linear-gradient(-180deg, #37B26F 10%, #201E52 90%);
+  color: #fff;
+  transition: all 0.3s; }
+  #sidebar a, #sidebar a:hover, #sidebar a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s; }
+  #sidebar ul.components li {
+    padding: 0; }
+  #sidebar ul.components li span {
+    font-size: 15px;
+    margin-right: 12px; }
+  #sidebar ul li a {
+    padding: 17px 30px 17px 0;
+    font-size: 1.1em;
+    display: block; }
+  #sidebar ul li a:hover {
+    color: #fff;
+    background: #186C3F; }
+  #sidebar ul li.active {
+    position: relative; }
+    #sidebar ul li.active:after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 18px;
+      transform: rotateZ(45deg);
+      left: -9px;
+      top: 20px;
+      background: #186C3F;
+      box-shadow: 3px 3px 9px 0 #00BA81;
+      z-index: -1; }
+  #sidebar ul li.active > a, #sidebar a[aria-expanded="true"] {
+    color: #fff;
+    background: #186C3F;
+    border-right: 14px solid #153B2F;
+    box-shadow: 3px 3px 9px 0 #00BA81; }
+  #sidebar ul ul {
+    padding-right: 0px !important; }
+  #sidebar ul ul a {
+    padding-right: 65px !important;
+    font-size: 14px; }
+  @media (max-width: 768px) {
+    #sidebar {
+      margin-right: -300px; } }
+
+.sidebar-header {
+  padding: 22px 34px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05); }
+  .sidebar-header h4 {
+    font-size: 15px !important; }
+
+#sidebar.active {
+  margin-right: -300px; }
+  @media (max-width: 768px) {
+    #sidebar.active {
+      margin-right: 0px; } }
+
+#sidebarCollapse {
+  border: 1px solid #EBEBF2;
+  box-shadow: 0 0 2px 0px #EBEBF2;
+  color: #BCBCCB; }
+
+header.site-header {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04); }
+  header.site-header .nav-user-name {
+    font-size: 13px;
+    border-right: 1px solid #EBEBF2;
+    color: #4D4F5C; }
+  header.site-header .nav-massage {
+    color: #BCBCCB; }
+  header.site-header .nav-notification {
+    position: relative;
+    color: #BCBCCB; }
+    header.site-header .nav-notification:after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #FF6A6A;
+      left: 12px;
+      top: 7px;
+      border: 2px solid #FFFFFF; }
+      @media (max-width: 1200px) {
+        header.site-header .nav-notification:after {
+          left: 4px; } }
+
+.content-top-row .overlay {
+  border-radius: 14px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+
+.content-top-row .content-header .overlay {
+  padding: 4px; }
+
+.content-top-row .content-left .overlay {
+  padding: 10px; }
+
+.content-title h3 {
+  font-family: 'lubalingraphitcturner-boldarabic';
+  font-size: 30px;
+  line-height: 50px;
+  margin-bottom: 140px;
+  margin-top: 30px; }
+
+.checkbox-main {
+  margin-right: 65px; }
+  .checkbox-main .custom-control-label {
+    font-family: 'lubalingraphitcturner-boldarabic';
+    font-size: 25px;
+    color: #FF6A6A;
+    line-height: 33px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+/* Create a custom checkbox */
+.checkmark-main {
+  position: absolute;
+  top: 3px;
+  right: -40px;
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.15);
+  background-color: #fff; }
+
+/* On mouse-over, add a grey background color */
+.custom-control-label:hover input ~ .checkmark-main {
+  background-color: #FFFFFF;
+  border: 3px solid #37B26F; }
+
+/* When the checkbox is checked, add a blue background */
+.custom-control-label input:checked ~ .checkmark-main {
+  border: 3px solid #37B26F; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-main:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.custom-control-label input:checked ~ .checkmark-main:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.custom-control-label .checkmark-main:after {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00BA81; }
+
+.content-text {
+  margin-right: 35px; }
+  .content-text h4 {
+    font-family: 'lubalingraphitcturner-boldarabic';
+    font-size: 20px;
+    line-height: 45px;
+    margin-bottom: 140px;
+    margin-top: 10px;
+    color: #4D4F5C; }
+
+.content-left .overlay p {
+  font-size: 18px;
+  margin: 20px 8px 40px 0; }
+
+.checkbox-small .custom-control-label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* Create a custom checkbox */
+.checkmark-small {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  opacity: 0.2;
+  height: 19px;
+  width: 19px;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.49);
+  background-color: #3B86FF; }
+
+/* On mouse-over, add a grey background color */
+.label-sm:hover input ~ .checkmark-small {
+  background-color: #FFFFFF;
+  opacity: 1; }
+
+/* When the checkbox is checked, add a blue background */
+.label-sm input:checked ~ .checkmark-small {
+  background: #FFFFFF;
+  opacity: 1; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-small:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.label-sm input:checked ~ .checkmark-small:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.label-sm .checkmark-small:after {
+  right: 6.5px;
+  top: 5px;
+  width: 6px;
+  height: 8px;
+  border: solid #000000;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.label-sm {
+  height: 130px;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: 0.2s all;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35); }
+  .label-sm:hover {
+    box-shadow: 4px 4px 6px #37B26F; }
+
+.label-half {
+  background-image: url(../img/charts/half-light.png); }
+  .label-half:hover {
+    background-image: url(../img/charts/half-dark.png); }
+
+.label-lines {
+  background-image: url(../img/charts/lines-light.png); }
+  .label-lines:hover {
+    background-image: url(../img/charts/lines-dark.png); }
+
+.label-curve {
+  background-image: url(../img/charts/curve-light.png); }
+  .label-curve:hover {
+    background-image: url(../img/charts/curve-dark.png); }
+
+.label-circle {
+  background-image: url(../img/charts/circle-light.png); }
+  .label-circle:hover {
+    background-image: url(../img/charts/circle-dark.png); }
+
+/* When the checkbox is checked, add a blue background */
+input#customCheck-lines:checked ~ #label-lines {
+  background-image: url(../img/charts/lines-dark.png); }
+
+.checkbox-small.checked-lines .label-lines {
+  background-image: url(../img/charts/lines-dark.png);
+  box-shadow: 4px 4px 6px #37B26F; }
+
+.checkbox-small.checked-curve .label-curve {
+  background-image: url(../img/charts/curve-dark.png);
+  box-shadow: 4px 4px 6px #37B26F; }
+
+.checkbox-small.checked-half .label-half {
+  background-image: url(../img/charts/half-dark.png);
+  box-shadow: 4px 4px 6px #37B26F; }
+
+.checkbox-small.checked-circle .label-circle {
+  background-image: url(../img/charts/circle-dark.png);
+  box-shadow: 4px 4px 6px #37B26F; }
+
+.card {
+  border: none;
+  border-radius: 10px; }
+
+.card-header {
+  border-radius: 10px 10px 0 0 !important;
+  font-size: 20px;
+  color: #FFFFFF; }
+
+.card-title {
+  font-size: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15); }
+
+.card-danger {
+  box-shadow: 0 3px 20px #FF6A6A; }
+  .card-danger .card-header, .card-danger img {
+    box-shadow: 0 3px 6px #FF6A6A; }
+  .card-danger .card-title {
+    color: #FF6A6A; }
+
+.card-teal {
+  box-shadow: 0 3px 20px #00BA81; }
+  .card-teal .card-header, .card-teal img {
+    box-shadow: 0 3px 6px #00BA81; }
+  .card-teal .card-title {
+    color: #00BA81; }
+
+.card-cyan {
+  box-shadow: 0 3px 20px #3B86FF; }
+  .card-cyan .card-header, .card-cyan img {
+    box-shadow: 0 3px 6px #3B86FF; }
+  .card-cyan .card-title {
+    color: #3B86FF; }
+
+.card-warning {
+  box-shadow: 0 3px 20px #E5A100; }
+  .card-warning .card-header, .card-warning img {
+    box-shadow: 0 3px 6px #E5A100; }
+  .card-warning .card-title {
+    color: #E5A100; }
+
+.chart-small {
+  box-shadow: 3px 3px 20px #6f42c1;
+  border-radius: 14px; }
+
+.table-responsive .modal {
+  top: 50%;
+  transform: translateY(-50%); }
+
+.nav-tabs .nav-link {
+  border: none;
+  color: #201E52; }
+  .nav-tabs .nav-link.active {
+    border-bottom: 4px solid #37B26F;
+    color: #37B26F; }
+
+.dropdown-toggle:after {
+  margin-left: auto;
+  margin-right: 0.255em; }
+
+.custom-select {
+  background-position: left 0.75rem center;
+  padding: 0.375rem 0.75rem 0.375rem 1.75rem; }
+
+.custom-control-label::before,
+.custom-control-label::after {
+  left: auto;
+  right: -1.5rem; }
+
+.multi-forms .custom-file label > span {
+  border-style: dashed !important; }
+
+.multi-forms .selectize-input > input,
+.multi-forms .selectize-dropdown.multi {
+  font-size: 16px; }
+  .multi-forms .selectize-input > input .create,
+  .multi-forms .selectize-dropdown.multi .create {
+    padding: 0.5rem;
+    background-color: #FFFFFF; }
+
+.multi-forms .selectize-dropdown.multi {
+  border-color: #969696; }
+
+.multi-forms .selectize-control.multi .selectize-input {
+  border-color: #969696;
+  border-radius: 4px;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 0.375rem 0.75rem; }
+  .multi-forms .selectize-control.multi .selectize-input > div {
+    background-color: #37B26F;
+    border-radius: 1rem;
+    color: #FDFDFD;
+    font-size: 16px;
+    font-family: "Din Next Medium", sans-serif;
+    padding: 0.125rem 1rem; }
