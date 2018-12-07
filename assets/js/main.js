@@ -117,15 +117,6 @@ $(document).ready(function () {
     (function(){
         var ctx = document.getElementById('curve-chart').getContext('2d');
         // data = JSON.parse(ctx.parentElement.dataset.values);
-        gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
-
-        gradient1.addColorStop(0, '#BE72FF');
-        gradient1.addColorStop(1, '#7B0ED9');
-
-        gradient2 = ctx.createLinearGradient(0, 0, 0, 600);
-
-        gradient2.addColorStop(0, '#FF95DA');
-        gradient2.addColorStop(1, '#E50497');
 
         gradient3 = ctx.createLinearGradient(0, 0, 0, 600);
 
@@ -219,6 +210,43 @@ $(document).ready(function () {
         });
     })();
 
+    (function(){
+        var ctx = document.getElementById("prev-half-chart").getContext('2d');
+        gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
+
+        gradient1.addColorStop(0, '#000000');
+        gradient1.addColorStop(1, '#A341F7');
+
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Red"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [50,100-50],
+                    text: "ff",
+                    backgroundColor: [
+                    
+                        gradient1
+                    ],
+                    borderColor: [
+                    
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                rotation: 1 * Math.PI,
+                circumference: 1 * Math.PI,
+                legend: {
+                    display : false
+                },
+            }
+        });
+    })();
+
+    // left check box changee label-background and its chart
     $('.checkbox-small').addClass("checked-lines");
     $('#customCheck-lines:input').click(function(){
         $('.checkbox-small').addClass("checked-lines");
@@ -227,6 +255,8 @@ $(document).ready(function () {
         $('.checkbox-small').removeClass("checked-circle");
         $('.chart-row').addClass("barChart");
         $('.chart-row').removeClass("curveChart");
+        $('.chart-row').removeClass("circleChart");
+        $('.chart-row').removeClass("halfChart");
     });
 
     $('#customCheck-curve:input').click(function(){
@@ -236,6 +266,8 @@ $(document).ready(function () {
         $('.checkbox-small').removeClass("checked-circle");
         $('.chart-row').addClass("curveChart");
         $('.chart-row').removeClass("barChart");
+        $('.chart-row').removeClass("circleChart");
+        $('.chart-row').removeClass("halfChart");
     });
 
     $('#customCheck-half:input').click(function(){
@@ -243,6 +275,10 @@ $(document).ready(function () {
         $('.checkbox-small').removeClass("checked-lines");
         $('.checkbox-small').removeClass("checked-curve");
         $('.checkbox-small').removeClass("checked-circle");
+        $('.chart-row').addClass("halfChart");
+        $('.chart-row').removeClass("barChart");
+        $('.chart-row').removeClass("circleChart");
+        $('.chart-row').removeClass("curveChart");
     });
 
     $('#customCheck-circle:input').click(function(){
@@ -250,7 +286,35 @@ $(document).ready(function () {
         $('.checkbox-small').removeClass("checked-half");
         $('.checkbox-small').removeClass("checked-lines");
         $('.checkbox-small').removeClass("checked-curve");
+        $('.chart-row').addClass("circleChart");
+        $('.chart-row').removeClass("curveChart");
+        $('.chart-row').removeClass("barChart");
+        $('.chart-row').removeClass("halfChart");
     });
 
+
+    $('#prev-card-body').circleProgress({
+        value: 0.5,
+        size: 146,
+        startAngle: 0,
+        reverse: true,
+        emptyFill:"#E2C5FC",
+        animationStartValue: 0.5,
+        fill: "#850CED"
+    }).on('circle-animation-progress', function(event, progress, stepvalue){
+        $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+    });
+
+    $('#next-card-body').circleProgress({
+    value: 0.88,
+    size: 146,
+    startAngle: 0,
+    reverse: true,
+    emptyFill:"#F5B3DE",
+    animationStartValue: 0.5,
+    fill: "#FF07A9"
+    }).on('circle-animation-progress', function(event, progress, stepvalue){
+        $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+    });
 
 });
