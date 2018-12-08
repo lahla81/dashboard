@@ -316,15 +316,20 @@ header.site-header {
         header.site-header .nav-notification:after {
           left: 4px; } }
 
-.content-top-row .overlay {
+.content-header .overlay {
   border-radius: 14px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
-
-.content-top-row .content-header .overlay {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 4px; }
 
-.content-top-row .content-left .overlay {
-  padding: 10px; }
+.content-left .overlay {
+  padding: 10px;
+  border-radius: 11px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+
+.content-left .period-btn {
+  font-size: 18px;
+  border-radius: 27px;
+  line-height: 40px; }
 
 .content-title h3 {
   font-family: 'lubalingraphitcturner-boldarabic';
@@ -334,7 +339,7 @@ header.site-header {
   margin-top: 30px; }
 
 .checkbox-main {
-  margin-right: 65px; }
+  margin-right: 75px; }
   .checkbox-main .custom-control-label {
     font-family: 'lubalingraphitcturner-boldarabic';
     font-size: 25px;
@@ -347,6 +352,12 @@ header.site-header {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  .checkbox-main .custom-control-label-notary {
+    font-family: 'JF-Flat-regular';
+    font-size: 18px;
+    color: #4D4F5C;
+    line-height: 31px;
+    margin-top: 35px; }
 
 /* Create a custom checkbox */
 .checkmark-main {
@@ -470,15 +481,15 @@ header.site-header {
   .label-half:hover {
     background-image: url(../img/charts/half-dark.png); }
 
-.label-lines {
-  background-image: url(../img/charts/lines-light.png); }
-  .label-lines:hover {
-    background-image: url(../img/charts/lines-dark.png); }
+.label-bar {
+  background-image: url(../img/charts/bar-light.png); }
+  .label-bar:hover {
+    background-image: url(../img/charts/bar-dark.png); }
 
-.label-curve {
-  background-image: url(../img/charts/curve-light.png); }
-  .label-curve:hover {
-    background-image: url(../img/charts/curve-dark.png); }
+.label-line {
+  background-image: url(../img/charts/line-light.png); }
+  .label-line:hover {
+    background-image: url(../img/charts/line-dark.png); }
 
 .label-circle {
   background-image: url(../img/charts/circle-light.png); }
@@ -486,15 +497,15 @@ header.site-header {
     background-image: url(../img/charts/circle-dark.png); }
 
 /* When the checkbox is checked, add a blue background */
-input#customCheck-lines:checked ~ #label-lines {
-  background-image: url(../img/charts/lines-dark.png); }
+input#customCheck-bar:checked ~ #label-bar {
+  background-image: url(../img/charts/bar-dark.png); }
 
-.checkbox-small.checked-lines .label-lines {
-  background-image: url(../img/charts/lines-dark.png);
+.checkbox-small.checked-bar .label-bar {
+  background-image: url(../img/charts/bar-dark.png);
   box-shadow: 4px 4px 6px #37B26F; }
 
-.checkbox-small.checked-curve .label-curve {
-  background-image: url(../img/charts/curve-dark.png);
+.checkbox-small.checked-line .label-line {
+  background-image: url(../img/charts/line-dark.png);
   box-shadow: 4px 4px 6px #37B26F; }
 
 .checkbox-small.checked-half .label-half {
@@ -513,6 +524,35 @@ input#customCheck-lines:checked ~ #label-lines {
   border-radius: 10px 10px 0 0 !important;
   font-size: 20px;
   color: #FFFFFF; }
+
+.notaries-half-chart-col .card-header,
+.notaries-circle-chart-col .card-header {
+  font-size: 14px; }
+
+.notaries-half-chart-col .col-12,
+.notaries-circle-chart-col .col-12 {
+  flex: 0 0 20% !important;
+  max-width: 20% !important; }
+  @media (max-width: 1432px) {
+    .notaries-half-chart-col .col-12,
+    .notaries-circle-chart-col .col-12 {
+      flex: 0 0 25% !important;
+      max-width: 25% !important; } }
+  @media (max-width: 1210px) {
+    .notaries-half-chart-col .col-12,
+    .notaries-circle-chart-col .col-12 {
+      flex: 0 0 33.33% !important;
+      max-width: 33.33% !important; } }
+  @media (max-width: 690px) {
+    .notaries-half-chart-col .col-12,
+    .notaries-circle-chart-col .col-12 {
+      flex: 0 0 50% !important;
+      max-width: 50% !important; } }
+  @media (max-width: 472px) {
+    .notaries-half-chart-col .col-12,
+    .notaries-circle-chart-col .col-12 {
+      flex: 0 0 100% !important;
+      max-width: 100% !important; } }
 
 .card-title {
   font-size: 20px;
@@ -560,33 +600,61 @@ input#customCheck-lines:checked ~ #label-lines {
   .card-rose .card-title {
     color: #FF07A9; }
 
+.card-light-red {
+  box-shadow: 0 3px 20px #FF6A6A; }
+  .card-light-red .card-header {
+    box-shadow: 0 3px 6px #FF6A6A; }
+  .card-light-red .card-title {
+    color: #FF6A6A; }
+
+.card-dark-red {
+  box-shadow: 0 3px 20px #D9581F; }
+  .card-dark-red .card-header {
+    box-shadow: 0 3px 6px #D9581F; }
+  .card-dark-red .card-title {
+    color: #D9581F; }
+
+.card-indigo {
+  box-shadow: 0 3px 20px #3349F0; }
+  .card-indigo .card-header {
+    box-shadow: 0 3px 6px #3349F0; }
+  .card-indigo .card-title {
+    color: #3349F0; }
+
+.card-dark-green {
+  box-shadow: 0 3px 20px #1A8162; }
+  .card-dark-green .card-header {
+    box-shadow: 0 3px 6px #1A8162; }
+  .card-dark-green .card-title {
+    color: #1A8162; }
+
 .bar-chart-col,
-.curve-chart-col {
+.line-chart-col {
   margin-top: 32px; }
 
 .chart-small {
   box-shadow: 3px 3px 20px #6f42c1;
   border-radius: 14px; }
 
-.curve-chart-col {
+.line-chart-col {
   display: none; }
 
-.chart-row.curveChart .bar-chart-col {
+.chart-row.lineChart .bar-chart-col {
   display: none; }
 
-.chart-row.curveChart .curve-chart-col {
+.chart-row.lineChart .line-chart-col {
   display: block !important; }
 
-.chart-row.curveChart .circle-chart-col {
+.chart-row.lineChart .circle-chart-col {
   display: none; }
 
-.chart-row.curveChart .half-chart-col {
+.chart-row.lineChart .half-chart-col {
   display: none; }
 
 .chart-row.barChart .bar-chart-col {
   display: block !important; }
 
-.chart-row.barChart .curve-chart-col {
+.chart-row.barChart .line-chart-col {
   display: none; }
 
 .chart-row.barChart .circle-chart-col {
@@ -598,7 +666,7 @@ input#customCheck-lines:checked ~ #label-lines {
 .chart-row.circleChart .bar-chart-col {
   display: none; }
 
-.chart-row.circleChart .curve-chart-col {
+.chart-row.circleChart .line-chart-col {
   display: none; }
 
 .chart-row.circleChart .circle-chart-col {
@@ -610,7 +678,7 @@ input#customCheck-lines:checked ~ #label-lines {
 .chart-row.halfChart .bar-chart-col {
   display: none; }
 
-.chart-row.halfChart .curve-chart-col {
+.chart-row.halfChart .line-chart-col {
   display: none; }
 
 .chart-row.halfChart .circle-chart-col {
