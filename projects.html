@@ -396,6 +396,7 @@
                     </div>
                 </div>
 
+                <!-- Line Chart -->
                 <div class="col-12 col-lg-6 px-3 mb-5 curve-chart-col d-none">
                     <div class="chart-small h-100 w-100 py-4">
                         <canvas class="h-100 w-100" id="curve-chart"></canvas>
@@ -403,6 +404,7 @@
                     </div>
                 </div>
 
+                <!-- Circle Chart -->
                 <div class="col-12 col-lg-6 px-3 mt-3 mb-5 circle-chart-col d-none">
                     <div class="row">
                         <div class="col-12 col-md-6 px-1 mt-3">
@@ -428,26 +430,28 @@
                     </div>
                 </div>
 
+                <!-- Half Chart -->
                 <div class="col-12 col-lg-6 px-3 mt-3 mb-5 half-chart-col d-none">
                     <div class="row">
-                        <div class="col-12 col-md-6 px-1 mt-3">
+                        <div class="col-12 col-xl-6 px-1 mt-3">
                             <div class="card card-purple">
                                 <div class="card-header bg-purple pr-5">
                                     نسبة الإنجاز السابقة
                                 </div>
-                                <div class="card-body text-center my-2 p-2">
+                                <div id="card-prev" class="card-body text-center my-2 p-2" value="50">
                                     <canvas class="h-100 w-100" id="prev-half-chart"></canvas>
-                                    <span class="text-purple"></span>                                    
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 px-1 mt-3">
+                        <div class="col-12 col-xl-6 px-1 mt-3">
                             <div class="card card-rose">
                                 <div class="card-header bg-rose pr-5">
                                     نسبة الإنجاز الحالية
                                 </div>
                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <span class="text-rose"></span> 
+                                    <canvas class="h-100 w-100" id="next-half-chart"></canvas>
+                
                                     
                                 </div>
                             </div>

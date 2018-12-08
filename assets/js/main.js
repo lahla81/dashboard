@@ -71,7 +71,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(bar, index) {
-                          var data = dataset.data[index];
+                          var data = dataset.data[index]+'%';
                           ctx.fillText(data, bar._model.x, bar._model.y + 35);
                         });
                       });
@@ -172,7 +172,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[index];
+                          var data = dataset.data[0]+'%';
                           ctx.fillText(data, line._model.x, line._model.y + 35);
                         });
                       });
@@ -211,7 +211,7 @@ $(document).ready(function () {
         });
     })();
 
-    // half Chart
+    // half Chart no 1
     (function(){
         var ctx = document.getElementById("prev-half-chart").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
@@ -219,6 +219,8 @@ $(document).ready(function () {
         gradient1.addColorStop(1, '#000000');
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#A341F7');
+
+        Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -258,6 +260,26 @@ $(document).ready(function () {
                         bottom: 10
                     }
                 },
+                "animation": {
+                    "duration": 1,
+                    "onComplete": function() {
+                      var chartInstance = this.chart,
+                        ctx = chartInstance.ctx;
+              
+                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.textAlign = 'center';
+                      ctx.textBaseline = 'bottom';
+                      ctx.fillStyle = '#A341F7';
+              
+                      this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(line, index) {
+                          var data = dataset.data[index]+'%';
+                          ctx.fillText(data, line._model.x, line._model.y + 5);
+                        });
+                      });
+                    }
+                  },
                 legend: {
                     display : false
                 },
@@ -265,7 +287,88 @@ $(document).ready(function () {
                     enabled: false
                 }
             }
-        });
+        })//.on('circle-animation-progress', function(event, progress, stepvalue){
+        //     $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+    })();
+
+    // Half Chart no2
+    (function(){
+        var ctx = document.getElementById("next-half-chart").getContext('2d');
+        gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
+
+        gradient1.addColorStop(1, '#000000');
+        gradient1.addColorStop(0.5, '#000000');
+        gradient1.addColorStop(0, '#FF07A9');
+
+        Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Red"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [88,100-88],
+                    text: "ff",
+                    backgroundColor: [
+                        gradient1,'#F0F2F8'
+                    ],
+                    hoverBackgroundColor: [
+                        gradient1,'#F0F2F8'
+                    ],
+                    borderColor: [
+                        gradient1,'#F0F2F8'
+                    ],
+                    hoverBorderColor: [
+                        gradient1,'#F0F2F8'
+                    ],
+                    borderWidth: 1,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 6,
+                    shadowBlur: 6,
+                    shadowColor: '#FF07A9'
+                }]
+            },
+            options: {
+                rotation: 1 * Math.PI,
+                circumference: 1 * Math.PI,
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                "animation": {
+                    "duration": 1,
+                    "onComplete": function() {
+                      var chartInstance = this.chart,
+                        ctx = chartInstance.ctx;
+              
+                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.textAlign = 'center';
+                      ctx.textBaseline = 'bottom';
+                      ctx.fillStyle = '#FF07A9';
+              
+                      this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(line, index) {
+                          var data = dataset.data[0]+'%';
+                          ctx.fillText(data, line._model.x, line._model.y + 5);
+                        });
+                      });
+                    }
+                  },
+                legend: {
+                    display : false
+                },
+                tooltips: {
+                    enabled: false
+                }
+            }
+        })//.on('circle-animation-progress', function(event, progress, stepvalue){
+        //     $(this).find('span').html(Math.round(stepvalue * 100) + '%');
     })();
 
     // left check box changee label-background and its chart
