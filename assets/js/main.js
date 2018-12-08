@@ -5,6 +5,7 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('active');
     });
 
+    // bar Chart
     (function(){
     
         var ctx = document.getElementById("bar-chart").getContext('2d');
@@ -99,12 +100,12 @@ $(document).ready(function () {
                             display:false,
                             zeroLineWidth: 4,
                         },
-                    barPercentage: 1.0,
-                            categoryPercentage: 0.3
+                        barPercentage: 1.0,
+                        categoryPercentage: 0.3
                     }]
                 },
                 tooltips: {
-                enabled: false
+                    enabled: false
                 }          
             }
         });
@@ -113,7 +114,7 @@ $(document).ready(function () {
 
     })();
 
-
+    // line Chart
     (function(){
         var ctx = document.getElementById('curve-chart').getContext('2d');
         // data = JSON.parse(ctx.parentElement.dataset.values);
@@ -210,12 +211,14 @@ $(document).ready(function () {
         });
     })();
 
+    // half Chart
     (function(){
         var ctx = document.getElementById("prev-half-chart").getContext('2d');
-        gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
+        gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
-        gradient1.addColorStop(0, '#000000');
-        gradient1.addColorStop(1, '#A341F7');
+        gradient1.addColorStop(1, '#000000');
+        gradient1.addColorStop(0.5, '#000000');
+        gradient1.addColorStop(0, '#A341F7');
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -226,22 +229,41 @@ $(document).ready(function () {
                     data: [50,100-50],
                     text: "ff",
                     backgroundColor: [
-                    
-                        gradient1
+                        gradient1,'#F0F2F8'
+                    ],
+                    hoverBackgroundColor: [
+                        gradient1,'#F0F2F8'
                     ],
                     borderColor: [
-                    
-                        'rgba(255, 159, 64, 1)'
+                        gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1
+                    hoverBorderColor: [
+                        gradient1,'#F0F2F8'
+                    ],
+                    borderWidth: 1,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 6,
+                    shadowBlur: 6,
+                    shadowColor: '#A341F7'
                 }]
             },
             options: {
                 rotation: 1 * Math.PI,
                 circumference: 1 * Math.PI,
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
                 legend: {
                     display : false
                 },
+                tooltips: {
+                    enabled: false
+                }
             }
         });
     })();
