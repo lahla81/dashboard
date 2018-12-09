@@ -697,6 +697,18 @@ input#customCheck-bar:checked ~ #label-bar {
     right: 50%;
     transform: translate(50%, -50%); }
 
+.chart-row.transaction .transaction {
+  display: block !important; }
+
+.chart-row.transaction .employStat {
+  display: none; }
+
+.chart-row.employStat .transaction {
+  display: none; }
+
+.chart-row.employStat .employStat {
+  display: block !important; }
+
 .table-responsive .modal {
   top: 50%;
   transform: translateY(-50%); }

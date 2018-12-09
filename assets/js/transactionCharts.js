@@ -7,7 +7,7 @@ $(document).ready(function () {
    // bar Chart
    (function(){
     
-        var ctx = document.getElementById("bar-chart").getContext('2d');
+        var ctx = document.getElementById("employStatBarChart").getContext('2d');
         // const data = JSON.parse(ctx.parentElement.dataset.values);
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 600);

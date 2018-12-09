@@ -53,7 +53,7 @@
                             <a href="#">مشاريع حالية</a>
                         </li>
                         <li>
-                            <a href="#">مشاريع سابقة</a>
+                            <a href="#">مشاريع مستقبلية</a>
                         </li>
                     </ul>
                 </li>
@@ -154,25 +154,22 @@
                     </a>
                     <ul class="collapse list-unstyled" id="auth">
                         <li>
-                            <a href="notaries.html">إحصائيات</a>
+                            <a href="notaries.html">قسم الكاتب العام</a>
                         </li>
                         <li>
-                            <a href="#">قسم الكاتب العام</a>
+                            <a href="notaries.html">قسم التوثيق العام</a>
                         </li>
                         <li>
-                            <a href="#">قسم التوثيق العام</a>
+                            <a href="notaries.html">قسم عقود الزواج</a>
                         </li>
                         <li>
-                            <a href="#">قسم عقود الزواج</a>
+                            <a href="notaries.html">قسم إشهار الإسلام</a>
                         </li>
                         <li>
-                            <a href="#">قسم إشهار الإسلام</a>
+                            <a href="notaries.html">قسم الكاتب العدل الخاص</a>
                         </li>
                         <li>
-                            <a href="">قسم الكاتب العدل الخاص</a>
-                        </li>
-                        <li>
-                            <a href="#">مكتب تسجيل وصايا وتركات غير المسلمين</a>
+                            <a href="notaries.html">مكتب تسجيل وصايا وتركات غير المسلمين</a>
                         </li>
                     </ul>
                 </li>
@@ -224,15 +221,15 @@
             </ul>
             <ul class="list-unstyled navbar justify-content-center d-lg-none p-0">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link text-gray-400 px-3"><i class="fas fa-comments" data-fa-transform="flip-h"></i></a>
+                    <a href="index.html" class="nav-link px-3"><i class="fas fa-comments" data-fa-transform="flip-h"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a href="category.html" class="nav-link nav-notification text-gray-400 px-3"><i class="fas fa-bell"></i></a>
+                    <a href="category.html" class="nav-link nav-notification px-3"><i class="fas fa-bell"></i></a>
                 </li>
             </ul>
             <ul class="list-unstyled navbar justify-content-center d-lg-none p-0">
                 <li class="nav-item">
-                    <a href="offer.html" class="nav-link nav-user-name text-gray-700 px-2">إسم المستخدم</a>
+                    <a href="offer.html" class="nav-link nav-user-name px-2">إسم المستخدم</a>
                 </li>
                 <li class="nav-item">
                     <a href="app.html" class="nav-link d-inline px-2">
@@ -416,234 +413,485 @@
             </div>
 
             <!-- start of bottom section -->
-            <div class="row chart-row">
+            <div class="w-100 chart-row">
                 
-                <!-- bar Chart start -->
-                <div class="col-12 px-3 mb-5 bar-chart-col">
-                    <div class="chart-small h-100 w-100 py-4">
-                        <canvas class="w-100" height="500" id="bar-chart"></canvas>
+                <div class="row transaction h-100 w-100" >
+                    <!-- bar Chart start -->
+                    <div class="col-12 px-3 mb-5 bar-chart-col">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas class="w-100" height="500" id="bar-chart"></canvas>
 
-                    </div>
-                </div>
-
-                <!-- Line Chart -->
-                <div class="col-12 px-3 mb-5 line-chart-col">
-                    <div class="chart-small h-100 w-100 py-4">
-                        <canvas class="w-100" height="90" id="line-chart"></canvas>
-
-                    </div>
-                </div>
-
-                <!-- Circle Chart -->
-                <div class="col-12 px-3 mt-3 mb-5 circle-chart-col notaries-circle-chart-col d-none">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-md-6 px-1 mt-3">
-                            <div class="card card-teal">
-                                <div class="card-header bg-teal pr-3">
-                                    الملغاة بعد خمس ايام عمل
-                                </div>
-                                <div id="circle-body-no1" class="card-body text-center my-2 p-2">
-                                    <span class="text-teal"></span>                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 px-1 mt-3">
-                            <div class="card card-cyan">
-                                <div class="card-header bg-cyan pr-3">
-                                    المتأخرة اكثر عن يومين
-                                </div>
-                                <div id="circle-body-no2" class="card-body text-center my-2 p-2">
-                                    <span class="text-cyan"></span> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 px-1 mt-3">
-                            <div class="card card-light-red">
-                                <div class="card-header bg-light-red pr-3">
-                                    المصدقة
-                                </div>
-                                <div id="circle-body-no3" class="card-body text-center my-2 p-2">
-                                    <span class="text-light-red"></span>                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 px-1 mt-3">
-                            <div class="card card-dark-red">
-                                <div class="card-header bg-dark-red pr-3">
-                                    إجمالي عدد المعاملات الكلي
-                                </div>
-                                <div id="circle-body-no4" class="card-body text-center my-2 p-2">
-                                    <span class="text-dark-red"></span> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 px-1 mt-3">
-                            <div class="card card-indigo">
-                                <div class="card-header bg-indigo pr-3">
-                                    قبول ودفع الكتروني
-                                </div>
-                                <div id="circle-body-no5" class="card-body text-center my-2 p-2">
-                                    <span class="text-indigo"></span>                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 px-1 mt-3">
-                            <div class="card card-purple">
-                                <div class="card-header bg-purple pr-3">
-                                    قبول الكتروني
-                                </div>
-                                <div id="circle-body-no6" class="card-body text-center my-2 p-2">
-                                    <span class="text-purple"></span> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 px-1 mt-3">
-                            <div class="card card-warning">
-                                <div class="card-header bg-warning pr-3">
-                                    رفض الكتروني
-                                </div>
-                                <div id="circle-body-no7" class="card-body text-center my-2 p-2">
-                                    <span class="text-warning"></span>                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 px-1 mt-3">
-                            <div class="card card-dark-green">
-                                <div class="card-header bg-dark-green pr-3">
-                                    بانتظار الموافقة
-                                </div>
-                                <div id="circle-body-no8" class="card-body text-center my-2 p-2">
-                                    <span class="text-dark-green"></span> 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 px-1 mt-3">
-                            <div class="card card-rose">
-                                <div class="card-header bg-rose pr-3">
-                                    بانتظار التعديل
-                                </div>
-                                <div id="circle-body-no9" class="card-body text-center my-2 p-2">
-                                    <span class="text-rose"></span> 
-                                </div>
-                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Half Chart -->
-                <div class="col-12 px-3 mt-3 mb-5 half-chart-col notaries-half-chart-col d-none">
-                    <div class="row justify-content-center">
-                        <div class="col-12 px-1 mt-3">
-                            <div class="card card-teal">
-                                <div class="card-header bg-teal pr-3">
-                                    الملغاة بعد خمس ايام عمل
-                                </div>
-                                <div id="brev-half-body" class="card-body text-center my-2 p-2" value="50">
-                                    <canvas class="h-100 w-100" id="half-chart-no1"></canvas>
-                                        <span></span>
-                                </div>
-                            </div>
+                    <!-- Line Chart -->
+                    <div class="col-12 px-3 mb-5 line-chart-col">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas class="w-100" height="95" id="line-chart"></canvas>
+
                         </div>
-                        <div class="col-12 px-1 mt-3">
-                            <div class="card card-cyan">
-                                <div class="card-header bg-cyan pr-3">
-                                    المتأخرة اكثر عن يومين
-                                </div>
-                                <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <canvas class="h-100 w-100" id="half-chart-no2"></canvas>
-                                        <span></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 px-1 mt-3">
-                            <div class="card card-light-red">
-                                <div class="card-header bg-light-red pr-3">
-                                    المصدقة
-                                </div>
-                                <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <canvas class="h-100 w-100" id="half-chart-no3"></canvas>
-                                        <span></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 px-1 mt-3">
-                            <div class="card card-dark-red">
-                                <div class="card-header bg-dark-red pr-3">
-                                    إجمالي عدد المعاملات الكلي
-                                </div>
-                                <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <canvas class="h-100 w-100" id="half-chart-no4"></canvas>
-                                        <span></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 px-1 mt-3">
-                            <div class="card card-indigo">
-                                <div class="card-header bg-indigo pr-3">
-                                    قبول ودفع الكتروني
-                                </div>
-                                <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <canvas class="h-100 w-100" id="half-chart-no5"></canvas>
-                                        <span></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 px-1 mt-3">
-                            <div class="card card-purple">
-                                <div class="card-header bg-purple pr-3">
-                                    قبول الكتروني
-                                </div>
-                                <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <canvas class="h-100 w-100" id="half-chart-no6"></canvas>
-                                        <span></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 px-1 mt-3">
-                            <div class="card card-warning">
-                                <div class="card-header bg-warning pr-3">
-                                    رفض الكتروني
-                                </div>
-                                <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <canvas class="h-100 w-100" id="half-chart-no7"></canvas>
-                                        <span></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 px-1 mt-3">
-                            <div class="card card-dark-green">
-                                <div class="card-header bg-dark-green pr-3">
-                                    بانتظار الموافقة
-                                </div>
-                                <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <canvas class="h-100 w-100" id="half-chart-no8"></canvas>
-                                        <span></span>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 px-1 mt-3">
-                            <div class="card card-rose">
-                                <div class="card-header bg-rose pr-3">
-                                    بانتظار التعديل
-                                </div>
-                                <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <canvas class="h-100 w-100" id="half-chart-no9"></canvas>
-                                        <span></span>
-
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <!-- Circle Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 circle-chart-col notaries-circle-chart-col d-none">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3">
+                                        الملغاة بعد خمس ايام عمل
+                                    </div>
+                                    <div id="circle-body-no1" class="card-body text-center my-2 p-2">
+                                        <span class="text-teal"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3">
+                                        المتأخرة اكثر عن يومين
+                                    </div>
+                                    <div id="circle-body-no2" class="card-body text-center my-2 p-2">
+                                        <span class="text-cyan"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3">
+                                        المصدقة
+                                    </div>
+                                    <div id="circle-body-no3" class="card-body text-center my-2 p-2">
+                                        <span class="text-light-red"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3">
+                                        إجمالي عدد المعاملات الكلي
+                                    </div>
+                                    <div id="circle-body-no4" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-red"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3">
+                                        قبول ودفع الكتروني
+                                    </div>
+                                    <div id="circle-body-no5" class="card-body text-center my-2 p-2">
+                                        <span class="text-indigo"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3">
+                                        قبول الكتروني
+                                    </div>
+                                    <div id="circle-body-no6" class="card-body text-center my-2 p-2">
+                                        <span class="text-purple"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3">
+                                        رفض الكتروني
+                                    </div>
+                                    <div id="circle-body-no7" class="card-body text-center my-2 p-2">
+                                        <span class="text-warning"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-green">
+                                    <div class="card-header bg-dark-green pr-3">
+                                        بانتظار الموافقة
+                                    </div>
+                                    <div id="circle-body-no8" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-green"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-rose">
+                                    <div class="card-header bg-rose pr-3">
+                                        بانتظار التعديل
+                                    </div>
+                                    <div id="circle-body-no9" class="card-body text-center my-2 p-2">
+                                        <span class="text-rose"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Half Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 half-chart-col notaries-half-chart-col d-none">
+                        <div class="row justify-content-center">
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3">
+                                        الملغاة بعد خمس ايام عمل
+                                    </div>
+                                    <div id="brev-half-body" class="card-body text-center my-2 p-2" value="50">
+                                        <canvas class="h-100 w-100" id="half-chart-no1"></canvas>
+                                            <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3">
+                                        المتأخرة اكثر عن يومين
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="half-chart-no2"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3">
+                                        المصدقة
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="half-chart-no3"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3">
+                                        إجمالي عدد المعاملات الكلي
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="half-chart-no4"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3">
+                                        قبول ودفع الكتروني
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="half-chart-no5"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3">
+                                        قبول الكتروني
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="half-chart-no6"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3">
+                                        رفض الكتروني
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="half-chart-no7"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-green">
+                                    <div class="card-header bg-dark-green pr-3">
+                                        بانتظار الموافقة
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="half-chart-no8"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-rose">
+                                    <div class="card-header bg-rose pr-3">
+                                        بانتظار التعديل
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="half-chart-no9"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
                 </div>
-                
+
+                <div class="row employStat h-100 w-100 d-none">
+                    
+                    <!-- اسم الموظف -->
+                    <div class="col-12">
+                        <div class="row justify-content-center">
+                            <div class="col-3 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3">
+                                        إسم الموظف
+                                    </div>
+                                    <div class="card-body text-center pb-0 px-0">
+                                        <img src="./assets/img/projects/Avatar.png" 
+                                            width="108" height="108" class="rounded-circle mb-2" alt="avatar">
+                                        <h5 class="card-title pt-3 mb-0">أميرة</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- bar Chart start -->
+                    <div class="col-12 px-3 mb-5 bar-chart-col">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas class="w-100" height="95" id="employStatBarChart"></canvas>
+
+                        </div>
+                    </div>
+
+                    <!-- Line Chart -->
+                    <div class="col-12 px-3 mb-5 line-chart-col">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas class="w-100" height="95" id="employStatLineChart"></canvas>
+
+                        </div>
+                    </div>
+
+                    <!-- Circle Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 circle-chart-col notaries-circle-chart-col d-none">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3">
+                                        الملغاة بعد خمس ايام عمل
+                                    </div>
+                                    <div id="employStatCircleChartNo1" class="card-body text-center my-2 p-2">
+                                        <span class="text-teal"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3">
+                                        المتأخرة اكثر عن يومين
+                                    </div>
+                                    <div id="employStatCircleChartNo2" class="card-body text-center my-2 p-2">
+                                        <span class="text-cyan"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3">
+                                        المصدقة
+                                    </div>
+                                    <div id="employStatCircleChartNo3" class="card-body text-center my-2 p-2">
+                                        <span class="text-light-red"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3">
+                                        إجمالي عدد المعاملات الكلي
+                                    </div>
+                                    <div id="employStatCircleChartNo4" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-red"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3">
+                                        قبول ودفع الكتروني
+                                    </div>
+                                    <div id="employStatCircleChartNo5" class="card-body text-center my-2 p-2">
+                                        <span class="text-indigo"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3">
+                                        قبول الكتروني
+                                    </div>
+                                    <div id="employStatCircleChartNo6" class="card-body text-center my-2 p-2">
+                                        <span class="text-purple"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3">
+                                        رفض الكتروني
+                                    </div>
+                                    <div id="employStatCircleChartNo7" class="card-body text-center my-2 p-2">
+                                        <span class="text-warning"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-green">
+                                    <div class="card-header bg-dark-green pr-3">
+                                        بانتظار الموافقة
+                                    </div>
+                                    <div id="employStatCircleChartNo8" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-green"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-rose">
+                                    <div class="card-header bg-rose pr-3">
+                                        بانتظار التعديل
+                                    </div>
+                                    <div id="employStatCircleChartNo9" class="card-body text-center my-2 p-2">
+                                        <span class="text-rose"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Half Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 half-chart-col notaries-half-chart-col d-none">
+                        <div class="row justify-content-center">
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3">
+                                        الملغاة بعد خمس ايام عمل
+                                    </div>
+                                    <div id="brev-half-body" class="card-body text-center my-2 p-2" value="50">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo1"></canvas>
+                                            <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3">
+                                        المتأخرة اكثر عن يومين
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo2"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3">
+                                        المصدقة
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo3"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3">
+                                        إجمالي عدد المعاملات الكلي
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo4"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3">
+                                        قبول ودفع الكتروني
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo5"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3">
+                                        قبول الكتروني
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo6"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3">
+                                        رفض الكتروني
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo7"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-green">
+                                    <div class="card-header bg-dark-green pr-3">
+                                        بانتظار الموافقة
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo8"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-rose">
+                                    <div class="card-header bg-rose pr-3">
+                                        بانتظار التعديل
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo9"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
             </div>
 
         </div>
@@ -666,7 +914,8 @@
     <script src="./assets/js/Chart.min.js"></script>
     <script src="./assets/js/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/circle-progress.min.js"></script>
-    <script src="./assets/js/charts.js"></script>
+    <script src="./assets/js/transactionCharts.js"></script>
+    <script src="./assets/js/employStatCharts.js"></script>
 
 
     <!-- Main JS -->

@@ -1,16 +1,16 @@
 $(document).ready(function () {
 
-    // bar Chart
-    (function(){
-    
-        var ctx = document.getElementById("bar-chart").getContext('2d');
-        // const data = JSON.parse(ctx.parentElement.dataset.values);
-        gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
+        // bar Chart
+        var bar_canvas_element = document.getElementById('bar-chart');
+        var bar_ctx = bar_canvas_element.getContext('2d');
+        const bar_data = JSON.parse(bar_canvas_element.parentElement.dataset.values);
+        const bar_labels = [ "نسبة الإنجاز الحالية", "نسبة الإنجاز السابقة"];
+        gradient1 = bar_ctx.createLinearGradient(0, 0, 0, 600);
 
         gradient1.addColorStop(0, '#BE72FF');
         gradient1.addColorStop(1, '#7B0ED9');
 
-        gradient2 = ctx.createLinearGradient(0, 0, 0, 600);
+        gradient2 = bar_ctx.createLinearGradient(0, 0, 0, 600);
 
         gradient2.addColorStop(0, '#FF95DA');
         gradient2.addColorStop(1, '#E50497');
@@ -18,13 +18,13 @@ $(document).ready(function () {
         Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
         // Chart.defaults.global.defaultFontSize = 12;
         
-        var myChart = new Chart(ctx, {
+        var myChart = new Chart(bar_ctx, {
             type: 'bar',
             data: {
-                labels: [ "نسبة الإنجاز الحالية", "نسبة الإنجاز السابقة"],
+                labels: bar_labels,
                 datasets: [{
                     // label: '# of Votes',
-                    data: [88, 50],
+                    data: bar_data,
                     backgroundColor: [ 
                         gradient2,gradient1
                     ], 
@@ -106,35 +106,49 @@ $(document).ready(function () {
             }
         });
 
-        
-
-    })();
 
     // line Chart
-    (function(){
-        var ctx = document.getElementById('line-chart').getContext('2d');
-        // data = JSON.parse(ctx.parentElement.dataset.values);
+        var line_canvas_element = document.getElementById('line-chart');
+        var line_ctx = line_canvas_element.getContext('2d');
+        const line_data = JSON.parse(line_canvas_element.parentElement.dataset.values);
+        const line_labels = [ "", "نسبة الإنجاز الحالية","", "نسبة الإنجاز السابقة",""];
 
-        gradient3 = ctx.createLinearGradient(0, 0, 0, 600);
+        gradient2 = line_ctx.createLinearGradient(0, 0, 800, 800);
+
+        gradient2.addColorStop(000, '#00BA81');
+        gradient2.addColorStop(0.1, '#9102FC');
+        gradient2.addColorStop(0.2, '#45C19C');
+        gradient2.addColorStop(0.3, '#FFD062');
+        gradient2.addColorStop(0.4, '#005EF7');
+        gradient2.addColorStop(0.5, '#C7521F');
+        gradient2.addColorStop(0.6, '#FF95DA');
+        gradient2.addColorStop(0.7, '#7B8AFF');
+        gradient2.addColorStop(0.8, '#FF8B58');
+        gradient2.addColorStop(0.9, '#BE72FF');
+        gradient2.addColorStop(1.0, '#44F2BD');
+
+
+        gradient3 = line_ctx.createLinearGradient(0, 0, 0, 600);
 
         gradient3.addColorStop(1, 'rgba(59,134,255,0)');
         gradient3.addColorStop(0, '#3B86FF');
 
         Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
-        var chart = new Chart(ctx, {
+        var chart = new Chart(line_ctx, {
             // The type of chart we want to create
             type: 'line',
         
             // The data for our dataset
             data: {
-                labels: [ "", "نسبة الإنجاز الحالية", "" , "نسبة الإنجاز السابقة",""],
+                labels: line_labels,
                 datasets: [{
                     label: "My First dataset",
                     backgroundColor: gradient3,
-                    borderColor: gradient3,
-                    data: [0 , 88 , 0 , 50 , 0],
-                    lineTension : 0.1
+                    borderColor: gradient2,
+                    borderWidth: 15,
+                    data: line_data,
+                    lineTension : 0.3
                 }]
             },
         
@@ -204,7 +218,7 @@ $(document).ready(function () {
                 }          
             }
         });
-    })();
+
 
     // half Chart no 1
     (function(){

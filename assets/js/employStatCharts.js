@@ -151,7 +151,7 @@ $(document).ready(function () {
     // line chart
     (function(){
     
-        var ctx = document.getElementById("line-chart").getContext('2d');
+        var ctx = document.getElementById("employStatLineChart").getContext('2d');
         // const data = JSON.parse(ctx.parentElement.dataset.values);
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
@@ -258,7 +258,7 @@ $(document).ready(function () {
 
     // half Chart no1
     (function(){
-        var ctx = document.getElementById("half-chart-no1").getContext('2d');
+        var ctx = document.getElementById("employStatHalfChartNo1").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
         gradient1.addColorStop(1, '#000000');
@@ -337,7 +337,7 @@ $(document).ready(function () {
 
     // Half Chart no2
     (function(){
-        var ctx = document.getElementById("half-chart-no2").getContext('2d');
+        var ctx = document.getElementById("employStatHalfChartNo2").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
         gradient1.addColorStop(1, '#000000');
@@ -416,7 +416,7 @@ $(document).ready(function () {
 
     // half Chart no3
     (function(){
-        var ctx = document.getElementById("half-chart-no3").getContext('2d');
+        var ctx = document.getElementById("employStatHalfChartNo3").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
         gradient1.addColorStop(1, '#000000');
@@ -495,7 +495,7 @@ $(document).ready(function () {
 
     // Half Chart no4
     (function(){
-        var ctx = document.getElementById("half-chart-no4").getContext('2d');
+        var ctx = document.getElementById("employStatHalfChartNo4").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
         gradient1.addColorStop(1, '#000000');
@@ -574,7 +574,7 @@ $(document).ready(function () {
 
     // half Chart no5
     (function(){
-        var ctx = document.getElementById("half-chart-no5").getContext('2d');
+        var ctx = document.getElementById("employStatHalfChartNo5").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
         gradient1.addColorStop(1, '#000000');
@@ -653,7 +653,7 @@ $(document).ready(function () {
 
     // Half Chart no6
     (function(){
-        var ctx = document.getElementById("half-chart-no6").getContext('2d');
+        var ctx = document.getElementById("employStatHalfChartNo6").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
         gradient1.addColorStop(1, '#000000');
@@ -732,7 +732,7 @@ $(document).ready(function () {
 
     // half Chart no7
     (function(){
-        var ctx = document.getElementById("half-chart-no7").getContext('2d');
+        var ctx = document.getElementById("employStatHalfChartNo7").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
         gradient1.addColorStop(1, '#000000');
@@ -811,7 +811,7 @@ $(document).ready(function () {
 
     // Half Chart no8
     (function(){
-        var ctx = document.getElementById("half-chart-no8").getContext('2d');
+        var ctx = document.getElementById("employStatHalfChartNo8").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
         gradient1.addColorStop(1, '#000000');
@@ -890,7 +890,7 @@ $(document).ready(function () {
 
     // Half Chart no9
     (function(){
-        var ctx = document.getElementById("half-chart-no9").getContext('2d');
+        var ctx = document.getElementById("employStatHalfChartNo9").getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
 
         gradient1.addColorStop(1, '#000000');
@@ -969,7 +969,7 @@ $(document).ready(function () {
 
      // circle Chart no1
     (function(){
-        $('#circle-body-no1').circleProgress({
+        $('#employStatCircleChartNo1').circleProgress({
             value: 0.3,
             size: 146,
             startAngle: 0,
@@ -984,7 +984,7 @@ $(document).ready(function () {
 
     // circle Chart no2
     (function(){
-        $('#circle-body-no2').circleProgress({
+        $('#employStatCircleChartNo2').circleProgress({
             value: 0.4,
             size: 146,
             startAngle: 0,
@@ -999,7 +999,7 @@ $(document).ready(function () {
 
      // circle Chart no3
      (function(){
-        $('#circle-body-no3').circleProgress({
+        $('#employStatCircleChartNo3').circleProgress({
             value: 0.2,
             size: 146,
             startAngle: 0,
@@ -1014,7 +1014,7 @@ $(document).ready(function () {
 
     // circle Chart no4
     (function(){
-        $('#circle-body-no4').circleProgress({
+        $('#employStatCircleChartNo4').circleProgress({
             value: 0.7,
             size: 146,
             startAngle: 0,
@@ -1029,7 +1029,7 @@ $(document).ready(function () {
 
      // circle Chart no5
      (function(){
-        $('#circle-body-no5').circleProgress({
+        $('#employStatCircleChartNo5').circleProgress({
             value: 0.6,
             size: 146,
             startAngle: 0,
@@ -1044,7 +1044,7 @@ $(document).ready(function () {
 
     // circle Chart no6
     (function(){
-        $('#circle-body-no6').circleProgress({
+        $('#employStatCircleChartNo6').circleProgress({
             value: 0.7,
             size: 146,
             startAngle: 0,
@@ -1059,7 +1059,7 @@ $(document).ready(function () {
 
      // circle Chart no7
      (function(){
-        $('#circle-body-no7').circleProgress({
+        $('#employStatCircleChartNo7').circleProgress({
             value: 0.3,
             size: 146,
             startAngle: 0,
@@ -1074,7 +1074,7 @@ $(document).ready(function () {
 
     // circle Chart no8
     (function(){
-        $('#circle-body-no8').circleProgress({
+        $('#employStatCircleChartNo8').circleProgress({
             value: 0.1,
             size: 146,
             startAngle: 0,
@@ -1089,7 +1089,7 @@ $(document).ready(function () {
 
      // circle Chart no9
      (function(){
-        $('#circle-body-no9').circleProgress({
+        $('#employStatCircleChartNo9').circleProgress({
             value: 0.9,
             size: 146,
             startAngle: 0,
