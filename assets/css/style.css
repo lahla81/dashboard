@@ -628,6 +628,20 @@ input#customCheck-bar:checked ~ #label-bar {
   .card-dark-green .card-title {
     color: #1A8162; }
 
+.card-maron {
+  box-shadow: 0 3px 20px #711466; }
+  .card-maron .card-header {
+    box-shadow: 0 3px 6px #711466; }
+  .card-maron .card-title {
+    color: #711466; }
+
+.card-rody {
+  box-shadow: 0 3px 20px #4D4F5C; }
+  .card-rody .card-header {
+    box-shadow: 0 3px 6px #4D4F5C; }
+  .card-rody .card-title {
+    color: #4D4F5C; }
+
 .bar-chart-col,
 .line-chart-col {
   margin-top: 32px; }
@@ -703,10 +717,25 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row.transaction .employStat {
   display: none; }
 
+.chart-row.transaction .elecStat {
+  display: none; }
+
 .chart-row.employStat .transaction {
   display: none; }
 
 .chart-row.employStat .employStat {
+  display: block !important; }
+
+.chart-row.employStat .elecStat {
+  display: none; }
+
+.chart-row.elecStat .transaction {
+  display: none; }
+
+.chart-row.elecStat .employStat {
+  display: none; }
+
+.chart-row.elecStat .elecStat {
   display: block !important; }
 
 .table-responsive .modal {

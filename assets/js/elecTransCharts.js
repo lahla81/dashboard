@@ -1,20 +1,25 @@
 $(document).ready(function () {
 
-    var employeStatistics = document.getElementById("employeStatistics");
+    var employeStatistics = document.getElementById("electronicStatistics");
     const values = JSON.parse(employeStatistics.parentElement.dataset.values);
     const data = JSON.parse(employeStatistics.parentElement.dataset.values);
 
-    const labels = ["بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
-                    "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات الكلي",
-                    "المصدقة","المتأخرة أكثر من يومين","متوسط إعتماد المعاملات","إنجاز فوق المطلوب","الإنجاز اليومي (اللون)"];
+    var count = 0;
+    for(var i=0, n=data.length; i < n; i++) 
+    { 
+        count += data[i]; 
+    }
+    const week = [data[0],data[1],data[2],data[3],data[4],data[5],count];
+
+    const labels = ["السبت", "الأحد","الإثنين",
+                    "الثلاثاء","الأربعاء","الخميس","المجموع"];
     
    // bar Chart
    (function(){
     
-        var bar_canvas_element = document.getElementById("employStatBarChart");
+        var bar_canvas_element = document.getElementById("elecStatBarChart");
         var bar_ctx =  bar_canvas_element.getContext('2d');
         
-
         gradient1 = bar_ctx.createLinearGradient(0, 0, 0, 600);
         gradient1.addColorStop(0, '#FF95DA');
         gradient1.addColorStop(1, '#E50497');
@@ -42,22 +47,6 @@ $(document).ready(function () {
         gradient7 = bar_ctx.createLinearGradient(0, 0, 0, 600);
         gradient7.addColorStop(0, '#FA9F9F');
         gradient7.addColorStop(1, '#F06161');
-
-        gradient8 = bar_ctx.createLinearGradient(0, 0, 0, 600);
-        gradient8.addColorStop(0, '#7FAFFD');
-        gradient8.addColorStop(1, '#3B86FF');
-
-        gradient9 = bar_ctx.createLinearGradient(0, 0, 0, 600);
-        gradient9.addColorStop(0, '#44F2BD');
-        gradient9.addColorStop(1, '#00B27C');
-
-        gradient10 = bar_ctx.createLinearGradient(0, 0, 0, 600);
-        gradient10.addColorStop(0, '#FF6A6A');
-        gradient10.addColorStop(1, '#9F4242');
-
-        gradient11 = bar_ctx.createLinearGradient(0, 0, 0, 600);
-        gradient11.addColorStop(0, '#767DAE');
-        gradient11.addColorStop(1, '#4D4F5C');
         
         Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
         // Chart.defaults.global.defaultFontSize = 12;
@@ -68,18 +57,16 @@ $(document).ready(function () {
                 labels: labels,
                 datasets: [{
                     // label: '# of Votes',
-                    data: data,
+                    data: week,
                     backgroundColor: [ 
                         gradient1,gradient2,gradient3,
                         gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11
+                        gradient7
                     ], 
                     hoverBackgroundColor: [
                         gradient1,gradient2,gradient3,
                         gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11
+                        gradient7
                     ],
 
                     shadowOffsetX: 3,
@@ -87,8 +74,7 @@ $(document).ready(function () {
                     shadowBlur: 20,
                     shadowColor: ['#FF07A9','#1A8162','#E5A100',
                                   '#850CED','#3349F0','#D9581F',
-                                  '#FF6A6A','#3B86FF','#00BA81',
-                                  '#9F4242','#4D4F5C']
+                                  '#FF6A6A']
                 }]
             },
             options: {
@@ -96,7 +82,7 @@ $(document).ready(function () {
                     padding: {
                         left: 10,
                         right: 10,
-                        top: 10,
+                        top: 35,
                         bottom: 10
                     }
                 },
@@ -112,16 +98,16 @@ $(document).ready(function () {
                     var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
             
-                    ctx.font = Chart.helpers.fontString(22, 700, Chart.defaults.global.defaultFontFamily);
+                    ctx.font = Chart.helpers.fontString(35, 700, Chart.defaults.global.defaultFontFamily);
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'bottom';
-                    ctx.fillStyle = "white";
+                    ctx.fillStyle = "#850CED";
             
                     this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(bar, index) {
-                        var data = dataset.data[index]+'%';
-                        ctx.fillText(data, bar._model.x, bar._model.y + 35);
+                        var data = dataset.data[index];
+                        ctx.fillText(data, bar._model.x, bar._model.y + 5);
                         });
                     });
                     }
@@ -164,7 +150,7 @@ $(document).ready(function () {
     // line chart
     (function(){
     
-        var line_canvas_element = document.getElementById("employStatLineChart");
+        var line_canvas_element = document.getElementById("elecStatLineChart");
         var line_ctx =  line_canvas_element.getContext('2d');
 
         gradient1 = line_ctx.createLinearGradient(0, 0, 0, 600);
@@ -186,7 +172,7 @@ $(document).ready(function () {
         gradient2.addColorStop(1.0, '#44F2BD');
 
         Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-        // Chart.defaults.global.defaultFontSize = 12;
+        // Chart.defaults.global.defaultFontSize = 20;
         
         var myChart = new Chart(line_ctx, {
             type: 'line',
@@ -194,7 +180,7 @@ $(document).ready(function () {
                 labels: labels,
                 datasets: [{
                     // label: '# of Votes',
-                    data: data,
+                    data: week,
                     backgroundColor: gradient1,
                     borderColor: gradient2,
                     borderWidth: 15,
@@ -230,7 +216,7 @@ $(document).ready(function () {
                     this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                        var data = dataset.data[index]+'%';
+                        var data = dataset.data[index];
                         ctx.fillText(data, line._model.x, line._model.y + 50);
                         });
                     });
@@ -271,11 +257,11 @@ $(document).ready(function () {
 
     // half Chart no1
     (function(){
-        var ctx = document.getElementById("employStatHalfChartNo1").getContext('2d');
+        var ctx = document.getElementById("elecStatHalfChartNo1").getContext('2d');
         const labele = labels[0];
-        const data1 = data[0];
-        const data2 = 100 - data[0];
-        document.getElementById("employStatHalfTitleNo1").innerHTML = labele;
+        const data1 = week[0];
+        const data2 = 100 - data1;
+        document.getElementById("elecStatHalfTitleNo1").innerHTML = labele;
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
         gradient1.addColorStop(1, '#000000');
@@ -336,7 +322,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -354,11 +340,11 @@ $(document).ready(function () {
 
     // Half Chart no2
     (function(){
-        var ctx = document.getElementById("employStatHalfChartNo2").getContext('2d');
+        var ctx = document.getElementById("elecStatHalfChartNo2").getContext('2d');
         const labele = labels[1];
-        const data1 = data[1];
+        const data1 = week[1];
         const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo2").innerHTML = labele;
+        document.getElementById("elecStatHalfTitleNo2").innerHTML = labele;
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
         gradient1.addColorStop(1, '#000000');
@@ -419,7 +405,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -437,12 +423,12 @@ $(document).ready(function () {
 
     // half Chart no3
     (function(){
-        var ctx = document.getElementById("employStatHalfChartNo3").getContext('2d');
+        var ctx = document.getElementById("elecStatHalfChartNo3").getContext('2d');
 
         const labele = labels[2];
-        const data1 = data[2];
+        const data1 = week[2];
         const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo3").innerHTML = labele;
+        document.getElementById("elecStatHalfTitleNo3").innerHTML = labele;
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
         gradient1.addColorStop(1, '#000000');
@@ -503,7 +489,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -521,12 +507,12 @@ $(document).ready(function () {
 
     // Half Chart no4
     (function(){
-        var ctx = document.getElementById("employStatHalfChartNo4").getContext('2d');
+        var ctx = document.getElementById("elecStatHalfChartNo4").getContext('2d');
 
         const labele = labels[3];
-        const data1 = data[3];
+        const data1 = week[3];
         const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo4").innerHTML = labele;
+        document.getElementById("elecStatHalfTitleNo4").innerHTML = labele;
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
         gradient1.addColorStop(1, '#000000');
@@ -587,7 +573,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -605,12 +591,12 @@ $(document).ready(function () {
 
     // half Chart no5
     (function(){
-        var ctx = document.getElementById("employStatHalfChartNo5").getContext('2d');
+        var ctx = document.getElementById("elecStatHalfChartNo5").getContext('2d');
 
         const labele = labels[4];
-        const data1 = data[4];
+        const data1 = week[4];
         const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo5").innerHTML = labele;
+        document.getElementById("elecStatHalfTitleNo5").innerHTML = labele;
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
         gradient1.addColorStop(1, '#000000');
@@ -671,7 +657,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -689,12 +675,12 @@ $(document).ready(function () {
 
     // Half Chart no6
     (function(){
-        var ctx = document.getElementById("employStatHalfChartNo6").getContext('2d');
+        var ctx = document.getElementById("elecStatHalfChartNo6").getContext('2d');
 
         const labele = labels[5];
-        const data1 = data[5];
+        const data1 = week[5];
         const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo6").innerHTML = labele;
+        document.getElementById("elecStatHalfTitleNo6").innerHTML = labele;
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
         gradient1.addColorStop(1, '#000000');
@@ -755,7 +741,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -773,12 +759,12 @@ $(document).ready(function () {
 
     // half Chart no7
     (function(){
-        var ctx = document.getElementById("employStatHalfChartNo7").getContext('2d');
+        var ctx = document.getElementById("elecStatHalfChartNo7").getContext('2d');
         
         const labele = labels[6];
-        const data1 = data[6];
+        const data1 = week[6];
         const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo7").innerHTML = labele;
+        document.getElementById("elecStatHalfTitleNo7").innerHTML = labele;
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
         gradient1.addColorStop(1, '#000000');
@@ -816,7 +802,7 @@ $(document).ready(function () {
             },
             options: {
                 rotation: 1 * Math.PI,
-                circumference: 1 * Math.PI,
+                circumference: 0.6 * Math.PI,
                 layout: {
                     padding: {
                         left: 10,
@@ -839,343 +825,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
-                          ctx.fillText(data, line._model.x, line._model.y + 5);
-                        });
-                      });
-                    }
-                  },
-                legend: {
-                    display : false
-                },
-                tooltips: {
-                    enabled: false
-                }
-            }
-        })
-    })();
-
-    // Half Chart no8
-    (function(){
-        var ctx = document.getElementById("employStatHalfChartNo8").getContext('2d');
-
-        const labele = labels[7];
-        const data1 = data[7];
-        const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo8").innerHTML = labele;
-
-        gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient1.addColorStop(1, '#000000');
-        gradient1.addColorStop(0.5, '#000000');
-        gradient1.addColorStop(0, '#1A8162');
-
-        Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-
-        var myChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Red"],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [data1,data2],
-                    text: "ff",
-                    backgroundColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    hoverBackgroundColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    hoverBorderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    borderWidth: 1,
-                    shadowOffsetX: 0,
-                    shadowOffsetY: 6,
-                    shadowBlur: 6,
-                    shadowColor: '#1A8162'
-                }]
-            },
-            options: {
-                rotation: 1 * Math.PI,
-                circumference: 1 * Math.PI,
-                layout: {
-                    padding: {
-                        left: 10,
-                        right: 10,
-                        top: 10,
-                        bottom: 10
-                    }
-                },
-                "animation": {
-                    "duration": 1,
-                    "onComplete": function() {
-                      var chartInstance = this.chart,
-                        ctx = chartInstance.ctx;
-              
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
-                      ctx.textAlign = 'center';
-                      ctx.textBaseline = 'bottom';
-                      ctx.fillStyle = '#1A8162';
-              
-                      this.data.datasets.forEach(function(dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
-                          ctx.fillText(data, line._model.x, line._model.y + 5);
-                        });
-                      });
-                    }
-                  },
-                legend: {
-                    display : false
-                },
-                tooltips: {
-                    enabled: false
-                }
-            }
-        })
-    })();
-
-    // Half Chart no9
-    (function(){
-        var ctx = document.getElementById("employStatHalfChartNo9").getContext('2d');
-
-        const labele = labels[8];
-        const data1 = data[8];
-        const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo9").innerHTML = labele;
-
-        gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient1.addColorStop(1, '#000000');
-        gradient1.addColorStop(0.5, '#000000');
-        gradient1.addColorStop(0, '#FF07A9');
-
-        Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-
-        var myChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Red"],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [data1,data2],
-                    text: "ff",
-                    backgroundColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    hoverBackgroundColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    hoverBorderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    borderWidth: 1,
-                    shadowOffsetX: 0,
-                    shadowOffsetY: 6,
-                    shadowBlur: 6,
-                    shadowColor: '#FF07A9'
-                }]
-            },
-            options: {
-                rotation: 1 * Math.PI,
-                circumference: 1 * Math.PI,
-                layout: {
-                    padding: {
-                        left: 10,
-                        right: 10,
-                        top: 10,
-                        bottom: 10
-                    }
-                },
-                "animation": {
-                    "duration": 1,
-                    "onComplete": function() {
-                      var chartInstance = this.chart,
-                        ctx = chartInstance.ctx;
-              
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
-                      ctx.textAlign = 'center';
-                      ctx.textBaseline = 'bottom';
-                      ctx.fillStyle = '#FF07A9';
-              
-                      this.data.datasets.forEach(function(dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
-                          ctx.fillText(data, line._model.x, line._model.y + 5);
-                        });
-                      });
-                    }
-                  },
-                legend: {
-                    display : false
-                },
-                tooltips: {
-                    enabled: false
-                }
-            }
-        })
-    })();
-
-    // Half Chart no10
-    (function(){
-        var ctx = document.getElementById("employStatHalfChartNo10").getContext('2d');
-
-        const labele = labels[9];
-        const data1 = data[9];
-        const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo10").innerHTML = labele;
-
-        gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient1.addColorStop(1, '#000000');
-        gradient1.addColorStop(0.5, '#000000');
-        gradient1.addColorStop(0, '#711466');
-
-        Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-
-        var myChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Red"],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [data1,data2],
-                    text: "ff",
-                    backgroundColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    hoverBackgroundColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    hoverBorderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    borderWidth: 1,
-                    shadowOffsetX: 0,
-                    shadowOffsetY: 6,
-                    shadowBlur: 6,
-                    shadowColor: '#711466'
-                }]
-            },
-            options: {
-                rotation: 1 * Math.PI,
-                circumference: 1 * Math.PI,
-                layout: {
-                    padding: {
-                        left: 10,
-                        right: 10,
-                        top: 10,
-                        bottom: 10
-                    }
-                },
-                "animation": {
-                    "duration": 1,
-                    "onComplete": function() {
-                      var chartInstance = this.chart,
-                        ctx = chartInstance.ctx;
-              
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
-                      ctx.textAlign = 'center';
-                      ctx.textBaseline = 'bottom';
-                      ctx.fillStyle = '#711466';
-              
-                      this.data.datasets.forEach(function(dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
-                          ctx.fillText(data, line._model.x, line._model.y + 5);
-                        });
-                      });
-                    }
-                  },
-                legend: {
-                    display : false
-                },
-                tooltips: {
-                    enabled: false
-                }
-            }
-        })
-    })();
-
-    // Half Chart no11
-    (function(){
-        var ctx = document.getElementById("employStatHalfChartNo11").getContext('2d');
-
-        const labele = labels[10];
-        const data1 = data[10];
-        const data2 = 100 - data1;
-        document.getElementById("employStatHalfTitleNo11").innerHTML = labele;
-
-        gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient1.addColorStop(1, '#000000');
-        gradient1.addColorStop(0.5, '#000000');
-        gradient1.addColorStop(0, '#4D4F5C');
-
-        Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-
-        var myChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Red"],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [data1,data2],
-                    text: "ff",
-                    backgroundColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    hoverBackgroundColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    hoverBorderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
-                    borderWidth: 1,
-                    shadowOffsetX: 0,
-                    shadowOffsetY: 6,
-                    shadowBlur: 6,
-                    shadowColor: '#4D4F5C'
-                }]
-            },
-            options: {
-                rotation: 1 * Math.PI,
-                circumference: 1 * Math.PI,
-                layout: {
-                    padding: {
-                        left: 10,
-                        right: 10,
-                        top: 10,
-                        bottom: 10
-                    }
-                },
-                "animation": {
-                    "duration": 1,
-                    "onComplete": function() {
-                      var chartInstance = this.chart,
-                        ctx = chartInstance.ctx;
-              
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
-                      ctx.textAlign = 'center';
-                      ctx.textBaseline = 'bottom';
-                      ctx.fillStyle = '#4D4F5C';
-              
-                      this.data.datasets.forEach(function(dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -1194,9 +844,9 @@ $(document).ready(function () {
     // circle Chart no1
     (function(){
         const labele = labels[0];
-        document.getElementById("employStatTitleNo1").innerHTML = labele;
-        $('#employStatCircleChartNo1').circleProgress({
-            value: values[0]/100,
+        document.getElementById("elecStatTitleNo1").innerHTML = labele;
+        $('#elecStatCircleChartNo1').circleProgress({
+            value: week[0]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1204,16 +854,16 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#00BA81"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100));
         });
     })();
 
     // circle Chart no2
     (function(){
         const labele = labels[1];
-        document.getElementById("employStatTitleNo2").innerHTML = labele;
-        $('#employStatCircleChartNo2').circleProgress({
-            value: values[1]/100,
+        document.getElementById("elecStatTitleNo2").innerHTML = labele;
+        $('#elecStatCircleChartNo2').circleProgress({
+            value: week[1]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1221,16 +871,16 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#3B86FF"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100));
         });
     })();
 
     // circle Chart no3
     (function(){
         const labele = labels[2];
-        document.getElementById("employStatTitleNo3").innerHTML = labele;
-        $('#employStatCircleChartNo3').circleProgress({
-            value: values[2]/100,
+        document.getElementById("elecStatTitleNo3").innerHTML = labele;
+        $('#elecStatCircleChartNo3').circleProgress({
+            value: week[2]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1238,16 +888,16 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#FF6A6A"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100));
         });
     })();
 
     // circle Chart no4
     (function(){
         const labele = labels[3];
-        document.getElementById("employStatTitleNo4").innerHTML = labele;
-        $('#employStatCircleChartNo4').circleProgress({
-            value: values[3]/100,
+        document.getElementById("elecStatTitleNo4").innerHTML = labele;
+        $('#elecStatCircleChartNo4').circleProgress({
+            value: week[3]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1255,16 +905,16 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#D9581F"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100));
         });
     })();
 
     // circle Chart no5
     (function(){
         const labele = labels[4];
-        document.getElementById("employStatTitleNo5").innerHTML = labele;
-        $('#employStatCircleChartNo5').circleProgress({
-            value: values[4]/100,
+        document.getElementById("elecStatTitleNo5").innerHTML = labele;
+        $('#elecStatCircleChartNo5').circleProgress({
+            value: week[4]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1272,16 +922,16 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#3349F0"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100));
         });
     })();
 
     // circle Chart no6
     (function(){
         const labele = labels[5];
-        document.getElementById("employStatTitleNo6").innerHTML = labele;
-        $('#employStatCircleChartNo6').circleProgress({
-            value: values[5]/100,
+        document.getElementById("elecStatTitleNo6").innerHTML = labele;
+        $('#elecStatCircleChartNo6').circleProgress({
+            value: week[5]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1289,92 +939,24 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#850CED"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100));
         });
     })();
 
     // circle Chart no7
     (function(){
         const labele = labels[6];
-        document.getElementById("employStatTitleNo7").innerHTML = labele;
-        $('#employStatCircleChartNo7').circleProgress({
-            value: values[6]/100,
+        document.getElementById("elecStatTitleNo7").innerHTML = labele;
+        $('#elecStatCircleChartNo7').circleProgress({
+            value: week[6]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
             emptyFill:'rgba(229,161,0,0.2)',
             animationStartValue: 0.5,
-            fill: "#E5A100"
+            fill: {gradient: [['#FFD062', .8], ['#9102FC', .3]], gradientAngle: Math.PI / 3},
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
-        });
-    })();
-
-    // circle Chart no8
-    (function(){
-        const labele = labels[7];
-        document.getElementById("employStatTitleNo8").innerHTML = labele;
-        $('#employStatCircleChartNo8').circleProgress({
-            value: values[7]/100,
-            size: 146,
-            startAngle: 0,
-            reverse: true,
-            emptyFill:'rgba(26,129,98,0.2)',
-            animationStartValue: 0.5,
-            fill: "#1A8162"
-        }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
-        });
-    })();
-
-    // circle Chart no9
-    (function(){
-        const labele = labels[8];
-        document.getElementById("employStatTitleNo9").innerHTML = labele;
-        $('#employStatCircleChartNo9').circleProgress({
-            value: values[8]/100,
-            size: 146,
-            startAngle: 0,
-            reverse: true,
-            emptyFill:'rgba(255,7,169,0.2)',
-            animationStartValue: 0.5,
-            fill: "#FF07A9"
-        }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
-        });
-    })();
-
-    // circle Chart no10
-    (function(){
-        const labele = labels[9];
-        document.getElementById("employStatTitleNo10").innerHTML = labele;
-        $('#employStatCircleChartNo10').circleProgress({
-            value: values[9]/100,
-            size: 146,
-            startAngle: 0,
-            reverse: true,
-            emptyFill:'rgba(77,79,92,0.2)',
-            animationStartValue: 0.5,
-            fill: "#4D4F5C"
-        }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
-        });
-    })();
-
-    // circle Chart no11
-    (function(){
-        const labele = labels[10];
-        document.getElementById("employStatTitleNo11").innerHTML = labele;
-        $('#employStatCircleChartNo11').circleProgress({
-            value: values[10]/100,
-            size: 146,
-            startAngle: 0,
-            reverse: true,
-            emptyFill:'rgba(113,20,102,0.2)',
-            animationStartValue: 0.5,
-            fill: "#711466"
-        }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100));
         });
     })();
 

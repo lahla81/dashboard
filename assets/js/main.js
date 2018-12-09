@@ -60,21 +60,21 @@ $(document).ready(function () {
         $('#customCheck1:input').click(function(){
             $('.chart-row').addClass("transaction");
             $('.chart-row').removeClass("employStat");
-            // $('.chart-row').removeClass("circleChart");
+            $('.chart-row').removeClass("elecStat");
             // $('.chart-row').removeClass("halfChart");
         });
 
         $('#customCheck2:input').click(function(){
             $('.chart-row').addClass("employStat");
             $('.chart-row').removeClass("transaction");
-            // $('.chart-row').removeClass("circleChart");
+            $('.chart-row').removeClass("elecStat");
             // $('.chart-row').removeClass("halfChart");
         });
 
         $('#customCheck3:input').click(function(){
-            // $('.chart-row').addClass("halfChart");
-            // $('.chart-row').removeClass("barChart");
-            // $('.chart-row').removeClass("circleChart");
+            $('.chart-row').addClass("elecStat");
+            $('.chart-row').removeClass("employStat");
+            $('.chart-row').removeClass("transaction");
             // $('.chart-row').removeClass("lineChart");
         });
 

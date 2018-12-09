@@ -193,14 +193,6 @@
                     </ul>
                 </li>
 
-                <!-- ادارة المشاريع الإلكترونية -->
-                <li>
-                    <a href="elecprojects.html">
-                        <i style="width:14px;" class="fas fa-bolt"></i>
-                        <span>ادارة المشاريع الإلكترونية</span>
-                    </a>
-                </li>
-
                 <!-- الاعدادات -->
                 <li>
                     <a href="sitting.html">
@@ -401,7 +393,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row text-center d-none">
+                        <div class="row text-center">
                             <button class="btn btn-primary mt-4 mb-2 py-10 px-5 mx-auto period-btn" type="button">
                                 حدد المدة
                                 <img class="mr-2 pr-1" src="./assets/img/icons/calendar-icon.png" alt="">
@@ -415,6 +407,7 @@
             <!-- start of bottom section -->
             <div class="w-100 chart-row">
                 
+                <!-- start of transaction -->
                 <div class="row transaction h-100 w-100" >
                     <!-- bar Chart start -->
                     <div class="col-12 px-3 mb-5 bar-chart-col">
@@ -644,12 +637,13 @@
                     
                 </div>
 
-                <div class="row employStat h-100 w-100 d-none">
+                <!-- start of employe statestics -->
+                <div class="row employStat h-100 w-100 d-none" data-values="[30 , 40 , 20, 70 , 60 , 70 , 30 , 10 , 90 , 80 , 50]">
                     
                     <!-- اسم الموظف -->
-                    <div class="col-12">
+                    <div class="col-12" id="employeStatistics">
                         <div class="row justify-content-center">
-                            <div class="col-3 mt-3">
+                            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-3">
                                 <div class="card card-teal">
                                     <div class="card-header bg-teal pr-3">
                                         إسم الموظف
@@ -664,7 +658,7 @@
                         </div>
                     </div>
 
-                    <!-- bar Chart start -->
+                    <!-- bar of employe statestics Chart start -->
                     <div class="col-12 px-3 mb-5 bar-chart-col">
                         <div class="chart-small h-100 w-100 py-4">
                             <canvas class="w-100" height="95" id="employStatBarChart"></canvas>
@@ -672,7 +666,7 @@
                         </div>
                     </div>
 
-                    <!-- Line Chart -->
+                    <!-- Line of employe statestics Chart -->
                     <div class="col-12 px-3 mb-5 line-chart-col">
                         <div class="chart-small h-100 w-100 py-4">
                             <canvas class="w-100" height="95" id="employStatLineChart"></canvas>
@@ -680,13 +674,13 @@
                         </div>
                     </div>
 
-                    <!-- Circle Chart -->
+                    <!-- Circle of employe statestics Chart -->
                     <div class="col-12 px-3 mt-3 mb-5 circle-chart-col notaries-circle-chart-col d-none">
                         <div class="row justify-content-center">
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-teal">
-                                    <div class="card-header bg-teal pr-3">
-                                        الملغاة بعد خمس ايام عمل
+                                    <div class="card-header bg-teal pr-3" id="employStatTitleNo1">
+
                                     </div>
                                     <div id="employStatCircleChartNo1" class="card-body text-center my-2 p-2">
                                         <span class="text-teal"></span>                                    
@@ -695,8 +689,8 @@
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-cyan">
-                                    <div class="card-header bg-cyan pr-3">
-                                        المتأخرة اكثر عن يومين
+                                    <div class="card-header bg-cyan pr-3" id="employStatTitleNo2">
+
                                     </div>
                                     <div id="employStatCircleChartNo2" class="card-body text-center my-2 p-2">
                                         <span class="text-cyan"></span> 
@@ -705,8 +699,8 @@
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-light-red">
-                                    <div class="card-header bg-light-red pr-3">
-                                        المصدقة
+                                    <div class="card-header bg-light-red pr-3" id="employStatTitleNo3">
+
                                     </div>
                                     <div id="employStatCircleChartNo3" class="card-body text-center my-2 p-2">
                                         <span class="text-light-red"></span>                                    
@@ -715,8 +709,8 @@
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-dark-red">
-                                    <div class="card-header bg-dark-red pr-3">
-                                        إجمالي عدد المعاملات الكلي
+                                    <div class="card-header bg-dark-red pr-3" id="employStatTitleNo4">
+
                                     </div>
                                     <div id="employStatCircleChartNo4" class="card-body text-center my-2 p-2">
                                         <span class="text-dark-red"></span> 
@@ -725,8 +719,8 @@
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-indigo">
-                                    <div class="card-header bg-indigo pr-3">
-                                        قبول ودفع الكتروني
+                                    <div class="card-header bg-indigo pr-3" id="employStatTitleNo5">
+
                                     </div>
                                     <div id="employStatCircleChartNo5" class="card-body text-center my-2 p-2">
                                         <span class="text-indigo"></span>                                    
@@ -735,8 +729,8 @@
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-purple">
-                                    <div class="card-header bg-purple pr-3">
-                                        قبول الكتروني
+                                    <div class="card-header bg-purple pr-3"  id="employStatTitleNo6">
+
                                     </div>
                                     <div id="employStatCircleChartNo6" class="card-body text-center my-2 p-2">
                                         <span class="text-purple"></span> 
@@ -745,8 +739,8 @@
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-warning">
-                                    <div class="card-header bg-warning pr-3">
-                                        رفض الكتروني
+                                    <div class="card-header bg-warning pr-3" id="employStatTitleNo7">
+
                                     </div>
                                     <div id="employStatCircleChartNo7" class="card-body text-center my-2 p-2">
                                         <span class="text-warning"></span>                                    
@@ -755,8 +749,8 @@
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-dark-green">
-                                    <div class="card-header bg-dark-green pr-3">
-                                        بانتظار الموافقة
+                                    <div class="card-header bg-dark-green pr-3" id="employStatTitleNo8">
+
                                     </div>
                                     <div id="employStatCircleChartNo8" class="card-body text-center my-2 p-2">
                                         <span class="text-dark-green"></span> 
@@ -765,26 +759,47 @@
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-rose">
-                                    <div class="card-header bg-rose pr-3">
-                                        بانتظار التعديل
+                                    <div class="card-header bg-rose pr-3" id="employStatTitleNo9">
+
                                     </div>
                                     <div id="employStatCircleChartNo9" class="card-body text-center my-2 p-2">
                                         <span class="text-rose"></span> 
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-rody">
+                                    <div class="card-header bg-rody pr-3" id="employStatTitleNo10">
+
+                                    </div>
+                                    <div id="employStatCircleChartNo10" class="card-body text-center my-2 p-2">
+                                        <span class="text-rody"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-maron">
+                                    <div class="card-header bg-maron pr-3" id="employStatTitleNo11">
+
+                                    </div>
+                                    <div id="employStatCircleChartNo11" class="card-body text-center my-2 p-2">
+                                        <span class="text-maron"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Half Chart -->
+                    <!-- Half of employe statestics Chart -->
                     <div class="col-12 px-3 mt-3 mb-5 half-chart-col notaries-half-chart-col d-none">
                         <div class="row justify-content-center">
+
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-teal">
-                                    <div class="card-header bg-teal pr-3">
-                                        الملغاة بعد خمس ايام عمل
+                                    <div class="card-header bg-teal pr-3" id="employStatHalfTitleNo1">
+                                       
                                     </div>
-                                    <div id="brev-half-body" class="card-body text-center my-2 p-2" value="50">
+                                    <div id="brev-half-body" class="card-body text-center my-2 p-2">
                                         <canvas class="h-100 w-100" id="employStatHalfChartNo1"></canvas>
                                             <span></span>
                                     </div>
@@ -792,8 +807,8 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-cyan">
-                                    <div class="card-header bg-cyan pr-3">
-                                        المتأخرة اكثر عن يومين
+                                    <div class="card-header bg-cyan pr-3" id="employStatHalfTitleNo2">
+                                        
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
                                         <canvas class="h-100 w-100" id="employStatHalfChartNo2"></canvas>
@@ -804,8 +819,8 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-light-red">
-                                    <div class="card-header bg-light-red pr-3">
-                                        المصدقة
+                                    <div class="card-header bg-light-red pr-3" id="employStatHalfTitleNo3">
+                                        
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
                                         <canvas class="h-100 w-100" id="employStatHalfChartNo3"></canvas>
@@ -816,8 +831,8 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-dark-red">
-                                    <div class="card-header bg-dark-red pr-3">
-                                        إجمالي عدد المعاملات الكلي
+                                    <div class="card-header bg-dark-red pr-3" id="employStatHalfTitleNo4">
+                                        
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
                                         <canvas class="h-100 w-100" id="employStatHalfChartNo4"></canvas>
@@ -828,8 +843,8 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-indigo">
-                                    <div class="card-header bg-indigo pr-3">
-                                        قبول ودفع الكتروني
+                                    <div class="card-header bg-indigo pr-3" id="employStatHalfTitleNo5">
+                                        
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
                                         <canvas class="h-100 w-100" id="employStatHalfChartNo5"></canvas>
@@ -840,8 +855,8 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-purple">
-                                    <div class="card-header bg-purple pr-3">
-                                        قبول الكتروني
+                                    <div class="card-header bg-purple pr-3" id="employStatHalfTitleNo6">
+                                        
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
                                         <canvas class="h-100 w-100" id="employStatHalfChartNo6"></canvas>
@@ -852,8 +867,8 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-warning">
-                                    <div class="card-header bg-warning pr-3">
-                                        رفض الكتروني
+                                    <div class="card-header bg-warning pr-3" id="employStatHalfTitleNo7">
+                                        
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
                                         <canvas class="h-100 w-100" id="employStatHalfChartNo7"></canvas>
@@ -864,8 +879,8 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-dark-green">
-                                    <div class="card-header bg-dark-green pr-3">
-                                        بانتظار الموافقة
+                                    <div class="card-header bg-dark-green pr-3" id="employStatHalfTitleNo8">
+                                        
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
                                         <canvas class="h-100 w-100" id="employStatHalfChartNo8"></canvas>
@@ -876,11 +891,223 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-rose">
-                                    <div class="card-header bg-rose pr-3">
-                                        بانتظار التعديل
+                                    <div class="card-header bg-rose pr-3" id="employStatHalfTitleNo9">
+                                        
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
                                         <canvas class="h-100 w-100" id="employStatHalfChartNo9"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-maron">
+                                    <div class="card-header bg-maron pr-3" id="employStatHalfTitleNo10">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo10"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-rody">
+                                    <div class="card-header bg-rody pr-3" id="employStatHalfTitleNo11">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="employStatHalfChartNo11"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- start of electronics employe statestics -->
+                <div class="row elecStat h-100 w-100 d-none" data-values="[50 , 70 , 40, 80 , 20 , 90]">
+
+                    <!-- bar Chart start -->
+                    <div class="col-12 px-3 mb-5 bar-chart-col" id="electronicStatistics">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas class="w-100" height="95" id="elecStatBarChart"></canvas>
+
+                        </div>
+                    </div>
+
+                    <!-- Line Chart -->
+                    <div class="col-12 px-3 mb-5 line-chart-col">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas class="w-100" height="95" id="elecStatLineChart"></canvas>
+
+                        </div>
+                    </div>
+
+                    <!-- Circle Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 circle-chart-col notaries-circle-chart-col d-none">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="elecStatTitleNo1">
+
+                                    </div>
+                                    <div id="elecStatCircleChartNo1" class="card-body text-center my-2 p-2">
+                                        <span class="text-teal"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="elecStatTitleNo2">
+
+                                    </div>
+                                    <div id="elecStatCircleChartNo2" class="card-body text-center my-2 p-2">
+                                        <span class="text-cyan"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3" id="elecStatTitleNo3">
+
+                                    </div>
+                                    <div id="elecStatCircleChartNo3" class="card-body text-center my-2 p-2">
+                                        <span class="text-light-red"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3" id="elecStatTitleNo4">
+
+                                    </div>
+                                    <div id="elecStatCircleChartNo4" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-red"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3" id="elecStatTitleNo5">
+
+                                    </div>
+                                    <div id="elecStatCircleChartNo5" class="card-body text-center my-2 p-2">
+                                        <span class="text-indigo"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3"  id="elecStatTitleNo6">
+
+                                    </div>
+                                    <div id="elecStatCircleChartNo6" class="card-body text-center my-2 p-2">
+                                        <span class="text-purple"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3" id="elecStatTitleNo7">
+
+                                    </div>
+                                    <div id="elecStatCircleChartNo7" class="card-body text-center my-2 p-2">
+                                        <span class="text-warning"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Half Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 half-chart-col notaries-half-chart-col d-none">
+                        <div class="row justify-content-center">
+
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="elecStatHalfTitleNo1">
+                                        
+                                    </div>
+                                    <div id="brev-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="elecStatHalfChartNo1"></canvas>
+                                            <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="elecStatHalfTitleNo2">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="elecStatHalfChartNo2"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3" id="elecStatHalfTitleNo3">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="elecStatHalfChartNo3"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3" id="elecStatHalfTitleNo4">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="elecStatHalfChartNo4"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3" id="elecStatHalfTitleNo5">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="elecStatHalfChartNo5"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3" id="elecStatHalfTitleNo6">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="elecStatHalfChartNo6"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3" id="elecStatHalfTitleNo7">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="elecStatHalfChartNo7"></canvas>
                                             <span></span>
 
                                     </div>
@@ -916,6 +1143,7 @@
     <script src="./assets/js/circle-progress.min.js"></script>
     <script src="./assets/js/transactionCharts.js"></script>
     <script src="./assets/js/employStatCharts.js"></script>
+    <script src="./assets/js/elecTransCharts.js"></script>
 
 
     <!-- Main JS -->
