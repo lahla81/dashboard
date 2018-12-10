@@ -720,6 +720,9 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row.transaction .elecStat {
   display: none; }
 
+.chart-row.transaction .employLate {
+  display: none; }
+
 .chart-row.employStat .transaction {
   display: none; }
 
@@ -729,6 +732,9 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row.employStat .elecStat {
   display: none; }
 
+.chart-row.employStat .employLate {
+  display: none; }
+
 .chart-row.elecStat .transaction {
   display: none; }
 
@@ -736,6 +742,21 @@ input#customCheck-bar:checked ~ #label-bar {
   display: none; }
 
 .chart-row.elecStat .elecStat {
+  display: block !important; }
+
+.chart-row.elecStat .employLate {
+  display: none; }
+
+.chart-row.employLate .transaction {
+  display: none; }
+
+.chart-row.employLate .employStat {
+  display: none; }
+
+.chart-row.employLate .elecStat {
+  display: none; }
+
+.chart-row.employLate .employLate {
   display: block !important; }
 
 .table-responsive .modal {

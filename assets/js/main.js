@@ -28,6 +28,7 @@ $(document).ready(function () {
             $('.chart-row').removeClass("barChart");
             $('.chart-row').removeClass("circleChart");
             $('.chart-row').removeClass("halfChart");
+            
         });
 
         $('#customCheck-half:input').click(function(){
@@ -61,28 +62,28 @@ $(document).ready(function () {
             $('.chart-row').addClass("transaction");
             $('.chart-row').removeClass("employStat");
             $('.chart-row').removeClass("elecStat");
-            // $('.chart-row').removeClass("halfChart");
+            $('.chart-row').removeClass("employLate");
         });
 
         $('#customCheck2:input').click(function(){
             $('.chart-row').addClass("employStat");
             $('.chart-row').removeClass("transaction");
             $('.chart-row').removeClass("elecStat");
-            // $('.chart-row').removeClass("halfChart");
+            $('.chart-row').removeClass("employLate");
         });
 
         $('#customCheck3:input').click(function(){
             $('.chart-row').addClass("elecStat");
             $('.chart-row').removeClass("employStat");
             $('.chart-row').removeClass("transaction");
-            // $('.chart-row').removeClass("lineChart");
+            $('.chart-row').removeClass("employLate");
         });
 
         $('#customCheck4:input').click(function(){
-            // $('.chart-row').addClass("circleChart");
-            // $('.chart-row').removeClass("lineChart");
-            // $('.chart-row').removeClass("barChart");
-            // $('.chart-row').removeClass("halfChart");
+            $('.chart-row').addClass("employLate");
+            $('.chart-row').removeClass("elecStat");
+            $('.chart-row').removeClass("employStat");
+            $('.chart-row').removeClass("transaction");
         });
 
     })();

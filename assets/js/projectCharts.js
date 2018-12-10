@@ -15,7 +15,7 @@ $(document).ready(function () {
         gradient2.addColorStop(0, '#FF95DA');
         gradient2.addColorStop(1, '#E50497');
         
-        Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        // Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
         // Chart.defaults.global.defaultFontSize = 12;
         
         var myChart = new Chart(bar_ctx, {
@@ -133,7 +133,7 @@ $(document).ready(function () {
         gradient3.addColorStop(1, 'rgba(59,134,255,0)');
         gradient3.addColorStop(0, '#3B86FF');
 
-        Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        // Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
         var chart = new Chart(line_ctx, {
             // The type of chart we want to create
@@ -229,7 +229,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#A341F7');
 
-        Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -308,7 +308,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#FF07A9');
 
-        Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
