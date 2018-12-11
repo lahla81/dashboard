@@ -7,7 +7,10 @@ $(document).ready(function () {
                     "عقد رهن","عقد بيع وتنازل","عقد عمل خاص",
                     "اقرار","تعهد","وكيل خدمات","اثبات تاريخ محرر","نسخة طبق الاصل",
                     "الوصية لغير المسلم","عقود اخرى","الاجمالي"];
-    
+// start();
+
+// function start(){
+
    // bar Chart
    (function(){
     
@@ -1683,5 +1686,12 @@ $(document).ready(function () {
             $(this).find('span').html(Math.round(stepvalue * 100) + '%');
         });
     })();
+// }
 
+// $('#customCheck6:input').click(function(){
+//     // myChart.destroy();
+//     var employeTransactionTypes = document.getElementById("employeTransactionTypes");
+//     const dataValue = JSON.parse(employeTransactionTypes.parentElement.dataset.values);
+//     start();
+// });
 });

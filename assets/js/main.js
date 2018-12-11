@@ -93,6 +93,15 @@ $(document).ready(function () {
             $('.chart-row').removeClass("employStat");
             $('.chart-row').removeClass("transaction");
             $('.chart-row').addClass("transactionTypes");
+            $('#transactionTypes').css('display','none');
+        });
+        $('#customCheck6:input').click(function(){
+            $('.chart-row').removeClass("employLate");
+            $('.chart-row').removeClass("elecStat");
+            $('.chart-row').removeClass("employStat");
+            $('.chart-row').removeClass("transaction");
+            $('.chart-row').addClass("transactionTypes");
+            $('#transactionTypes').css('display','block');
         });
 
     })();
