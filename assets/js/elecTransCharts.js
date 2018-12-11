@@ -48,8 +48,8 @@ $(document).ready(function () {
         gradient7.addColorStop(0, '#FA9F9F');
         gradient7.addColorStop(1, '#F06161');
         
-        // Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-        // Chart.defaults.global.defaultFontSize = 12;
+        Chart.defaults.global.animationSteps = 50;
+        Chart.defaults.global.animationEasing = "easeOutBounce";
         
         var myChart = new Chart(bar_ctx, {
             type: 'bar',

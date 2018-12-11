@@ -642,6 +642,13 @@ input#customCheck-bar:checked ~ #label-bar {
   .card-rody .card-title {
     color: #4D4F5C; }
 
+.card-maroon {
+  box-shadow: 0 3px 20px #B51E1E; }
+  .card-maroon .card-header {
+    box-shadow: 0 3px 6px #B51E1E; }
+  .card-maroon .card-title {
+    color: #B51E1E; }
+
 .bar-chart-col,
 .line-chart-col {
   margin-top: 32px; }
@@ -723,6 +730,9 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row.transaction .employLate {
   display: none; }
 
+.chart-row.transaction .transactionTypes {
+  display: none; }
+
 .chart-row.employStat .transaction {
   display: none; }
 
@@ -733,6 +743,9 @@ input#customCheck-bar:checked ~ #label-bar {
   display: none; }
 
 .chart-row.employStat .employLate {
+  display: none; }
+
+.chart-row.employStat .transactionTypes {
   display: none; }
 
 .chart-row.elecStat .transaction {
@@ -747,6 +760,9 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row.elecStat .employLate {
   display: none; }
 
+.chart-row.elecStat .transactionTypes {
+  display: none; }
+
 .chart-row.employLate .transaction {
   display: none; }
 
@@ -757,6 +773,24 @@ input#customCheck-bar:checked ~ #label-bar {
   display: none; }
 
 .chart-row.employLate .employLate {
+  display: block !important; }
+
+.chart-row.employLate .transactionTypes {
+  display: none; }
+
+.chart-row.transactionTypes .transaction {
+  display: none; }
+
+.chart-row.transactionTypes .employStat {
+  display: none; }
+
+.chart-row.transactionTypes .elecStat {
+  display: none; }
+
+.chart-row.transactionTypes .employLate {
+  display: none; }
+
+.chart-row.transactionTypes .transactionTypes {
   display: block !important; }
 
 .table-responsive .modal {
