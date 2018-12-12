@@ -15,6 +15,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="assets/fonts/dinnext/Jf-flat.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <script defer src="assets/fonts/fontawesome/fontawesome-all.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -278,66 +279,67 @@
                 <!-- start of right-page-content -->
                 <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
-            
-                        <div class="checkbox-main">
-                            <label class="custom-control-label custom-control-label-notary"
-                                for="customCheck1">المعاملات الالكترونية ( اجمالي عدد المعاملات لكل نوع)
-                                <input type="radio" name="notary"
-                                    class="custom-control-input"
-                                    id="customCheck1" checked>
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
+                        <form action="">
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary"
+                                    for="customCheck1">المعاملات الالكترونية ( اجمالي عدد المعاملات لكل نوع)
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck1" checked>
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
 
-                        <div class="checkbox-main">
-                            <label class="custom-control-label custom-control-label-notary"
-                                for="customCheck2">إحصائية الموظف للمعاملات الالكترونية بحسب الفئة ( يومي ، شهري ، سنوي ) ( 60معاملة ، 50 معاملات ، 10 معاملات ، 5 معاملة ) 
-                                <input type="radio" name="notary"
-                                    class="custom-control-input"
-                                    id="customCheck2">
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary"
+                                    for="customCheck2">إحصائية الموظف للمعاملات الالكترونية بحسب الفئة ( يومي ، شهري ، سنوي ) ( 60معاملة ، 50 معاملات ، 10 معاملات ، 5 معاملة ) 
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck2">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
 
-                        <div class="checkbox-main">
-                            <label class="custom-control-label custom-control-label-notary"
-                                for="customCheck3">إحصائية بالمعاملات التي تم ادخالها الكترونيا خلال ايام الاسبوع 
-                                <input type="radio" name="notary"
-                                    class="custom-control-input"
-                                    id="customCheck3">
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary"
+                                    for="customCheck3">إحصائية بالمعاملات التي تم ادخالها الكترونيا خلال ايام الاسبوع 
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck3">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
 
-                        <div class="checkbox-main">
-                            <label class="custom-control-label custom-control-label-notary"
-                                for="customCheck4">إحصائية بالمعاملات المتأخرة  لكل موظف
-                                <input type="radio" name="notary"
-                                    class="custom-control-input"
-                                    id="customCheck4">
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary"
+                                    for="customCheck4">إحصائية بالمعاملات المتأخرة  لكل موظف
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck4">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
 
-                        <div class="checkbox-main">
-                            <label class="custom-control-label custom-control-label-notary"
-                                for="customCheck5">تقرير إحصائي حسب نوع المعاملات ( اجمالي عدد المعاملات لكل نوع)
-                                <input type="radio" name="notary"
-                                    class="custom-control-input"
-                                    id="customCheck5">
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary"
+                                    for="customCheck5">تقرير إحصائي حسب نوع المعاملات ( اجمالي عدد المعاملات لكل نوع)
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck5">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
 
-                        <div class="checkbox-main">
-                            <label class="custom-control-label custom-control-label-notary"
-                                for="customCheck6">إحصائية بحسب  نوع المعاملات لكل موظف
-                                <input type="radio" name="notary"
-                                    class="custom-control-input"
-                                    id="customCheck6">
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary"
+                                    for="customCheck6">إحصائية بحسب  نوع المعاملات لكل موظف
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck6">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+                        </form>
                         
                     </div>
                     
@@ -394,10 +396,42 @@
                             </div>
                         </div>
                         <div class="row text-center">
-                            <button class="btn btn-primary mt-4 mb-2 py-10 px-5 mx-auto period-btn" type="button">
+                            <button class="btn btn-primary mt-4 mb-2 py-10 px-5 mx-auto period-btn" type="button" data-toggle="modal" data-target="#calendar">
                                 حدد المدة
                                 <img class="mr-2 pr-1" src="./assets/img/icons/calendar-icon.png" alt="">
                             </button>
+
+                            <div class="modal fade" id="calendar" tabindex="-1" role="dialog" aria-labelledby="calendarTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="calendarTitle">حدد المدة</h5>
+                                            <button type="button" class="mr-auto ml-1 close" data-dismiss="modal" aria-label="Close">
+                                            <span class="" aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-12 col-md-6 p-0">
+                                                <p class="mb-0 text-primary">من</p>
+                                                <div class="modal-body pt-0 font-body-bold" id="calendar_from">
+                                        
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 p-0">
+                                                <p class="mb-0 text-light-red">إلي</p>
+                                                <div class="modal-body pt-0 font-body-bold" id="calendar_to">
+                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary mx-2" data-dismiss="modal">إغلاق</button>
+                                            <button type="button" class="btn btn-primary">حفظ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1171,16 +1205,350 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>                     
                 </div>
 
 
                 <!-- start of transactionTypes -->
-                <div class="row transactionTypes h-100 w-100 d-none" data-values="[80 , 20 , 50 , 65 , 45 , 60, 70 , 60 , 70 , 30 , 10 , 90 , 80 , 50]">
+                <div class="row transactionTypes h-100 w-100 d-none" data-values="[80 , 20 , 50 , 65 , 45 , 60, 70 , 60 , 70 , 70 , 80 , 90 , 80 , 50]">
+
+                    <!-- bar of transactionTypes Chart start -->
+                    <div class="col-12 px-3 mb-5 bar_line_chart_col" style="height:500px;" id="transactionTypes">
+                        <div class="chart-small h-100 w-100 py-4 position-relative">
+                            <canvas class="w-100 h-100" id="transactionTypesBarChart"></canvas>
+
+                        </div>
+                    </div>
+
+                    <!-- Circle of transactionTypes Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 circle-chart-col notaries-circle-chart-col d-none">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="transactionTypeTitleNo0">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo0" class="card-body text-center my-2 p-2">
+                                        <span class="text-teal"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="transactionTypeTitleNo1">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo1" class="card-body text-center my-2 p-2">
+                                        <span class="text-cyan"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3" id="transactionTypeTitleNo2">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo2" class="card-body text-center my-2 p-2">
+                                        <span class="text-light-red"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3" id="transactionTypeTitleNo3">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo3" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-red"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3" id="transactionTypeTitleNo4">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo4" class="card-body text-center my-2 p-2">
+                                        <span class="text-indigo"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3"  id="transactionTypeTitleNo5">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo5" class="card-body text-center my-2 p-2">
+                                        <span class="text-purple"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3" id="transactionTypeTitleNo6">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo6" class="card-body text-center my-2 p-2">
+                                        <span class="text-warning"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-green">
+                                    <div class="card-header bg-dark-green pr-3" id="transactionTypeTitleNo7">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo7" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-green"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-rose">
+                                    <div class="card-header bg-rose pr-3" id="transactionTypeTitleNo8">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo8" class="card-body text-center my-2 p-2">
+                                        <span class="text-rose"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-rody">
+                                    <div class="card-header bg-rody pr-3" id="transactionTypeTitleNo9">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo9" class="card-body text-center my-2 p-2">
+                                        <span class="text-rody"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-maron">
+                                    <div class="card-header bg-maron pr-3" id="transactionTypeTitleNo10">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo10" class="card-body text-center my-2 p-2">
+                                        <span class="text-maron"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-maroon">
+                                    <div class="card-header bg-maroon pr-3" id="transactionTypeTitleNo11">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo11" class="card-body text-center my-2 p-2">
+                                        <span class="text-maroon"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="transactionTypeTitleNo12">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo12" class="card-body text-center my-2 p-2">
+                                        <span class="text-teal"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="transactionTypeTitleNo13">
+
+                                    </div>
+                                    <div id="transactionTypeCircleChartNo13" class="card-body text-center my-2 p-2">
+                                        <span class="text-cyan"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Half of transactionTypes Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 half-chart-col notaries-half-chart-col d-none">
+                        <div class="row justify-content-center">
+
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="transactionTypesHalfChart0">
+                                       
+                                    </div>
+                                    <div id="brev-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle0"></canvas>
+                                            <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="transactionTypesHalfChart1">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle1"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3" id="transactionTypesHalfChart2">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle2"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3" id="transactionTypesHalfChart3">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle3"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3" id="transactionTypesHalfChart4">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle4"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3" id="transactionTypesHalfChart5">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle5"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3" id="transactionTypesHalfChart6">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle6"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-green">
+                                    <div class="card-header bg-dark-green pr-3" id="transactionTypesHalfChart7">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle7"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-rose">
+                                    <div class="card-header bg-rose pr-3" id="transactionTypesHalfChart8">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle8"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-maron">
+                                    <div class="card-header bg-maron pr-3" id="transactionTypesHalfChart9">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle9"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-rody">
+                                    <div class="card-header bg-rody pr-3" id="transactionTypesHalfChart10">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle10"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-maroon">
+                                    <div class="card-header bg-maroon pr-3" id="transactionTypesHalfChart11">
+                                       
+                                    </div>
+                                    <div id="brev-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle11"></canvas>
+                                            <span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="transactionTypesHalfChart12">
+                                       
+                                    </div>
+                                    <div id="brev-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle12"></canvas>
+                                            <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="transactionTypesHalfChart13">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle13"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- start of employes transactionTypes -->
+                <div class="row employeTransactionTypes h-100 w-100 d-none" data-values="[30 , 40 , 80 , 25 , 55 , 65, 70 , 60 , 70 , 30 , 10 , 20 , 80 , 30]">
                     
                     <!-- اسم الموظف -->
-                    <div class="col-12" id="transactionTypes">
+                    <div class="col-12" id="employeTransactionTypes">
                         <div class="row justify-content-center">
                             <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-3">
                                 <div class="card card-teal">
@@ -1198,17 +1566,9 @@
                     </div>
 
                     <!-- bar of transactionTypes Chart start -->
-                    <div class="col-12 px-3 mb-5 bar-chart-col">
-                        <div class="chart-small w-100 py-4 position-relative">
-                            <canvas class="w-100" height="95" id="transactionTypesBarChart"></canvas>
-
-                        </div>
-                    </div>
-
-                    <!-- Line of transactionTypes Chart -->
-                    <div class="col-12 px-3 mb-5 line-chart-col">
-                        <div class="chart-small w-100 py-4 position-relative">
-                            <canvas class="w-100" height="100" id="transactionTypesLineChart"></canvas>
+                    <div class="col-12 px-3 mb-5 bar_line_chart_col" style="height:500px;">
+                        <div class="chart-small h-100 w-100 py-4 position-relative">
+                            <canvas class="w-100 h-100" id="employeTransactionTypesBarChart"></canvas>
 
                         </div>
                     </div>
@@ -1218,140 +1578,140 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-teal">
-                                    <div class="card-header bg-teal pr-3" id="transactionTypeTitleNo1">
+                                    <div class="card-header bg-teal pr-3" id="employeTransactionTypeTitleNo0">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo1" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo0" class="card-body text-center my-2 p-2">
                                         <span class="text-teal"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-cyan">
-                                    <div class="card-header bg-cyan pr-3" id="transactionTypeTitleNo2">
+                                    <div class="card-header bg-cyan pr-3" id="employeTransactionTypeTitleNo1">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo2" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo1" class="card-body text-center my-2 p-2">
                                         <span class="text-cyan"></span> 
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-light-red">
-                                    <div class="card-header bg-light-red pr-3" id="transactionTypeTitleNo3">
+                                    <div class="card-header bg-light-red pr-3" id="employeTransactionTypeTitleNo2">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo3" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo2" class="card-body text-center my-2 p-2">
                                         <span class="text-light-red"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-dark-red">
-                                    <div class="card-header bg-dark-red pr-3" id="transactionTypeTitleNo4">
+                                    <div class="card-header bg-dark-red pr-3" id="employeTransactionTypeTitleNo3">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo4" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo3" class="card-body text-center my-2 p-2">
                                         <span class="text-dark-red"></span> 
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-indigo">
-                                    <div class="card-header bg-indigo pr-3" id="transactionTypeTitleNo5">
+                                    <div class="card-header bg-indigo pr-3" id="employeTransactionTypeTitleNo4">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo5" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo4" class="card-body text-center my-2 p-2">
                                         <span class="text-indigo"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-purple">
-                                    <div class="card-header bg-purple pr-3"  id="transactionTypeTitleNo6">
+                                    <div class="card-header bg-purple pr-3"  id="employeTransactionTypeTitleNo5">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo6" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo5" class="card-body text-center my-2 p-2">
                                         <span class="text-purple"></span> 
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-warning">
-                                    <div class="card-header bg-warning pr-3" id="transactionTypeTitleNo7">
+                                    <div class="card-header bg-warning pr-3" id="employeTransactionTypeTitleNo6">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo7" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo6" class="card-body text-center my-2 p-2">
                                         <span class="text-warning"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-dark-green">
-                                    <div class="card-header bg-dark-green pr-3" id="transactionTypeTitleNo8">
+                                    <div class="card-header bg-dark-green pr-3" id="employeTransactionTypeTitleNo7">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo8" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo7" class="card-body text-center my-2 p-2">
                                         <span class="text-dark-green"></span> 
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-rose">
-                                    <div class="card-header bg-rose pr-3" id="transactionTypeTitleNo9">
+                                    <div class="card-header bg-rose pr-3" id="employeTransactionTypeTitleNo8">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo9" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo8" class="card-body text-center my-2 p-2">
                                         <span class="text-rose"></span> 
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-rody">
-                                    <div class="card-header bg-rody pr-3" id="transactionTypeTitleNo10">
+                                    <div class="card-header bg-rody pr-3" id="employeTransactionTypeTitleNo9">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo10" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo9" class="card-body text-center my-2 p-2">
                                         <span class="text-rody"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-maron">
-                                    <div class="card-header bg-maron pr-3" id="transactionTypeTitleNo11">
+                                    <div class="card-header bg-maron pr-3" id="employeTransactionTypeTitleNo10">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo11" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo10" class="card-body text-center my-2 p-2">
                                         <span class="text-maron"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-maroon">
-                                    <div class="card-header bg-maroon pr-3" id="transactionTypeTitleNo12">
+                                    <div class="card-header bg-maroon pr-3" id="employeTransactionTypeTitleNo11">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo12" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo11" class="card-body text-center my-2 p-2">
                                         <span class="text-maroon"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-teal">
-                                    <div class="card-header bg-teal pr-3" id="transactionTypeTitleNo13">
+                                    <div class="card-header bg-teal pr-3" id="employeTransactionTypeTitleNo12">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo13" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo12" class="card-body text-center my-2 p-2">
                                         <span class="text-teal"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
                                 <div class="card card-cyan">
-                                    <div class="card-header bg-cyan pr-3" id="transactionTypeTitleNo14">
+                                    <div class="card-header bg-cyan pr-3" id="employeTransactionTypeTitleNo13">
 
                                     </div>
-                                    <div id="transactionTypeCircleChartNo14" class="card-body text-center my-2 p-2">
+                                    <div id="employeTransactionTypeCircleChartNo13" class="card-body text-center my-2 p-2">
                                         <span class="text-cyan"></span> 
                                     </div>
                                 </div>
@@ -1365,22 +1725,22 @@
 
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-teal">
-                                    <div class="card-header bg-teal pr-3" id="transactionTypesHalfChart1">
+                                    <div class="card-header bg-teal pr-3" id="employeTransactionTypesHalfChart0">
                                        
                                     </div>
                                     <div id="brev-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle1"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle0"></canvas>
                                             <span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-cyan">
-                                    <div class="card-header bg-cyan pr-3" id="transactionTypesHalfChart2">
+                                    <div class="card-header bg-cyan pr-3" id="employeTransactionTypesHalfChart1">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle2"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle1"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1388,11 +1748,11 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-light-red">
-                                    <div class="card-header bg-light-red pr-3" id="transactionTypesHalfChart3">
+                                    <div class="card-header bg-light-red pr-3" id="employeTransactionTypesHalfChart2">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle3"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle2"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1400,11 +1760,11 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-dark-red">
-                                    <div class="card-header bg-dark-red pr-3" id="transactionTypesHalfChart4">
+                                    <div class="card-header bg-dark-red pr-3" id="employeTransactionTypesHalfChart3">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle4"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle3"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1412,11 +1772,11 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-indigo">
-                                    <div class="card-header bg-indigo pr-3" id="transactionTypesHalfChart5">
+                                    <div class="card-header bg-indigo pr-3" id="employeTransactionTypesHalfChart4">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle5"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle4"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1424,11 +1784,11 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-purple">
-                                    <div class="card-header bg-purple pr-3" id="transactionTypesHalfChart6">
+                                    <div class="card-header bg-purple pr-3" id="employeTransactionTypesHalfChart5">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle6"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle5"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1436,11 +1796,11 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-warning">
-                                    <div class="card-header bg-warning pr-3" id="transactionTypesHalfChart7">
+                                    <div class="card-header bg-warning pr-3" id="employeTransactionTypesHalfChart6">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle7"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle6"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1448,11 +1808,11 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-dark-green">
-                                    <div class="card-header bg-dark-green pr-3" id="transactionTypesHalfChart8">
+                                    <div class="card-header bg-dark-green pr-3" id="employeTransactionTypesHalfChart7">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle8"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle7"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1460,11 +1820,11 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-rose">
-                                    <div class="card-header bg-rose pr-3" id="transactionTypesHalfChart9">
+                                    <div class="card-header bg-rose pr-3" id="employeTransactionTypesHalfChart8">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle9"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle8"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1472,11 +1832,11 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-maron">
-                                    <div class="card-header bg-maron pr-3" id="transactionTypesHalfChart10">
+                                    <div class="card-header bg-maron pr-3" id="employeTransactionTypesHalfChart9">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle10"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle9"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1484,11 +1844,11 @@
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-rody">
-                                    <div class="card-header bg-rody pr-3" id="transactionTypesHalfChart11">
+                                    <div class="card-header bg-rody pr-3" id="employeTransactionTypesHalfChart10">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle11"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle10"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1497,11 +1857,11 @@
 
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-maroon">
-                                    <div class="card-header bg-maroon pr-3" id="transactionTypesHalfChart12">
+                                    <div class="card-header bg-maroon pr-3" id="employeTransactionTypesHalfChart11">
                                        
                                     </div>
                                     <div id="brev-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle12"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle11"></canvas>
                                             <span></span>
                                     </div>
                                 </div>
@@ -1509,22 +1869,22 @@
 
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-teal">
-                                    <div class="card-header bg-teal pr-3" id="transactionTypesHalfChart13">
+                                    <div class="card-header bg-teal pr-3" id="employeTransactionTypesHalfChart12">
                                        
                                     </div>
                                     <div id="brev-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle13"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle12"></canvas>
                                             <span></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 px-1 mt-3">
                                 <div class="card card-cyan">
-                                    <div class="card-header bg-cyan pr-3" id="transactionTypesHalfChart14">
+                                    <div class="card-header bg-cyan pr-3" id="employeTransactionTypesHalfChart13">
                                         
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="transactionTypesHalfTitle14"></canvas>
+                                        <canvas class="h-100 w-100" id="employeTransactionTypesHalfTitle13"></canvas>
                                             <span></span>
 
                                     </div>
@@ -1536,43 +1896,47 @@
                     
                 </div>
 
-                <!-- start of employeTransactionTypes -->
-                <div class="row employeTransactionTypes h-100 w-100 d-none" data-values="[30 , 40 , 80 , 25 , 55 , 65, 70 , 60 , 70 , 30 , 10 , 95 , 80 , 50]">
-                    <div class="col-12" id="employeTransactionTypes">
-                    </div>
-                </div>
-
             </div>
 
         </div>
 
     </div>
 
- <!-- Optional JavaScript -->
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="./assets/js/vendor/jquery-3.3.1.min.js"><\/script>');
     </script>
-    <script src="./assets/js/vendor/popper.min.js"></script>
     <script src="./assets/js/vendor/bootstrap.min.js"></script>
-
-    <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- <script src="./assets/js/vendor/jquery.js"></script> -->
+    <script src="./assets/js/vendor/jquery-ui.min.js"></script>
 
     <!-- CHART JS -->
-    <script src="./assets/js/Chart.min.js"></script>
-    <script src="./assets/js/chartjs-plugin-style.min.js"></script>
-    <script src="./assets/js/circle-progress.min.js"></script>
+    <script src="./assets/js/vendor/Chart.min.js"></script>
+    <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
+    <script src="./assets/js/vendor/circle-progress.min.js"></script>
+
     <script src="./assets/js/transactionCharts.js"></script>
     <script src="./assets/js/employStatCharts.js"></script>
     <script src="./assets/js/elecTransCharts.js"></script>
     <script src="./assets/js/employLate.js"></script>
     <script src="./assets/js/transactionTypes.js"></script>
-
-
+    <script src="./assets/js/employeTransactionTypes.js"></script>
+    
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
+
+    <script>
+        $( function() {
+            $( "#calendar_from" ).datepicker({
+                isRTL: true,
+            });
+            $( "#calendar_to" ).datepicker({
+                isRTL: true,
+            });
+        });
+    </script>
     
 </body>
 

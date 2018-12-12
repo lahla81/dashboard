@@ -113,20 +113,31 @@ h6,
   margin: 0 !important; }
 
 .main-page {
-  min-height: 100vh; }
+  min-height: 100vh;
+  transition: all 0.3s; }
 
 .main-body {
   background: #37B26F;
   background-image: url(../img/01/Group-4.png), linear-gradient(-135deg, #37B26F 10%, #201E52 90%);
   background-position: center center, center center;
   background-size: cover , cover;
-  background-repeat: no-repeat, no-repeat;
-  flex: 0 0 73%;
-  max-width: 73%; }
+  background-repeat: no-repeat, no-repeat; }
 
 .main-sidebar {
-  flex: 0 0 27%;
-  max-width: 27%; }
+  min-width: 522px;
+  max-width: 522px;
+  min-height: 100vh;
+  transition: all 0.3s; }
+  @media (max-width: 992px) {
+    .main-sidebar {
+      min-width: 270px;
+      max-width: 270px; } }
+
+#main_sidbar.active {
+  margin-right: -522px; }
+  @media (max-width: 992px) {
+    #main_sidbar.active {
+      margin-right: -270px; } }
 
 .login-head {
   font-size: 24px;
@@ -330,6 +341,94 @@ header.site-header {
   font-size: 18px;
   border-radius: 27px;
   line-height: 40px; }
+
+.content-left .modal-dialog {
+  max-width: 800px !important; }
+
+.content-left .ui-datepicker {
+  width: 100% !important; }
+
+.content-left .ui-datepicker-prev .ui-icon {
+  background-image: url(../img/icons/right.png) !important;
+  background-size: cover;
+  background-position: 0 0; }
+
+.content-left .ui-datepicker-next .ui-icon {
+  background-image: url(../img/icons/left.png) !important;
+  background-size: cover;
+  background-position: 0 0; }
+
+.content-left .ui-widget-header {
+  border: none;
+  background: transparent; }
+
+.content-left .ui-widget-content {
+  color: #A3A6B4; }
+
+.content-left #calendar_from .ui-widget-header {
+  color: #37B26F; }
+
+.content-left #calendar_from .ui-button.ui-state-active:hover,
+.content-left #calendar_from .ui-button:active, .content-left #calendar_from .ui-state-active,
+.content-left #calendar_from .ui-widget-content .ui-state-active,
+.content-left #calendar_from .ui-widget-header .ui-state-active,
+.content-left #calendar_from a.ui-button:active {
+  background: rgba(55, 178, 111, 0.2);
+  color: #37B26F;
+  font-weight: 400;
+  border-radius: 50%;
+  font-size: 16px; }
+
+.content-left #calendar_from .ui-state-highlight,
+.content-left #calendar_from .ui-widget-content .ui-state-highlight,
+.content-left #calendar_from .ui-widget-header .ui-state-highlight {
+  background: rgba(232, 62, 140, 0.1);
+  color: rgba(232, 62, 140, 0.5);
+  border-radius: 50%; }
+
+.content-left #calendar_to .ui-widget-header {
+  color: #FF6A6A; }
+
+.content-left #calendar_to .ui-button.ui-state-active:hover,
+.content-left #calendar_to .ui-button:active, .content-left #calendar_to .ui-state-active,
+.content-left #calendar_to .ui-widget-content .ui-state-active,
+.content-left #calendar_to .ui-widget-header .ui-state-active,
+.content-left #calendar_to a.ui-button:active {
+  background: rgba(255, 106, 106, 0.2);
+  color: #FF6A6A;
+  font-weight: 400;
+  border-radius: 50%; }
+
+.content-left #calendar_to .ui-state-highlight,
+.content-left #calendar_to .ui-widget-content .ui-state-highlight,
+.content-left #calendar_to .ui-widget-header .ui-state-highlight {
+  background: rgba(232, 62, 140, 0.1);
+  color: rgba(232, 62, 140, 0.5);
+  border-radius: 50%; }
+
+.content-left .ui-widget.ui-widget-content {
+  border: none; }
+
+.content-left .ui-datepicker table thead {
+  border-bottom: 1px solid #E9E9F0; }
+
+.content-left .ui-button, .content-left .ui-state-default,
+.content-left .ui-widget-content .ui-state-default,
+.content-left .ui-widget-header .ui-state-default {
+  border: none; }
+
+.content-left .ui-state-default, .content-left .ui-widget-content .ui-state-default {
+  background: #fff; }
+
+.content-left .ui-datepicker td a, .content-left .ui-datepicker td span {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  padding: 15px;
+  line-height: 20px;
+  color: #43425D;
+  font-family: 'SourceSansPro Regular';
+  font-size: 16px; }
 
 .content-title h3 {
   font-family: 'lubalingraphitcturner-boldarabic';
@@ -650,7 +749,8 @@ input#customCheck-bar:checked ~ #label-bar {
     color: #B51E1E; }
 
 .bar-chart-col,
-.line-chart-col {
+.line-chart-col,
+.bar_line_chart_col {
   margin-top: 32px; }
 
 .chart-small {
@@ -659,6 +759,9 @@ input#customCheck-bar:checked ~ #label-bar {
 
 .line-chart-col {
   display: none; }
+
+.chart-row.lineChart .bar_line_chart_col {
+  display: block !important; }
 
 .chart-row.lineChart .bar-chart-col {
   display: none; }
@@ -672,16 +775,22 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row.lineChart .half-chart-col {
   display: none; }
 
-.chart-row.barChart .bar-chart-col {
+.chart-row.barChart .bar_line_chart_col {
   display: block !important; }
 
 .chart-row.barChart .line-chart-col {
   display: none; }
 
+.chart-row.barChart .bar-chart-col {
+  display: block !important; }
+
 .chart-row.barChart .circle-chart-col {
   display: none; }
 
 .chart-row.barChart .half-chart-col {
+  display: none; }
+
+.chart-row.circleChart .bar_line_chart_col {
   display: none; }
 
 .chart-row.circleChart .bar-chart-col {
@@ -694,6 +803,9 @@ input#customCheck-bar:checked ~ #label-bar {
   display: block !important; }
 
 .chart-row.circleChart .half-chart-col {
+  display: none; }
+
+.chart-row.halfChart .bar_line_chart_col {
   display: none; }
 
 .chart-row.halfChart .bar-chart-col {
@@ -733,6 +845,9 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row.transaction .transactionTypes {
   display: none; }
 
+.chart-row.transaction .employeTransactionTypes {
+  display: none; }
+
 .chart-row.employStat .transaction {
   display: none; }
 
@@ -746,6 +861,9 @@ input#customCheck-bar:checked ~ #label-bar {
   display: none; }
 
 .chart-row.employStat .transactionTypes {
+  display: none; }
+
+.chart-row.employStat .employeTransactionTypes {
   display: none; }
 
 .chart-row.elecStat .transaction {
@@ -763,6 +881,9 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row.elecStat .transactionTypes {
   display: none; }
 
+.chart-row.elecStat .employeTransactionTypes {
+  display: none; }
+
 .chart-row.employLate .transaction {
   display: none; }
 
@@ -778,6 +899,9 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row.employLate .transactionTypes {
   display: none; }
 
+.chart-row.employLate .employeTransactionTypes {
+  display: none; }
+
 .chart-row.transactionTypes .transaction {
   display: none; }
 
@@ -791,6 +915,27 @@ input#customCheck-bar:checked ~ #label-bar {
   display: none; }
 
 .chart-row.transactionTypes .transactionTypes {
+  display: block !important; }
+
+.chart-row.transactionTypes .employeTransactionTypes {
+  display: none; }
+
+.chart-row.employeTransactionTypes .transaction {
+  display: none; }
+
+.chart-row.employeTransactionTypes .employStat {
+  display: none; }
+
+.chart-row.employeTransactionTypes .elecStat {
+  display: none; }
+
+.chart-row.employeTransactionTypes .employLate {
+  display: none; }
+
+.chart-row.employeTransactionTypes .transactionTypes {
+  display: none; }
+
+.chart-row.employeTransactionTypes .employeTransactionTypes {
   display: block !important; }
 
 .table-responsive .modal {

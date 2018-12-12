@@ -3,7 +3,9 @@ $(document).ready(function () {
     // sidebar toggle
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
+        $('#main_sidbar').toggleClass('active');
     });
+    
 
     (function(){
         // left check box changee label-background and its chart
@@ -62,6 +64,7 @@ $(document).ready(function () {
             $('.chart-row').removeClass("elecStat");
             $('.chart-row').removeClass("employLate");
             $('.chart-row').removeClass("transactionTypes");
+            $('.chart-row').removeClass("employeTransactionTypes");
         });
 
         $('#customCheck2:input').click(function(){
@@ -70,6 +73,7 @@ $(document).ready(function () {
             $('.chart-row').removeClass("elecStat");
             $('.chart-row').removeClass("employLate");
             $('.chart-row').removeClass("transactionTypes");
+            $('.chart-row').removeClass("employeTransactionTypes");
         });
 
         $('#customCheck3:input').click(function(){
@@ -78,6 +82,7 @@ $(document).ready(function () {
             $('.chart-row').removeClass("transaction");
             $('.chart-row').removeClass("employLate");
             $('.chart-row').removeClass("transactionTypes");
+            $('.chart-row').removeClass("employeTransactionTypes");
         });
 
         $('#customCheck4:input').click(function(){
@@ -86,6 +91,7 @@ $(document).ready(function () {
             $('.chart-row').removeClass("employStat");
             $('.chart-row').removeClass("transaction");
             $('.chart-row').removeClass("transactionTypes");
+            $('.chart-row').removeClass("employeTransactionTypes");
         });
         $('#customCheck5:input').click(function(){
             $('.chart-row').removeClass("employLate");
@@ -93,16 +99,36 @@ $(document).ready(function () {
             $('.chart-row').removeClass("employStat");
             $('.chart-row').removeClass("transaction");
             $('.chart-row').addClass("transactionTypes");
-            $('#transactionTypes').css('display','none');
+            $('.chart-row').removeClass("employeTransactionTypes");
         });
         $('#customCheck6:input').click(function(){
             $('.chart-row').removeClass("employLate");
             $('.chart-row').removeClass("elecStat");
             $('.chart-row').removeClass("employStat");
             $('.chart-row').removeClass("transaction");
-            $('.chart-row').addClass("transactionTypes");
-            $('#transactionTypes').css('display','block');
+            $('.chart-row').removeClass("transactionTypes");
+            $('.chart-row').addClass("employeTransactionTypes");
         });
+        // $('#customCheck6:input').click(function(){
+            // $('.chart-row').removeClass("employLate");
+            // $('.chart-row').removeClass("elecStat");
+            // $('.chart-row').removeClass("employStat");
+            // $('.chart-row').removeClass("transaction");
+            // $('.chart-row').addClass("transactionTypes");
+            // $('#transactionTypes').css('display','block');
+            // $('.checkbox-small').addClass("checked-bar");
+            // $('.checkbox-small').addClass("checked-bar");
+            // $('.checkbox-small').removeClass("checked-line");
+            // $('.checkbox-small').removeClass("checked-half");
+            // $('.checkbox-small').removeClass("checked-circle");
+            // document.getElementById("customCheck-bar").checked = true;
+            // document.getElementById("customCheck-line").checked = false;
+            // document.getElementById("customCheck-half").checked = false;
+            // document.getElementById("customCheck-circle").checked = false;
+            // var employe_transaction_types_canvas_element = document.getElementById("employeTransactionTypes");
+            // var dataValue = JSON.parse(employe_transaction_types_canvas_element.parentElement.dataset.values);    
+
+        // });
 
     })();
 

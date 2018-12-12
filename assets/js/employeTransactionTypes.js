@@ -1,9 +1,10 @@
 $(document).ready(function () {
 
-        var employe_transaction_types_canvas_element = document.getElementById("transactionTypes");
-        var transData = JSON.parse(employe_transaction_types_canvas_element.parentElement.dataset.values);    
+   
+        var transactionTypes = document.getElementById("employeTransactionTypes");
+        var employeTransData = JSON.parse(transactionTypes.parentElement.dataset.values);
         
-        var canvas_element = document.getElementById("transactionTypesBarChart");
+        var canvas_element = document.getElementById("employeTransactionTypesBarChart");
         var ctx =  canvas_element.getContext('2d');
 
         const labels = ["وكاله", "عقد شركة","اعتماد توقيع",
@@ -11,71 +12,72 @@ $(document).ready(function () {
                         "اقرار","تعهد","وكيل خدمات","اثبات تاريخ محرر","نسخة طبق الاصل",
                         "الوصية لغير المسلم","عقود اخرى","الاجمالي"];
 
-        gradient0 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient0.addColorStop(0, '#FF95DA');
-        gradient0.addColorStop(1, '#E50497');
-
         gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient1.addColorStop(0, '#45C19C');
-        gradient1.addColorStop(1, '#10523D');
+        gradient1.addColorStop(0, '#FF95DA');
+        gradient1.addColorStop(1, '#E50497');
 
         gradient2 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient2.addColorStop(0, '#FFD062');
-        gradient2.addColorStop(1, '#D59704');
+        gradient2.addColorStop(0, '#45C19C');
+        gradient2.addColorStop(1, '#10523D');
 
         gradient3 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient3.addColorStop(0, '#BE72FF');
-        gradient3.addColorStop(1, '#7B0ED9');
+        gradient3.addColorStop(0, '#FFD062');
+        gradient3.addColorStop(1, '#D59704');
 
         gradient4 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient4.addColorStop(0, '#7B8AFF');
-        gradient4.addColorStop(1, '#2F44E3');
+        gradient4.addColorStop(0, '#BE72FF');
+        gradient4.addColorStop(1, '#7B0ED9');
 
         gradient5 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient5.addColorStop(0, '#FF8B58');
-        gradient5.addColorStop(1, '#C7521F');
+        gradient5.addColorStop(0, '#7B8AFF');
+        gradient5.addColorStop(1, '#2F44E3');
 
         gradient6 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient6.addColorStop(0, '#FA9F9F');
-        gradient6.addColorStop(1, '#F06161');
+        gradient6.addColorStop(0, '#FF8B58');
+        gradient6.addColorStop(1, '#C7521F');
 
         gradient7 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient7.addColorStop(0, '#7FAFFD');
-        gradient7.addColorStop(1, '#3B86FF');
+        gradient7.addColorStop(0, '#FA9F9F');
+        gradient7.addColorStop(1, '#F06161');
 
         gradient8 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient8.addColorStop(0, '#44F2BD');
-        gradient8.addColorStop(1, '#00B27C');
+        gradient8.addColorStop(0, '#7FAFFD');
+        gradient8.addColorStop(1, '#3B86FF');
 
         gradient9 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient9.addColorStop(0, '#FF6A6A');
-        gradient9.addColorStop(1, '#9F4242');
+        gradient9.addColorStop(0, '#44F2BD');
+        gradient9.addColorStop(1, '#00B27C');
 
         gradient10 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient10.addColorStop(0, '#767DAE');
-        gradient10.addColorStop(1, '#4D4F5C');
+        gradient10.addColorStop(0, '#FF6A6A');
+        gradient10.addColorStop(1, '#9F4242');
 
         gradient11 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient11.addColorStop(0, '#FF95DA');
-        gradient11.addColorStop(0.7, '#9F4242');
-        gradient11.addColorStop(1, '#9F4242');
+        gradient11.addColorStop(0, '#767DAE');
+        gradient11.addColorStop(1, '#4D4F5C');
 
         gradient12 = ctx.createLinearGradient(0, 0, 0, 600);
-        gradient12.addColorStop(1, 'rgba(59,134,255,0.19)');
-        gradient12.addColorStop(0, '#005EF7');
+        gradient12.addColorStop(0, '#FF95DA');
+        gradient12.addColorStop(0.7, '#9F4242');
+        gradient12.addColorStop(1, '#9F4242');
 
-        gradient13 = ctx.createLinearGradient(0, 0, 800, 800);
-        gradient13.addColorStop(000, '#00BA81');
-        gradient13.addColorStop(0.1, '#9102FC');
-        gradient13.addColorStop(0.2, '#45C19C');
-        gradient13.addColorStop(0.3, '#FFD062');
-        gradient13.addColorStop(0.4, '#005EF7');
-        gradient13.addColorStop(0.5, '#C7521F');
-        gradient13.addColorStop(0.6, '#FF95DA');
-        gradient13.addColorStop(0.7, '#7B8AFF');
-        gradient13.addColorStop(0.8, '#FF8B58');
-        gradient13.addColorStop(0.9, '#BE72FF');
-        gradient13.addColorStop(1.0, '#44F2BD');
+        gradient13 = ctx.createLinearGradient(0, 0, 0, 600);
+        gradient13.addColorStop(1, 'rgba(59,134,255,0.19)');
+        gradient13.addColorStop(0, '#005EF7');
+
+        gradient14 = ctx.createLinearGradient(0, 0, 800, 800);
+
+        gradient14.addColorStop(000, '#00BA81');
+        gradient14.addColorStop(0.1, '#9102FC');
+        gradient14.addColorStop(0.2, '#45C19C');
+        gradient14.addColorStop(0.3, '#FFD062');
+        gradient14.addColorStop(0.4, '#005EF7');
+        gradient14.addColorStop(0.5, '#C7521F');
+        gradient14.addColorStop(0.6, '#FF95DA');
+        gradient14.addColorStop(0.7, '#7B8AFF');
+        gradient14.addColorStop(0.8, '#FF8B58');
+        gradient14.addColorStop(0.9, '#BE72FF');
+        gradient14.addColorStop(1.0, '#44F2BD');
 
         gradhalf0 = ctx.createLinearGradient(0, 0, 0, 400);
         gradhalf0.addColorStop(1, '#000000');
@@ -152,11 +154,11 @@ $(document).ready(function () {
                     gradhalf8,gradhalf9,gradhalf10,gradhalf11,
                     gradhalf12,gradhalf13];
         
-        var halfhadowColor= [  '#00BA81','#3B86FF','#FF6A6A',
-                            '#D9581F','#3349F0','#850CED',
-                            '#E5A100','#1A8162','#FF07A9',
-                            '#711466','#4D4F5C','#B51E1E',
-                            '#00BA81','#3B86FF' ];
+        var halfShadowColor= [  '#00BA81','#3B86FF','#FF6A6A',
+                                '#D9581F','#3349F0','#850CED',
+                                '#E5A100','#1A8162','#FF07A9',
+                                '#711466','#4D4F5C','#B51E1E',
+                                '#00BA81','#3B86FF' ];
         
         var emptyFill = [
             'rgba(0,186,129,0.2)','rgba(59,134,255,0.2)','rgba(255,106,106,0.2)',
@@ -171,30 +173,30 @@ $(document).ready(function () {
         var data = {
             labels: labels,
             datasets: [{
-                data: transData,
+                data: employeTransData,
                 backgroundColor: [ 
-                    gradient0,gradient1,gradient2,gradient3,
+                    gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10,gradient11,
-                    gradient0,gradient1,
+                    gradient10,gradient11,gradient12,
+                    gradient1,gradient2,
                 ], 
                 hoverBackgroundColor: [
-                    gradient0,gradient1,gradient2,gradient3,
+                    gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10,gradient11,
-                    gradient0,gradient1,
+                    gradient10,gradient11,gradient12,
+                    gradient1,gradient2,
                 ],
 
                 shadowOffsetX: 3,
                 shadowOffsetY: 3,
                 shadowBlur: 20,
-                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
-                                '#850CED','#3349F0','#D9581F',
-                                '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242','#4D4F5C','#9F4242',
-                                '#FF07A9','#1A8162' ]
+                shadowColor: ['#FF07A9','#1A8162','#E5A100',
+                            '#850CED','#3349F0','#D9581F',
+                            '#FF6A6A','#3B86FF','#00BA81',
+                            '#9F4242','#4D4F5C','#9F4242',
+                            '#FF07A9','#1A8162' ]
             }]
         };
 
@@ -213,7 +215,7 @@ $(document).ready(function () {
             plugins: {
                 
             },
-            animation:{
+            animation: {
                 duration: 500,
                 onComplete: function() {
                 var chartInstance = this.chart,
@@ -268,30 +270,32 @@ $(document).ready(function () {
         var bar_data = {
             labels: labels,
             datasets: [{
-                data: transData,
+                data: employeTransData,
                 backgroundColor: [ 
-                    gradient0,gradient1,gradient2,gradient3,
+                    gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10,gradient11,
-                    gradient0,gradient1,
+                    gradient10,gradient11,gradient12,
+                    gradient1,gradient2,
                 ], 
                 hoverBackgroundColor: [
-                    gradient0,gradient1,gradient2,gradient3,
+                    gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10,gradient11,
-                    gradient0,gradient1,
+                    gradient10,gradient11,gradient12,
+                    gradient1,gradient2,
                 ],
 
                 shadowOffsetX: 3,
                 shadowOffsetY: 3,
                 shadowBlur: 20,
-                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
-                                '#850CED','#3349F0','#D9581F',
-                                '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242','#4D4F5C','#9F4242',
-                                '#FF07A9','#1A8162' ]
+                shadowColor: [
+                    '#FF07A9','#1A8162','#E5A100',
+                    '#850CED','#3349F0','#D9581F',
+                    '#FF6A6A','#3B86FF','#00BA81',
+                    '#9F4242','#4D4F5C','#9F4242',
+                    '#FF07A9','#1A8162'
+                ],
             }]
         };
 
@@ -365,9 +369,9 @@ $(document).ready(function () {
         var line_data = {
             labels: labels,
             datasets: [{
-                data: transData,
-                backgroundColor: gradient12,
-                borderColor: gradient13,
+                data: employeTransData,
+                backgroundColor: gradient13,
+                borderColor: gradient14,
                 borderWidth: 8,
                 lineTension : 0.1
             }]
@@ -388,7 +392,7 @@ $(document).ready(function () {
             plugins: {
                 
             },
-            animation:  {
+            animation: {
                 duration: 500,
                 onComplete: function() {
                 var chartInstance = this.chart,
@@ -444,7 +448,7 @@ $(document).ready(function () {
         
         function init() {
         // Chart declaration:
-        transactionsChart = new Chart(ctx, {
+        employeTransactionsChart = new Chart(ctx, {
             type: chartType,
             data: data,
             options: options,
@@ -453,19 +457,18 @@ $(document).ready(function () {
 
         // line Charts
         $('#customCheck-line:input').click(function(){
-            transactionsChart.destroy();
+            employeTransactionsChart.destroy();
             //change chart type: 
             chartType = 'line';
             data = line_data;
             options = line_options;
-            
             //restart chart:
             init();
         });
 
         // bar Chart
         $('#customCheck-bar:input').click(function(){
-            transactionsChart.destroy();
+            employeTransactionsChart.destroy();
             //change chart type: 
             chartType = 'bar';
             data = bar_data;
@@ -473,25 +476,28 @@ $(document).ready(function () {
 
             //restart chart:
             init();
-        }); 
+        });
 
 
     // half Charts
         $('#customCheck-half:input').click(function(){
             for (i = 0; i < 14 ; i++) {
-                var id = "transactionTypesHalfTitle" + i;
+                var id = "employeTransactionTypesHalfTitle" + i;
                 var ctx = document.getElementById(id).getContext('2d');
                 const labele = labels[i];
-                const data1 = transData[i];
+                const data1 = employeTransData[i];
                 const data2 = 100 - data1;
-                var titleId = "transactionTypesHalfChart" + i;
+                var titleId = "employeTransactionTypesHalfChart" + i;
                 document.getElementById(titleId).innerHTML = labele;
+
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
                         labels: ["Red"],
                         datasets: [{
+                            label: '# of Votes',
                             data: [data1,data2],
+                            text: "ff",
                             backgroundColor: [
                                 bgColor[i],'#F0F2F8'
                             ],
@@ -508,7 +514,7 @@ $(document).ready(function () {
                             shadowOffsetX: 0,
                             shadowOffsetY: 6,
                             shadowBlur: 6,
-                            shadowColor: halfhadowColor[i],
+                            shadowColor: halfShadowColor[i],
                         }]
                     },
                     options: {
@@ -527,7 +533,7 @@ $(document).ready(function () {
                             onComplete: function() {
                                 var chartInstance = this.chart,
                                 ctx = chartInstance.ctx;
-        
+
                                 ctx.font = Chart.helpers.fontString(22, 700, Chart.defaults.global.defaultFontFamily);
                                 ctx.textAlign = 'center';
                                 ctx.textBaseline = 'bottom';
@@ -556,18 +562,19 @@ $(document).ready(function () {
     // circle Charts
         $('#customCheck-circle:input').click(function(){
             for (i = 0; i < 14 ; i++) {
-                var id = "#transactionTypeCircleChartNo" + i;
+                var id = "#employeTransactionTypeCircleChartNo" + i;
                 const labele = labels[i];
-                var titleId = "transactionTypeTitleNo" + i;
+                const data1 = employeTransData[i];
+                var titleId = "employeTransactionTypeTitleNo" + i;
                 document.getElementById(titleId).innerHTML = labele;
                 $(id).circleProgress({
-                    value: transData[i]/100,
+                    value: employeTransData[i]/100,
                     size: 146,
                     startAngle: 0,
                     reverse: true,
                     emptyFill: emptyFill[i],
                     animationStartValue: 0,
-                    fill: halfhadowColor[i],
+                    fill: halfShadowColor[i],
                 }).on('circle-animation-progress', function(event, progress, stepvalue){
                     $(this).find('span').html(Math.round(stepvalue * 100));
                 });

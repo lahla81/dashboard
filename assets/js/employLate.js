@@ -113,7 +113,7 @@ $(document).ready(function () {
                 spanGaps: true,
             }]
         };
-        // Notice the scaleLabel at the same level as Ticks
+
         var options = {
             layout: {
                 padding: {
@@ -188,7 +188,7 @@ $(document).ready(function () {
             spanGaps: true,
             }]
         };
-        // Notice the scaleLabel at the same level as Ticks
+
         var barOptions = {
             layout: {
                 padding: {
@@ -315,7 +315,6 @@ $(document).ready(function () {
             }]
         };
     
-        
         var halfOptions= {
             rotation: 1 * Math.PI,
             circumference: 1 * Math.PI,
@@ -373,10 +372,7 @@ $(document).ready(function () {
             tooltips: {
                 enabled: false
             }
-        };
-    
-    // We add an init function down here after the chart options are declared.
-    
+        };    
     
     $('#customCheck-line:input').click(function(){
         latesChart.destroy();

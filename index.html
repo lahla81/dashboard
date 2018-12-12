@@ -25,9 +25,9 @@
 <![endif]-->
 
     <!-- start of Main-Page -->
-    <div class="row main-page font-body">
+    <div class="wrapper main-page font-body">
         <!-- Start of Main-Page SideBar -->
-        <div class="p-0 main-sidebar">
+        <nav class="p-0 main-sidebar" id="main_sidbar">
             <div class="text-center">
                 <img class="mt-4" src="./assets/img/01/judicial_dpart_logo.png" 
                         alt="logo" width="54%">
@@ -79,16 +79,20 @@
 
                 <div class="row justify-content-center">
                     <div class="zaid-img">
-                        <img src="./assets/img/01/image-1.png" width="400" alt="عام زايد">
+                        <img class="mw-100" src="./assets/img/01/image-1.png" width="400" alt="عام زايد">
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
         <!-- End of Main-Page SideBar -->
 
         <!-- Start of Main-Page Body -->
-        <div class="p-0 main-body">
-
+        <div class="p-0 content main-body w-100">
+            <div class="page-content position-relative d-lg-none d-block">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary bg-transparent border-gray mt-2 mr-2 position-absolute">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
         </div>
         <!-- End of Main-Page Body -->
     </div>
