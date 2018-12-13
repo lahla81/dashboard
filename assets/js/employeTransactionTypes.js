@@ -267,7 +267,10 @@ $(document).ready(function () {
                 }],
                 xAxes: [{
                     ticks: {
-                        fontColor: '#FF07A9'
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
                     },
                     gridLines: {
                         display:false,
@@ -381,7 +384,10 @@ $(document).ready(function () {
                 }],
                 xAxes: [{
                     ticks: {
-                        fontColor: '#FF07A9'
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
                     },
                     gridLines: {
                         display:false,
@@ -449,7 +455,7 @@ $(document).ready(function () {
                 yAxes: [{
                     ticks: {
                         display: false,
-                        beginAtZero:true
+                        beginAtZero:true,
                     },
                     gridLines: {
                         color: '#E2E2E2',
@@ -459,7 +465,10 @@ $(document).ready(function () {
                 }],
                 xAxes: [{
                     ticks: {
-                        fontColor: '#FF07A9'
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
                     },
                     gridLines: {
                         display:false,
@@ -472,7 +481,7 @@ $(document).ready(function () {
             }          
         };
         
-        Chart.defaults.global.defaultFontSize = 8;
+        Chart.defaults.global.defaultFontSize = 12;
 
         init();
         

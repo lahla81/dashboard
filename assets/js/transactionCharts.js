@@ -1,14 +1,18 @@
 $(document).ready(function () {
 
-    const data = [30 , 40 , 20, 70 , 60 , 70 , 30 , 10 , 90];
+    // const data = [30 , 40 , 20, 70 , 60 , 70 , 30 , 10 , 90];
     const label = ["بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
                     "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات الكلي",
                     "المصدقة","المتأخرة اكثر عن يومين","الملغاة بعد خمس ايام عمل"];
+
+    var transaction_chart = document.getElementById("bar-chart");
+    const data = JSON.parse(transaction_chart.parentElement.dataset.values);
+    
    // bar Chart
    (function(){
     
-        var ctx = document.getElementById("bar-chart").getContext('2d');
-        // const data = JSON.parse(ctx.parentElement.dataset.values);
+        
+        var ctx =  transaction_chart.getContext('2d');
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
         gradient1.addColorStop(0, '#FF95DA');

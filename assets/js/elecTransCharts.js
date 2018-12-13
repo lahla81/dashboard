@@ -129,7 +129,10 @@ $(document).ready(function () {
                     }],
                     xAxes: [{
                         ticks: {
-                            fontColor: '#FF07A9'
+                            fontColor: '#FF07A9',
+                            stepSize: 1,
+                            min: 0,
+                            autoSkip: false,
                         },
                         gridLines: {
                             display:false,
@@ -192,7 +195,7 @@ $(document).ready(function () {
                     padding: {
                         left: 10,
                         right: 10,
-                        top: 10,
+                        top: 20,
                         bottom: 10
                     }
                 },
@@ -203,7 +206,7 @@ $(document).ready(function () {
                     
                 },
                 "animation": {
-                    "duration": 1,
+                    "duration": 400,
                     "onComplete": function() {
                     var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
@@ -239,7 +242,10 @@ $(document).ready(function () {
                     }],
                     xAxes: [{
                         ticks: {
-                            fontColor: '#FF07A9'
+                            fontColor: '#FF07A9',
+                            stepSize: 1,
+                            min: 0,
+                            autoSkip: false,
                         },
                         gridLines: {
                             display:false,
