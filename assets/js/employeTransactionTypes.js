@@ -509,7 +509,7 @@ $(document).ready(function () {
         });
 
 
-    // half Charts
+        // half Charts
         $('#customCheck-half:input').click(function(){
             for (i = 0; i < 14 ; i++) {
                 var id = "employeTransactionTypesHalfTitle" + i;
@@ -558,8 +558,8 @@ $(document).ready(function () {
                                 bottom: 10
                             }
                         },
-                        animation: {
-                            duration: 500,
+                        "animation": {
+                            "duration": 500,
                             onComplete: function() {
                                 var chartInstance = this.chart,
                                 ctx = chartInstance.ctx;
@@ -584,12 +584,12 @@ $(document).ready(function () {
                         tooltips: {
                             enabled: false
                         }
-                    }
+                    },
                 })
             }
         });
     
-    // circle Charts
+        // circle Charts
         $('#customCheck-circle:input').click(function(){
             for (i = 0; i < 14 ; i++) {
                 var id = "#employeTransactionTypeCircleChartNo" + i;
