@@ -189,6 +189,12 @@ $(document).ready(function () {
                     gradient1,gradient2,
                 ],
 
+                bevelWidth: 3,
+
+                bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
+
+                bevelShadowColor: 'rgba(0, 0, 0, 0.5)',
+
                 shadowOffsetX: 3,
                 shadowOffsetY: 3,
                 shadowBlur: 20,
@@ -208,6 +214,15 @@ $(document).ready(function () {
                     top: 10,
                     bottom: 10
                 }
+            },
+            tooplips: {
+
+                bevelWidth: 3,
+          
+                bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
+          
+                bevelShadowColor: 'rgba(0, 0, 0, 0.5)'
+          
             },
             legend: {
                 display : false
@@ -286,6 +301,12 @@ $(document).ready(function () {
                     gradient1,gradient2,
                 ],
 
+                bevelWidth: 3,
+
+                bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
+
+                bevelShadowColor: 'rgba(0, 0, 0, 0.5)',
+
                 shadowOffsetX: 3,
                 shadowOffsetY: 3,
                 shadowBlur: 20,
@@ -307,6 +328,15 @@ $(document).ready(function () {
                     top: 10,
                     bottom: 10
                 }
+            },
+            tooplips: {
+
+                bevelWidth: 3,
+          
+                bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
+          
+                bevelShadowColor: 'rgba(0, 0, 0, 0.5)'
+          
             },
             legend: {
                 display : false
