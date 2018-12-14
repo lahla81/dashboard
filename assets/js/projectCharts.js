@@ -14,9 +14,11 @@ $(document).ready(function () {
 
         gradient2.addColorStop(0, '#FF95DA');
         gradient2.addColorStop(1, '#E50497');
+
+        const ctx_fillstyle = ['#7B0ED9','#E50497'];
         
-        // Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-        // Chart.defaults.global.defaultFontSize = 12;
+        Chart.defaults.global.defaultFontSize = 16;
+        Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
         
         var myChart = new Chart(bar_ctx, {
             type: 'bar',
@@ -43,7 +45,7 @@ $(document).ready(function () {
                     padding: {
                         left: 10,
                         right: 10,
-                        top: 30,
+                        top: 40,
                         bottom: 10
                     }
                 },
@@ -56,21 +58,22 @@ $(document).ready(function () {
                 "animation": {
                     "duration": 1,
                     "onComplete": function() {
-                      var chartInstance = this.chart,
+                        var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(25, 700, Chart.defaults.global.defaultFontFamily);
-                      ctx.textAlign = 'center';
-                      ctx.textBaseline = 'bottom';
-                      ctx.fillStyle = "white";
+                        ctx.font = Chart.helpers.fontString(25, 700, Chart.defaults.global.defaultFontFamily);
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'bottom';
+                      
               
-                      this.data.datasets.forEach(function(dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function(bar, index) {
-                          var data = dataset.data[index]+'%';
-                          ctx.fillText(data, bar._model.x, bar._model.y + 35);
+                        this.data.datasets.forEach(function(dataset, i) {
+                            var meta = chartInstance.controller.getDatasetMeta(i);
+                            meta.data.forEach(function(bar, index) {
+                                ctx.fillStyle = ctx_fillstyle[i];
+                                var data = dataset.data[index]+'%';
+                                ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                            });
                         });
-                      });
                     }
                   },
                 scales: {
@@ -90,7 +93,10 @@ $(document).ready(function () {
                     }],
                     xAxes: [{
                         ticks: {
-                            fontColor: ['#FF07A9']
+                            fontColor: '#FF07A9',
+                            stepSize: 1,
+                            min: 0,
+                            autoSkip: false,
                         },
                         gridLines: {
                             display:false,
@@ -114,7 +120,6 @@ $(document).ready(function () {
         const line_labels = [ "", "نسبة الإنجاز الحالية","", "نسبة الإنجاز السابقة",""];
 
         gradient2 = line_ctx.createLinearGradient(0, 0, 800, 800);
-
         gradient2.addColorStop(000, '#00BA81');
         gradient2.addColorStop(0.1, '#9102FC');
         gradient2.addColorStop(0.2, '#45C19C');
@@ -129,11 +134,8 @@ $(document).ready(function () {
 
 
         gradient3 = line_ctx.createLinearGradient(0, 0, 0, 600);
-
         gradient3.addColorStop(1, 'rgba(59,134,255,0)');
         gradient3.addColorStop(0, '#3B86FF');
-
-        // Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
         var chart = new Chart(line_ctx, {
             // The type of chart we want to create
@@ -146,7 +148,7 @@ $(document).ready(function () {
                     label: "My First dataset",
                     backgroundColor: gradient3,
                     borderColor: gradient2,
-                    borderWidth: 15,
+                    borderWidth: 5,
                     data: line_data,
                     lineTension : 0.3
                 }]
@@ -174,7 +176,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(25, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = Chart.helpers.fontString(20, 700, Chart.defaults.global.defaultFontFamily);
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = "white";
@@ -205,7 +207,10 @@ $(document).ready(function () {
                     }],
                     xAxes: [{
                         ticks: {
-                            fontColor: ['#FF07A9']
+                            fontColor: '#FF07A9',
+                            stepSize: 1,
+                            min: 0,
+                            autoSkip: false,
                         },
                         gridLines: {
                             display:false,
@@ -214,7 +219,7 @@ $(document).ready(function () {
                     }]
                 },
                 tooltips: {
-                enabled: false
+                    enabled: false
                 }          
             }
         });

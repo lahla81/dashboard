@@ -493,7 +493,7 @@ $(document).ready(function () {
         }); 
 
 
-    // half Charts
+        // half Charts
         $('#customCheck-half:input').click(function(){
             for (i = 0; i < 14 ; i++) {
                 var id = "transactionTypesHalfTitle" + i;
@@ -571,7 +571,7 @@ $(document).ready(function () {
             }
         });
     
-    // circle Charts
+        // circle Charts
         $('#customCheck-circle:input').click(function(){
             for (i = 0; i < 14 ; i++) {
                 var id = "#transactionTypeCircleChartNo" + i;

@@ -760,6 +760,9 @@ input#customCheck-bar:checked ~ #label-bar {
 .line-chart-col {
   display: none; }
 
+.chart-row {
+  transition: 1s all ease-in; }
+
 .chart-row.lineChart .bar_line_chart_col {
   display: block !important; }
 
@@ -829,6 +832,14 @@ input#customCheck-bar:checked ~ #label-bar {
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%); }
+
+.transaction,
+.employStat,
+.elecStat,
+.employLate,
+.transactionTypes,
+.employeTransactionTypes {
+  transition: 0.5s all ease-in; }
 
 .chart-row.transaction .transaction {
   display: block !important; }
