@@ -287,13 +287,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -366,13 +364,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -439,19 +435,17 @@ $(document).ready(function () {
                     label: '# of Votes',
                     data: [data1,100-data1],
                     text: "ff",
-                    backgroundColor: [
+                    backgroundColor:[
                         gradient1,'#F0F2F8'
                     ],
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -518,19 +512,17 @@ $(document).ready(function () {
                     label: '# of Votes',
                     data: [data1,100-data1],
                     text: "ff",
-                    backgroundColor: [
+                    backgroundColor:[
                         gradient1,'#F0F2F8'
                     ],
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -603,13 +595,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -682,13 +672,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -761,13 +749,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -840,13 +826,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor:'#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -919,13 +903,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,

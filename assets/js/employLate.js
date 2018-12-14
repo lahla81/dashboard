@@ -298,13 +298,11 @@ $(document).ready(function () {
                 hoverBackgroundColor: [
                     grad1,'#F0F2F8'
                 ],
-                borderColor: [
-                    grad1,'#F0F2F8'
-                ],
+                borderColor: '#F0F2F8',
                 hoverBorderColor: [
                     grad1,'#F0F2F8'
                 ],
-                borderWidth: 1,
+                borderWidth: 2,
                 shadowOffsetX: 0,
                 shadowOffsetY: 6,
                 shadowBlur: 6,

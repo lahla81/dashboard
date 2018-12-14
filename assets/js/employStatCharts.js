@@ -245,7 +245,7 @@ $(document).ready(function () {
                     this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                        var data = dataset.data[index]+'%';
+                        var data = dataset.data[index];
                         ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                     });
@@ -316,13 +316,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -399,9 +397,7 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
@@ -437,7 +433,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -483,13 +479,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -521,7 +515,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -567,13 +561,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -651,13 +643,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -735,13 +725,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -819,13 +807,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -903,13 +889,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -987,13 +971,11 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor:'#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -1071,9 +1053,7 @@ $(document).ready(function () {
                     hoverBackgroundColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderColor: [
-                        gradient1,'#F0F2F8'
-                    ],
+                    borderColor: '#F0F2F8',
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
@@ -1256,7 +1236,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#00BA81"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 
@@ -1273,7 +1253,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#3B86FF"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 
@@ -1290,7 +1270,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#FF6A6A"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 
@@ -1307,7 +1287,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#D9581F"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 
@@ -1324,7 +1304,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#3349F0"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 
@@ -1341,7 +1321,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#850CED"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 
@@ -1358,7 +1338,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#E5A100"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 
@@ -1375,7 +1355,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#1A8162"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 
@@ -1392,7 +1372,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#FF07A9"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 
@@ -1409,7 +1389,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#4D4F5C"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 100)  );
         });
     })();
 

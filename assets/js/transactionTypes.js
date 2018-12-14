@@ -527,7 +527,7 @@ $(document).ready(function () {
                             hoverBorderColor: [
                                 bgColor[i],'#F0F2F8'
                             ],
-                            borderWidth: 1,
+                            borderWidth: 2,
                             shadowOffsetX: 0,
                             shadowOffsetY: 6,
                             shadowBlur: 6,
