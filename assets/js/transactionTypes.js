@@ -152,11 +152,12 @@ $(document).ready(function () {
                     gradhalf8,gradhalf9,gradhalf10,gradhalf11,
                     gradhalf12,gradhalf13];
         
-        var halfhadowColor= [  '#00BA81','#3B86FF','#FF6A6A',
-                            '#D9581F','#3349F0','#850CED',
-                            '#E5A100','#1A8162','#FF07A9',
-                            '#711466','#4D4F5C','#B51E1E',
-                            '#00BA81','#3B86FF' ];
+        var halfShadowColor= [   '#00BA81','#3B86FF','#FF6A6A',
+                                '#D9581F','#3349F0','#850CED',
+                                '#E5A100','#1A8162','#FF07A9',
+                                '#711466','#4D4F5C','#B51E1E',
+                                '#00BA81','#3B86FF' 
+                            ];
         
         var emptyFill = [
             'rgba(0,186,129,0.2)','rgba(59,134,255,0.2)','rgba(255,106,106,0.2)',
@@ -165,6 +166,13 @@ $(document).ready(function () {
             'rgba(77,79,92,0.2)','rgba(113,20,102,0.2)','rgba(181,30,30,0.2)',
             'rgba(0,186,129,0.2)','rgba(59,134,255,0.2)'
         ]
+
+        Chart.defaults.global.defaultFontSize = 12;
+        ctx_font = Chart.helpers.fontString(25, 700, Chart.defaults.global.defaultFontFamily);
+        if ($(window).width() < 900){
+            Chart.defaults.global.defaultFontSize = 8;
+            ctx_font = Chart.helpers.fontString(14, 600, Chart.defaults.global.defaultFontFamily);
+        };
 
         var chartType = 'bar';
 
@@ -203,7 +211,7 @@ $(document).ready(function () {
                 padding: {
                     left: 10,
                     right: 10,
-                    top: 10,
+                    top: 40,
                     bottom: 10
                 }
             },
@@ -219,16 +227,16 @@ $(document).ready(function () {
                 var chartInstance = this.chart,
                     ctx = chartInstance.ctx;
     
-                ctx.font = Chart.helpers.fontString(18, 700, Chart.defaults.global.defaultFontFamily);
+                ctx.font = ctx_font;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
-                ctx.fillStyle = "white";
+                ctx.fillStyle = "#FF07A9";
     
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(bar, index) {
                     var data = dataset.data[index]+'%';
-                    ctx.fillText(data, bar._model.x, bar._model.y + 35);
+                    ctx.fillText(data, bar._model.x, bar._model.y - 5);
                     });
                 });
                 }
@@ -250,7 +258,10 @@ $(document).ready(function () {
                 }],
                 xAxes: [{
                     ticks: {
-                        fontColor: '#FF07A9'
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
                     },
                     gridLines: {
                         display:false,
@@ -300,7 +311,7 @@ $(document).ready(function () {
                 padding: {
                     left: 10,
                     right: 10,
-                    top: 10,
+                    top: 40,
                     bottom: 10
                 }
             },
@@ -316,16 +327,16 @@ $(document).ready(function () {
                 var chartInstance = this.chart,
                     ctx = chartInstance.ctx;
     
-                ctx.font = Chart.helpers.fontString(18, 700, Chart.defaults.global.defaultFontFamily);
+                ctx.font =ctx_font;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
-                ctx.fillStyle = "white";
+                ctx.fillStyle = "#FF07A9";
     
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(bar, index) {
                     var data = dataset.data[index]+'%';
-                    ctx.fillText(data, bar._model.x, bar._model.y + 35);
+                    ctx.fillText(data, bar._model.x, bar._model.y - 5);
                     });
                 });
                 }
@@ -347,7 +358,10 @@ $(document).ready(function () {
                 }],
                 xAxes: [{
                     ticks: {
-                        fontColor: '#FF07A9'
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
                     },
                     gridLines: {
                         display:false,
@@ -368,7 +382,7 @@ $(document).ready(function () {
                 data: transData,
                 backgroundColor: gradient12,
                 borderColor: gradient13,
-                borderWidth: 8,
+                borderWidth: 5,
                 lineTension : 0.1
             }]
         };
@@ -378,7 +392,7 @@ $(document).ready(function () {
                 padding: {
                     left: 0,
                     right: 0,
-                    top: 10,
+                    top: 40,
                     bottom: 10
                 }
             },
@@ -394,16 +408,16 @@ $(document).ready(function () {
                 var chartInstance = this.chart,
                     ctx = chartInstance.ctx;
     
-                ctx.font = Chart.helpers.fontString(20, 700, Chart.defaults.global.defaultFontFamily);
+                ctx.font = ctx_font;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
-                ctx.fillStyle = "#10523D";
+                ctx.fillStyle = "#FF07A9";
     
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(line, index) {
                     var data = dataset.data[index]+'%';
-                    ctx.fillText(data, line._model.x, line._model.y + 50);
+                    ctx.fillText(data, line._model.x, line._model.y - 5);
                     });
                 });
                 }
@@ -425,7 +439,10 @@ $(document).ready(function () {
                 }],
                 xAxes: [{
                     ticks: {
-                        fontColor: '#FF07A9'
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
                     },
                     gridLines: {
                         display:false,
@@ -438,7 +455,7 @@ $(document).ready(function () {
             }          
         };
         
-        Chart.defaults.global.defaultFontSize = 8;
+
 
         init();
         
@@ -484,6 +501,7 @@ $(document).ready(function () {
                 const labele = labels[i];
                 const data1 = transData[i];
                 const data2 = 100 - data1;
+                const ctx_fillstyle = halfShadowColor[i];
                 var titleId = "transactionTypesHalfChart" + i;
                 document.getElementById(titleId).innerHTML = labele;
                 var myChart = new Chart(ctx, {
@@ -508,7 +526,7 @@ $(document).ready(function () {
                             shadowOffsetX: 0,
                             shadowOffsetY: 6,
                             shadowBlur: 6,
-                            shadowColor: halfhadowColor[i],
+                            shadowColor: halfShadowColor[i],
                         }]
                     },
                     options: {
@@ -528,10 +546,10 @@ $(document).ready(function () {
                                 var chartInstance = this.chart,
                                 ctx = chartInstance.ctx;
         
-                                ctx.font = Chart.helpers.fontString(22, 700, Chart.defaults.global.defaultFontFamily);
+                                ctx.font = ctx_font;
                                 ctx.textAlign = 'center';
                                 ctx.textBaseline = 'bottom';
-                                ctx.fillStyle = '#43425D';
+                                ctx.fillStyle = ctx_fillstyle;
                     
                             this.data.datasets.forEach(function(dataset, i) {
                                 var meta = chartInstance.controller.getDatasetMeta(i);
@@ -567,7 +585,7 @@ $(document).ready(function () {
                     reverse: true,
                     emptyFill: emptyFill[i],
                     animationStartValue: 0,
-                    fill: halfhadowColor[i],
+                    fill: halfShadowColor[i],
                 }).on('circle-animation-progress', function(event, progress, stepvalue){
                     $(this).find('span').html(Math.round(stepvalue * 100));
                 });

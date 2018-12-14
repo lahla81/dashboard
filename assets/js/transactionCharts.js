@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    const label = ["بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
-                    "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات الكلي",
+    const labels = ["بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
+                    "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات",
                     "المصدقة","المتأخرة اكثر عن يومين","الملغاة بعد خمس ايام عمل"];
 
     var transaction_chart = document.getElementById("bar-chart");
@@ -58,10 +58,7 @@ $(document).ready(function () {
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: [ "بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
-                            "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات",
-                            "المصدقة","المتأخرة اكثر عن يومين","الملغاة بعد خمس ايام عمل"
-                        ],
+                labels: labels,
                 datasets: [{
                     // label: '# of Votes',
                     data: data,
@@ -182,7 +179,7 @@ $(document).ready(function () {
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: label,
+                labels: labels,
                 datasets: [{
                     // label: '# of Votes',
                     data: data,

@@ -1078,7 +1078,7 @@ $(document).ready(function () {
                     hoverBorderColor: [
                         gradient1,'#F0F2F8'
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -1177,7 +1177,7 @@ $(document).ready(function () {
                     hoverBorderColor: [
                         gradient1,'#F0F2F8',gradient2,
                     ],
-                    borderWidth: 1,
+                    borderWidth: 2,
                     shadowOffsetX: 0,
                     shadowOffsetY: 6,
                     shadowBlur: 6,
@@ -1491,7 +1491,7 @@ $(document).ready(function () {
                         ctx = chartInstance.ctx;
               
                       ctx.font = ctx_font;
-                      ctx.textAlign = 'center';
+                      ctx.textAlign = 'right';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#00B27C';
               
@@ -1508,8 +1508,8 @@ $(document).ready(function () {
                         ctxR = chartInst.ctx;
                 
                         ctxR.font = ctx_font;
-                        ctxR.textAlign = 'center';
-                        ctxR.textBaseline = 'bottom';
+                        ctxR.textAlign = 'left';
+                        ctxR.textBaseline = 'top';
                         ctxR.fillStyle = '#FF6A6A';
                 
                         this.data.datasets.forEach(function(dataset, i) {
@@ -1518,7 +1518,7 @@ $(document).ready(function () {
                             // var finshed_data = dataset.data[0]+'%';
                             var unfinshed_data = dataset.data[2]+'%';
                             // ctx.fillText(finshed_data, line._model.x - right_half_label, line._model.y + 40);
-                            ctx.fillText(unfinshed_data, line._model.x + right_half_label, line._model.y + 40);
+                            ctx.fillText(unfinshed_data, line._model.x + right_half_label , line._model.y - 40);
                         });
                         });
                     },

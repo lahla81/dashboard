@@ -168,6 +168,13 @@ $(document).ready(function () {
             'rgba(0,186,129,0.2)','rgba(59,134,255,0.2)'
         ]
 
+        Chart.defaults.global.defaultFontSize = 12;
+        ctx_font = Chart.helpers.fontString(25, 700, Chart.defaults.global.defaultFontFamily);
+        if ($(window).width() < 900){
+            Chart.defaults.global.defaultFontSize = 8;
+            ctx_font = Chart.helpers.fontString(14, 600, Chart.defaults.global.defaultFontFamily);
+        };
+
         var chartType = 'bar';
 
         var data = {
@@ -189,12 +196,6 @@ $(document).ready(function () {
                     gradient1,gradient2,
                 ],
 
-                bevelWidth: 3,
-
-                bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
-
-                bevelShadowColor: 'rgba(0, 0, 0, 0.5)',
-
                 shadowOffsetX: 3,
                 shadowOffsetY: 3,
                 shadowBlur: 20,
@@ -211,7 +212,7 @@ $(document).ready(function () {
                 padding: {
                     left: 10,
                     right: 10,
-                    top: 10,
+                    top: 30,
                     bottom: 10
                 }
             },
@@ -236,16 +237,16 @@ $(document).ready(function () {
                 var chartInstance = this.chart,
                     ctx = chartInstance.ctx;
     
-                ctx.font = Chart.helpers.fontString(18, 700, Chart.defaults.global.defaultFontFamily);
+                ctx.font = ctx_font;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
-                ctx.fillStyle = "white";
+                ctx.fillStyle = "#FF07A9";
     
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(bar, index) {
-                    var data = dataset.data[index]+'%';
-                    ctx.fillText(data, bar._model.x, bar._model.y + 35);
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y - 5);
                     });
                 });
                 }
@@ -304,12 +305,6 @@ $(document).ready(function () {
                     gradient1,gradient2,
                 ],
 
-                bevelWidth: 3,
-
-                bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
-
-                bevelShadowColor: 'rgba(0, 0, 0, 0.5)',
-
                 shadowOffsetX: 3,
                 shadowOffsetY: 3,
                 shadowBlur: 20,
@@ -328,17 +323,12 @@ $(document).ready(function () {
                 padding: {
                     left: 10,
                     right: 10,
-                    top: 10,
+                    top: 40,
                     bottom: 10
                 }
             },
             tooplips: {
 
-                bevelWidth: 3,
-          
-                bevelHighlightColor: 'rgba(255, 255, 255, 0.75)',
-          
-                bevelShadowColor: 'rgba(0, 0, 0, 0.5)'
           
             },
             legend: {
@@ -353,16 +343,16 @@ $(document).ready(function () {
                 var chartInstance = this.chart,
                     ctx = chartInstance.ctx;
     
-                ctx.font = Chart.helpers.fontString(18, 700, Chart.defaults.global.defaultFontFamily);
+                ctx.font = ctx_font;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
-                ctx.fillStyle = "white";
+                ctx.fillStyle = "#FF07A9";
     
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(bar, index) {
-                    var data = dataset.data[index]+'%';
-                    ctx.fillText(data, bar._model.x, bar._model.y + 35);
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y - 5);
                     });
                 });
                 }
@@ -408,7 +398,7 @@ $(document).ready(function () {
                 data: employeTransData,
                 backgroundColor: gradient13,
                 borderColor: gradient14,
-                borderWidth: 8,
+                borderWidth: 5,
                 lineTension : 0.1
             }]
         };
@@ -418,7 +408,7 @@ $(document).ready(function () {
                 padding: {
                     left: 0,
                     right: 0,
-                    top: 10,
+                    top: 40,
                     bottom: 10
                 }
             },
@@ -434,16 +424,16 @@ $(document).ready(function () {
                 var chartInstance = this.chart,
                     ctx = chartInstance.ctx;
     
-                ctx.font = Chart.helpers.fontString(20, 700, Chart.defaults.global.defaultFontFamily);
+                ctx.font = ctx_font;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
-                ctx.fillStyle = "#10523D";
+                ctx.fillStyle = "#FF07A9";
     
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(line, index) {
-                    var data = dataset.data[index]+'%';
-                    ctx.fillText(data, line._model.x, line._model.y + 50);
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y - 5);
                     });
                 });
                 }
@@ -481,8 +471,6 @@ $(document).ready(function () {
             }          
         };
         
-        Chart.defaults.global.defaultFontSize = 12;
-
         init();
         
         function init() {
@@ -517,7 +505,6 @@ $(document).ready(function () {
             init();
         });
 
-
         // half Charts
         $('#customCheck-half:input').click(function(){
             for (i = 0; i < 14 ; i++) {
@@ -526,6 +513,7 @@ $(document).ready(function () {
                 const labele = labels[i];
                 const data1 = employeTransData[i];
                 const data2 = 100 - data1;
+                const ctx_fillstyle = halfShadowColor[i];
                 var titleId = "employeTransactionTypesHalfChart" + i;
                 document.getElementById(titleId).innerHTML = labele;
 
@@ -570,15 +558,15 @@ $(document).ready(function () {
                         "animation": {
                             "duration": 500,
                             onComplete: function() {
-                                var chartInstance = this.chart,
+                                var chartInstance = this.chart;
                                 ctx = chartInstance.ctx;
 
-                                ctx.font = Chart.helpers.fontString(22, 700, Chart.defaults.global.defaultFontFamily);
+                                ctx.font = ctx_font;
                                 ctx.textAlign = 'center';
                                 ctx.textBaseline = 'bottom';
-                                ctx.fillStyle = '#43425D';
-                    
-                            this.data.datasets.forEach(function(dataset, i) {
+                                ctx.fillStyle = ctx_fillstyle;
+                                
+                                this.data.datasets.forEach(function(dataset, i) {
                                 var meta = chartInstance.controller.getDatasetMeta(i);
                                 meta.data.forEach(function(line, index) {
                                 var data = dataset.data[0];
