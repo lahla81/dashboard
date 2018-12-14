@@ -1,17 +1,14 @@
 $(document).ready(function () {
 
-    // const data = [30 , 40 , 20, 70 , 60 , 70 , 30 , 10 , 90];
     const label = ["بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
                     "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات الكلي",
                     "المصدقة","المتأخرة اكثر عن يومين","الملغاة بعد خمس ايام عمل"];
 
     var transaction_chart = document.getElementById("bar-chart");
     const data = JSON.parse(transaction_chart.parentElement.dataset.values);
-    
-   // bar Chart
-   (function(){
-    
-        
+
+    // bar Chart
+    (function(){
         var ctx =  transaction_chart.getContext('2d');
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
@@ -51,13 +48,18 @@ $(document).ready(function () {
         gradient9.addColorStop(1, '#00B27C');
         
         Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-        // Chart.defaults.global.defaultFontSize = 12;
+        Chart.defaults.global.defaultFontSize = 12;
+        ctx_font = Chart.helpers.fontString(25, 700, Chart.defaults.global.defaultFontFamily);
+        if ($(window).width() < 900){
+            Chart.defaults.global.defaultFontSize = 8;
+            ctx_font = Chart.helpers.fontString(14, 600, Chart.defaults.global.defaultFontFamily);
+        };
         
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: [ "بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
-                            "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات الكلي",
+                            "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات",
                             "المصدقة","المتأخرة اكثر عن يومين","الملغاة بعد خمس ايام عمل"
                         ],
                 datasets: [{
@@ -77,17 +79,17 @@ $(document).ready(function () {
                     shadowOffsetX: 3,
                     shadowOffsetY: 3,
                     shadowBlur: 20,
-                    shadowColor: ['#FF07A9','#1A8162','#E5A100',
-                                '#850CED','#3349F0','#D9581F',
-                                '#FF6A6A','#3B86FF','#00BA81']
+                    shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                    '#850CED','#3349F0','#D9581F',
+                                    '#FF6A6A','#3B86FF','#00BA81']
                 }]
             },
             options: {
                 layout: {
                     padding: {
-                        left: 10,
-                        right: 10,
-                        top: 10,
+                        left: 0,
+                        right: 0,
+                        top: 30,
                         bottom: 10
                     }
                 },
@@ -98,21 +100,21 @@ $(document).ready(function () {
                     
                 },
                 "animation": {
-                    "duration": 1,
+                    "duration": 400,
                     "onComplete": function() {
                     var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
             
-                    ctx.font = Chart.helpers.fontString(22, 700, Chart.defaults.global.defaultFontFamily);
+                    ctx.font = ctx_font;
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'bottom';
-                    ctx.fillStyle = "white";
+                    ctx.fillStyle = "#FF07A9";
             
                     this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(bar, index) {
                         var data = dataset.data[index]+'%';
-                        ctx.fillText(data, bar._model.x, bar._model.y + 35);
+                        ctx.fillText(data, bar._model.x, bar._model.y + 5);
                         });
                     });
                     }
@@ -134,7 +136,11 @@ $(document).ready(function () {
                     }],
                     xAxes: [{
                         ticks: {
-                            fontColor: '#FF07A9'
+                            fontColor: '#FF07A9',
+                            stepSize: 1,
+                            min: 0,
+                            autoSkip: false,
+                            
                         },
                         gridLines: {
                             display:false,
@@ -149,14 +155,11 @@ $(document).ready(function () {
                 }          
             }
         });
-
     })();
-
     // line chart
     (function(){
     
         var ctx = document.getElementById("line-chart").getContext('2d');
-        // const data = JSON.parse(ctx.parentElement.dataset.values);
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
         gradient1.addColorStop(1, 'rgba(59,134,255,0.19)');
@@ -176,9 +179,6 @@ $(document).ready(function () {
         gradient2.addColorStop(0.9, '#BE72FF');
         gradient2.addColorStop(1.0, '#44F2BD');
 
-        // Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
-        // Chart.defaults.global.defaultFontSize = 12;
-        
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -188,7 +188,7 @@ $(document).ready(function () {
                     data: data,
                     backgroundColor: gradient1,
                     borderColor: gradient2,
-                    borderWidth: 15,
+                    borderWidth: 5,
                     lineTension : 0.1
                 }]
             },
@@ -196,8 +196,8 @@ $(document).ready(function () {
                 layout: {
                     padding: {
                         left: 10,
-                        right: 10,
-                        top: 10,
+                        right: 0,
+                        top: 30,
                         bottom: 10
                     }
                 },
@@ -208,21 +208,22 @@ $(document).ready(function () {
                     
                 },
                 "animation": {
-                    "duration": 1,
+                    "duration": 100,
                     "onComplete": function() {
                     var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
             
-                    ctx.font = Chart.helpers.fontString(35, 700, Chart.defaults.global.defaultFontFamily);
+                    ctx.font = ctx_font;
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'bottom';
-                    ctx.fillStyle = "#10523D";
-            
+                    ctx.fillStyle = "#FF07A9";
+
+                    ctx.font = ctx_font;
                     this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(bar, index) {
                         var data = dataset.data[index]+'%';
-                        ctx.fillText(data, bar._model.x, bar._model.y + 50);
+                        ctx.fillText(data, bar._model.x, bar._model.y + 5);
                         });
                     });
                     }
@@ -244,7 +245,10 @@ $(document).ready(function () {
                     }],
                     xAxes: [{
                         ticks: {
-                            fontColor: '#FF07A9'
+                            fontColor: '#FF07A9',
+                            stepSize: 1,
+                            min: 0,
+                            autoSkip: false,
                         },
                         gridLines: {
                             display:false,
@@ -255,7 +259,8 @@ $(document).ready(function () {
                 tooltips: {
                     enabled: false
                 }          
-            }
+            },
+
         });
 
     })();
@@ -315,7 +320,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = ctx_font;
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#00BA81';
@@ -394,7 +399,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = ctx_font;
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#3B86FF';
@@ -473,7 +478,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = ctx_font;
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#FF6A6A';
@@ -552,7 +557,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = ctx_font;
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#D9581F';
@@ -631,7 +636,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = ctx_font;
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#3349F0';
@@ -710,7 +715,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = ctx_font;
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#850CED';
@@ -789,7 +794,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = ctx_font;
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#E5A100';
@@ -868,7 +873,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = ctx_font;
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#1A8162';
@@ -947,7 +952,7 @@ $(document).ready(function () {
                       var chartInstance = this.chart,
                         ctx = chartInstance.ctx;
               
-                      ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                      ctx.font = ctx_font;
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#FF07A9';
