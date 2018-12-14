@@ -1136,10 +1136,26 @@ $(document).ready(function () {
         const data3 = data[11];
         document.getElementById("employStatHalfTitleNo11").innerHTML = labele;
 
-        gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
         gradient1.addColorStop(1, '#000000');
-        gradient1.addColorStop(0.5, '#000000');
-        gradient1.addColorStop(0, '#4D4F5C');
+        gradient1.addColorStop(0.3, '#000000');
+        gradient1.addColorStop(0, '#00BA81');
+
+        gradient2 = ctx.createLinearGradient(0, 0, 0, 300);
+        gradient2.addColorStop(1, '#000000');
+        gradient2.addColorStop(0.5, '#000000');
+        gradient2.addColorStop(0, '#FF6A6A');
+
+        var right_half_label = 75;
+        if ($(window).width() < 1800){
+            var right_half_label = 65;
+        };
+        if ($(window).width() < 1700){
+            var right_half_label = 55;
+        };
+        if ($(window).width() < 1600){
+            var right_half_label = 45;
+        };
 
         // Chart.defaults.global.defaultFontFamily " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
 
@@ -1152,14 +1168,14 @@ $(document).ready(function () {
                     data: [data1,data2,data3],
                     text: "ff",
                     backgroundColor: [
-                        gradient9,'#F0F2F8',gradient1,
+                        gradient1,'#F0F2F8',gradient2,
                     ],
                     hoverBackgroundColor: [
-                        gradient9,'#F0F2F8',gradient1,
+                        gradient1,'#F0F2F8',gradient2,
                     ],
                     borderColor:'#F0F2F8',
                     hoverBorderColor: [
-                        gradient9,'#F0F2F8',gradient1,
+                        gradient1,'#F0F2F8',gradient2,
                     ],
                     borderWidth: 1,
                     shadowOffsetX: 0,
@@ -1176,7 +1192,7 @@ $(document).ready(function () {
                         left: 10,
                         right: 10,
                         top: 10,
-                        bottom: 30
+                        bottom: 40
                     }
                 },
                 "animation": {
@@ -1194,12 +1210,29 @@ $(document).ready(function () {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
                           var finshed_data = dataset.data[0]+'%';
-                          var unfinshed_data = dataset.data[2]+'%';
-                          ctx.fillText(finshed_data, line._model.x - 85, line._model.y + 40);
-                          ctx.fillText(unfinshed_data, line._model.x + 85, line._model.y + 40);
+                        //   var unfinshed_data = dataset.data[2]+'%';
+                          ctx.fillText(finshed_data, line._model.x - right_half_label, line._model.y + 40);
+                        //   ctx.fillText(unfinshed_data, line._model.x + right_half_label, line._model.y + 40);
                         });
                       });
-                    }
+                        var chartInst = this.chart,
+                        ctxR = chartInst.ctx;
+                
+                        ctxR.font = ctx_font;
+                        ctxR.textAlign = 'center';
+                        ctxR.textBaseline = 'bottom';
+                        ctxR.fillStyle = '#FF6A6A';
+                
+                        this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInst.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(line, index) {
+                            // var finshed_data = dataset.data[0]+'%';
+                            var unfinshed_data = dataset.data[2]+'%';
+                            // ctx.fillText(finshed_data, line._model.x - right_half_label, line._model.y + 40);
+                            ctx.fillText(unfinshed_data, line._model.x + right_half_label, line._model.y + 40);
+                        });
+                        });
+                    },
                   },
                 legend: {
                     display : false
@@ -1383,19 +1416,121 @@ $(document).ready(function () {
 
     // circle Chart no11
     (function(){
+        var ctx = document.getElementById("employStatCircleChartNo11").getContext('2d');
+
         const labele = labels[10];
+        const data1 = data[10];
+        const data2 = 100 - data1;
+        const data3 = data[11];
+        const data4 = 100 - data3
         document.getElementById("employStatTitleNo11").innerHTML = labele;
-        $('#employStatCircleChartNo11').circleProgress({
-            value: values[10]/100,
-            size: 146,
-            startAngle: 0,
-            reverse: true,
-            emptyFill:'rgba(113,20,102,0.2)',
-            animationStartValue: 0.5,
-            fill: "#711466"
-        }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
-        });
+
+        gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
+        gradient1.addColorStop(1, '#000000');
+        gradient1.addColorStop(0.3, '#000000');
+        gradient1.addColorStop(0, '#00BA81');
+
+        gradient2 = ctx.createLinearGradient(0, 0, 0, 300);
+        gradient2.addColorStop(1, '#000000');
+        gradient2.addColorStop(0.5, '#000000');
+        gradient2.addColorStop(0, '#FF6A6A');
+
+        var right_half_label = 75;
+        if ($(window).width() < 1800){
+            var right_half_label = 65;
+        };
+        if ($(window).width() < 1700){
+            var right_half_label = 55;
+        };
+        if ($(window).width() < 1600){
+            var right_half_label = 45;
+        };
+
+        // Chart.defaults.global.defaultFontFamily " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Red"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [data1,data2,data3,data4],
+                    text: "ff",
+                    backgroundColor: [
+                        gradient1,'#F0F2F8',gradient2,'#F0F2F8'
+                    ],
+                    hoverBackgroundColor: [
+                        gradient1,'#F0F2F8',gradient2,'#F0F2F8'
+                    ],
+                    borderColor:'#F0F2F8',
+                    hoverBorderColor: [
+                        gradient1,'#F0F2F8',gradient2,'#F0F2F8'
+                    ],
+                    borderWidth: 1,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 6,
+                    shadowBlur: 6,
+                    shadowColor: '#4D4F5C'
+                }]
+            },
+            options: {
+                rotation: 1 * Math.PI,
+                circumference: 2 * Math.PI,
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 40
+                    }
+                },
+                "animation": {
+                    "duration": 1,
+                    "onComplete": function() {
+                      var chartInstance = this.chart,
+                        ctx = chartInstance.ctx;
+              
+                      ctx.font = ctx_font;
+                      ctx.textAlign = 'center';
+                      ctx.textBaseline = 'bottom';
+                      ctx.fillStyle = '#00B27C';
+              
+                      this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(line, index) {
+                          var finshed_data = dataset.data[0]+'%';
+                        //   var unfinshed_data = dataset.data[2]+'%';
+                          ctx.fillText(finshed_data, line._model.x - right_half_label, line._model.y + 40);
+                        //   ctx.fillText(unfinshed_data, line._model.x + right_half_label, line._model.y + 40);
+                        });
+                      });
+                        var chartInst = this.chart,
+                        ctxR = chartInst.ctx;
+                
+                        ctxR.font = ctx_font;
+                        ctxR.textAlign = 'center';
+                        ctxR.textBaseline = 'bottom';
+                        ctxR.fillStyle = '#FF6A6A';
+                
+                        this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInst.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(line, index) {
+                            // var finshed_data = dataset.data[0]+'%';
+                            var unfinshed_data = dataset.data[2]+'%';
+                            // ctx.fillText(finshed_data, line._model.x - right_half_label, line._model.y + 40);
+                            ctx.fillText(unfinshed_data, line._model.x + right_half_label, line._model.y + 40);
+                        });
+                        });
+                    },
+                  },
+                legend: {
+                    display : false
+                },
+                tooltips: {
+                    enabled: false
+                }
+            }
+        })
     })();
 
 });
