@@ -2,6 +2,13 @@ $(document).ready(function () {
 
         var employe_transaction_types_canvas_element = document.getElementById("transactionTypes");
         var transData = JSON.parse(employe_transaction_types_canvas_element.parentElement.dataset.values);    
+
+        var count = 0;
+        for(var i=0, n=transData.length; i < n; i++) 
+            { 
+                count += transData[i]; 
+            }
+        const total = [transData[0],transData[1],transData[2],transData[3],transData[4],transData[5],transData[6],transData[7],transData[8],transData[9],transData[10],transData[11],transData[12],count];
         
         var canvas_element = document.getElementById("transactionTypesBarChart");
         var ctx =  canvas_element.getContext('2d');
@@ -179,7 +186,7 @@ $(document).ready(function () {
         var data = {
             labels: labels,
             datasets: [{
-                data: transData,
+                data: total,
                 backgroundColor: [ 
                     gradient0,gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -209,8 +216,8 @@ $(document).ready(function () {
         var options = {
             layout: {
                 padding: {
-                    left: 10,
-                    right: 10,
+                    left: 20,
+                    right: 20,
                     top: 40,
                     bottom: 10
                 }
@@ -235,7 +242,7 @@ $(document).ready(function () {
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(bar, index) {
-                    var data = dataset.data[index]+'%';
+                    var data = dataset.data[index];
                     ctx.fillText(data, bar._model.x, bar._model.y - 5);
                     });
                 });
@@ -279,7 +286,7 @@ $(document).ready(function () {
         var bar_data = {
             labels: labels,
             datasets: [{
-                data: transData,
+                data: total,
                 backgroundColor: [ 
                     gradient0,gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -309,8 +316,8 @@ $(document).ready(function () {
         var bar_options = {
             layout: {
                 padding: {
-                    left: 10,
-                    right: 10,
+                    left: 20,
+                    right: 20,
                     top: 40,
                     bottom: 10
                 }
@@ -335,7 +342,7 @@ $(document).ready(function () {
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(bar, index) {
-                    var data = dataset.data[index]+'%';
+                    var data = dataset.data[index];
                     ctx.fillText(data, bar._model.x, bar._model.y - 5);
                     });
                 });
@@ -379,7 +386,7 @@ $(document).ready(function () {
         var line_data = {
             labels: labels,
             datasets: [{
-                data: transData,
+                data: total,
                 backgroundColor: gradient12,
                 borderColor: gradient13,
                 borderWidth: 5,
@@ -390,8 +397,8 @@ $(document).ready(function () {
         var line_options = {
             layout: {
                 padding: {
-                    left: 0,
-                    right: 0,
+                    left: 20,
+                    right: 20,
                     top: 40,
                     bottom: 10
                 }
@@ -416,7 +423,7 @@ $(document).ready(function () {
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(line, index) {
-                    var data = dataset.data[index]+'%';
+                    var data = dataset.data[index];
                     ctx.fillText(data, line._model.x, line._model.y - 5);
                     });
                 });
@@ -499,7 +506,7 @@ $(document).ready(function () {
                 var id = "transactionTypesHalfTitle" + i;
                 var ctx = document.getElementById(id).getContext('2d');
                 const labele = labels[i];
-                const data1 = transData[i];
+                const data1 = total[i];
                 const data2 = 100 - data1;
                 const ctx_fillstyle = halfShadowColor[i];
                 var titleId = "transactionTypesHalfChart" + i;
@@ -516,9 +523,7 @@ $(document).ready(function () {
                             hoverBackgroundColor: [
                                 bgColor[i],'#F0F2F8'
                             ],
-                            borderColor: [
-                                bgColor[i],'#F0F2F8'
-                            ],
+                            borderColor:'#F0F2F8',
                             hoverBorderColor: [
                                 bgColor[i],'#F0F2F8'
                             ],
@@ -579,7 +584,7 @@ $(document).ready(function () {
                 var titleId = "transactionTypeTitleNo" + i;
                 document.getElementById(titleId).innerHTML = labele;
                 $(id).circleProgress({
-                    value: transData[i]/100,
+                    value: total[i]/100,
                     size: 146,
                     startAngle: 0,
                     reverse: true,

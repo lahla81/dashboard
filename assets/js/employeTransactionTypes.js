@@ -2,10 +2,17 @@ $(document).ready(function () {
 
    
         var transactionTypes = document.getElementById("employeTransactionTypes");
-        var employeTransData = JSON.parse(transactionTypes.parentElement.dataset.values);
+        var transData = JSON.parse(transactionTypes.parentElement.dataset.values);
         
         var canvas_element = document.getElementById("employeTransactionTypesBarChart");
         var ctx =  canvas_element.getContext('2d');
+
+        var count = 0;
+        for(var i=0, n=transData.length; i < n; i++) 
+            { 
+                count += transData[i]; 
+            }
+        const total = [transData[0],transData[1],transData[2],transData[3],transData[4],transData[5],transData[6],transData[7],transData[8],transData[9],transData[10],transData[11],transData[12],count];
 
         const labels = ["وكاله", "عقد شركة","اعتماد توقيع",
                         "عقد رهن","عقد بيع وتنازل","عقد عمل خاص",
@@ -180,7 +187,7 @@ $(document).ready(function () {
         var data = {
             labels: labels,
             datasets: [{
-                data: employeTransData,
+                data: total,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -210,8 +217,8 @@ $(document).ready(function () {
         var options = {
             layout: {
                 padding: {
-                    left: 10,
-                    right: 10,
+                    left: 20,
+                    right: 20,
                     top: 30,
                     bottom: 10
                 }
@@ -289,7 +296,7 @@ $(document).ready(function () {
         var bar_data = {
             labels: labels,
             datasets: [{
-                data: employeTransData,
+                data: total,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -321,8 +328,8 @@ $(document).ready(function () {
         var bar_options = {
             layout: {
                 padding: {
-                    left: 10,
-                    right: 10,
+                    left: 20,
+                    right: 20,
                     top: 40,
                     bottom: 10
                 }
@@ -395,7 +402,7 @@ $(document).ready(function () {
         var line_data = {
             labels: labels,
             datasets: [{
-                data: employeTransData,
+                data: total,
                 backgroundColor: gradient13,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -406,8 +413,8 @@ $(document).ready(function () {
         var line_options = {
             layout: {
                 padding: {
-                    left: 0,
-                    right: 0,
+                    left: 20,
+                    right: 20,
                     top: 40,
                     bottom: 10
                 }
@@ -511,7 +518,7 @@ $(document).ready(function () {
                 var id = "employeTransactionTypesHalfTitle" + i;
                 var ctx = document.getElementById(id).getContext('2d');
                 const labele = labels[i];
-                const data1 = employeTransData[i];
+                const data1 = total[i];
                 const data2 = 100 - data1;
                 const ctx_fillstyle = halfShadowColor[i];
                 var titleId = "employeTransactionTypesHalfChart" + i;
@@ -531,9 +538,7 @@ $(document).ready(function () {
                             hoverBackgroundColor: [
                                 bgColor[i],'#F0F2F8'
                             ],
-                            borderColor: [
-                                bgColor[i],'#F0F2F8'
-                            ],
+                            borderColor:'#F0F2F8',
                             hoverBorderColor: [
                                 bgColor[i],'#F0F2F8'
                             ],
@@ -591,11 +596,10 @@ $(document).ready(function () {
             for (i = 0; i < 14 ; i++) {
                 var id = "#employeTransactionTypeCircleChartNo" + i;
                 const labele = labels[i];
-                const data1 = employeTransData[i];
                 var titleId = "employeTransactionTypeTitleNo" + i;
                 document.getElementById(titleId).innerHTML = labele;
                 $(id).circleProgress({
-                    value: employeTransData[i]/100,
+                    value: total[i]/100,
                     size: 146,
                     startAngle: 0,
                     reverse: true,

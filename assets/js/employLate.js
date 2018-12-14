@@ -27,10 +27,9 @@ $(document).ready(function () {
         gradient5.addColorStop(1, '#2F44E3');
 
 
-        const font28 = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
-        const fillStylePurple = '#9102FC';
+    
 
-        const font40 = Chart.helpers.fontString(40, 700, Chart.defaults.global.defaultFontFamily);
+        const font30 = Chart.helpers.fontString(30, 700, Chart.defaults.global.defaultFontFamily);
         const fillStylewhite = 'white';
 
         var animation40white = {
@@ -39,7 +38,7 @@ $(document).ready(function () {
             var chartInstance = this.chart,
                 ctx = chartInstance.ctx;
 
-            ctx.font = font40;
+            ctx.font = font30;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'bottom';
             ctx.fillStyle = fillStylewhite;
@@ -48,7 +47,7 @@ $(document).ready(function () {
                 var meta = chartInstance.controller.getDatasetMeta(i);
                 meta.data.forEach(function(bar, index) {
                 var data = dataset.data[index];
-                ctx.fillText(data, bar._model.x, bar._model.y + 60);
+                ctx.fillText(data, bar._model.x, bar._model.y + 40);
                 });
             });
             }
@@ -60,7 +59,7 @@ $(document).ready(function () {
             var chartInstance = this.chart,
                 ctx = chartInstance.ctx;
 
-            ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+            ctx.font = Chart.helpers.fontString(18, 700, Chart.defaults.global.defaultFontFamily);
             ctx.textAlign = 'center';
             ctx.textBaseline = 'bottom';
             ctx.fillStyle = "#9102FC";
@@ -69,15 +68,13 @@ $(document).ready(function () {
                 var meta = chartInstance.controller.getDatasetMeta(i);
                 meta.data.forEach(function(bar, index) {
                 var data = dataset.data[0];
-                ctx.fillText(data, bar._model.x, bar._model.y + 25);
+                ctx.fillText(data, bar._model.x, bar._model.y + 20);
                 });
             });
             }
         };
       
-        Chart.defaults.global.animationSteps = 50;
-        Chart.defaults.global.animationEasing = "easeOutBounce";
-
+       
         var chartType = 'bar';
         var latesChart;
         
@@ -361,7 +358,7 @@ $(document).ready(function () {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(line, index) {
                     var data = dataset.data[0];
-                    ctx.fillText(data, line._model.x, line._model.y + 25);
+                    ctx.fillText(data, line._model.x, line._model.y + 20);
                     });
                 });
                 }

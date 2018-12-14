@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     var employeStatistics = document.getElementById("employeStatistics");
-    const values = JSON.parse(employeStatistics.parentElement.dataset.values);
     const data = JSON.parse(employeStatistics.parentElement.dataset.values);
     const first_dat = [,,,,,,,,,,data[11]];
 
@@ -136,7 +135,7 @@ $(document).ready(function () {
                     this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(bar, index) {
-                        var data = dataset.data[index]+'%';
+                        var data = dataset.data[index];
                         ctx.fillText(data, bar._model.x, bar._model.y + 5);
                         });
                     });
@@ -1249,7 +1248,7 @@ $(document).ready(function () {
         const labele = labels[0];
         document.getElementById("employStatTitleNo1").innerHTML = labele;
         $('#employStatCircleChartNo1').circleProgress({
-            value: values[0]/100,
+            value: data[0]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1266,7 +1265,7 @@ $(document).ready(function () {
         const labele = labels[1];
         document.getElementById("employStatTitleNo2").innerHTML = labele;
         $('#employStatCircleChartNo2').circleProgress({
-            value: values[1]/100,
+            value: data[1]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1283,7 +1282,7 @@ $(document).ready(function () {
         const labele = labels[2];
         document.getElementById("employStatTitleNo3").innerHTML = labele;
         $('#employStatCircleChartNo3').circleProgress({
-            value: values[2]/100,
+            value: data[2]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1300,7 +1299,7 @@ $(document).ready(function () {
         const labele = labels[3];
         document.getElementById("employStatTitleNo4").innerHTML = labele;
         $('#employStatCircleChartNo4').circleProgress({
-            value: values[3]/100,
+            value: data[3]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1317,7 +1316,7 @@ $(document).ready(function () {
         const labele = labels[4];
         document.getElementById("employStatTitleNo5").innerHTML = labele;
         $('#employStatCircleChartNo5').circleProgress({
-            value: values[4]/100,
+            value: data[4]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1334,7 +1333,7 @@ $(document).ready(function () {
         const labele = labels[5];
         document.getElementById("employStatTitleNo6").innerHTML = labele;
         $('#employStatCircleChartNo6').circleProgress({
-            value: values[5]/100,
+            value: data[5]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1351,7 +1350,7 @@ $(document).ready(function () {
         const labele = labels[6];
         document.getElementById("employStatTitleNo7").innerHTML = labele;
         $('#employStatCircleChartNo7').circleProgress({
-            value: values[6]/100,
+            value: data[6]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1368,7 +1367,7 @@ $(document).ready(function () {
         const labele = labels[7];
         document.getElementById("employStatTitleNo8").innerHTML = labele;
         $('#employStatCircleChartNo8').circleProgress({
-            value: values[7]/100,
+            value: data[7]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1385,7 +1384,7 @@ $(document).ready(function () {
         const labele = labels[8];
         document.getElementById("employStatTitleNo9").innerHTML = labele;
         $('#employStatCircleChartNo9').circleProgress({
-            value: values[8]/100,
+            value: data[8]/100,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1402,7 +1401,7 @@ $(document).ready(function () {
         const labele = labels[9];
         document.getElementById("employStatTitleNo10").innerHTML = labele;
         $('#employStatCircleChartNo10').circleProgress({
-            value: values[9]/100,
+            value: data[9]/100,
             size: 146,
             startAngle: 0,
             reverse: true,

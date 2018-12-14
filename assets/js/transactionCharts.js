@@ -110,7 +110,7 @@ $(document).ready(function () {
                     this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(bar, index) {
-                        var data = dataset.data[index]+'%';
+                        var data = dataset.data[index];
                         ctx.fillText(data, bar._model.x, bar._model.y + 5);
                         });
                     });
@@ -192,8 +192,8 @@ $(document).ready(function () {
             options: {
                 layout: {
                     padding: {
-                        left: 10,
-                        right: 0,
+                        left: 20,
+                        right: 20,
                         top: 30,
                         bottom: 10
                     }
@@ -219,7 +219,7 @@ $(document).ready(function () {
                     this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(bar, index) {
-                        var data = dataset.data[index]+'%';
+                        var data = dataset.data[index];
                         ctx.fillText(data, bar._model.x, bar._model.y + 5);
                         });
                     });
@@ -271,7 +271,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#00BA81');
 
-        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        const data1 = data[0];
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -279,7 +279,7 @@ $(document).ready(function () {
                 labels: ["Red"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [30,100-30],
+                    data: [data1,100-data1],
                     text: "ff",
                     backgroundColor: [
                         gradient1,'#F0F2F8'
@@ -325,7 +325,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -350,7 +350,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#3B86FF');
 
-        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        const data1 = data[1];
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -358,7 +358,7 @@ $(document).ready(function () {
                 labels: ["Red"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [40,100-40],
+                    data: [data1,100-data1],
                     text: "ff",
                     backgroundColor: [
                         gradient1,'#F0F2F8'
@@ -404,7 +404,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -429,7 +429,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#FF6A6A');
 
-        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        const data1 = data[2];
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -437,7 +437,7 @@ $(document).ready(function () {
                 labels: ["Red"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [20,100-20],
+                    data: [data1,100-data1],
                     text: "ff",
                     backgroundColor: [
                         gradient1,'#F0F2F8'
@@ -483,7 +483,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -508,7 +508,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#D9581F');
 
-        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        const data1 = data[3];
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -516,7 +516,7 @@ $(document).ready(function () {
                 labels: ["Red"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [70,100-70],
+                    data: [data1,100-data1],
                     text: "ff",
                     backgroundColor: [
                         gradient1,'#F0F2F8'
@@ -562,7 +562,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -587,7 +587,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#3349F0');
 
-        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        const data1 = data[4];
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -595,7 +595,7 @@ $(document).ready(function () {
                 labels: ["Red"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [60,100-60],
+                    data: [data1,100-data1],
                     text: "ff",
                     backgroundColor: [
                         gradient1,'#F0F2F8'
@@ -641,7 +641,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -666,7 +666,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#850CED');
 
-        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        const data1 = data[5];
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -674,7 +674,7 @@ $(document).ready(function () {
                 labels: ["Red"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [70,100-70],
+                    data: [data1,100-data1],
                     text: "ff",
                     backgroundColor: [
                         gradient1,'#F0F2F8'
@@ -720,7 +720,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -745,7 +745,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#E5A100');
 
-        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        const data1 = data[6];
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -753,7 +753,7 @@ $(document).ready(function () {
                 labels: ["Red"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [30,100-30],
+                    data: [data1,100-data1],
                     text: "ff",
                     backgroundColor: [
                         gradient1,'#F0F2F8'
@@ -799,7 +799,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -824,7 +824,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#1A8162');
 
-        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        const data1 = data[7];
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -832,7 +832,7 @@ $(document).ready(function () {
                 labels: ["Red"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [10,100-10],
+                    data: [data1,100-data1],
                     text: "ff",
                     backgroundColor: [
                         gradient1,'#F0F2F8'
@@ -878,7 +878,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -903,7 +903,7 @@ $(document).ready(function () {
         gradient1.addColorStop(0.5, '#000000');
         gradient1.addColorStop(0, '#FF07A9');
 
-        // Chart.defaults.global.defaultFontFamily = " 'DIN Alternate Bold', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+        const data1 = data[8];
 
         var myChart = new Chart(ctx, {
             type: 'doughnut',
@@ -911,7 +911,7 @@ $(document).ready(function () {
                 labels: ["Red"],
                 datasets: [{
                     label: '# of Votes',
-                    data: [90,100-90],
+                    data: [data1,100-data1],
                     text: "ff",
                     backgroundColor: [
                         gradient1,'#F0F2F8'
@@ -957,7 +957,7 @@ $(document).ready(function () {
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function(line, index) {
-                          var data = dataset.data[0]+'%';
+                          var data = dataset.data[0];
                           ctx.fillText(data, line._model.x, line._model.y + 5);
                         });
                       });
@@ -976,7 +976,7 @@ $(document).ready(function () {
      // circle Chart no1
     (function(){
         $('#circle-body-no1').circleProgress({
-            value: 0.3,
+            value: data[0]/1000,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -984,14 +984,14 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#00BA81"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 1000));
         });
     })();
 
     // circle Chart no2
     (function(){
         $('#circle-body-no2').circleProgress({
-            value: 0.4,
+            value: data[1]/1000,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -999,14 +999,14 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#3B86FF"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 1000));
         });
     })();
 
      // circle Chart no3
      (function(){
         $('#circle-body-no3').circleProgress({
-            value: 0.2,
+            value: data[2]/1000,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1014,14 +1014,14 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#FF6A6A"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 1000));
         });
     })();
 
     // circle Chart no4
     (function(){
         $('#circle-body-no4').circleProgress({
-            value: 0.7,
+            value: data[3]/1000,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1029,14 +1029,14 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#D9581F"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 1000));
         });
     })();
 
      // circle Chart no5
      (function(){
         $('#circle-body-no5').circleProgress({
-            value: 0.6,
+            value: data[4]/1000,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1044,14 +1044,14 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#3349F0"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 1000));
         });
     })();
 
     // circle Chart no6
     (function(){
         $('#circle-body-no6').circleProgress({
-            value: 0.7,
+            value: data[5]/1000,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1059,14 +1059,14 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#850CED"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 1000));
         });
     })();
 
      // circle Chart no7
      (function(){
         $('#circle-body-no7').circleProgress({
-            value: 0.3,
+            value: data[6]/1000,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1074,14 +1074,14 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#E5A100"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 1000));
         });
     })();
 
     // circle Chart no8
     (function(){
         $('#circle-body-no8').circleProgress({
-            value: 0.1,
+            value: data[7]/1000,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1089,14 +1089,14 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#1A8162"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 1000));
         });
     })();
 
      // circle Chart no9
      (function(){
         $('#circle-body-no9').circleProgress({
-            value: 0.9,
+            value: data[8]/1000,
             size: 146,
             startAngle: 0,
             reverse: true,
@@ -1104,7 +1104,7 @@ $(document).ready(function () {
             animationStartValue: 0.5,
             fill: "#FF07A9"
         }).on('circle-animation-progress', function(event, progress, stepvalue){
-            $(this).find('span').html(Math.round(stepvalue * 100) + '%');
+            $(this).find('span').html(Math.round(stepvalue * 1000));
         });
     })();
 
