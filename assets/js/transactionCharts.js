@@ -8,7 +8,6 @@ $(document).ready(function () {
     const data = JSON.parse(transaction_chart.parentElement.dataset.values);
 
     // bar Chart
-    (function(){
         var ctx =  transaction_chart.getContext('2d');
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
@@ -46,6 +45,82 @@ $(document).ready(function () {
         gradient9 = ctx.createLinearGradient(0, 0, 0, 600);
         gradient9.addColorStop(0, '#44F2BD');
         gradient9.addColorStop(1, '#00B27C');
+
+        gradient14 = ctx.createLinearGradient(0, 0, 800, 800);
+        gradient14.addColorStop(000, '#00BA81');
+        gradient14.addColorStop(0.1, '#9102FC');
+        gradient14.addColorStop(0.2, '#45C19C');
+        gradient14.addColorStop(0.3, '#FFD062');
+        gradient14.addColorStop(0.4, '#005EF7');
+        gradient14.addColorStop(0.5, '#C7521F');
+        gradient14.addColorStop(0.6, '#FF95DA');
+        gradient14.addColorStop(0.7, '#7B8AFF');
+        gradient14.addColorStop(0.8, '#FF8B58');
+        gradient14.addColorStop(0.9, '#BE72FF');
+        gradient14.addColorStop(1.0, '#44F2BD');
+
+        gradhalf0 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradhalf0.addColorStop(1, '#000000');
+        gradhalf0.addColorStop(0.5, '#000000');
+        gradhalf0.addColorStop(0, '#00BA81');
+
+        gradhalf1 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradhalf1.addColorStop(1, '#000000');
+        gradhalf1.addColorStop(0.5, '#000000');
+        gradhalf1.addColorStop(0, '#3B86FF');
+
+        gradhalf2 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradhalf2.addColorStop(1, '#000000');
+        gradhalf2.addColorStop(0.5, '#000000');
+        gradhalf2.addColorStop(0, '#FF6A6A');
+
+        gradhalf3 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradhalf3.addColorStop(1, '#000000');
+        gradhalf3.addColorStop(0.5, '#000000');
+        gradhalf3.addColorStop(0, '#D9581F');
+
+        gradhalf4 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradhalf4.addColorStop(1, '#000000');
+        gradhalf4.addColorStop(0.5, '#000000');
+        gradhalf4.addColorStop(0, '#3349F0');
+
+        gradhalf5 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradhalf5.addColorStop(1, '#000000');
+        gradhalf5.addColorStop(0.5, '#000000');
+        gradhalf5.addColorStop(0, '#850CED');
+
+        gradhalf6 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradhalf6.addColorStop(1, '#000000');
+        gradhalf6.addColorStop(0.5, '#000000');
+        gradhalf6.addColorStop(0, '#E5A100');
+
+        gradhalf7 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradhalf7.addColorStop(1, '#000000');
+        gradhalf7.addColorStop(0.5, '#000000');
+        gradhalf7.addColorStop(0, '#1A8162');
+
+        gradhalf8 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradhalf8.addColorStop(1, '#000000');
+        gradhalf8.addColorStop(0.5, '#000000');
+        gradhalf8.addColorStop(0, '#FF07A9');
+
+        bgColor = [ gradhalf0,gradhalf1,gradhalf2,gradhalf3,
+            gradhalf4,gradhalf5,gradhalf6,gradhalf7,
+            gradhalf8];
+
+        var halfShadowColor= [  '#00BA81','#3B86FF','#FF6A6A',
+                                '#D9581F','#3349F0','#850CED',
+                                '#E5A100','#1A8162','#FF07A9',
+                                '#711466','#4D4F5C','#B51E1E',
+                                '#00BA81','#3B86FF' ];
+
+        var emptyFill = [
+            'rgba(0,186,129,0.2)','rgba(59,134,255,0.2)','rgba(255,106,106,0.2)',
+            'rgba(217,88,31,0.2)','rgba(51,73,240,0.2)','rgba(133,12,237,0.2)',
+            'rgba(229,161,0,0.2)','rgba(26,129,98,0.2)','rgba(255,7,169,0.2)',
+            'rgba(77,79,92,0.2)','rgba(113,20,102,0.2)','rgba(181,30,30,0.2)',
+            'rgba(0,186,129,0.2)','rgba(59,134,255,0.2)'
+]
         
         Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
         Chart.defaults.global.defaultFontSize = 12;
@@ -152,7 +227,7 @@ $(document).ready(function () {
                 }          
             }
         });
-    })();
+    
     // line chart
     (function(){
     

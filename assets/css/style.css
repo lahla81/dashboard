@@ -429,6 +429,11 @@ header.site-header {
   color: #43425D;
   font-family: 'SourceSansPro Regular';
   font-size: 16px; }
+  @media (max-width: 500px) {
+    .content-left .ui-datepicker td a, .content-left .ui-datepicker td span {
+      height: 37px;
+      width: 37px;
+      padding: 10px; } }
 
 .content-title h3 {
   font-family: 'lubalingraphitcturner-boldarabic';
