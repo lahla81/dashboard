@@ -8,9 +8,9 @@ $(document).ready(function () {
     { 
         count += data[i]; 
     }
-    const week = [data[0],data[1],data[2],data[3],data[4],data[5],count];
+    const week = [data[0],data[1],data[2],data[3],data[4],data[5],data[6],count];
 
-    const labels = ["السبت", "الأحد","الإثنين",
+    const labels = ["الجمعة","السبت", "الأحد","الإثنين",
                     "الثلاثاء","الأربعاء","الخميس","المجموع"];
     
    // bar Chart
@@ -46,9 +46,10 @@ $(document).ready(function () {
         gradient7 = bar_ctx.createLinearGradient(0, 0, 0, 600);
         gradient7.addColorStop(0, '#FA9F9F');
         gradient7.addColorStop(1, '#F06161');
-        
-        // Chart.defaults.global.animationSteps = 50;
-        // Chart.defaults.global.animationEasing = "easeOutBounce";
+
+        gradient8 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+        gradient8.addColorStop(0, '#7FAFFD');
+        gradient8.addColorStop(1, '#3B86FF');
         
         Chart.defaults.global.defaultFontSize = 16;
         ctx_font = Chart.helpers.fontString(25, 700, Chart.defaults.global.defaultFontFamily);
@@ -67,12 +68,12 @@ $(document).ready(function () {
                     backgroundColor: [ 
                         gradient1,gradient2,gradient3,
                         gradient4,gradient5,gradient6,
-                        gradient7
+                        gradient7,gradient8
                     ], 
                     hoverBackgroundColor: [
                         gradient1,gradient2,gradient3,
                         gradient4,gradient5,gradient6,
-                        gradient7
+                        gradient7,gradient8
                     ],
 
                     shadowOffsetX: 3,
@@ -80,7 +81,7 @@ $(document).ready(function () {
                     shadowBlur: 20,
                     shadowColor: ['#FF07A9','#1A8162','#E5A100',
                                   '#850CED','#3349F0','#D9581F',
-                                  '#FF6A6A']
+                                  '#FF6A6A','#3B86FF']
                 }]
             },
             options: {
@@ -799,7 +800,7 @@ $(document).ready(function () {
             },
             options: {
                 rotation: 1 * Math.PI,
-                circumference: 0.6 * Math.PI,
+                circumference: 1 * Math.PI,
                 layout: {
                     padding: {
                         left: 10,
@@ -818,6 +819,86 @@ $(document).ready(function () {
                       ctx.textAlign = 'center';
                       ctx.textBaseline = 'bottom';
                       ctx.fillStyle = '#E5A100';
+              
+                      this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(line, index) {
+                          var data = dataset.data[0];
+                          ctx.fillText(data, line._model.x, line._model.y + 5);
+                        });
+                      });
+                    }
+                  },
+                legend: {
+                    display : false
+                },
+                tooltips: {
+                    enabled: false
+                }
+            }
+        })
+    })();
+
+    // half Chart no8
+    (function(){
+        var ctx = document.getElementById("elecStatHalfChartNo8").getContext('2d');
+        
+        const labele = labels[7];
+        const data1 = week[7];
+        const data2 = 100 - data1;
+        document.getElementById("elecStatHalfTitleNo8").innerHTML = labele;
+
+        gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient1.addColorStop(1, '#000000');
+        gradient1.addColorStop(0.5, '#000000');
+        gradient1.addColorStop(0, '#1A8162');
+
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Red"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [data1,data2],
+                    text: "ff",
+                    backgroundColor: [
+                        gradient1,'#F0F2F8'
+                    ],
+                    hoverBackgroundColor: [
+                        gradient1,'#F0F2F8'
+                    ],
+                    borderColor: '#F0F2F8',
+                    hoverBorderColor: [
+                        gradient1,'#F0F2F8'
+                    ],
+                    borderWidth: 2,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 6,
+                    shadowBlur: 6,
+                    shadowColor: '#1A8162'
+                }]
+            },
+            options: {
+                rotation: 1 * Math.PI,
+                circumference: 0.6 * Math.PI,
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                "animation": {
+                    "duration": 1,
+                    "onComplete": function() {
+                      var chartInstance = this.chart,
+                        ctx = chartInstance.ctx;
+              
+                      ctx.font = ctx_font;
+                      ctx.textAlign = 'center';
+                      ctx.textBaseline = 'bottom';
+                      ctx.fillStyle = '#1A8162';
               
                       this.data.datasets.forEach(function(dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
@@ -946,6 +1027,23 @@ $(document).ready(function () {
         document.getElementById("elecStatTitleNo7").innerHTML = labele;
         $('#elecStatCircleChartNo7').circleProgress({
             value: week[6]/100,
+            size: 146,
+            startAngle: 0,
+            reverse: true,
+            emptyFill:'rgba(229,161,0,0.2)',
+            animationStartValue: 0.5,
+            fill: '#E5A100',
+        }).on('circle-animation-progress', function(event, progress, stepvalue){
+            $(this).find('span').html(Math.round(stepvalue * 100));
+        });
+    })();
+
+    // circle Chart no8
+    (function(){
+        const labele = labels[7];
+        document.getElementById("elecStatTitleNo8").innerHTML = labele;
+        $('#elecStatCircleChartNo8').circleProgress({
+            value: week[7]/100,
             size: 146,
             startAngle: 0,
             reverse: true,

@@ -154,7 +154,7 @@ $(document).ready(function () {
         gradhalf13.addColorStop(0.5, '#000000');
         gradhalf13.addColorStop(0, '#3B86FF');
 
-        bgColor = [ gradhalf0,gradhalf1,gradhalf2,gradhalf3,
+        var bgColor = [ gradhalf0,gradhalf1,gradhalf2,gradhalf3,
                     gradhalf4,gradhalf5,gradhalf6,gradhalf7,
                     gradhalf8,gradhalf9,gradhalf10,gradhalf11,
                     gradhalf12,gradhalf13];

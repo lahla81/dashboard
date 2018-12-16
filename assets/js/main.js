@@ -65,6 +65,8 @@ $(document).ready(function () {
             $('.chart-row').removeClass("employLate");
             $('.chart-row').removeClass("transactionTypes");
             $('.chart-row').removeClass("employeTransactionTypes");
+            $('.chart-row').removeClass("digital_platform");
+            $('.chart-row').removeClass("digital_platform_eye");
         });
 
         $('#customCheck2:input').click(function(){
@@ -74,6 +76,8 @@ $(document).ready(function () {
             $('.chart-row').removeClass("employLate");
             $('.chart-row').removeClass("transactionTypes");
             $('.chart-row').removeClass("employeTransactionTypes");
+            $('.chart-row').removeClass("digital_platform");
+            $('.chart-row').removeClass("digital_platform_eye");
         });
 
         $('#customCheck3:input').click(function(){
@@ -83,6 +87,8 @@ $(document).ready(function () {
             $('.chart-row').removeClass("employLate");
             $('.chart-row').removeClass("transactionTypes");
             $('.chart-row').removeClass("employeTransactionTypes");
+            $('.chart-row').removeClass("digital_platform");
+            $('.chart-row').removeClass("digital_platform_eye");
         });
 
         $('#customCheck4:input').click(function(){
@@ -92,6 +98,9 @@ $(document).ready(function () {
             $('.chart-row').removeClass("transaction");
             $('.chart-row').removeClass("transactionTypes");
             $('.chart-row').removeClass("employeTransactionTypes");
+            $('.chart-row').removeClass("digital_platform");
+            $('.chart-row').removeClass("digital_platform_eye");
+            $('.chart-row').removeClass("digital_platform_eye");
         });
         $('#customCheck5:input').click(function(){
             $('.chart-row').removeClass("employLate");
@@ -100,6 +109,8 @@ $(document).ready(function () {
             $('.chart-row').removeClass("transaction");
             $('.chart-row').addClass("transactionTypes");
             $('.chart-row').removeClass("employeTransactionTypes");
+            $('.chart-row').removeClass("digital_platform");
+            $('.chart-row').removeClass("digital_platform_eye");
         });
         $('#customCheck6:input').click(function(){
             $('.chart-row').removeClass("employLate");
@@ -108,6 +119,28 @@ $(document).ready(function () {
             $('.chart-row').removeClass("transaction");
             $('.chart-row').removeClass("transactionTypes");
             $('.chart-row').addClass("employeTransactionTypes");
+            $('.chart-row').removeClass("digital_platform");
+            $('.chart-row').removeClass("digital_platform_eye");
+        });
+        $('#customCheck7:input').click(function(){
+            $('.chart-row').removeClass("employLate");
+            $('.chart-row').removeClass("elecStat");
+            $('.chart-row').removeClass("employStat");
+            $('.chart-row').removeClass("transaction");
+            $('.chart-row').removeClass("transactionTypes");
+            $('.chart-row').removeClass("employeTransactionTypes");
+            $('.chart-row').addClass("digital_platform");
+            $('.chart-row').removeClass("digital_platform_eye");
+        });
+        $('#customCheck8:input').click(function(){
+            $('.chart-row').removeClass("employLate");
+            $('.chart-row').removeClass("elecStat");
+            $('.chart-row').removeClass("employStat");
+            $('.chart-row').removeClass("transaction");
+            $('.chart-row').removeClass("transactionTypes");
+            $('.chart-row').removeClass("employeTransactionTypes");
+            $('.chart-row').removeClass("digital_platform");
+            $('.chart-row').addClass("digital_platform_eye");
         });
         // $('#customCheck6:input').click(function(){
             // $('.chart-row').removeClass("employLate");

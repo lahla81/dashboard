@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
     <title>إدارة الكاتب العدل والتوثيق</title>
@@ -339,6 +339,27 @@
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary"
+                                    for="customCheck7">إحصائية المنصة الرقمية (المحكمة الرئيسية)
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck7">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary"
+                                    for="customCheck8">إحصائية المنصة الرقمية (مبني الخدمات العدلية (العين))
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck8">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
                         </form>
                         
                     </div>
@@ -396,42 +417,20 @@
                             </div>
                         </div>
                         <div class="row text-center">
-                            <button class="btn btn-primary mt-4 mb-2 py-10 px-5 mx-auto period-btn" type="button" data-toggle="modal" data-target="#calendar">
-                                حدد المدة
-                                <img class="mr-2 pr-1" src="./assets/img/icons/calendar-icon.png" alt="">
-                            </button>
-
-                            <div class="modal fade" id="calendar" tabindex="-1" role="dialog" aria-labelledby="calendarTitle" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="calendarTitle">حدد المدة</h5>
-                                            <button type="button" class="mr-auto ml-1 close" data-dismiss="modal" aria-label="Close">
-                                            <span class="" aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="row justify-content-center">
-                                            <div class="col-12 col-md-6 p-0">
-                                                <p class="mb-0 text-primary">من</p>
-                                                <div class="modal-body pt-0 font-body-bold" id="calendar_from">
-                                        
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-6 p-0">
-                                                <p class="mb-0 text-light-red">إلي</p>
-                                                <div class="modal-body pt-0 font-body-bold" id="calendar_to">
-                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary mx-2" data-dismiss="modal">إغلاق</button>
-                                            <button type="button" class="btn btn-primary">حفظ</button>
-                                        </div>
+                            <h3 class="text-indigo h3 my-3">حدد الفترة الزمنية</h3>
+                            <form class="col-12" action="">
+                                <div class="form-group row">
+                                    <div class="col-12 col-sm-6 col-lg-12">
+                                        <label class="text-primary" for="from-date">من</label>
+                                        <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-lg-12">
+                                        <label class="text-light-red" for="to-date">إلي</label>
+                                        <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date">
                                     </div>
                                 </div>
-                            </div>
+                                <input type="submit" class="btn-primary btn" value="حفظ">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -467,7 +466,7 @@
                                     <div class="card-header bg-teal pr-3">
                                         الملغاة بعد خمس ايام عمل
                                     </div>
-                                    <div id="circle-body-no1" class="card-body text-center my-2 p-2">
+                                    <div id="circle-body-no0" class="card-body text-center my-2 p-2">
                                         <span class="text-teal"></span>                                    
                                     </div>
                                 </div>
@@ -477,7 +476,7 @@
                                     <div class="card-header bg-cyan pr-3">
                                         المتأخرة اكثر عن يومين
                                     </div>
-                                    <div id="circle-body-no2" class="card-body text-center my-2 p-2">
+                                    <div id="circle-body-no1" class="card-body text-center my-2 p-2">
                                         <span class="text-cyan"></span> 
                                     </div>
                                 </div>
@@ -487,7 +486,7 @@
                                     <div class="card-header bg-light-red pr-3">
                                         المصدقة
                                     </div>
-                                    <div id="circle-body-no3" class="card-body text-center my-2 p-2">
+                                    <div id="circle-body-no2" class="card-body text-center my-2 p-2">
                                         <span class="text-light-red"></span>                                    
                                     </div>
                                 </div>
@@ -497,7 +496,7 @@
                                     <div class="card-header bg-dark-red pr-3">
                                         إجمالي عدد المعاملات الكلي
                                     </div>
-                                    <div id="circle-body-no4" class="card-body text-center my-2 p-2">
+                                    <div id="circle-body-no3" class="card-body text-center my-2 p-2">
                                         <span class="text-dark-red"></span> 
                                     </div>
                                 </div>
@@ -507,7 +506,7 @@
                                     <div class="card-header bg-indigo pr-3">
                                         قبول ودفع الكتروني
                                     </div>
-                                    <div id="circle-body-no5" class="card-body text-center my-2 p-2">
+                                    <div id="circle-body-no4" class="card-body text-center my-2 p-2">
                                         <span class="text-indigo"></span>                                    
                                     </div>
                                 </div>
@@ -517,7 +516,7 @@
                                     <div class="card-header bg-purple pr-3">
                                         قبول الكتروني
                                     </div>
-                                    <div id="circle-body-no6" class="card-body text-center my-2 p-2">
+                                    <div id="circle-body-no5" class="card-body text-center my-2 p-2">
                                         <span class="text-purple"></span> 
                                     </div>
                                 </div>
@@ -527,7 +526,7 @@
                                     <div class="card-header bg-warning pr-3">
                                         رفض الكتروني
                                     </div>
-                                    <div id="circle-body-no7" class="card-body text-center my-2 p-2">
+                                    <div id="circle-body-no6" class="card-body text-center my-2 p-2">
                                         <span class="text-warning"></span>                                    
                                     </div>
                                 </div>
@@ -537,7 +536,7 @@
                                     <div class="card-header bg-dark-green pr-3">
                                         بانتظار الموافقة
                                     </div>
-                                    <div id="circle-body-no8" class="card-body text-center my-2 p-2">
+                                    <div id="circle-body-no7" class="card-body text-center my-2 p-2">
                                         <span class="text-dark-green"></span> 
                                     </div>
                                 </div>
@@ -547,7 +546,7 @@
                                     <div class="card-header bg-rose pr-3">
                                         بانتظار التعديل
                                     </div>
-                                    <div id="circle-body-no9" class="card-body text-center my-2 p-2">
+                                    <div id="circle-body-no8" class="card-body text-center my-2 p-2">
                                         <span class="text-rose"></span> 
                                     </div>
                                 </div>
@@ -563,8 +562,8 @@
                                     <div class="card-header bg-teal pr-3">
                                         الملغاة بعد خمس ايام عمل
                                     </div>
-                                    <div id="brev-half-body" class="card-body text-center my-2 p-2" value="50">
-                                        <canvas class="h-100 w-100" id="half-chart-no1"></canvas>
+                                    <div id="brev-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="half_chart_no0"></canvas>
                                             <span></span>
                                     </div>
                                 </div>
@@ -575,7 +574,7 @@
                                         المتأخرة اكثر عن يومين
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="half-chart-no2"></canvas>
+                                        <canvas class="h-100 w-100" id="half_chart_no1"></canvas>
                                             <span></span>
 
                                     </div>
@@ -587,7 +586,7 @@
                                         المصدقة
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="half-chart-no3"></canvas>
+                                        <canvas class="h-100 w-100" id="half_chart_no2"></canvas>
                                             <span></span>
 
                                     </div>
@@ -599,7 +598,7 @@
                                         إجمالي عدد المعاملات الكلي
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="half-chart-no4"></canvas>
+                                        <canvas class="h-100 w-100" id="half_chart_no3"></canvas>
                                             <span></span>
 
                                     </div>
@@ -611,7 +610,7 @@
                                         قبول ودفع الكتروني
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="half-chart-no5"></canvas>
+                                        <canvas class="h-100 w-100" id="half_chart_no4"></canvas>
                                             <span></span>
 
                                     </div>
@@ -623,7 +622,7 @@
                                         قبول الكتروني
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="half-chart-no6"></canvas>
+                                        <canvas class="h-100 w-100" id="half_chart_no5"></canvas>
                                             <span></span>
 
                                     </div>
@@ -635,7 +634,7 @@
                                         رفض الكتروني
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="half-chart-no7"></canvas>
+                                        <canvas class="h-100 w-100" id="half_chart_no6"></canvas>
                                             <span></span>
 
                                     </div>
@@ -647,7 +646,7 @@
                                         بانتظار الموافقة
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="half-chart-no8"></canvas>
+                                        <canvas class="h-100 w-100" id="half_chart_no7"></canvas>
                                             <span></span>
 
                                     </div>
@@ -659,7 +658,7 @@
                                         بانتظار التعديل
                                     </div>
                                     <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                        <canvas class="h-100 w-100" id="half-chart-no9"></canvas>
+                                        <canvas class="h-100 w-100" id="half_chart_no8"></canvas>
                                             <span></span>
 
                                     </div>
@@ -965,7 +964,7 @@
                 </div>
 
                 <!-- start of electronics employe statestics -->
-                <div class="row elecStat h-100 w-100 d-none" data-values="[20 , 100 , 250, 300 , 500 , 270 , 10]">
+                <div class="row elecStat h-100 w-100 d-none" data-values="[10 , 20 , 100 , 250, 300 , 500 , 270 ]">
 
                     <!-- bar Chart start -->
                     <div class="col-12 px-3 mb-5 bar-chart-col" id="electronicStatistics">
@@ -1053,6 +1052,16 @@
                                     </div>
                                     <div id="elecStatCircleChartNo7" class="card-body text-center my-2 p-2">
                                         <span class="text-warning"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-green h-100">
+                                    <div class="card-header bg-dark-green pr-3" id="elecStatTitleNo8">
+
+                                    </div>
+                                    <div id="elecStatCircleChartNo8" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-green"></span> 
                                     </div>
                                 </div>
                             </div>
@@ -1146,7 +1155,18 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-green h-100">
+                                    <div class="card-header bg-dark-green pr-3" id="elecStatHalfTitleNo8">
+                                        
+                                    </div>
+                                    <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="elecStatHalfChartNo8"></canvas>
+                                            <span></span>
 
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -1314,22 +1334,22 @@
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
-                                <div class="card card-rody">
-                                    <div class="card-header bg-rody pr-3" id="transactionTypeTitleNo9">
+                                <div class="card card-maron">
+                                    <div class="card-header bg-maron pr-3" id="transactionTypeTitleNo9">
 
                                     </div>
                                     <div id="transactionTypeCircleChartNo9" class="card-body text-center my-2 p-2">
-                                        <span class="text-rody"></span>                                    
+                                        <span class="text-maron"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
-                                <div class="card card-maron">
-                                    <div class="card-header bg-maron pr-3" id="transactionTypeTitleNo10">
+                                <div class="card card-rody">
+                                    <div class="card-header bg-rody pr-3" id="transactionTypeTitleNo10">
 
                                     </div>
                                     <div id="transactionTypeCircleChartNo10" class="card-body text-center my-2 p-2">
-                                        <span class="text-maron"></span>                                    
+                                        <span class="text-rody"></span>                                    
                                     </div>
                                 </div>
                             </div>
@@ -1666,22 +1686,22 @@
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
-                                <div class="card card-rody">
-                                    <div class="card-header bg-rody pr-3" id="employeTransactionTypeTitleNo9">
+                                <div class="card card-maron">
+                                    <div class="card-header bg-maron pr-3" id="employeTransactionTypeTitleNo9">
 
                                     </div>
                                     <div id="employeTransactionTypeCircleChartNo9" class="card-body text-center my-2 p-2">
-                                        <span class="text-rody"></span>                                    
+                                        <span class="text-maron"></span>                                    
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 px-1 mt-3">
-                                <div class="card card-maron">
-                                    <div class="card-header bg-maron pr-3" id="employeTransactionTypeTitleNo10">
+                                <div class="card card-rody">
+                                    <div class="card-header bg-rody pr-3" id="employeTransactionTypeTitleNo10">
 
                                     </div>
                                     <div id="employeTransactionTypeCircleChartNo10" class="card-body text-center my-2 p-2">
-                                        <span class="text-maron"></span>                                    
+                                        <span class="text-rody"></span>                                    
                                     </div>
                                 </div>
                             </div>
@@ -1895,6 +1915,380 @@
                     
                 </div>
 
+                <!-- start of digital_platform -->
+                <div class="row digital_platform h-100 w-100 d-none" data-values="[ 9 , 2 , 5 , 3, 7 , 0 ]">
+
+                    <!-- bar Chart start -->
+                    <div class="col-12 px-3 mb-5 bar-chart-col" id="digital_platform_bar">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="digital_platform"></canvas>
+
+                        </div>
+                    </div>
+
+                    <!-- Line Chart -->
+                    <div class="col-12 px-3 mb-5 line-chart-col">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="digital_platform_line"></canvas>
+
+                        </div>
+                    </div>
+
+                    <!-- Circle Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 circle-chart-col notaries-circle-chart-col d-none">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="digital_platform_circle_title0">
+                                            وكالة عامة
+                                    </div>
+                                    <div id="digital_platform_circle0" class="card-body text-center my-2 p-2">
+                                        <span class="text-teal"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="digital_platform_circle_title1">
+                                            وكالة خاصة
+                                    </div>
+                                    <div id="digital_platform_circle1" class="card-body text-center my-2 p-2">
+                                        <span class="text-cyan"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3" id="digital_platform_circle_title2">
+                                            الغاء وكالة
+                                    </div>
+                                    <div id="digital_platform_circle2" class="card-body text-center my-2 p-2">
+                                        <span class="text-light-red"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3" id="digital_platform_circle_title3">
+                                            اعتماد توقيع
+                                    </div>
+                                    <div id="digital_platform_circle3" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-red"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3" id="digital_platform_circle_title4">
+                                            اقرار
+                                    </div>
+                                    <div id="digital_platform_circle4" class="card-body text-center my-2 p-2">
+                                        <span class="text-indigo"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3"  id="digital_platform_circle_title5">
+                                            وكيل خدمات
+                                    </div>
+                                    <div id="digital_platform_circle5" class="card-body text-center my-2 p-2">
+                                        <span class="text-purple"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3" id="digital_platform_circle_title6">
+                                            المجموع
+                                    </div>
+                                    <div id="digital_platform_circle6" class="card-body text-center my-2 p-2">
+                                        <span class="text-warning"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Half Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 half-chart-col notaries-half-chart-col d-none">
+                        <div class="row justify-content-center">
+
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="digital_platform_half_title0">
+                                            وكالة عامة
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_half0"></canvas>
+                                            <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="digital_platform_half_title1">
+                                            وكالة خاصة
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_half1"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3" id="digital_platform_half_title2">
+                                            الغاء وكالة
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_half2"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3" id="digital_platform_half_title3">
+                                            اعتماد توقيع
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_half3"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3" id="digital_platform_half_title4">
+                                            اقرار
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_half4"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3" id="digital_platform_half_title5">
+                                            وكيل خدمات
+                                    </div>
+                                    <div class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_half5"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3" id="digital_platform_half_title6">
+                                            المجموع
+                                    </div>
+                                    <div class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_half6"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- start of digital_platform eye -->
+                <div class="row digital_platform_eye h-100 w-100 d-none" data-values="[ 1 , 0 , 0 , 3 , 4 , 0 ]">
+
+                    <!-- bar Chart start -->
+                    <div class="col-12 px-3 mb-5 bar-chart-col" id="digital_platform_eye_bar">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="digital_platform_eye"></canvas>
+
+                        </div>
+                    </div>
+
+                    <!-- Line Chart -->
+                    <div class="col-12 px-3 mb-5 line-chart-col">
+                        <div class="chart-small h-100 w-100 py-4">
+                            <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="digital_platform_eye_line"></canvas>
+
+                        </div>
+                    </div>
+
+                    <!-- Circle Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 circle-chart-col notaries-circle-chart-col d-none">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="digital_platform_eye_circle_title0">
+                                            وكالة عامة
+                                    </div>
+                                    <div id="digital_platform_eye_circle0" class="card-body text-center my-2 p-2">
+                                        <span class="text-teal"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="digital_platform_eye_circle_title1">
+                                            وكالة خاصة
+                                    </div>
+                                    <div id="digital_platform_eye_circle1" class="card-body text-center my-2 p-2">
+                                        <span class="text-cyan"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3" id="digital_platform_eye_circle_title2">
+                                            الغاء وكالة
+                                    </div>
+                                    <div id="digital_platform_eye_circle2" class="card-body text-center my-2 p-2">
+                                        <span class="text-light-red"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3" id="digital_platform_eye_circle_title3">
+                                            اعتماد توقيع
+                                    </div>
+                                    <div id="digital_platform_eye_circle3" class="card-body text-center my-2 p-2">
+                                        <span class="text-dark-red"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3" id="digital_platform_eye_circle_title4">
+                                            اقرار
+                                    </div>
+                                    <div id="digital_platform_eye_circle4" class="card-body text-center my-2 p-2">
+                                        <span class="text-indigo"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3"  id="digital_platform_eye_circle_title5">
+                                            وكيل خدمات
+                                    </div>
+                                    <div id="digital_platform_eye_circle5" class="card-body text-center my-2 p-2">
+                                        <span class="text-purple"></span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3" id="digital_platform_eye_circle_title6">
+                                            المجموع
+                                    </div>
+                                    <div id="digital_platform_eye_circle6" class="card-body text-center my-2 p-2">
+                                        <span class="text-warning"></span>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Half Chart -->
+                    <div class="col-12 px-3 mt-3 mb-5 half-chart-col notaries-half-chart-col d-none">
+                        <div class="row justify-content-center">
+
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-teal">
+                                    <div class="card-header bg-teal pr-3" id="digital_platform_eye_half_title0">
+                                            وكالة عامة
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_eye_half0"></canvas>
+                                            <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-cyan">
+                                    <div class="card-header bg-cyan pr-3" id="digital_platform_eye_half_title1">
+                                            وكالة خاصة
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_eye_half1"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-light-red">
+                                    <div class="card-header bg-light-red pr-3" id="digital_platform_eye_half_title2">
+                                            الغاء وكالة
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_eye_half2"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-dark-red">
+                                    <div class="card-header bg-dark-red pr-3" id="digital_platform_eye_half_title3">
+                                            اعتماد توقيع
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_eye_half3"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-indigo">
+                                    <div class="card-header bg-indigo pr-3" id="digital_platform_eye_half_title4">
+                                            اقرار
+                                    </div>
+                                    <div id="" class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_eye_half4"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-purple">
+                                    <div class="card-header bg-purple pr-3" id="digital_platform_eye_half_title5">
+                                            وكيل خدمات
+                                    </div>
+                                    <div class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_eye_half5"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 px-1 mt-3">
+                                <div class="card card-warning">
+                                    <div class="card-header bg-warning pr-3" id="digital_platform_eye_half_title6">
+                                            المجموع
+                                    </div>
+                                    <div class="card-body text-center my-2 p-2">
+                                        <canvas class="h-100 w-100" id="digital_platform_eye_half6"></canvas>
+                                            <span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
             </div>
 
         </div>
@@ -1922,6 +2316,8 @@
     <script src="./assets/js/employLate.js"></script>
     <script src="./assets/js/transactionTypes.js"></script>
     <script src="./assets/js/employeTransactionTypes.js"></script>
+    <script src="./assets/js/digital_platform.js"></script>
+    <script src="./assets/js/digital_platform_eye.js"></script>
     
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>

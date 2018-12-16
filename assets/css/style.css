@@ -342,99 +342,6 @@ header.site-header {
   border-radius: 27px;
   line-height: 40px; }
 
-.content-left .modal-dialog {
-  max-width: 800px !important; }
-
-.content-left .ui-datepicker {
-  width: 100% !important; }
-
-.content-left .ui-datepicker-prev .ui-icon {
-  background-image: url(../img/icons/right.png) !important;
-  background-size: cover;
-  background-position: 0 0; }
-
-.content-left .ui-datepicker-next .ui-icon {
-  background-image: url(../img/icons/left.png) !important;
-  background-size: cover;
-  background-position: 0 0; }
-
-.content-left .ui-widget-header {
-  border: none;
-  background: transparent; }
-
-.content-left .ui-widget-content {
-  color: #A3A6B4; }
-
-.content-left #calendar_from .ui-widget-header {
-  color: #37B26F; }
-
-.content-left #calendar_from .ui-button.ui-state-active:hover,
-.content-left #calendar_from .ui-button:active, .content-left #calendar_from .ui-state-active,
-.content-left #calendar_from .ui-widget-content .ui-state-active,
-.content-left #calendar_from .ui-widget-header .ui-state-active,
-.content-left #calendar_from a.ui-button:active {
-  background: rgba(55, 178, 111, 0.2);
-  color: #37B26F;
-  font-weight: 400;
-  border-radius: 50%;
-  font-size: 16px; }
-
-.content-left #calendar_from .ui-state-highlight,
-.content-left #calendar_from .ui-widget-content .ui-state-highlight,
-.content-left #calendar_from .ui-widget-header .ui-state-highlight {
-  background: rgba(232, 62, 140, 0.1);
-  color: rgba(232, 62, 140, 0.5);
-  border-radius: 50%; }
-
-.content-left #calendar_to .ui-widget-header {
-  color: #FF6A6A; }
-
-.content-left #calendar_to .ui-button.ui-state-active:hover,
-.content-left #calendar_to .ui-button:active, .content-left #calendar_to .ui-state-active,
-.content-left #calendar_to .ui-widget-content .ui-state-active,
-.content-left #calendar_to .ui-widget-header .ui-state-active,
-.content-left #calendar_to a.ui-button:active {
-  background: rgba(255, 106, 106, 0.2);
-  color: #FF6A6A;
-  font-weight: 400;
-  border-radius: 50%; }
-
-.content-left #calendar_to .ui-state-highlight,
-.content-left #calendar_to .ui-widget-content .ui-state-highlight,
-.content-left #calendar_to .ui-widget-header .ui-state-highlight {
-  background: rgba(232, 62, 140, 0.1);
-  color: rgba(232, 62, 140, 0.5);
-  border-radius: 50%; }
-
-.content-left .ui-widget.ui-widget-content {
-  border: none; }
-
-.content-left .ui-datepicker table thead {
-  border-bottom: 1px solid #E9E9F0; }
-
-.content-left .ui-button, .content-left .ui-state-default,
-.content-left .ui-widget-content .ui-state-default,
-.content-left .ui-widget-header .ui-state-default {
-  border: none; }
-
-.content-left .ui-state-default, .content-left .ui-widget-content .ui-state-default {
-  background: #fff; }
-
-.content-left .ui-datepicker td a, .content-left .ui-datepicker td span {
-  text-align: center;
-  height: 50px;
-  width: 50px;
-  padding: 15px;
-  line-height: 20px;
-  color: #43425D;
-  font-family: 'SourceSansPro Regular';
-  font-size: 16px; }
-  @media (max-width: 500px) {
-    .content-left .ui-datepicker td a, .content-left .ui-datepicker td span {
-      height: 37px;
-      width: 37px;
-      padding: 10px; } }
-
 .content-title h3 {
   font-family: 'lubalingraphitcturner-boldarabic';
   font-size: 30px;
@@ -756,7 +663,12 @@ input#customCheck-bar:checked ~ #label-bar {
 .bar-chart-col,
 .line-chart-col,
 .bar_line_chart_col {
-  margin-top: 32px; }
+  margin-top: 32px;
+  transition: 0.6s all ease-in-out; }
+
+.circle-chart-col,
+.half-chart-col {
+  transition: 0.6s all ease-in-out; }
 
 .chart-small {
   box-shadow: 3px 3px 20px #6f42c1;
@@ -843,116 +755,265 @@ input#customCheck-bar:checked ~ #label-bar {
 .elecStat,
 .employLate,
 .transactionTypes,
-.employeTransactionTypes {
+.digital_platform,
+.digital_platform_eye {
   transition: 0.5s all ease-in; }
 
 .chart-row.transaction .transaction {
-  display: block !important; }
+  display: block !important;
+  opacity: 1; }
 
 .chart-row.transaction .employStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.transaction .elecStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.transaction .employLate {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.transaction .transactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.transaction .employeTransactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
+
+.chart-row.transaction .digital_platform {
+  display: none;
+  opacity: 0; }
+
+.chart-row.transaction .digital_platform_eye {
+  display: none;
+  opacity: 0; }
 
 .chart-row.employStat .transaction {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employStat .employStat {
-  display: block !important; }
+  display: block !important;
+  opacity: 1; }
 
 .chart-row.employStat .elecStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employStat .employLate {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employStat .transactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employStat .employeTransactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
+
+.chart-row.employStat .digital_platform {
+  display: none;
+  opacity: 0; }
+
+.chart-row.employStat .digital_platform_eye {
+  display: none;
+  opacity: 0; }
 
 .chart-row.elecStat .transaction {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.elecStat .employStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.elecStat .elecStat {
-  display: block !important; }
+  display: block !important;
+  opacity: 1; }
 
 .chart-row.elecStat .employLate {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.elecStat .transactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.elecStat .employeTransactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
+
+.chart-row.elecStat .digital_platform {
+  display: none;
+  opacity: 0; }
+
+.chart-row.elecStat .digital_platform_eye {
+  display: none;
+  opacity: 0; }
 
 .chart-row.employLate .transaction {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employLate .employStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employLate .elecStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employLate .employLate {
-  display: block !important; }
+  display: block !important;
+  opacity: 1; }
 
 .chart-row.employLate .transactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employLate .employeTransactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
+
+.chart-row.employLate .digital_platform {
+  display: none;
+  opacity: 0; }
+
+.chart-row.employLate .digital_platform_eye {
+  display: none;
+  opacity: 0; }
 
 .chart-row.transactionTypes .transaction {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.transactionTypes .employStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.transactionTypes .elecStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.transactionTypes .employLate {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.transactionTypes .transactionTypes {
-  display: block !important; }
+  display: block !important;
+  opacity: 1; }
 
 .chart-row.transactionTypes .employeTransactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
+
+.chart-row.transactionTypes .digital_platform {
+  display: none;
+  opacity: 0; }
+
+.chart-row.transactionTypes .digital_platform_eye {
+  display: none;
+  opacity: 0; }
 
 .chart-row.employeTransactionTypes .transaction {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employeTransactionTypes .employStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employeTransactionTypes .elecStat {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employeTransactionTypes .employLate {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employeTransactionTypes .transactionTypes {
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .chart-row.employeTransactionTypes .employeTransactionTypes {
-  display: block !important; }
+  display: block !important;
+  opacity: 1; }
+
+.chart-row.employeTransactionTypes .digital_platform {
+  display: none;
+  opacity: 0; }
+
+.chart-row.employeTransactionTypes .digital_platform_eye {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform .transaction {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform .employStat {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform .elecStat {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform .employLate {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform .transactionTypes {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform .employeTransactionTypes {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform .digital_platform {
+  display: block !important;
+  opacity: 1; }
+
+.chart-row.digital_platform .digital_platform_eye {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform_eye .transaction {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform_eye .employStat {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform_eye .elecStat {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform_eye .employLate {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform_eye .transactionTypes {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform_eye .employeTransactionTypes {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform_eye .digital_platform {
+  display: none;
+  opacity: 0; }
+
+.chart-row.digital_platform_eye .digital_platform_eye {
+  display: block !important;
+  opacity: 1; }
 
 .table-responsive .modal {
   top: 50%;

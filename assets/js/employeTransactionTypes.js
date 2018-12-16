@@ -73,7 +73,6 @@ $(document).ready(function () {
         gradient13.addColorStop(0, '#005EF7');
 
         gradient14 = ctx.createLinearGradient(0, 0, 800, 800);
-
         gradient14.addColorStop(000, '#00BA81');
         gradient14.addColorStop(0.1, '#9102FC');
         gradient14.addColorStop(0.2, '#45C19C');
@@ -156,7 +155,7 @@ $(document).ready(function () {
         gradhalf13.addColorStop(0.5, '#000000');
         gradhalf13.addColorStop(0, '#3B86FF');
 
-        bgColor = [ gradhalf0,gradhalf1,gradhalf2,gradhalf3,
+        var bgColor = [ gradhalf0,gradhalf1,gradhalf2,gradhalf3,
                     gradhalf4,gradhalf5,gradhalf6,gradhalf7,
                     gradhalf8,gradhalf9,gradhalf10,gradhalf11,
                     gradhalf12,gradhalf13];
@@ -398,85 +397,6 @@ $(document).ready(function () {
                 enabled: false
             }          
         };
-
-        var line_data = {
-            labels: labels,
-            datasets: [{
-                data: total,
-                backgroundColor: gradient13,
-                borderColor: gradient14,
-                borderWidth: 5,
-                lineTension : 0.1
-            }]
-        };
-
-        var line_options = {
-            layout: {
-                padding: {
-                    left: 20,
-                    right: 20,
-                    top: 40,
-                    bottom: 10
-                }
-            },
-            legend: {
-                display : false
-            },
-            plugins: {
-                
-            },
-            animation: {
-                duration: 500,
-                onComplete: function() {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-    
-                ctx.font = ctx_font;
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'bottom';
-                ctx.fillStyle = "#FF07A9";
-    
-                this.data.datasets.forEach(function(dataset, i) {
-                    var meta = chartInstance.controller.getDatasetMeta(i);
-                    meta.data.forEach(function(line, index) {
-                    var data = dataset.data[index];
-                    ctx.fillText(data, line._model.x, line._model.y - 5);
-                    });
-                });
-                }
-            },
-            scales: {
-                pointLabels :{
-                    fontColor: "red",
-                },
-                yAxes: [{
-                    ticks: {
-                        display: false,
-                        beginAtZero:true,
-                    },
-                    gridLines: {
-                        color: '#E2E2E2',
-                        zeroLineColor: '#707070',
-                        zeroLineWidth: 1
-                    }
-                }],
-                xAxes: [{
-                    ticks: {
-                        fontColor: '#FF07A9',
-                        stepSize: 1,
-                        min: 0,
-                        autoSkip: false,
-                    },
-                    gridLines: {
-                        display:false,
-                        zeroLineWidth: 4,
-                    },
-                }]
-            },
-            tooltips: {
-                enabled: false
-            }          
-        };
         
         init();
         
@@ -494,8 +414,83 @@ $(document).ready(function () {
             employeTransactionsChart.destroy();
             //change chart type: 
             chartType = 'line';
-            data = line_data;
-            options = line_options;
+            data = {
+                labels: labels,
+                datasets: [{
+                    data: total,
+                    backgroundColor: gradient13,
+                    borderColor: gradient14,
+                    borderWidth: 5,
+                    lineTension : 0.1
+                }]
+            };
+            options = {
+                layout: {
+                    padding: {
+                        left: 20,
+                        right: 20,
+                        top: 40,
+                        bottom: 10
+                    }
+                },
+                legend: {
+                    display : false
+                },
+                plugins: {
+                    
+                },
+                animation: {
+                    duration: 500,
+                    onComplete: function() {
+                    var chartInstance = this.chart,
+                        ctx = chartInstance.ctx;
+        
+                    ctx.font = ctx_font;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'bottom';
+                    ctx.fillStyle = "#FF07A9";
+        
+                    this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(line, index) {
+                        var data = dataset.data[index];
+                        ctx.fillText(data, line._model.x, line._model.y - 5);
+                        });
+                    });
+                    }
+                },
+                scales: {
+                    pointLabels :{
+                        fontColor: "red",
+                    },
+                    yAxes: [{
+                        ticks: {
+                            display: false,
+                            beginAtZero:true,
+                        },
+                        gridLines: {
+                            color: '#E2E2E2',
+                            zeroLineColor: '#707070',
+                            zeroLineWidth: 1
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontColor: '#FF07A9',
+                            stepSize: 1,
+                            min: 0,
+                            autoSkip: false,
+                        },
+                        gridLines: {
+                            display:false,
+                            zeroLineWidth: 4,
+                        },
+                    }]
+                },
+                tooltips: {
+                    enabled: false
+                }          
+            };
             //restart chart:
             init();
         });

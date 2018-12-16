@@ -1,15 +1,22 @@
 $(document).ready(function () {
 
-    const labels = ["بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
-                    "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات",
-                    "المصدقة","المتأخرة اكثر عن يومين","الملغاة بعد خمس ايام عمل"];
+    const labels = ["وكالة عامة", "وكالة خاصة","الغاء وكالة",
+                    "اعتماد توقيع","اقرار","وكيل خدمات",
+                    "المجموع"];
 
-    var transaction_chart = document.getElementById("bar-chart");
-    const data = JSON.parse(transaction_chart.parentElement.dataset.values);
+    var digital_platform_bar = document.getElementById("digital_platform_bar");
+    const digital_data = JSON.parse(digital_platform_bar.parentElement.dataset.values);
+
+    var count = 0;
+    for(var i=0, n=digital_data.length; i < n; i++) 
+    { 
+        count += digital_data[i]; 
+    }
+    const data = [digital_data[0],digital_data[1],digital_data[2],digital_data[3],digital_data[4],digital_data[5],count];
 
     // bar Chart
-        var ctx =  transaction_chart.getContext('2d');
-
+    var digital_platform = document.getElementById("digital_platform");
+        var ctx =  digital_platform.getContext('2d');
         gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
         gradient1.addColorStop(0, '#FF95DA');
         gradient1.addColorStop(1, '#E50497');
@@ -140,12 +147,12 @@ $(document).ready(function () {
                     backgroundColor: [ 
                         gradient1,gradient2,gradient3,
                         gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
+                        gradient7
                     ], 
                     hoverBackgroundColor: [
                         gradient1,gradient2,gradient3,
                         gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
+                        gradient7
                     ],
 
                     shadowOffsetX: 3,
@@ -153,7 +160,7 @@ $(document).ready(function () {
                     shadowBlur: 20,
                     shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                     '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81']
+                                    '#FF6A6A']
                 }]
             },
             options: {
@@ -231,7 +238,7 @@ $(document).ready(function () {
     // line chart
     $('#customCheck-line:input').click(function(){
     
-        var ctx = document.getElementById("line-chart").getContext('2d');
+        var ctx = document.getElementById("digital_platform_line").getContext('2d');
 
         gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
         gradient1.addColorStop(1, 'rgba(59,134,255,0.19)');
@@ -325,11 +332,10 @@ $(document).ready(function () {
 
     // half Charts
     $('#customCheck-half:input').click(function(){
-        for (i = 0; i < 9 ; i++) {
-            var id = "half_chart_no" + i;
+        for (i = 0; i < 7 ; i++) {
+            var id = "digital_platform_half" + i;
             var ctx = document.getElementById(id).getContext('2d');
             const data1 = data[i];
-            // const data2 = 100 - data1;
             const ctx_fillstyle = halfShadowColor[i];
 
             var myChart = new Chart(ctx, {
@@ -401,8 +407,8 @@ $(document).ready(function () {
     
     // circle Charts
     $('#customCheck-circle:input').click(function(){
-        for (i = 0; i < 14 ; i++) {
-            var id = "#circle-body-no" + i;
+        for (i = 0; i < 7 ; i++) {
+            var id = "#digital_platform_circle" + i;
             const labele = labels[i];
             $(id).circleProgress({
                 value: data[i]/100,
