@@ -1,9 +1,15 @@
 $(document).ready(function () {
 
     var transaction_chart = document.getElementById("bar-chart");
-    const data   = JSON.parse(transaction_chart.parentElement.dataset.values);
+    const transData   = JSON.parse(transaction_chart.parentElement.dataset.values);
     const labels = JSON.parse(transaction_chart.parentElement.dataset.labels);
 
+    var persent = (transData[0]-transData[1])*100/(transData[0]);
+    
+
+    var data = transData;
+    data.push(persent);
+    
     // bar Chart
         var ctx =  transaction_chart.getContext('2d');
 
@@ -322,7 +328,7 @@ $(document).ready(function () {
 
     // half Charts
     $('#customCheck-half:input').click(function(){
-        for (i = 0; i < 9 ; i++) {
+        for (i = 0; i < data.length ; i++) {
             var id = "half_chart_no" + i;
             var ctx = document.getElementById(id).getContext('2d');
             const data1 = data[i];
@@ -395,10 +401,85 @@ $(document).ready(function () {
             })
         }
     });
+
+    // adding % to the third value in half chart
+    $('#customCheck-half:input').click(function(){
+
+        var id = "half_chart_no2";
+        var ctx = document.getElementById(id).getContext('2d');
+        const data1 = data[2];
+        // const data2 = 100 - data1;
+        const ctx_fillstyle = halfShadowColor[2];
+
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Red"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [data1,100-data1],
+                    text: "ff",
+                    backgroundColor: [
+                        bgColor[2],'#F0F2F8'
+                    ],
+                    hoverBackgroundColor: [
+                        bgColor[2],'#F0F2F8'
+                    ],
+                    borderColor:'#F0F2F8',
+                    hoverBorderColor: [
+                        bgColor[2],'#F0F2F8'
+                    ],
+                    borderWidth: 2,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 6,
+                    shadowBlur: 6,
+                    shadowColor: halfShadowColor[2],
+                }]
+            },
+            options: {
+                rotation: 1 * Math.PI,
+                circumference: 1 * Math.PI,
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 20
+                    }
+                },
+                "animation": {
+                    "duration": 500,
+                    onComplete: function() {
+                        var chartInstance = this.chart;
+                        ctx = chartInstance.ctx;
+
+                        ctx.font = ctx_font;
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'bottom';
+                        ctx.fillStyle = ctx_fillstyle;
+                        
+                        this.data.datasets.forEach(function(dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function(line, index) {
+                        var data = dataset.data[0] + "%";
+                        ctx.fillText(data, line._model.x, line._model.y + 15);
+                        });
+                    });
+                    }
+                },
+                legend: {
+                    display : false
+                },
+                tooltips: {
+                    enabled: false
+                }
+            },
+        })
+    });
     
     // circle Charts
     $('#customCheck-circle:input').click(function(){
-        for (i = 0; i < 14 ; i++) {
+        for (i = 0; i < data.length-1 ; i++) {
             var id = "#circle-body-no" + i;
             const labele = labels[i];
             $(id).circleProgress({
@@ -413,6 +494,23 @@ $(document).ready(function () {
                 $(this).find('span').html(Math.round(stepvalue * 100));
             });
         }
+    });
+
+    // adding % to the third value in circle chart
+    $('#customCheck-circle:input').click(function(){
+        var id = "#circle-body-no2";
+        const labele = labels[2];
+        $(id).circleProgress({
+            value: data[2]/100,
+            size: 146,
+            startAngle: 0,
+            reverse: true,
+            emptyFill: emptyFill[2],
+            animationStartValue: 0,
+            fill: halfShadowColor[2],
+        }).on('circle-animation-progress', function(event, progress, stepvalue){
+            $(this).find('span').html(Math.round(stepvalue * 100)+ "%");
+        });
     });
 
 });

@@ -18,13 +18,17 @@
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
     <script defer src="assets/fonts/fontawesome/fontawesome-all.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
 </head>
 
 <body class="front-page font-body page-template">
 
     <div class="wrapper">
 
-         <!-- sudebar -->
+         <!-- sidebar -->
          <nav id="sidebar">
             <div class="sidebar-header">
                 <h4>قطاع مساندة المحاكم والمتعاملين</h4>
@@ -183,13 +187,19 @@
                     </a>
                     <ul class="collapse list-unstyled" id="medicin">
                         <li>
-                            <a href="#">قسم الطب الشرعي التشريحي السرسري</a>
+                            <a href="medical-abu.html">قسم الطب الشرعي بأبوظبي</a>
                         </li>
                         <li>
-                            <a href="#">قسم المختبر الكيميائي</a>
+                            <a href="medical-eye.html">قسم الطب الشرعي بالعين</a>
                         </li>
                         <li>
-                            <a href="#">قسم المختبر الإلكتروني</a>
+                            <a href="medical-zafra.html">قسم الطب الشرعي بالظفرة</a>
+                        </li>
+                        <li>
+                            <a href="chemical.html">قسم المختبر الكيميائي</a>
+                        </li>
+                        <li>
+                            <a href="elec_medical.html">قسم المختبر الإلكتروني</a>
                         </li>
                     </ul>
                 </li>
@@ -444,7 +454,11 @@
                 <div class="row transaction h-100 w-100" >
                     <!-- bar Chart start -->
                     <div class="col-12 px-3 mb-5 bar-chart-col">
-                        <div class="chart-small h-100 w-100 py-4" data-values="[10 , 20 , 250, 600 , 300 , 20 , 30 , 20 , 550]">
+                        <div class="chart-small h-100 w-100 py-4" 
+                            data-values="[10 , 20 , 250, 600 , 300 , 20 , 30 , 20 , 550]"
+                            data-labels ='["بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
+                                            "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات",
+                                            "المصدقة","المتأخرة اكثر عن يومين","الملغاة بعد خمس ايام عمل"]'>
                             <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
 
                         </div>
@@ -671,7 +685,11 @@
                 </div>
 
                 <!-- start of employe statestics  -->
-                <div class="row employStat h-100 w-100 d-none" data-values="[3 , 2 , 20, 0 , 65 , 70 , 0 , 4 , 10 , 50 , 40 , 20]">
+                <div class="row employStat h-100 w-100 d-none" 
+                        data-values="[3 , 2 , 20, 0 , 65 , 70 , 0 , 4 , 10 , 50 , 40 , 20]"
+                        data-labels ='["بانتظار التعديل", "بانتظار الموافقة","رفض الكتروني",
+                        "قبول الكتروني","قبول ودفع الكتروني","إجمالي عدد المعاملات",
+                        "المصدقة","المتأخرة اكثر عن يومين","الملغاة بعد خمس ايام عمل"]'>
                     
                     <!-- اسم الموظف -->
                     <div class="col-12" id="employeStatistics">

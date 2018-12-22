@@ -12,8 +12,10 @@ $(document).ready(function () {
             { 
                 count += transData[i]; 
             }
-        const total = [transData[0],transData[1],transData[2],transData[3],transData[4],transData[5],transData[6],transData[7],transData[8],transData[9],transData[10],transData[11],transData[12],count];
 
+        var total = transData;
+            total.push(count);
+       
         const labels = ["وكاله", "عقد شركة","اعتماد توقيع",
                         "عقد رهن","عقد بيع وتنازل","عقد عمل خاص",
                         "اقرار","تعهد","وكيل خدمات","اثبات تاريخ محرر","نسخة طبق الاصل",
@@ -509,7 +511,7 @@ $(document).ready(function () {
 
         // half Charts
         $('#customCheck-half:input').click(function(){
-            for (i = 0; i < 14 ; i++) {
+            for (i = 0; i < total.length ; i++) {
                 var id = "employeTransactionTypesHalfTitle" + i;
                 var ctx = document.getElementById(id).getContext('2d');
                 const labele = labels[i];

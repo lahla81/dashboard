@@ -8,7 +8,6 @@ $(document).ready(function () {
     const lineLabels = [ "", "" , "" ];
  
     const data1 = values[0];
-    const data2 = 100 - data1;
        
     var canvas = document.getElementById("employlate");
     var ctx = canvas.getContext('2d');
@@ -33,8 +32,8 @@ $(document).ready(function () {
         const fillStylewhite = 'white';
 
         var animation40white = {
-            "duration": 1,
-            "onComplete": function() {
+            duration: 500,
+            onComplete: function() {
             var chartInstance = this.chart,
                 ctx = chartInstance.ctx;
 
@@ -54,8 +53,8 @@ $(document).ready(function () {
         };
 
         var animation28purple = {
-            "duration": 1,
-            "onComplete": function() {
+            duration: 500,
+            onComplete: function() {
             var chartInstance = this.chart,
                 ctx = chartInstance.ctx;
 

@@ -238,6 +238,7 @@ input.custom-control-input {
   min-width: 300px;
   max-width: 300px;
   min-height: 100vh;
+  background-color: #00BA81;
   background-image: linear-gradient(-180deg, #37B26F 10%, #201E52 90%);
   color: #fff;
   transition: all 0.3s; }
@@ -663,82 +664,118 @@ input#customCheck-bar:checked ~ #label-bar {
 .bar-chart-col,
 .line-chart-col,
 .bar_line_chart_col {
-  margin-top: 32px;
-  transition: 0.6s all ease-in-out; }
+  margin-top: 32px; }
 
 .circle-chart-col,
 .half-chart-col {
-  transition: 0.6s all ease-in-out; }
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1); }
 
 .chart-small {
   box-shadow: 3px 3px 20px #6f42c1;
   border-radius: 14px; }
 
 .line-chart-col {
-  display: none; }
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1); }
 
 .chart-row {
   transition: 1s all ease-in; }
 
 .chart-row.lineChart .bar_line_chart_col {
-  display: block !important; }
+  display: block !important;
+  transform: scale(1); }
 
 .chart-row.lineChart .bar-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.lineChart .line-chart-col {
-  display: block !important; }
+  display: block !important;
+  transform: scale(1); }
 
 .chart-row.lineChart .circle-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.lineChart .half-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.barChart .bar_line_chart_col {
-  display: block !important; }
+  display: block !important;
+  transform: scale(1); }
 
 .chart-row.barChart .line-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.barChart .bar-chart-col {
-  display: block !important; }
+  display: block !important;
+  transform: scale(1); }
 
 .chart-row.barChart .circle-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.barChart .half-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.circleChart .bar_line_chart_col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.circleChart .bar-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.circleChart .line-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.circleChart .circle-chart-col {
-  display: block !important; }
+  display: block !important;
+  transform: scale(1); }
 
 .chart-row.circleChart .half-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.halfChart .bar_line_chart_col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.halfChart .bar-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.halfChart .line-chart-col {
+  display: none;
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.halfChart .circle-chart-col {
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.halfChart .half-chart-col {
-  display: block !important; }
+  display: block !important;
+  transform: scale(1); }
 
 .circle-chart-col .card-body {
   position: relative; }

@@ -1,14 +1,16 @@
 $(document).ready(function () {
 
         var employe_transaction_types_canvas_element = document.getElementById("transactionTypes");
-        var transData = JSON.parse(employe_transaction_types_canvas_element.parentElement.dataset.values);    
+        var transData = JSON.parse(employe_transaction_types_canvas_element.parentElement.dataset.values);
 
         var count = 0;
         for(var i=0, n=transData.length; i < n; i++) 
             { 
                 count += transData[i]; 
             }
-        const total = [transData[0],transData[1],transData[2],transData[3],transData[4],transData[5],transData[6],transData[7],transData[8],transData[9],transData[10],transData[11],transData[12],count];
+
+        var total = transData;
+        total.push(count);
         
         var canvas_element = document.getElementById("transactionTypesBarChart");
         var ctx =  canvas_element.getContext('2d');
