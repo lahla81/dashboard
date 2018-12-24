@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <title>إدارة الطب الشرعي | قسم الطب الشرعي بالظفرة</title>
+    <title>إدارة شؤون المحاماة والخبراء | احصائية ملفات الحراسة القضائية  والتصفية المتداولة</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
@@ -124,7 +124,7 @@
                 </li>
 
                 <!-- ادارة شؤون المحاماة والخبراء -->
-                <li>
+                <li class="active">
                     <a href="#lawyer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <img src="./assets/img/icons/Path_149.png" alt="">
                         <span>ادارة شؤون المحاماة والخبراء</span>
@@ -165,7 +165,7 @@
                             <a href="registration.html">قسم التوثيق العام</a>
                         </li>
                         <li>
-                            <a href="marriage.html">قسم عقود الزواج</a>
+                            <a href="notaries.html">قسم عقود الزواج</a>
                         </li>
                         <li>
                             <a href="notaries.html">قسم إشهار الإسلام</a>
@@ -180,7 +180,7 @@
                 </li>
 
                 <!-- ادارة الطب الشرعي -->
-                <li class="active">
+                <li>
                     <a href="#medicin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-prescription-bottle" style="width:14px;"></i>
                         <span>ادارة الطب الشرعي</span>
@@ -291,57 +291,111 @@
             <div class="row content-top-row">
 
                 <!-- start of right-page-content -->
-                <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2">
+                <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
-                            <h2 class="text-primary h2 text-center mt-2">قسم الطب الشرعي بالظفرة</h2>
-                        <form action="">
+                        <div>
+                            <h2 class="text-primary h2 text-center mt-2">احصائية ملفات الحراسة والتصفية القضائية المتداولة حسب نوعها</h2>
+                        </div>
+                        <form action="" class="form-group p-3">
                             <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary"
-                                    for="customCheck_clinical">عدد الحالات السريرية
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_all_type">احصائية جميع المناطق
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
-                                        id="customCheck_clinical" checked>
+                                        id="customCheck_all_type" checked>
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary"
-                                    for="customCheck_death">عدد حالات الوفاة
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_abu_type">احصائية منطقة أبو ظبي
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
-                                        id="customCheck_death">
+                                        id="customCheck_abu_type">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary"
-                                    for="customCheck_sum">المجموع
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_eye_type">احصائية المنطقة الشرقية-العين
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
-                                        id="customCheck_sum">
+                                        id="customCheck_eye_type">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
-                            <div class="row justify-content-center">
-                                <div class="form-group row">
-                                    <div class="col-12 mt-4 text-center">
-                                        <label class="text-primary" for="from-date">إحصائية عن شهر :</label>
-                                        <input type="month" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
-                                        <input type="submit" class="btn-primary px-3 py-1" value="تم">
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_west_type">احصائية المنطقة الغربية
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_west_type">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <h2 class="text-light-red h2 text-center mt-4">احصائية ملفات الحراسة والتصفية القضائية المتداولة حسب الشهور</h2>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_all_month">احصائية جميع المناطق
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_all_month">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_abu_month">احصائية منطقة أبو ظبي
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_abu_month">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_eye_month">احصائية المنطقة الشرقية-العين
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_eye_month">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="">
+                                <h3 class="text-indigo h3 mb-3 mt-5">حدد الفترة الزمنية</h3>
+                            </div>
+
+                            <div class="row text-center w-100 shadow-around rounded-lg p-3">
+                                <div class="form-group row w-100">
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-primary mt-2" for="from-date">من</label>
+                                        <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-light-red mt-2" for="to-date">إلي</label>
+                                        <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date">
                                     </div>
                                 </div>
+                                <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
                             </div>
-                           
+
                         </form>
                     </div>
                     
                 </div>
 
                 <!-- start of left side -->
-                <div class="col-lg-4 col-12 content-left p-0 mt-2 my-lg-2">
+                <div class="col-lg-4 col-12 content-left p-0 mt-2 my-lg-2 mx-0">
                     <div class="overlay h-100 mx-2 mx-md-2 ml-lg-3">
                         <p>حدد طريقة العرض</p>
                         <div class="row text-center">
@@ -396,7 +450,7 @@
             </div>
 
             <!-- start of bottom section -->
-            <div class="w-100 chart-row">
+            <div class="chart-row">
                 
                 <!-- start of transaction -->
                 <div class="row transaction justify-content-center w-100">
@@ -405,8 +459,12 @@
 
                         <!-- bar and line Chart start -->
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small" data-all="[60 , 9]" data-death="[70 , 15]"
-                                data-labels='["عدد القضايا" , "عدد القضايا الغير منجزة" , "نسبة الإنجاز"]'>
+                            <div class="chart-small" data-all_month="[20 , 6 , 5 ]"  data-abu_month="[25 , 12 , 8 ]" 
+                                                     data-eye_month="[8 , 15 , 17 ]" data-west_type="[15 , 38 , 19 , 14 , 22 , 23]" 
+                                                     data-all_type="[9 , 13 , 16 , 35 , 27 , 32]"  data-abu_type="[47 , 40 , 48 , 38 , 50 , 42]" 
+                                                     data-eye_type="[31 , 34 , 37 , 29 , 26 , 25]"
+                                data-type_labels='[ "مدني" , "تجاري" , "تنفيذ" , "إيجارات" , "جزئي" , "إداري" , "المجموع" ]'
+                                data-month_labels='[ "الجديدة المقيدة" , "مجموع الملفات المنتهية" , "مجموع الملفات المتبقية","نسبة الإنجاز المنتهية الى المتداولة  %" ]'>
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
 
                             </div>
@@ -417,8 +475,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                                عدد القضايا
+                                        <div class="card-header bg-teal pr-3" id="circle_guard_title0">
+                                            
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
                                             <span class="text-teal"></span>                                    
@@ -427,8 +485,8 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3">
-                                            عدد القضايا الغير منجزة
+                                        <div class="card-header bg-cyan pr-3" id="circle_guard_title1">
+                                            
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
                                             <span class="text-cyan"></span> 
@@ -437,11 +495,51 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3">
-                                            نسبة الإنجاز
+                                        <div class="card-header bg-light-red pr-3" id="circle_guard_title2">
+                                            
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
                                             <span class="text-light-red"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 px-1 mt-3">
+                                    <div class="card card-dark-red">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_guard_title3">
+                                            
+                                        </div>
+                                        <div id="circle-body-no3" class="card-body text-center my-2 p-2">
+                                            <span class="text-dark-red"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 px-1 mt-3 month_circle">
+                                    <div class="card card-indigo">
+                                        <div class="card-header bg-indigo pr-3" id="circle_guard_title4">
+                                            
+                                        </div>
+                                        <div id="circle-body-no4" class="card-body text-center my-2 p-2">
+                                            <span class="text-indigo"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 px-1 mt-3 month_circle">
+                                    <div class="card card-purple">
+                                        <div class="card-header bg-purple pr-3" id="circle_guard_title5">
+                                            
+                                        </div>
+                                        <div id="circle-body-no5" class="card-body text-center my-2 p-2">
+                                            <span class="text-purple"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 px-1 mt-3 month_circle">
+                                    <div class="card card-warning">
+                                        <div class="card-header bg-warning pr-3" id="circle_guard_title6">
+                                            
+                                        </div>
+                                        <div id="circle-body-no6" class="card-body text-center my-2 p-2">
+                                            <span class="text-warning"></span>                                    
                                         </div>
                                     </div>
                                 </div>
@@ -453,8 +551,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                                عدد القضايا
+                                        <div class="card-header bg-teal pr-3" id="half_guard_title0">
+                                            
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas class="h-100 w-100" id="half_chart_no0"></canvas>
@@ -464,8 +562,8 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3">
-                                                عدد القضايا الغير منجزة
+                                        <div class="card-header bg-cyan pr-3" id="half_guard_title1">
+                                            
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas class="h-100 w-100" id="half_chart_no1"></canvas>
@@ -476,13 +574,60 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3">
-                                                نسبة الإنجاز
+                                        <div class="card-header bg-light-red pr-3" id="half_guard_title2">
+                                            
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas class="h-100 w-100" id="half_chart_no2"></canvas>
                                                 <span></span>
 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 px-1 mt-3">
+                                    <div class="card card-dark-red">
+                                        <div class="card-header bg-dark-red pr-3" id="half_guard_title3">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no3"></canvas>
+                                                <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 px-1 mt-3 month_half">
+                                    <div class="card card-indigo">
+                                        <div class="card-header bg-indigo pr-3" id="half_guard_title4">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no4"></canvas>
+                                                <span></span>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 px-1 mt-3 month_half">
+                                    <div class="card card-purple">
+                                        <div class="card-header bg-purple pr-3" id="half_guard_title5">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no5"></canvas>
+                                                <span></span>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 px-1 mt-3 month_half">
+                                    <div class="card card-warning">
+                                        <div class="card-header bg-warning pr-3" id="half_guard_title6">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no6"></canvas>
+                                                <span></span>
+    
                                         </div>
                                     </div>
                                 </div>
@@ -512,11 +657,11 @@
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/clinical.js"></script>
-   
+    <script src="./assets/js/guarding.js"></script>
+
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-    
+
 </body>
 
 </html>
