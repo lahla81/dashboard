@@ -5,27 +5,13 @@ $(document).ready(function () {
     const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
 
     var count_veto1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        for(var i=0, n=veto_data.length; i < n; i++) 
             { 
                 count_veto1 += veto_data[i]; 
             }
 
-            console.log(veto_data.join());
-            veto_data.splice(2, 0, count_veto1);
-            console.log(veto_data.join());
-
-        var count_veto2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_veto2 += veto_data[i]; 
-            }
-
-            console.log(veto_data.join());
-            veto_data.splice(4, 0, count_veto2);
-            console.log(veto_data.join());
-    
-
     data = veto_data;
+    data.push(count_veto1)
 
     for (i = 0; i < data.length ; i++) {
         var titleId = "half_guard_title" + i;
@@ -80,6 +66,10 @@ $(document).ready(function () {
     gradient10 = ctx.createLinearGradient(0, 0, 0, 600);
     gradient10.addColorStop(0, '#FF6A6A');
     gradient10.addColorStop(1, '#9F4242');
+
+    gradient11 = ctx.createLinearGradient(0, 0, 0, 600);
+    gradient11.addColorStop(0, '#767DAE');
+    gradient11.addColorStop(1, '#4D4F5C');
 
     gradient14 = ctx.createLinearGradient(0, 0, 800, 800);
     gradient14.addColorStop(000, '#00BA81');
@@ -144,20 +134,36 @@ $(document).ready(function () {
     gradhalf9.addColorStop(0.5, '#000000');
     gradhalf9.addColorStop(0, '#711466');
 
+    gradhalf10 = ctx.createLinearGradient(0, 0, 0, 400);
+    gradhalf10.addColorStop(1, '#000000');
+    gradhalf10.addColorStop(0.5, '#000000');
+    gradhalf10.addColorStop(0, '#4D4F5C');
+
 
     bgColor = [ gradhalf0,gradhalf1,gradhalf2,gradhalf3,
                 gradhalf4,gradhalf5,gradhalf6,gradhalf7,
-                gradhalf8,gradhalf9];
+                gradhalf8,gradhalf9,gradhalf10,gradhalf0,
+                gradhalf1,gradhalf2,gradhalf3,gradhalf4,
+                gradhalf5,gradhalf6,gradhalf7,gradhalf8,
+                gradhalf9,gradhalf10,gradhalf0];
 
     var halfShadowColor= [  '#00BA81','#3B86FF','#FF6A6A',
                             '#D9581F','#3349F0','#850CED',
                             '#E5A100','#1A8162','#FF07A9',
-                            '#711466'];
+                            '#711466','#4D4F5C',
+                            '#00BA81','#3B86FF','#FF6A6A',
+                            '#D9581F','#3349F0','#850CED',
+                            '#E5A100','#1A8162','#FF07A9',
+                            '#711466','#4D4F5C','#00BA81'];
 
     var emptyFill = [   'rgba(0,186,129,0.2)','rgba(59,134,255,0.2)','rgba(255,106,106,0.2)',
                         'rgba(217,88,31,0.2)','rgba(51,73,240,0.2)','rgba(133,12,237,0.2)',
                         'rgba(229,161,0,0.2)','rgba(26,129,98,0.2)','rgba(255,7,169,0.2)',
-                        'rgba(77,79,92,0.2)'
+                        'rgba(113,20,102,0.2)','rgba(77,79,92,0.2)',
+                        'rgba(0,186,129,0.2)','rgba(59,134,255,0.2)','rgba(255,106,106,0.2)',
+                        'rgba(217,88,31,0.2)','rgba(51,73,240,0.2)','rgba(133,12,237,0.2)',
+                        'rgba(229,161,0,0.2)','rgba(26,129,98,0.2)','rgba(255,7,169,0.2)',
+                        'rgba(113,20,102,0.2)','rgba(77,79,92,0.2)','rgba(0,186,129,0.2)'
     ]
     
     Chart.defaults.global.defaultFontFamily = " 'JF-Flat-regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
@@ -183,14 +189,22 @@ $(document).ready(function () {
                 gradient1,gradient2,gradient3,
                 gradient4,gradient5,gradient6,
                 gradient7,gradient8,gradient9,
-                gradient10
+                gradient10,gradient11,
+                gradient1,gradient2,gradient3,
+                gradient4,gradient5,gradient6,
+                gradient7,gradient8,gradient9,
+                gradient10,gradient11,gradient1
                 
             ], 
             hoverBackgroundColor: [
                 gradient1,gradient2,gradient3,
                 gradient4,gradient5,gradient6,
                 gradient7,gradient8,gradient9,
-                gradient10
+                gradient10,gradient11,
+                gradient1,gradient2,gradient3,
+                gradient4,gradient5,gradient6,
+                gradient7,gradient8,gradient9,
+                gradient10,gradient11,gradient1
             ],
 
             shadowOffsetX: 3,
@@ -199,7 +213,11 @@ $(document).ready(function () {
             shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                             '#850CED','#3349F0','#D9581F',
                             '#FF6A6A','#3B86FF','#00BA81',
-                            '#9F4242']
+                            '#9F4242','#4D4F5C',
+                            '#FF07A9','#1A8162','#E5A100',
+                            '#850CED','#3349F0','#D9581F',
+                            '#FF6A6A','#3B86FF','#00BA81',
+                            '#9F4242','#4D4F5C','#FF07A9']
         }]
     };
 
@@ -360,14 +378,22 @@ $(document).ready(function () {
                 gradient1,gradient2,gradient3,
                 gradient4,gradient5,gradient6,
                 gradient7,gradient8,gradient9,
-                gradient10
+                gradient10,gradient11,
+                gradient1,gradient2,gradient3,
+                gradient4,gradient5,gradient6,
+                gradient7,gradient8,gradient9,
+                gradient10,gradient11,gradient1
                 
             ], 
             hoverBackgroundColor: [
                 gradient1,gradient2,gradient3,
                 gradient4,gradient5,gradient6,
                 gradient7,gradient8,gradient9,
-                gradient10
+                gradient10,gradient11,
+                gradient1,gradient2,gradient3,
+                gradient4,gradient5,gradient6,
+                gradient7,gradient8,gradient9,
+                gradient10,gradient11,gradient1
             ],
 
             shadowOffsetX: 3,
@@ -376,7 +402,11 @@ $(document).ready(function () {
             shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                             '#850CED','#3349F0','#D9581F',
                             '#FF6A6A','#3B86FF','#00BA81',
-                            '#9F4242']
+                            '#9F4242','#4D4F5C',
+                            '#FF07A9','#1A8162','#E5A100',
+                            '#850CED','#3349F0','#D9581F',
+                            '#FF6A6A','#3B86FF','#00BA81',
+                            '#9F4242','#4D4F5C','#FF07A9']
         }]
     };
 
@@ -455,27 +485,14 @@ $(document).ready(function () {
         const veto_data   = JSON.parse(advertise_data.parentElement.dataset.veto);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
     
-        var count_veto1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        var count_veto = 0;
+        for(var i=0, n=veto_data.length; i < n; i++) 
             { 
-                count_veto1 += veto_data[i]; 
+                count_veto += veto_data[i]; 
             }
 
-            console.log(veto_data.join());
-            veto_data.splice(2, 0, count_veto1);
-            console.log(veto_data.join());
-
-        var count_veto2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_veto2 += veto_data[i]; 
-            }
-
-            console.log(veto_data.join());
-            veto_data.splice(4, 0, count_veto2);
-            console.log(veto_data.join());
-    
         data = veto_data;
+        data.push(count_veto)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -496,14 +513,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -512,7 +537,11 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
         };
     
@@ -770,27 +799,14 @@ $(document).ready(function () {
         const abu_inter_data   = JSON.parse(advertise_data.parentElement.dataset.abu_inter);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
     
-        var count_abu_inter1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        var count_abu_inter = 0;
+        for(var i=0, n=abu_inter_data.length; i < n; i++) 
             { 
-                count_abu_inter1 += abu_inter_data[i]; 
+                count_abu_inter += abu_inter_data[i]; 
             }
 
-            console.log(abu_inter_data.join());
-            abu_inter_data.splice(2, 0, count_abu_inter1);
-            console.log(abu_inter_data.join());
-
-        var count_abu_inter2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_abu_inter2 += abu_inter_data[i]; 
-            }
-
-            console.log(abu_inter_data.join());
-            abu_inter_data.splice(4, 0, count_abu_inter2);
-            console.log(abu_inter_data.join());
-    
         data = abu_inter_data;
+        data.push(count_abu_inter)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -811,14 +827,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -827,7 +851,11 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
         };
     
@@ -1084,28 +1112,15 @@ $(document).ready(function () {
         var advertise_data = document.getElementById("bar-chart");
         const comerc_data   = JSON.parse(advertise_data.parentElement.dataset.comerc);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
-    
-        var count_comerc_data1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        
+        var count_comerc = 0;
+        for(var i=0, n=comerc_data.length; i < n; i++) 
             { 
-                count_comerc_data1 += comerc_data[i]; 
+                count_comerc += comerc_data[i]; 
             }
 
-            console.log(comerc_data.join());
-            comerc_data.splice(2, 0, count_comerc_data1);
-            console.log(comerc_data.join());
-
-        var count_comerc_data2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_comerc_data2 += comerc_data[i]; 
-            }
-
-            console.log(comerc_data.join());
-            comerc_data.splice(4, 0, count_comerc_data2);
-            console.log(comerc_data.join());
-    
         data = comerc_data;
+        data.push(count_comerc)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -1126,14 +1141,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -1142,10 +1165,13 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
-        };
-    
+        };    
         var bar_options = {
             layout: {
                 padding: {
@@ -1400,28 +1426,14 @@ $(document).ready(function () {
         const workers_data   = JSON.parse(advertise_data.parentElement.dataset.workers);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
     
-        var count_workers_data1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        var count_workers = 0;
+        for(var i=0, n=workers_data.length; i < n; i++) 
             { 
-                count_workers_data1 += workers_data[i]; 
+                count_workers += workers_data[i]; 
             }
 
-            console.log(workers_data.join());
-            workers_data.splice(2, 0, count_workers_data1);
-            console.log(workers_data.join());
-
-        var count_workers_data2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_workers_data2 += workers_data[i]; 
-            }
-
-            console.log(workers_data.join());
-            workers_data.splice(4, 0, count_workers_data2);
-            console.log(workers_data.join());
-    
         data = workers_data;
-        // data.push(count_west_type);
+        data.push(count_workers)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -1442,14 +1454,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -1458,7 +1478,11 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
         };
     
@@ -1716,28 +1740,14 @@ $(document).ready(function () {
         const abu_extr_data   = JSON.parse(advertise_data.parentElement.dataset.abu_extr);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
     
-        var count_abu_extr_data1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        var count_abu_extr = 0;
+        for(var i=0, n=abu_extr_data.length; i < n; i++) 
             { 
-                count_abu_extr_data1 += abu_extr_data[i]; 
+                count_abu_extr += abu_extr_data[i]; 
             }
 
-            console.log(abu_extr_data.join());
-            abu_extr_data.splice(2, 0, count_abu_extr_data1);
-            console.log(abu_extr_data.join());
-
-        var count_abu_extr_data2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_abu_extr_data2 += abu_extr_data[i]; 
-            }
-
-            console.log(abu_extr_data.join());
-            abu_extr_data.splice(4, 0, count_abu_extr_data2);
-            console.log(abu_extr_data.join());
-       
-    
         data = abu_extr_data;
+        data.push(count_abu_extr)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -1758,14 +1768,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -1774,7 +1792,11 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
         };
     
@@ -2031,28 +2053,14 @@ $(document).ready(function () {
         const rent_data   = JSON.parse(advertise_data.parentElement.dataset.rent);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
     
-        var count_rent_data1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        var count_rent = 0;
+        for(var i=0, n=rent_data.length; i < n; i++) 
             { 
-                count_rent_data1 += rent_data[i]; 
+                count_rent += rent_data[i]; 
             }
 
-            console.log(rent_data.join());
-            rent_data.splice(2, 0, count_rent_data1);
-            console.log(rent_data.join());
-
-        var count_rent_data2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_rent_data2 += rent_data[i]; 
-            }
-
-            console.log(rent_data.join());
-            rent_data.splice(4, 0, count_rent_data2);
-            console.log(rent_data.join());
-       
         data = rent_data;
-       
+        data.push(count_rent)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -2073,14 +2081,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -2089,7 +2105,11 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
         };
     
@@ -2347,27 +2367,14 @@ $(document).ready(function () {
         const eye_adv_data   = JSON.parse(advertise_data.parentElement.dataset.eye_adv);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
     
-        var count_eye_adv_data1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        var count_eye_adv = 0;
+        for(var i=0, n=eye_adv_data.length; i < n; i++) 
             { 
-                count_eye_adv_data1 += eye_adv_data[i]; 
+                count_eye_adv += eye_adv_data[i]; 
             }
 
-            console.log(eye_adv_data.join());
-            eye_adv_data.splice(2, 0, count_eye_adv_data1);
-            console.log(eye_adv_data.join());
-
-        var count_eye_adv_data2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_eye_adv_data2 += eye_adv_data[i]; 
-            }
-
-            console.log(eye_adv_data.join());
-            eye_adv_data.splice(4, 0, count_eye_adv_data2);
-            console.log(eye_adv_data.join());
-       
         data = eye_adv_data;
+        data.push(count_eye_adv)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -2388,14 +2395,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -2404,7 +2419,11 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
         };
         var bar_options = {
@@ -2661,27 +2680,14 @@ $(document).ready(function () {
         const yahr_adv_data   = JSON.parse(advertise_data.parentElement.dataset.yahr_adv);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
     
-        var count_yahr_adv1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        var count_yahr_adv = 0;
+        for(var i=0, n=yahr_adv_data.length; i < n; i++) 
             { 
-                count_yahr_adv1 += yahr_adv_data[i]; 
+                count_yahr_adv += yahr_adv_data[i]; 
             }
 
-            console.log(yahr_adv_data.join());
-            yahr_adv_data.splice(2, 0, count_yahr_adv1);
-            console.log(yahr_adv_data.join());
-
-        var count_yahr_adv2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_yahr_adv2 += yahr_adv_data[i]; 
-            }
-
-            console.log(yahr_adv_data.join());
-            yahr_adv_data.splice(4, 0, count_yahr_adv2);
-            console.log(yahr_adv_data.join());
-    
         data = yahr_adv_data;
+        data.push(count_yahr_adv)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -2702,14 +2708,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -2718,7 +2732,11 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
         };
         var bar_options = {
@@ -2975,29 +2993,14 @@ $(document).ready(function () {
         const zafra_adv_data   = JSON.parse(advertise_data.parentElement.dataset.zafra_adv);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
     
-        var count_zafra_adv1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        var count_zafra_adv = 0;
+        for(var i=0, n=zafra_adv_data.length; i < n; i++) 
             { 
-                count_zafra_adv1 += zafra_adv_data[i]; 
+                count_zafra_adv += zafra_adv_data[i]; 
             }
 
-            console.log(zafra_adv_data.join());
-            zafra_adv_data.splice(2, 0, count_zafra_adv1);
-            console.log(zafra_adv_data.join());
-
-        var count_zafra2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_zafra2 += zafra_adv_data[i]; 
-            }
-
-            console.log(zafra_adv_data.join());
-            zafra_adv_data.splice(4, 0, count_zafra2);
-            console.log(zafra_adv_data.join());
-    
         data = zafra_adv_data;
-        // persent_eye_month = Math.round(persent_eye_month);
-        // data.push(persent_eye_month);
+        data.push(count_zafra_adv)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -3018,14 +3021,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -3034,7 +3045,11 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
         };
         var bar_options = {
@@ -3291,27 +3306,14 @@ $(document).ready(function () {
         const roways_adv_data   = JSON.parse(advertise_data.parentElement.dataset.roways_adv);
         const labels = JSON.parse(advertise_data.parentElement.dataset.labels);
     
-        var count_roways_adv_data1 = 0;
-        for(var i=0, n=2; i < n; i++) 
+        var count_roways_adv = 0;
+        for(var i=0, n=roways_adv_data.length; i < n; i++) 
             { 
-                count_roways_adv_data1 += roways_adv_data[i]; 
+                count_roways_adv += roways_adv_data[i]; 
             }
-
-            console.log(roways_adv_data.join());
-            roways_adv_data.splice(2, 0, count_roways_adv_data1);
-            console.log(roways_adv_data.join());
-
-        var count_roways_adv_data2 = 0;
-        for(var i=2, n=4; i < n; i++) 
-            { 
-                count_roways_adv_data2 += roways_adv_data[i]; 
-            }
-
-            console.log(roways_adv_data.join());
-            roways_adv_data.splice(4, 0, count_roways_adv_data2);
-            console.log(roways_adv_data.join());
 
         data = roways_adv_data;
+        data.push(count_roways_adv)
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_guard_title" + i;
@@ -3332,14 +3334,22 @@ $(document).ready(function () {
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                     
                 ], 
                 hoverBackgroundColor: [
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
                     gradient7,gradient8,gradient9,
-                    gradient10
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
                 ],
     
                 shadowOffsetX: 3,
@@ -3348,7 +3358,11 @@ $(document).ready(function () {
                 shadowColor: [  '#FF07A9','#1A8162','#E5A100',
                                 '#850CED','#3349F0','#D9581F',
                                 '#FF6A6A','#3B86FF','#00BA81',
-                                '#9F4242']
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
             }]
         };
         var bar_options = {
