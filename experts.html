@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <title>إدارة خدمة المحاكم | قسم المعلنين</title>
+    <title>إدارة شؤون المحاماة والخبراء | إحصائية لجان الخبرة المتخصصة </title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
@@ -80,7 +80,7 @@
                 </li>
 
                 <!-- ادارة خدمات المحاكم -->
-                <li class="active">
+                <li>
                     <a href="#services" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <img src="./assets/img/icons/Union_10.png" alt="">
                         <span>ادارة خدمات المحاكم</span>
@@ -132,7 +132,7 @@
                 </li>
 
                 <!-- ادارة شؤون المحاماة والخبراء -->
-                <li>
+                <li class="active">
                     <a href="#lawyer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <img src="./assets/img/icons/Path_149.png" alt="">
                         <span>ادارة شؤون المحاماة والخبراء</span>
@@ -303,127 +303,43 @@
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
                         
                         <form action="" class="form-group p-3">
-                            <!-- <div class="row">
-                                <div class="col-6">
-                                    <div class="checkbox-main">
-                                        <label class="custom-control-label custom-control-label-notary my-3"
-                                            for="customCheck_month"><h2 class="text-primary h2 mt-2">إحصائية إعلانات قسم المعلنين</h2>
-                                            <input type="radio" name="main_input"
-                                                class="custom-control-input"
-                                                id="customCheck_month">
-                                            <span class="checkmark-main"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="checkbox-main">
-                                        <label class="custom-control-label custom-control-label-notary my-3"
-                                            for="customCheck_type"><h2 class="text-primary h2 mt-2">إحــصــائـيــة الإعــلانــات الـمنـفـذة لـقــسـم الـمعـلنــيـن حــســب نــوع الـدعــوى</h2>
-                                            <input type="radio" name="main_input"
-                                                class="custom-control-input"
-                                                id="customCheck_type">
-                                            <span class="checkmark-main"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div> -->
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_veto">إعلانات واردة من محكمة النـقـض
+                                    for="customCheck_person">اللجنة المتخصصة في مسائل الأحوال الشخصية		
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_veto" checked>
+                                    class="custom-control-input"
+                                    id="customCheck_person" checked>
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_abu_inter">إعلانات المناطق الداخلية في محكمة أبــوظـبي
+                                    for="customCheck_estimate">اللجنة المتخصصة في مسائل التقدير العامة		
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
-                                        id="customCheck_abu_inter">
+                                        id="customCheck_estimate">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_comerc">إعلانات واردة من المحكمة التجارية
+                                    for="customCheck_state">اللجنة المتخصصة في التقييم العقاري
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
-                                        id="customCheck_comerc">
+                                        id="customCheck_state">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_workers">إعلانات واردة من المحكمة العـمالــية
+                                    for="customCheck_sum">الإجمالي
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
-                                        id="customCheck_workers">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_abu_extr">إعلانات المناطق الخارجية في محكمة أبوظبي (بنـي يـاس سابقاً)
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_abu_extr">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_rent">إعلانات واردة من لجنة فض المنازعات الإيجارية
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_rent">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_eye_adv">إعلانات وحدة الإعلان في محكمة العـيـن
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_eye_adv">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_yahr_adv">إعلانات وحدة الإعلان في محكمة الـيــحــر
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_yahr_adv">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_zafra_adv">إعلانات وحدة الإعلان في محكمة الظـفـرة
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_zafra_adv">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_roways_adv">إعلانات وحدة الإعلان في محكمة الرويس والسلع
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_roways_adv">
+                                        id="customCheck_sum">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
@@ -509,12 +425,9 @@
 
                         <!-- bar and line Chart start -->
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small" data-veto="[20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 ]"  data-abu_inter="[25 , 12 , 8 , 20 , 22 , 14 , 17 , 19 ]" 
-                                                     data-comerc="[8 , 15 , 17 , 12 , 20 , 22 , 18 , 16]" data-workers="[21 , 6 , 5 , 31 , 34 , 37 , 29 , 26 ]" 
-                                                     data-abu_extr="[23 , 6 , 5 , 31 , 34 , 37 , 29 , 26]"  data-rent="[22 , 6 , 5 , 31 , 34 , 37 , 29 , 26 ]" 
-                                                     data-eye_adv="[28 , 6 , 5 , 31 , 34 , 37 , 29 , 32]" data-yahr_adv="[24 , 6 , 5 , 31 , 34 , 37 , 25 , 32]"
-                                                     data-zafra_adv="[27 , 31 , 34 , 37 , 29 , 26 , 25 , 32]" data-roways_adv="[26 , 6 , 5 , 31 , 29 , 26 , 25 , 32]"
-                                data-labels='[ "المتبقية من الشهر السابق" , "الواردة خلال الشهر" , "المجموع" , "وردت نهاية الشهر ولم يتم تداولها" , "المجموع" , "المنفذ من الإعلانات الواردة" , "إنتظار المدعي للإرشاد", "وردت نهاية الشهر ولم يتم تداولها" , "المتبقي للشهر اللاحق" , "نسبة الإنجاز %" ]'>
+                            <div class="chart-small" data-person="[20 , 6 , 31 , 34 , 37 , 29 , 26  ]"  data-estimate="[25 , 12 , 20 , 22 , 14 , 17 , 19 ]" 
+                                                     data-state="[ 15 , 17 , 12 , 20 , 22 , 18 , 16]"
+                                data-labels='[ "المتبقية من السابق" , "الجديدة المقيدة" , "المعادة للسير والمجددة" , "مجموع الملفات المتداولة" , "ملفات لم يتم تداولها" , "مجموع الملفات المعروضة" , "تم ابداء الرأي وأحيلت للمحكمة", "تعذر وأحيلت للقضاء" , "حفظت لعدم حضور الأطراف" , "مجموع الملفات المنجزة","ملفات معروضة","ملفات لم يتم تداولها","مجموع الملفات المتبقية","نسبة الإنجاز%" ]'>
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
 
                             </div>
@@ -522,15 +435,15 @@
 
                         <!-- Circle Chart -->
                         <div class="circle-chart-col notaries-circle-chart-col d-none">
-                            <div class="card w-100 card-teal">
+                            <div class="card w-100 card-teal my-3">
                                 <div class="card-header bg-teal pr-3">
-                                    <h2>الإعلانات المتداولة</h2>
+                                    <h2>الملفات المتداولة</h2>
                                 </div>
                                 <div class="card-body d-flex flex-wrap my-2 py-4 justify-content-center">
 
                                     <div class="col-12 col-md-6 px-1 mt-3">
                                         <div class="card card-teal">
-                                            <div class="card-header bg-teal pr-3" id="circle_guard_title0">
+                                            <div class="card-header bg-teal pr-3" id="circle_expert_title0">
                                                 
                                             </div>
                                             <div id="circle-body-no0" class="card-body text-center my-2 p-2">
@@ -540,7 +453,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 px-1 mt-3">
                                         <div class="card card-cyan">
-                                            <div class="card-header bg-cyan pr-3" id="circle_guard_title1">
+                                            <div class="card-header bg-cyan pr-3" id="circle_expert_title1">
                                                 
                                             </div>
                                             <div id="circle-body-no1" class="card-body text-center my-2 p-2">
@@ -550,7 +463,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 px-1 mt-3">
                                         <div class="card card-light-red">
-                                            <div class="card-header bg-light-red pr-3" id="circle_guard_title2">
+                                            <div class="card-header bg-light-red pr-3" id="circle_expert_title2">
                                                 
                                             </div>
                                             <div id="circle-body-no2" class="card-body text-center my-2 p-2">
@@ -560,7 +473,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 px-1 mt-3">
                                         <div class="card card-dark-red">
-                                            <div class="card-header bg-dark-red pr-3" id="circle_guard_title3">
+                                            <div class="card-header bg-dark-red pr-3" id="circle_expert_title3">
                                                 
                                             </div>
                                             <div id="circle-body-no3" class="card-body text-center my-2 p-2">
@@ -570,7 +483,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 px-1 mt-3">
                                         <div class="card card-indigo">
-                                            <div class="card-header bg-indigo pr-3" id="circle_guard_title4">
+                                            <div class="card-header bg-indigo pr-3" id="circle_expert_title4">
                                                 
                                             </div>
                                             <div id="circle-body-no4" class="card-body text-center my-2 p-2">
@@ -578,30 +491,29 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-12 col-md-6 px-1 my-3">
+                                        <div class="card card-purple">
+                                            <div class="card-header bg-purple pr-3" id="circle_expert_title5">
+                                                
+                                            </div>
+                                            <div id="circle-body-no5" class="card-body text-center my-2 p-2">
+                                                <span class="text-purple"></span> 
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 px-1 my-3">
-                                    <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="circle_guard_title5">
-                                            
-                                        </div>
-                                        <div id="circle-body-no5" class="card-body text-center my-2 p-2">
-                                            <span class="text-purple"></span> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card w-100 card-warning">
+
+                            <div class="card w-100 card-warning my-3">
                                 <div class="card-header bg-warning pr-3">
-                                    <h2>الإعلانات المتبقية للشهر اللاحق</h2>
+                                    <h2>الملفات المنجزة</h2>
                                 </div>
                                 <div class="card-body d-flex flex-wrap my-2 py-4 justify-content-center">
 
                                     <div class="col-12 col-md-6 px-1 mt-3">
                                         <div class="card card-warning">
-                                            <div class="card-header bg-warning pr-3" id="circle_guard_title6">
+                                            <div class="card-header bg-warning pr-3" id="circle_expert_title6">
                                                 
                                             </div>
                                             <div id="circle-body-no6" class="card-body text-center my-2 p-2">
@@ -611,7 +523,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 px-1 mt-3">
                                         <div class="card card-dark-green">
-                                            <div class="card-header bg-dark-green pr-3" id="circle_guard_title7">
+                                            <div class="card-header bg-dark-green pr-3" id="circle_expert_title7">
 
                                             </div>
                                             <div id="circle-body-no7" class="card-body text-center my-2 p-2">
@@ -621,7 +533,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 px-1 mt-3">
                                         <div class="card card-rose">
-                                            <div class="card-header bg-rose pr-3" id="circle_guard_title8">
+                                            <div class="card-header bg-rose pr-3" id="circle_expert_title8">
 
                                             </div>
                                             <div id="circle-body-no8" class="card-body text-center my-2 p-2">
@@ -629,34 +541,86 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-12 col-md-6 px-1 mt-3">
+                                        <div class="card card-maron">
+                                            <div class="card-header bg-maron pr-3" id="circle_expert_title9">
+    
+                                            </div>
+                                            <div id="circle-body-no9" class="card-body text-center my-2 p-2">
+                                                <span class="text-maron"></span>                                    
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="circle_guard_title9">
 
+                            <div class="card w-100 card-teal my-3">
+                                <div class="card-header bg-teal pr-3">
+                                    <h2>الملفات المتبقية</h2>
+                                </div>
+                                <div class="card-body d-flex flex-wrap my-2 py-4 justify-content-center">
+                                   
+                                    <div class="col-12 col-md-6 px-1 mt-3">
+                                        <div class="card card-rody">
+                                            <div class="card-header bg-rody pr-3" id="circle_expert_title10">
+        
+                                            </div>
+                                            <div id="circle-body-no10" class="card-body text-center my-2 p-2">
+                                                <span class="text-rody"></span>                                    
+                                            </div>
                                         </div>
-                                        <div id="circle-body-no9" class="card-body text-center my-2 p-2">
-                                            <span class="text-maron"></span>                                    
+                                    </div>
+                                    <div class="col-12 col-md-6 px-1 mt-3">
+                                        <div class="card card-teal">
+                                            <div class="card-header bg-teal pr-3" id="circle_expert_title11">
+                                                
+                                            </div>
+                                            <div id="circle-body-no11" class="card-body text-center my-2 p-2">
+                                                <span class="text-teal"></span>                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 px-1 mt-3">
+                                        <div class="card card-cyan">
+                                            <div class="card-header bg-cyan pr-3" id="circle_expert_title12">
+                                                
+                                            </div>
+                                            <div id="circle-body-no12" class="card-body text-center my-2 p-2">
+                                                <span class="text-cyan"></span> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+
+                                </div>
+                            </div>
+                            <div class="row w-100 justify-content-center">
+                                <div class="col-12 col-md-6 px-1 mt-2">
+                                    <div class="card card-light-red">
+                                        <div class="card-header bg-light-red pr-3" id="circle_expert_title13">
+                                            
+                                        </div>
+                                        <div id="circle-body-no13" class="card-body text-center my-2 p-2">
+                                            <span class="text-light-red"></span>                                    
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                           
                         </div>
 
                         <!-- Half Chart -->
                         <div class="half-chart-col notaries-half-chart-col d-none">
                             <div class="row justify-content-center">
-                                <div class="card w-100 card-teal">
+                                <div class="card w-100 card-teal my-3">
                                     <div class="card-header bg-teal pr-3">
-                                        <h2>الإعلانات المتداولة</h2>
+                                        <h2>الملفات المتداولة</h2>
                                     </div>
                                     <div class="card-body d-flex flex-wrap my-2 py-4 justify-content-center">
                                         <div class="col-12 px-1 mt-3">
                                             <div class="card card-teal">
-                                                <div class="card-header bg-teal pr-3" id="half_guard_title0">
+                                                <div class="card-header bg-teal pr-3" id="half_expert_title0">
                                                     
                                                 </div>
                                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -667,7 +631,7 @@
                                         </div>
                                         <div class="col-12 px-1 mt-3">
                                             <div class="card card-cyan">
-                                                <div class="card-header bg-cyan pr-3" id="half_guard_title1">
+                                                <div class="card-header bg-cyan pr-3" id="half_expert_title1">
                                                     
                                                 </div>
                                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -679,7 +643,7 @@
                                         </div>
                                         <div class="col-12 px-1 mt-3">
                                             <div class="card card-light-red">
-                                                <div class="card-header bg-light-red pr-3" id="half_guard_title2">
+                                                <div class="card-header bg-light-red pr-3" id="half_expert_title2">
                                                     
                                                 </div>
                                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -691,7 +655,7 @@
                                         </div>
                                         <div class="col-12 px-1 mt-3">
                                             <div class="card card-dark-red">
-                                                <div class="card-header bg-dark-red pr-3" id="half_guard_title3">
+                                                <div class="card-header bg-dark-red pr-3" id="half_expert_title3">
                                                     
                                                 </div>
                                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -702,7 +666,7 @@
                                         </div>
                                         <div class="col-12 px-1 mt-3">
                                             <div class="card card-indigo">
-                                                <div class="card-header bg-indigo pr-3" id="half_guard_title4">
+                                                <div class="card-header bg-indigo pr-3" id="half_expert_title4">
                                                     
                                                 </div>
                                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -712,30 +676,29 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="row w-100 justify-content-center">
-                                    <div class="col-12 px-1 mt-3">
-                                        <div class="card card-purple">
-                                            <div class="card-header bg-purple pr-3" id="half_guard_title5">
-                                                
-                                            </div>
-                                            <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                                <canvas class="h-100 w-100" id="half_chart_no5"></canvas>
-                                                    <span></span>
-        
+                                        <div class="col-12 px-1 mt-3">
+                                            <div class="card card-purple">
+                                                <div class="card-header bg-purple pr-3" id="half_expert_title5">
+                                                    
+                                                </div>
+                                                <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                                    <canvas class="h-100 w-100" id="half_chart_no5"></canvas>
+                                                        <span></span>
+            
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>.
-                                <div class="card w-100 card-warning">
+                                </div>
+                                
+                                <div class="card w-100 card-warning my-3">
                                     <div class="card-header bg-warning pr-3">
-                                        <h2>الإعلانات المتبقية للشهر اللاحق</h2>
+                                        <h2>الملفات المنجزة</h2>
                                     </div>
                                     <div class="card-body d-flex flex-wrap my-2 py-4 justify-content-center">
                                         <div class="col-12 px-1 mt-3">
                                             <div class="card card-warning">
-                                                <div class="card-header bg-warning pr-3" id="half_guard_title6">
+                                                <div class="card-header bg-warning pr-3" id="half_expert_title6">
                                                     
                                                 </div>
                                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -747,7 +710,7 @@
                                         </div>
                                         <div class="col-12 px-1 mt-3">
                                             <div class="card card-dark-green">
-                                                <div class="card-header bg-dark-green pr-3" id="half_guard_title7">
+                                                <div class="card-header bg-dark-green pr-3" id="half_expert_title7">
                                                     
                                                 </div>
                                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -759,7 +722,7 @@
                                         </div>
                                         <div class="col-12 px-1 mt-3">
                                             <div class="card card-rose">
-                                                <div class="card-header bg-rose pr-3" id="half_guard_title8">
+                                                <div class="card-header bg-rose pr-3" id="half_expert_title8">
                                                     
                                                 </div>
                                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -769,18 +732,74 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-12 px-1 mt-3">
+                                            <div class="card card-maron">
+                                                <div class="card-header bg-maron pr-3" id="half_expert_title9">
+                                                    
+                                                </div>
+                                                <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                                    <canvas class="h-100 w-100" id="half_chart_no9"></canvas>
+                                                        <span></span>
+            
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <div class="card w-100 card-teal my-3">
+                                    <div class="card-header bg-teal pr-3">
+                                        <h2>الملفات المتبقية</h2>
+                                    </div>
+                                    <div class="card-body d-flex flex-wrap my-2 py-4 justify-content-center">
+                                        <div class="col-12 px-1 mt-3">
+                                            <div class="card card-rody">
+                                                <div class="card-header bg-rody pr-3" id="half_expert_title10">
+                                                    
+                                                </div>
+                                                <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                                    <canvas class="h-100 w-100" id="half_chart_no10"></canvas>
+                                                        <span></span>
+            
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-1 mt-3">
+                                            <div class="card card-teal">
+                                                <div class="card-header bg-teal pr-3" id="half_expert_title11">
+                                                    
+                                                </div>
+                                                <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                                    <canvas class="h-100 w-100" id="half_chart_no11"></canvas>
+                                                        <span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-1 mt-3">
+                                            <div class="card card-cyan">
+                                                <div class="card-header bg-cyan pr-3" id="half_expert_title12">
+                                                    
+                                                </div>
+                                                <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                                    <canvas class="h-100 w-100" id="half_chart_no12"></canvas>
+                                                        <span></span>
+        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="row w-100 justify-content-center">
                                     <div class="col-12 px-1 mt-3">
-                                        <div class="card card-maron">
-                                            <div class="card-header bg-maron pr-3" id="half_guard_title9">
+                                        <div class="card card-light-red">
+                                            <div class="card-header bg-light-red pr-3" id="half_expert_title13">
                                                 
                                             </div>
                                             <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                                <canvas class="h-100 w-100" id="half_chart_no9"></canvas>
+                                                <canvas class="h-100 w-100" id="half_chart_no13"></canvas>
                                                     <span></span>
-        
+    
                                             </div>
                                         </div>
                                     </div>
@@ -811,7 +830,7 @@
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/advertise_month.js"></script>
+    <script src="./assets/js/expert.js"></script>
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
