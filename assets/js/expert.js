@@ -475,6 +475,9 @@ $(document).ready(function () {
     };
     
     $('#customCheck_person:input').click(function () {
+        $('.type-hd').css({display:'block'});
+        $('.type-block').css({display:'block'});
+        $('.sum').css({display:'block'});
         myChart.destroy();
         var experts_data = document.getElementById("bar-chart");
         const person_data   = JSON.parse(experts_data.parentElement.dataset.person);
@@ -803,6 +806,9 @@ $(document).ready(function () {
     });
     
     $('#customCheck_estimate:input').click(function () {
+        $('.type-hd').css({display:'block'});
+        $('.type-block').css({display:'block'});
+        $('.sum').css({display:'block'});
         myChart.destroy();
         var experts_data = document.getElementById("bar-chart");
         const estimate_data   = JSON.parse(experts_data.parentElement.dataset.estimate);
@@ -1131,6 +1137,9 @@ $(document).ready(function () {
     });
 
     $('#customCheck_state:input').click(function() {
+        $('.type-hd').css({display:'block'});
+        $('.type-block').css({display:'block'});
+        $('.sum').css({display:'block'});
         myChart.destroy();
         var experts_data = document.getElementById("bar-chart");
         const state_data   = JSON.parse(experts_data.parentElement.dataset.state);
@@ -1459,6 +1468,9 @@ $(document).ready(function () {
     });
 
     $('#customCheck_sum:input').click(function() {
+        $('.type-hd').css({display:'block'});
+        $('.type-block').css({display:'block'});
+        $('.sum').css({display:'block'});
         myChart.destroy();
         var experts_data = document.getElementById("bar-chart");
         const state_data   = JSON.parse(experts_data.parentElement.dataset.state);
@@ -1619,6 +1631,1242 @@ $(document).ready(function () {
             labels: labels,
             datasets: [{
                 data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+    
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+    
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+    });
+
+    $('#customCheck_person_type:input').click(function () {
+        $('.sum').css({display:'block'});
+        $('.type-hd').css({display:'none'});
+        myChart.destroy();
+        var experts_data = document.getElementById("bar-chart");
+        const person_type_data   = JSON.parse(experts_data.parentElement.dataset.person_type);
+        const labels = JSON.parse(experts_data.parentElement.dataset.labels_person);
+    
+        var count_person_type = 0;
+        for(var i=0, n=person_type_data.length; i < n; i++) 
+            { 
+                count_person_type += person_type_data[i]; 
+            }
+
+        data = person_type_data;
+        data.push(count_person_type);
+
+        for (i = 0; i < data.length ; i++) {
+            var titleId = "half_expert_title" + i;
+            document.getElementById(titleId).innerHTML = labels[i];
+        }
+
+        for (i = 0; i < data.length ; i++) {
+            var circle_titleId = "circle_expert_title" + i;
+            document.getElementById(circle_titleId).innerHTML = labels[i];
+        }
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3                
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3
+                ],
+    
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100']
+            }]
+        };
+    
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.4
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+    
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+    
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+    
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+    });
+    
+    $('#customCheck_estimate_type:input').click(function () {
+        $('.type-hd').css({display:'none'});
+        $('.type-block').css({display:'block'});
+        $('.sum').css({display:'block'});
+        myChart.destroy();
+        var experts_data = document.getElementById("bar-chart");
+        const estimate_type_data   = JSON.parse(experts_data.parentElement.dataset.estimate_type);
+        const labels = JSON.parse(experts_data.parentElement.dataset.labels_estimate);
+    
+        var count_estimate_type = 0;
+        for(var i=0, n=estimate_type_data.length; i < n; i++) 
+            { 
+                count_estimate_type += estimate_type_data[i]; 
+            }
+
+        data = estimate_type_data;
+        data.push(count_estimate_type);
+
+        for (i = 0; i < data.length ; i++) {
+            var titleId = "half_expert_title" + i;
+            document.getElementById(titleId).innerHTML = labels[i];
+        }
+
+        for (i = 0; i < data.length ; i++) {
+            var circle_titleId = "circle_expert_title" + i;
+            document.getElementById(circle_titleId).innerHTML = labels[i];
+        }
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3                
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3
+                ],
+    
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100']
+            }]
+        };
+    
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.4
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+    
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+    
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+    
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }else
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }else
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }else
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+    });
+
+    $('#customCheck_state_type:input').click(function() {
+        $('.type-hd').css({display:'none'});
+        $('.type-block').css({display:'block'});
+        $('.sum').css({display:'block'});
+        myChart.destroy();
+        var experts_data = document.getElementById("bar-chart");
+        const state_type_data   = JSON.parse(experts_data.parentElement.dataset.state_type);
+        const labels = JSON.parse(experts_data.parentElement.dataset.labels_state);
+    
+        var count_state_type = 0;
+        for(var i=0, n=state_type_data.length; i < n; i++) 
+            { 
+                count_state_type += state_type_data[i]; 
+            }
+
+        data = state_type_data;
+        data.push(count_state_type);
+
+        for (i = 0; i < data.length ; i++) {
+            var titleId = "half_expert_title" + i;
+            document.getElementById(titleId).innerHTML = labels[i];
+        }
+
+        for (i = 0; i < data.length ; i++) {
+            var circle_titleId = "circle_expert_title" + i;
+            document.getElementById(circle_titleId).innerHTML = labels[i];
+        }
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3                
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3
+                ],
+    
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100']
+            }]
+        };
+    
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.4
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+    
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+    
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+    
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+            $('#customCheck-bar:input').click(function(){
+                myChart.destroy();
+                chart_type = 'bar';
+                chart_data = bar_data;
+                chart_options = bar_options;
+                init();
+            });
+            $('#customCheck-line:input').click(function(){
+                myChart.destroy();
+                chart_type = 'line';
+                chart_data = line_data;
+                chart_options = line_options;
+                init();
+            });
+            $('#customCheck-half:input').click(function removeData(chart) {
+                half();
+            });
+            $('#customCheck-circle:input').click(function(){
+                circle();
+            });
+        }
+    });
+
+    $('#customCheck_sum_type:input').click(function() {
+        $('.type-hd').css({display:'none'});
+        $('.sum').css({display:'none'});
+        $('.type-block').css({display:'none'});
+        myChart.destroy();
+        var experts_data = document.getElementById("bar-chart");
+        const state_type_data   = JSON.parse(experts_data.parentElement.dataset.state_type);
+        const person_type_data   = JSON.parse(experts_data.parentElement.dataset.person_type);
+        const estimate_type_data   = JSON.parse(experts_data.parentElement.dataset.estimate_type);
+
+        var count_state_type = 0;
+        for(var i=0, n=state_type_data.length; i < n; i++) 
+            { 
+                count_state_type += state_type_data[i]; 
+            }
+
+        var count_person_type = 0;
+        for(var i=0, n=person_type_data.length; i < n; i++) 
+            { 
+                count_person_type += person_type_data[i]; 
+            }
+
+        var count_estimate_type = 0;
+        for(var i=0, n=estimate_type_data.length; i < n; i++) 
+            { 
+                count_estimate_type += estimate_type_data[i]; 
+            }
+       
+
+        var sum = count_state_type + count_person_type + count_estimate_type;
+        data[0] = sum;
+
+        document.getElementById('half_expert_title0').innerHTML = 'الإجمالي';
+        
+
+        document.getElementById('circle_expert_title0').innerHTML = 'الإجمالي';
+
+        var bar_data =  {
+            labels: ['الإجمالي'],
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3                
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3
+                ],
+    
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100']
+            }]
+        };
+    
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.4
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+    
+        var line_data =  {
+            labels: [ '' , 'الإجمالي', ''],
+            datasets: [{
+                data: [ '', data[0] , ''],
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,

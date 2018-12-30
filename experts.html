@@ -304,6 +304,10 @@
                         
                         <form action="" class="form-group p-3">
 
+                            <div>
+                                <h2 class="text-primary h2 text-center mt-2">إحصائية لجان الخبرة المتخصصة حسب الملفات</h2>
+                            </div>
+
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
                                     for="customCheck_person">اللجنة المتخصصة في مسائل الأحوال الشخصية		
@@ -340,6 +344,50 @@
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
                                         id="customCheck_sum">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <h2 class="text-primary h2 text-center mt-2">البيان حسب نوع المعاملة</h2>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_person_type">اللجنة المتخصصة في مسائل الأحوال الشخصية		
+                                    <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="customCheck_person_type">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_estimate_type">اللجنة المتخصصة في مسائل التقدير العامة		
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_estimate_type">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_state_type">اللجنة المتخصصة في التقييم العقاري
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_state_type">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_sum_type">الإجمالي
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_sum_type">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
@@ -425,9 +473,13 @@
 
                         <!-- bar and line Chart start -->
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small" data-person="[20 , 6 , 31 , 34 , 37 , 29 , 26  ]"  data-estimate="[25 , 12 , 20 , 22 , 14 , 17 , 19 ]" 
-                                                     data-state="[ 15 , 17 , 12 , 20 , 22 , 18 , 16]"
-                                data-labels='[ "المتبقية من السابق" , "الجديدة المقيدة" , "المعادة للسير والمجددة" , "مجموع الملفات المتداولة" , "ملفات لم يتم تداولها" , "مجموع الملفات المعروضة" , "تم ابداء الرأي وأحيلت للمحكمة", "تعذر وأحيلت للقضاء" , "حفظت لعدم حضور الأطراف" , "مجموع الملفات المنجزة","ملفات معروضة","ملفات لم يتم تداولها","مجموع الملفات المتبقية","نسبة الإنجاز%" ]'>
+                                <div class="chart-small"data-person="[20 , 6 , 31 , 34 , 37 , 29 , 26  ]"  data-estimate="[25 , 12 , 20 , 22 , 14 , 17 , 19 ]" 
+                                                        data-state="[ 15 , 17 , 12 , 20 , 22 , 18 , 16]"   data-person_type="[31 , 34 , 28 , 24]"
+                                                        data-estimate_type="[30 , 37 , 24 , 31 , 29]"      data-state_type="[30 , 34 , 38 , 42 , 35]"
+                                                        data-labels_person='["اثبات الرشد","تعيين أو عزل وصي","معاينة مسكن حضانة","اذن (بيع / رهن / اقتراض)","مجموع اللجنة"]'
+                                                        data-labels_estimate='["تقدير قيمة مزارع","تقدير قيمة إبل وأغنام","تقدير قيمة سيارات وقوارب","اذن (بيع / رهن / اقتراض)","تقسيم تركة","مجموع اللجنة"]'
+                                                        data-labels_state='["تقدير قيمة عقارات سكنية وتجارية ","تقدير قيمة الشركات التجارية","تقدير قيمة المساهمات والاستثمارات التجارية  أوالصناعية","تقدير قيمة مبدئية للعقار في حالات البيع بالمزاد","تقدير ايجارات","مجموع اللجنة"]'
+                                                        data-labels='[ "المتبقية من السابق" , "الجديدة المقيدة" , "المعادة للسير والمجددة" , "مجموع الملفات المتداولة" , "ملفات لم يتم تداولها" , "مجموع الملفات المعروضة" , "تم ابداء الرأي وأحيلت للمحكمة", "تعذر وأحيلت للقضاء" , "حفظت لعدم حضور الأطراف" , "مجموع الملفات المنجزة","ملفات معروضة","ملفات لم يتم تداولها","مجموع الملفات المتبقية","نسبة الإنجاز%" ]'>
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
 
                             </div>
@@ -436,7 +488,7 @@
                         <!-- Circle Chart -->
                         <div class="circle-chart-col notaries-circle-chart-col d-none">
                             <div class="card w-100 card-teal my-3">
-                                <div class="card-header bg-teal pr-3">
+                                <div class="card-header bg-teal pr-3 type-hd">
                                     <h2>الملفات المتداولة</h2>
                                 </div>
                                 <div class="card-body d-flex flex-wrap my-2 py-4 justify-content-center">
@@ -451,7 +503,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6 px-1 mt-3">
+                                    <div class="col-12 col-md-6 px-1 mt-3 sum">
                                         <div class="card card-cyan">
                                             <div class="card-header bg-cyan pr-3" id="circle_expert_title1">
                                                 
@@ -461,7 +513,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6 px-1 mt-3">
+                                    <div class="col-12 col-md-6 px-1 mt-3 sum">
                                         <div class="card card-light-red">
                                             <div class="card-header bg-light-red pr-3" id="circle_expert_title2">
                                                 
@@ -471,7 +523,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6 px-1 mt-3">
+                                    <div class="col-12 col-md-6 px-1 mt-3 sum">
                                         <div class="card card-dark-red">
                                             <div class="card-header bg-dark-red pr-3" id="circle_expert_title3">
                                                 
@@ -481,7 +533,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6 px-1 mt-3">
+                                    <div class="col-12 col-md-6 px-1 mt-3 sum">
                                         <div class="card card-indigo">
                                             <div class="card-header bg-indigo pr-3" id="circle_expert_title4">
                                                 
@@ -491,7 +543,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-6 px-1 my-3">
+                                    <div class="col-12 col-md-6 px-1 my-3 type-hd type-block sum">
                                         <div class="card card-purple">
                                             <div class="card-header bg-purple pr-3" id="circle_expert_title5">
                                                 
@@ -505,7 +557,7 @@
                                 </div>
                             </div>
 
-                            <div class="card w-100 card-warning my-3">
+                            <div class="card w-100 card-warning my-3 type-hd">
                                 <div class="card-header bg-warning pr-3">
                                     <h2>الملفات المنجزة</h2>
                                 </div>
@@ -555,7 +607,7 @@
                                 </div>
                             </div>
 
-                            <div class="card w-100 card-teal my-3">
+                            <div class="card w-100 card-teal my-3 type-hd">
                                 <div class="card-header bg-teal pr-3">
                                     <h2>الملفات المتبقية</h2>
                                 </div>
@@ -595,8 +647,9 @@
 
                                 </div>
                             </div>
+
                             <div class="row w-100 justify-content-center">
-                                <div class="col-12 col-md-6 px-1 mt-2">
+                                <div class="col-12 col-md-6 px-1 mt-2 type-hd">
                                     <div class="card card-light-red">
                                         <div class="card-header bg-light-red pr-3" id="circle_expert_title13">
                                             
@@ -614,7 +667,7 @@
                         <div class="half-chart-col notaries-half-chart-col d-none">
                             <div class="row justify-content-center">
                                 <div class="card w-100 card-teal my-3">
-                                    <div class="card-header bg-teal pr-3">
+                                    <div class="card-header bg-teal pr-3 type-hd">
                                         <h2>الملفات المتداولة</h2>
                                     </div>
                                     <div class="card-body d-flex flex-wrap my-2 py-4 justify-content-center">
@@ -629,7 +682,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 px-1 mt-3">
+                                        <div class="col-12 px-1 mt-3 sum">
                                             <div class="card card-cyan">
                                                 <div class="card-header bg-cyan pr-3" id="half_expert_title1">
                                                     
@@ -641,7 +694,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 px-1 mt-3">
+                                        <div class="col-12 px-1 mt-3 sum">
                                             <div class="card card-light-red">
                                                 <div class="card-header bg-light-red pr-3" id="half_expert_title2">
                                                     
@@ -653,7 +706,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 px-1 mt-3">
+                                        <div class="col-12 px-1 mt-3 sum">
                                             <div class="card card-dark-red">
                                                 <div class="card-header bg-dark-red pr-3" id="half_expert_title3">
                                                     
@@ -664,7 +717,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 px-1 mt-3">
+                                        <div class="col-12 px-1 mt-3 sum">
                                             <div class="card card-indigo">
                                                 <div class="card-header bg-indigo pr-3" id="half_expert_title4">
                                                     
@@ -676,7 +729,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 px-1 mt-3">
+                                        <div class="col-12 px-1 mt-3 type-hd type-block sum">
                                             <div class="card card-purple">
                                                 <div class="card-header bg-purple pr-3" id="half_expert_title5">
                                                     
@@ -691,7 +744,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="card w-100 card-warning my-3">
+                                <div class="card w-100 card-warning my-3 type-hd">
                                     <div class="card-header bg-warning pr-3">
                                         <h2>الملفات المنجزة</h2>
                                     </div>
@@ -747,7 +800,7 @@
                                     </div>
                                 </div>
 
-                                <div class="card w-100 card-teal my-3">
+                                <div class="card w-100 card-teal my-3 type-hd">
                                     <div class="card-header bg-teal pr-3">
                                         <h2>الملفات المتبقية</h2>
                                     </div>
@@ -791,7 +844,7 @@
                                 </div>
 
                                 <div class="row w-100 justify-content-center">
-                                    <div class="col-12 px-1 mt-3">
+                                    <div class="col-12 px-1 mt-3 type-hd">
                                         <div class="card card-light-red">
                                             <div class="card-header bg-light-red pr-3" id="half_expert_title13">
                                                 
