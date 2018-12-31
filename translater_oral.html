@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <title>إدارة شؤون المحاماة والخبراء | احصائية ملفات الحراسة القضائية  والتصفية المتداولة</title>
+    <title>إدارة خدمة المحاكم | قسم المعلنين</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
@@ -80,7 +80,7 @@
                 </li>
 
                 <!-- ادارة خدمات المحاكم -->
-                <li>
+                <li class="active">
                     <a href="#services" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <img src="./assets/img/icons/Union_10.png" alt="">
                         <span>ادارة خدمات المحاكم</span>
@@ -132,7 +132,7 @@
                 </li>
 
                 <!-- ادارة شؤون المحاماة والخبراء -->
-                <li class="active">
+                <li>
                     <a href="#lawyer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <img src="./assets/img/icons/Path_149.png" alt="">
                         <span>ادارة شؤون المحاماة والخبراء</span>
@@ -298,202 +298,32 @@
 
             <div class="row content-top-row">
 
-                <!-- start of right-page-content -->
-                <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2 mx-0">
-                    <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
-                        <div>
-                            <h2 class="text-primary h2 text-center mt-2">احصائية ملفات الحراسة والتصفية القضائية المتداولة حسب نوعها</h2>
+                <div class="w-100 m-3" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    محمد السيد أحمد
+                                </button>
+                            </h2>
                         </div>
-                        <form action="" class="form-group p-3">
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_all_type">احصائية جميع المناطق
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_all_type" checked>
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_abu_type">احصائية منطقة أبو ظبي
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_abu_type">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_eye_type">احصائية المنطقة الشرقية-العين
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_eye_type">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_west_type">احصائية المنطقة الغربية
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_west_type">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div>
-                                <h2 class="text-light-red h2 text-center mt-4">احصائية ملفات الحراسة والتصفية القضائية المتداولة حسب الشهور</h2>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_all_month">احصائية جميع المناطق
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_all_month">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_abu_month">احصائية منطقة أبو ظبي
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_abu_month">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_eye_month">احصائية المنطقة الشرقية-العين
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_eye_month">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="">
-                                <h3 class="text-indigo h3 mb-3 mt-5">حدد الفترة الزمنية</h3>
-                            </div>
-
-                            <div class="row text-center w-100 shadow-around rounded-lg p-3">
-                                <div class="form-group row w-100">
-                                    <div class="col-12 col-sm-6">
-                                        <label class="text-primary mt-2" for="from-date">من</label>
-                                        <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label class="text-light-red mt-2" for="to-date">إلي</label>
-                                        <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date">
-                                    </div>
-                                </div>
-                                <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
-                            </div>
-
-                        </form>
-                    </div>
                     
-                </div>
-
-                <!-- start of left side -->
-                <div class="col-lg-4 col-12 content-left p-0 mt-2 my-lg-2 mx-0">
-                    <div class="overlay h-100 mx-2 mx-md-2 ml-lg-3">
-                        <p>حدد طريقة العرض</p>
-                        <div class="row text-center">
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small">
-                                    <label class="custom-control-label label-sm label-half mb-2"
-                                        for="customCheck-half">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input"
-                                            id="customCheck-half">
-                                        <span class="checkmark-small"></span>
-                                    </label>                                            
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small checkbox-small-bar">
-                                    <label class="custom-control-label label-sm label-bar mb-2"
-                                        for="customCheck-bar" id="label-bar">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input" value="bar"
-                                            id="customCheck-bar" checked>
-                                        <span class="checkmark-small"></span>
-                                    </label>     
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small">
-                                    <label class="custom-control-label label-sm label-line"
-                                        for="customCheck-line">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input" value="line"
-                                            id="customCheck-line">
-                                        <span class="checkmark-small"></span>
-                                    </label>     
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small">
-                                    <label class="custom-control-label label-sm label-circle"
-                                        for="customCheck-circle">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input"
-                                            id="customCheck-circle">
-                                        <span class="checkmark-small"></span>
-                                    </label>     
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- start of bottom section -->
-            <div class="chart-row">
-                
-                <!-- start of transaction -->
-                <div class="row transaction justify-content-center w-100">
-                    
-                    <div class="col-12 px-3 mb-5 ">
-
-                        <!-- bar and line Chart start -->
-                        <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small" data-all_month="[20 , 6 , 5 ]"  data-abu_month="[25 , 12 , 8 ]" 
-                                                     data-eye_month="[8 , 15 , 17 ]" data-west_type="[15 , 38 , 19 , 14 , 22 , 23]" 
-                                                     data-all_type="[9 , 13 , 16 , 35 , 27 , 32]"  data-abu_type="[47 , 40 , 48 , 38 , 50 , 42]" 
-                                                     data-eye_type="[31 , 34 , 37 , 29 , 26 , 25]"
-                                data-type_labels='[ "مدني" , "تجاري" , "تنفيذ" , "إيجارات" , "جزئي" , "إداري" , "المجموع" ]'
-                                data-month_labels='[ "الجديدة المقيدة" , "مجموع الملفات المنتهية" , "مجموع الملفات المتبقية","نسبة الإنجاز المنتهية الى المتداولة  %" ]'>
-                                <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
-
-                            </div>
-                        </div>
-
-                        <!-- Circle Chart -->
-                        <div class="circle-chart-col notaries-circle-chart-col d-none">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_guard_title0">
-                                            
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body d-flex flex-wrap my-2 py-4 justify-content-center">
+                                    
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                        <div class="card card-teal">
+                                            <div class="card-header bg-teal pr-3" id="circle_expert_title0">
+                                                
+                                            </div>
+                                            <div id="circle-body-no0" class="card-body text-center my-2 p-2">
+                                                <span class="text-teal"></span>                                    
+                                            </div>
                                         </div>
-                                        <div id="circle-body-no0" class="card-body text-center my-2 p-2">
-                                            <span class="text-teal"></span>                                    
-                                        </div>
-                                    </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="col-12 col-md-3 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="circle_expert_title1">
                                             
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
@@ -501,9 +331,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="col-12 col-md-3 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="circle_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="circle_expert_title2">
                                             
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
@@ -511,9 +341,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="col-12 col-md-3 px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="circle_guard_title3">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_expert_title3">
                                             
                                         </div>
                                         <div id="circle-body-no3" class="card-body text-center my-2 p-2">
@@ -521,9 +351,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3 month_circle">
+                                <div class="col-12 col-md-3 px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="circle_guard_title4">
+                                        <div class="card-header bg-indigo pr-3" id="circle_expert_title4">
                                             
                                         </div>
                                         <div id="circle-body-no4" class="card-body text-center my-2 p-2">
@@ -531,9 +361,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3 month_circle">
+                                <div class="col-12 col-md-3 px-1 my-3">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="circle_guard_title5">
+                                        <div class="card-header bg-purple pr-3" id="circle_expert_title5">
                                             
                                         </div>
                                         <div id="circle-body-no5" class="card-body text-center my-2 p-2">
@@ -541,9 +371,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3 month_circle">
+                                <div class="col-12 col-md-3 px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="circle_guard_title6">
+                                        <div class="card-header bg-warning pr-3" id="circle_expert_title6">
                                             
                                         </div>
                                         <div id="circle-body-no6" class="card-body text-center my-2 p-2">
@@ -551,99 +381,187 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-dark-green">
+                                        <div class="card-header bg-dark-green pr-3" id="circle_expert_title7">
 
-                        <!-- Half Chart -->
-                        <div class="half-chart-col notaries-half-chart-col d-none">
-                            <div class="row justify-content-center">
-                                <div class="col-12 px-1 mt-3">
+                                        </div>
+                                        <div id="circle-body-no7" class="card-body text-center my-2 p-2">
+                                            <span class="text-dark-green"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-rose">
+                                        <div class="card-header bg-rose pr-3" id="circle_expert_title8">
+
+                                        </div>
+                                        <div id="circle-body-no8" class="card-body text-center my-2 p-2">
+                                            <span class="text-rose"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-maron">
+                                        <div class="card-header bg-maron pr-3" id="circle_expert_title9">
+
+                                        </div>
+                                        <div id="circle-body-no9" class="card-body text-center my-2 p-2">
+                                            <span class="text-maron"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-rody">
+                                        <div class="card-header bg-rody pr-3" id="circle_expert_title10">
+    
+                                        </div>
+                                        <div id="circle-body-no10" class="card-body text-center my-2 p-2">
+                                            <span class="text-rody"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title0">
+                                        <div class="card-header bg-teal pr-3" id="circle_expert_title0">
                                             
                                         </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no0"></canvas>
-                                                <span></span>
+                                        <div id="circle-body-no0" class="card-body text-center my-2 p-2">
+                                            <span class="text-teal"></span>                                    
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="col-12 col-md-3 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="circle_expert_title1">
                                             
                                         </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no1"></canvas>
-                                                <span></span>
-
+                                        <div id="circle-body-no1" class="card-body text-center my-2 p-2">
+                                            <span class="text-cyan"></span> 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="col-12 col-md-3 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="half_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="circle_expert_title2">
                                             
                                         </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no2"></canvas>
-                                                <span></span>
+                                        <div id="circle-body-no2" class="card-body text-center my-2 p-2">
+                                            <span class="text-light-red"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-dark-red">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_expert_title3">
+                                            
+                                        </div>
+                                        <div id="circle-body-no3" class="card-body text-center my-2 p-2">
+                                            <span class="text-dark-red"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-indigo">
+                                        <div class="card-header bg-indigo pr-3" id="circle_expert_title4">
+                                            
+                                        </div>
+                                        <div id="circle-body-no4" class="card-body text-center my-2 p-2">
+                                            <span class="text-indigo"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 my-3">
+                                    <div class="card card-purple">
+                                        <div class="card-header bg-purple pr-3" id="circle_expert_title5">
+                                            
+                                        </div>
+                                        <div id="circle-body-no5" class="card-body text-center my-2 p-2">
+                                            <span class="text-purple"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-warning">
+                                        <div class="card-header bg-warning pr-3" id="circle_expert_title6">
+                                            
+                                        </div>
+                                        <div id="circle-body-no6" class="card-body text-center my-2 p-2">
+                                            <span class="text-warning"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-dark-green">
+                                        <div class="card-header bg-dark-green pr-3" id="circle_expert_title7">
 
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="half_guard_title3">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no3"></canvas>
-                                                <span></span>
+                                        <div id="circle-body-no7" class="card-body text-center my-2 p-2">
+                                            <span class="text-dark-green"></span> 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3 month_half">
-                                    <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="half_guard_title4">
-                                            
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-rose">
+                                        <div class="card-header bg-rose pr-3" id="circle_expert_title8">
+
                                         </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no4"></canvas>
-                                                <span></span>
+                                        <div id="circle-body-no8" class="card-body text-center my-2 p-2">
+                                            <span class="text-rose"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-maron">
+                                        <div class="card-header bg-maron pr-3" id="circle_expert_title9">
+
+                                        </div>
+                                        <div id="circle-body-no9" class="card-body text-center my-2 p-2">
+                                            <span class="text-maron"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-3 px-1 mt-3">
+                                    <div class="card card-rody">
+                                        <div class="card-header bg-rody pr-3" id="circle_expert_title10">
     
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3 month_half">
-                                    <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="half_guard_title5">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no5"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3 month_half">
-                                    <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="half_guard_title6">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no6"></canvas>
-                                                <span></span>
-    
+                                        <div id="circle-body-no10" class="card-body text-center my-2 p-2">
+                                            <span class="text-rody"></span>                                    
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    كريم أحمد السعيد
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                            <button class="btn btn-primary collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                أنس عبد الرحمن محمد
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -665,7 +583,7 @@
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/guarding.js"></script>
+    <script src="./assets/js/translater.js"></script>
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
