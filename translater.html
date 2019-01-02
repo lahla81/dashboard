@@ -28,6 +28,7 @@
 
     <div class="wrapper">
 
+        <div class="layer"></div>
          <!-- sidebar -->
          <nav id="sidebar">
             <div class="sidebar-header">
@@ -262,43 +263,49 @@
             <!-- navbar -->
             <header class="site-header py-lg-0 py-2 px-4 d-none d-lg-block">
                 <!-- <div class="container"> -->
-                    <nav class="navbar navbar-expand-lg  px-0">
-                        <a href="index.html" class="navbar-brand site-logo mr-3 py-0">
-                            <img src="assets/img/judicial_dpart_logo.png"
-                                    width="125"
-                                    height="54"
-                                    alt="Site Logo">
-                        </a><!-- .site-logo -->
-                        <div class="collapse navbar-collapse justify-content-end" id="top-navigation">
-                            <ul class="nav navbar primary-menu flex-column flex-lg-row">
-                                <li class="nav-item">
-                                    <a href="index.html" class="nav-link nav-massage px-xl-3 px-2"><i class="fas fa-comments" data-fa-transform="flip-h"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="category.html" class="nav-link nav-notification px-xl-3 px-2"><i class="fas fa-bell"></i></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="offer.html" class="nav-link nav-user-name px-xl-3 px-2">إسم المستخدم</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="app.html" class="nav-link d-inline px-xl-3 px-2"><img src="./assets/img/icons/small-down.png" alt="">
-                                    <img class="mr-3" src="./assets/img/Avatar.png" alt=""></a>
-                                </li>
-                            </ul><!-- .primary-menu -->
-                        </div>
-                    </nav>
+                <nav class="navbar navbar-expand-lg px-0">
+
+                    <!-- <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button> -->
+
+                    <a href="index.html" class="navbar-brand site-logo mr-3 py-0">
+                        <img src="assets/img/judicial_dpart_logo.png"
+                                width="125"
+                                height="54"
+                                alt="Site Logo">
+                    </a><!-- .site-logo -->
+                    <div class="collapse navbar-collapse justify-content-end" id="top-navigation">
+                        <ul class="nav navbar primary-menu flex-column flex-lg-row">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link nav-massage px-xl-3 px-2"><i class="fas fa-comments" data-fa-transform="flip-h"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="category.html" class="nav-link nav-notification px-xl-3 px-2"><i class="fas fa-bell"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="offer.html" class="nav-link nav-user-name px-xl-3 px-2">إسم المستخدم</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="app.html" class="nav-link d-inline px-xl-3 px-2"><img src="./assets/img/icons/small-down.png" alt="">
+                                <img class="mr-3" src="./assets/img/Avatar.png" alt=""></a>
+                            </li>
+                        </ul><!-- .primary-menu -->
+                    </div>
+                </nav>
                 <!-- </div> -->
             </header><!-- .site-header -->
 
-            <div class="page-content position-relative d-lg-none d-block">
-                <button type="button" id="sidebarCollapse" class="btn btn-primary bg-transparent border-gray mt-2 mr-2 position-absolute">
-                    <i class="fa fa-bars"></i>
-                </button>
-            </div>
-
             <div class="row content-top-row">
 
-                <div class="layer"></div>
+                <button type="button" id="sidebarCollapse" class="navbar-btn m-2 bg-white rounded-lg">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
                 <div class="container m-sm-5 m-1 mt-5 mw-100  position-relative">
                     <h1 class="text-indigo my-3 h1_title p-4 rounded-lg">قسم الترجمة الإحصائية</h1>
                     <div class="row w-100 p-2 translater-container">
@@ -314,7 +321,7 @@
                                 
                                 </div>
                             </div>
-                            <div class="trans-data bg-white box-teal rounded-lg position-absolute animated bounceIn" id="translater-data01">
+                            <div class="trans-data bg-white box-teal rounded-lg position-absolute animated bounceIn mb-3" id="translater-data01">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -439,7 +446,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-cyan rounded-lg position-absolute" id="translater-data02">
+                            <div class="animated bounceIn mb-3 trans-data bg-white box-cyan rounded-lg position-absolute" id="translater-data02">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -564,7 +571,7 @@
                                     </h2> 
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-light-red rounded-lg position-absolute" id="translater-data03">
+                            <div class="animated bounceIn mb-3 trans-data bg-white box-light-red rounded-lg position-absolute" id="translater-data03">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -689,7 +696,7 @@
                                     </h2> 
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-cyan rounded-lg position-absolute" id="translater-data04">
+                            <div class="animated bounceIn mb-3 trans-data bg-white box-dark-red rounded-lg position-absolute" id="translater-data04">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -814,7 +821,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-indigo rounded-lg position-absolute" id="translater-data05">
+                            <div class="animated bounceIn mb-3 trans-data bg-white box-indigo rounded-lg position-absolute" id="translater-data05">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -939,7 +946,7 @@
                                     </h2> 
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-purple rounded-lg position-absolute" id="translater-data06">
+                            <div class="animated bounceIn mb-3 trans-data bg-white box-purple rounded-lg position-absolute" id="translater-data06">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -1064,7 +1071,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-warning rounded-lg position-absolute" id="translater-data07">
+                            <div class="animated bounceIn mb-3 trans-data bg-white box-warning rounded-lg position-absolute" id="translater-data07">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -1189,7 +1196,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-dark-green rounded-lg position-absolute" id="translater-data08">
+                            <div class="animated bounceIn mb-3 trans-data bg-white box-dark-green rounded-lg position-absolute" id="translater-data08">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -1314,7 +1321,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-rose rounded-lg position-absolute" id="translater-data09">
+                            <div class="animated mb-3 bounceIn trans-data bg-white box-rose rounded-lg position-absolute" id="translater-data09">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -1439,7 +1446,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-maroon rounded-lg position-absolute" id="translater-data10">
+                            <div class="animated mb-3 bounceIn trans-data bg-white box-maroon rounded-lg position-absolute" id="translater-data10">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -1564,7 +1571,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-rody rounded-lg position-absolute" id="translater-data11">
+                            <div class="animated mb-3 bounceIn trans-data bg-white box-rody rounded-lg position-absolute" id="translater-data11">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -1689,7 +1696,7 @@
                                     </h2>
                                 </div>
                             </div>
-                            <div class="animated bounceIn trans-data bg-white box-maron rounded-lg position-absolute" id="translater-data12">
+                            <div class="animated mb-3 bounceIn trans-data bg-white box-maron rounded-lg position-absolute" id="translater-data12">
                                 <div class="d-flex flex-wrap my-2 py-4 justify-content-center">
                                     
                                     <div class="col-12 col-sm-6 col-lg-3 col-xl-3 my-3">
@@ -1829,6 +1836,14 @@
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
 
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

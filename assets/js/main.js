@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
     // sidebar toggle
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $('#main_sidbar').toggleClass('active');
-    });
+    // $('#sidebarCollapse').on('click', function () {
+    //     $('#sidebar').toggleClass('active');
+    //     $('#main_sidbar').toggleClass('active');
+    // });
     
 
     (function(){

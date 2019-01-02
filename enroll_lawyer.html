@@ -290,11 +290,11 @@
                 <!-- </div> -->
             </header><!-- .site-header -->
 
-            <div class="page-content position-relative d-lg-none d-block">
-                <button type="button" id="sidebarCollapse" class="btn btn-primary bg-transparent border-gray mt-2 mr-2 position-absolute">
-                    <i class="fa fa-bars"></i>
+                <button type="button" id="sidebarCollapse" class="navbar-btn m-2 bg-white rounded-lg">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-            </div>
 
             <div class="row content-top-row">
 
@@ -436,7 +436,7 @@
                                                         data-labels_2='["ابوظبي","دبي","الشارقة","عجمان","رأس الخيمة","الفجيرة","المجموع"]'
                                                         data-labels_3='[ "29-20","39-30","49-40","59-50","60 فما فوق" ]'>
 
-                                    <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
+                                    <canvas height="150" style="display: block;" id="bar-chart"></canvas>
                             </div>
                         </div>
 
@@ -631,7 +631,14 @@
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
