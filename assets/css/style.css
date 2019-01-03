@@ -3782,7 +3782,7 @@ h2.trans-name {
   max-width: 80vw;
   display: none;
   z-index: 2;
-  right: -5vw; }
+  right: 0; }
   @media (max-width: 576px) {
     .trans-data {
       max-width: 90vw;
