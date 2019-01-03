@@ -1,10 +1,29 @@
 $(document).ready(function () {
 
     // sidebar toggle
-    // $('#sidebarCollapse').on('click', function () {
-    //     $('#sidebar').toggleClass('active');
-    //     $('#main_sidbar').toggleClass('active');
-    // });
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('#main_sidbar').toggleClass('active');
+    });
+    // if ($(window).width() < 900){
+    //     // $('#sidebar').addClass('active');
+    //     // $('#content').addClass('active');
+    //     $('#sidebarCollapse').on('click', function () {
+    //         $('#sidebar').toggleClass('active');
+    //         $('#content').toggleClass('active');
+    //         $(this).toggleClass('active');
+    //     });
+    // };
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('#sidebar').toggleClass('active');
+        $('#content').toggleClass('active');
+        $(this).toggleClass('active');
+       
+    });
+
+   
     
 
     (function(){

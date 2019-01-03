@@ -257,7 +257,7 @@
         </nav>
 
         <!-- Page Content -->
-        <div id="content" class="w-100">
+        <div id="content">
 
             <!-- navbar -->
             <header class="site-header py-lg-0 py-2 px-4 d-none d-lg-block">
@@ -290,7 +290,7 @@
                 <!-- </div> -->
             </header><!-- .site-header -->
 
-                <button type="button" id="sidebarCollapse" class="navbar-btn m-2 bg-white rounded-lg">
+            <button type="button" id="sidebarCollapse" class="navbar-btn m-2 bg-white rounded-lg">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -299,7 +299,7 @@
             <div class="row content-top-row">
 
                 <!-- start of right-page-content -->
-                <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2 mx-0">
+                <div class="col-12 col-lg-8 content-header p-0 mt-1 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
                         
                         <form action="" class="form-group p-3">
@@ -428,15 +428,14 @@
                     <div class="col-12 px-3 mb-5 ">
 
                         <!-- bar and line Chart start -->
-                        <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
+                        <div class="h-100 py-2 mediacl-bar-chart bar_line_chart_col mx-auto">
                                 <div class="chart-small"data-lawyer0="[20 , 6 ]"  data-lawyer1="[25 , 12 , 20 ]" 
                                                         data-lawyer2="[17 , 12 , 20 , 22 , 18 , 16]"   data-lawyer3="[31 , 34 , 28 , 24 , 20]"
                                                         data-labels_0='["ذكر","أنثي","المجموع"]'
                                                         data-labels_1='["بكالوريوس او ليسانس","ماجستير او دبلوم","دكتوراه","المجموع"]'
                                                         data-labels_2='["ابوظبي","دبي","الشارقة","عجمان","رأس الخيمة","الفجيرة","المجموع"]'
                                                         data-labels_3='[ "29-20","39-30","49-40","59-50","60 فما فوق" ]'>
-
-                                    <canvas height="150" style="display: block;" id="bar-chart"></canvas>
+                                <canvas height="150" style="display: block;" id="bar-chart"></canvas>
                             </div>
                         </div>
 
@@ -631,14 +630,6 @@
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
-            });
-        });
-    </script>
 </body>
 
 </html>

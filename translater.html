@@ -258,18 +258,12 @@
         </nav>
 
         <!-- Page Content -->
-        <div id="content" class="w-100 position-relative">
+        <div id="content" class="position-relative">
 
             <!-- navbar -->
             <header class="site-header py-lg-0 py-2 px-4 d-none d-lg-block">
                 <!-- <div class="container"> -->
                 <nav class="navbar navbar-expand-lg px-0">
-
-                    <!-- <button type="button" id="sidebarCollapse" class="navbar-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button> -->
 
                     <a href="index.html" class="navbar-brand site-logo mr-3 py-0">
                         <img src="assets/img/judicial_dpart_logo.png"
@@ -298,15 +292,15 @@
                 <!-- </div> -->
             </header><!-- .site-header -->
 
-            <div class="row content-top-row">
+            <button type="button" id="sidebarCollapse" class="navbar-btn m-2 bg-white rounded-lg">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <button type="button" id="sidebarCollapse" class="navbar-btn m-2 bg-white rounded-lg">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <div class="row content-top-row">
                 
-                <div class="container m-sm-5 m-1 mt-5 mw-100  position-relative">
+                <div class="container m-sm-5 m-1 mw-100  position-relative">
                     <h1 class="text-indigo my-3 h1_title p-4 rounded-lg">قسم الترجمة الإحصائية</h1>
                     <div class="row w-100 p-2 translater-container">
                         <div class="translator box-teal rounded-lg p-2">
@@ -1835,15 +1829,6 @@
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-                $(this).toggleClass('active');
-            });
-        });
-    </script>
 </body>
 
 </html>
