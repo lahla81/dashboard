@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <title>إدارة شؤون المحاماة والخبراء | قسم قيد ومتابعة شؤون المحامين</title>
+    <title>إدارة خدمة المحاكم | قسم المعلنين</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
@@ -113,7 +113,7 @@
                 </li>
 
                 <!-- ادارة خدمة المتعاملين -->
-                <li>
+                <li class="active">
                     <a href="#peopleserv" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <img src="./assets/img/icons/Union_11.png" alt="">
                         <span>ادارة خدمة المتعاملين</span>
@@ -132,7 +132,7 @@
                 </li>
 
                 <!-- ادارة شؤون المحاماة والخبراء -->
-                <li class="active">
+                <li>
                     <a href="#lawyer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <img src="./assets/img/icons/Path_149.png" alt="">
                         <span>ادارة شؤون المحاماة والخبراء</span>
@@ -291,59 +291,125 @@
             </header><!-- .site-header -->
 
             <button type="button" id="sidebarCollapse" class="navbar-btn m-2 bg-white rounded-lg">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <div class="row content-top-row">
 
                 <!-- start of right-page-content -->
                 <div class="col-12 col-lg-8 content-header p-0 mt-1 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
-                        
+
                         <form action="" class="form-group p-3">
-
-                            <div>
-                                <h2 class="text-primary h2 text-center mt-2">تصنيفات المحامين</h2>
+                            <div class="row">
+                                <h2 class="p-3 text-indigo">
+                                    إسم مركز الخدمة
+                                </h2>
+                                <select class="h4 text-primary mw-100" name="service_center" id="" required>
+                                    <option value="" selected disabled>إختر مركز الخدمة</option>
+                                    <option value="Infinty">انفنتي الدولية لخدمات إدارة المنشآت</option>
+                                    <option value="servi">انجازات سرفيس ذ.م.م</option>
+                                </select>
                             </div>
-
+                        
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="lawyer0">النوع
+                                    for="customCheck_veto">طلب تسوية المنازعات صلحا
                                     <input type="radio" name="notary"
-                                    class="custom-control-input"
-                                    id="lawyer0" checked>
+                                        class="custom-control-input"
+                                        id="customCheck_veto" checked>
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="lawyer1">المستوى التعليمي
+                                    for="customCheck_abu_inter">طلب قيد صحيفة دعوى ابتدائية عمالية
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
-                                        id="lawyer1">
+                                        id="customCheck_abu_inter">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="lawyer2">المنطقة
+                                    for="customCheck_comerc">طلب قيد صحيفة دعوى ابتدائية ايجارات
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
-                                        id="lawyer2">
+                                        id="customCheck_comerc">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="lawyer3">الفئات العمرية 
+                                    for="customCheck_workers">طلب قيد ملف تنفيذ "ما عدا العمالي"
                                     <input type="radio" name="notary"
                                         class="custom-control-input"
-                                        id="lawyer3">
+                                        id="customCheck_workers">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_abu_extr">طلب قيد ملف تنفيذ "عمالي"
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_abu_extr">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_rent">قيد الدعاوي المدنية الإبتدائية
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_rent">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_eye_adv">قيد الدعاوي التجارية الإبتدائية
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_eye_adv">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_yahr_adv">قيد صحيفة استئناف عمالية 
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_yahr_adv">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_zafra_adv">قيد الدعاوي الاستئناف " ما عدا العمالي "
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_zafra_adv">
+                                    <span class="checkmark-main"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-main">
+                                <label class="custom-control-label custom-control-label-notary my-3"
+                                    for="customCheck_roways_adv">الإجـمـالي
+                                    <input type="radio" name="notary"
+                                        class="custom-control-input"
+                                        id="customCheck_roways_adv">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
@@ -352,7 +418,7 @@
                                 <div class="form-group row">
                                     <div class="col-12 mt-4 text-center">
                                         <label class="text-primary" for="from-date">إحصائية عن شهر :</label>
-                                        <input type="month" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
+                                        <input type="month" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date" required>
                                         <input type="submit" class="btn-primary px-3 py-1" value="تم">
                                     </div>
                                 </div>
@@ -428,14 +494,32 @@
                     <div class="col-12 px-3 mb-5 ">
 
                         <!-- bar and line Chart start -->
-                        <div class="h-100 py-2 mediacl-bar-chart bar_line_chart_col mx-auto">
-                                <div class="chart-small"data-lawyer0="[20 , 6 ]"  data-lawyer1="[25 , 12 , 20 ]" 
-                                                        data-lawyer2="[17 , 12 , 20 , 22 , 18 , 16]"   data-lawyer3="[31 , 34 , 28 , 24 , 20]"
-                                                        data-labels_0='["ذكر","أنثي","المجموع"]'
-                                                        data-labels_1='["بكالوريوس او ليسانس","ماجستير او دبلوم","دكتوراه","المجموع"]'
-                                                        data-labels_2='["ابوظبي","دبي","الشارقة","عجمان","رأس الخيمة","الفجيرة","المجموع"]'
-                                                        data-labels_3='[ "29-20","39-30","49-40","59-50","60 فما فوق" ]'>
-                                <canvas height="150" style="display: block;" id="bar-chart"></canvas>
+                        <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
+                            <div class="chart-small"data-veto=      "[20 , 6 , 31 ]"
+                                                    data-abu_inter= "[25 , 12 , 8 ]"
+                                                    data-comerc=    "[8 , 15 , 17 ]"
+                                                    data-workers=   "[21 , 6 , 5 ]"
+                                                    data-abu_extr=  "[23 , 6 , 5 ]"
+                                                    data-rent=      "[22 , 6 , 5 ]"
+                                                    data-eye_adv=   "[28 , 6 , 5 ]"
+                                                    data-yahr_adv=  "[24 , 6 , 5 ]"
+                                                    data-zafra_adv= "[27 , 31 , 34 ]"
+                                data-labels='[ "إجمالي المعاملات" , "إجمالي الإيرادات" , "المبلغ المستحق للدائرة"]'>
+                                <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-sm-6 col-md-4 px-1 my-3">
+                                        <div class="card card-purple">
+                                            <div class="card-header bg-purple">
+                                                حالة التوريد
+                                            </div>
+                                            <div class="card-body text-center pb-0 px-0">
+                                                <img src="./assets/img/icons/JvcXM.png" 
+                                                    width="108" height="108" class="rounded-circle box-indigo mb-1" alt="avatar">
+                                                <h5 class="card-title pt-3">قيد الإجراء</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -444,7 +528,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_expert_title0">
+                                        <div class="card-header bg-teal pr-3" id="circle_guard_title0">
                                             
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
@@ -454,7 +538,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_expert_title1">
+                                        <div class="card-header bg-cyan pr-3" id="circle_guard_title1">
                                             
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
@@ -464,7 +548,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="circle_expert_title2">
+                                        <div class="card-header bg-light-red pr-3" id="circle_guard_title2">
                                             
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
@@ -472,55 +556,28 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3 lawyer0_hide">
-                                    <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="circle_expert_title3">
-                                            
-                                        </div>
-                                        <div id="circle-body-no3" class="card-body text-center my-2 p-2">
-                                            <span class="text-dark-red"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3 lawyer0_hide lawyer1_hide">
-                                    <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="circle_expert_title4">
-                                            
-                                        </div>
-                                        <div id="circle-body-no4" class="card-body text-center my-2 p-2">
-                                            <span class="text-indigo"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 my-3 lawyer0_hide lawyer1_hide lawyer3_hide">
-                                    <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="circle_expert_title5">
-                                            
-                                        </div>
-                                        <div id="circle-body-no5" class="card-body text-center my-2 p-2">
-                                            <span class="text-purple"></span> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3 lawyer0_hide lawyer1_hide lawyer3_hide">
+                                <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="circle_expert_title6">
-                                            
+                                        <div class="card-header bg-warning">
+                                            حالة التوريد
                                         </div>
-                                        <div id="circle-body-no6" class="card-body text-center my-2 p-2">
-                                            <span class="text-warning"></span>                                    
+                                        <div class="card-body text-center pb-0 px-0">
+                                            <img src="./assets/img/icons/JvcXM.png" 
+                                                width="108" height="108" class="rounded-circle mb-1" alt="avatar">
+                                            <h5 class="card-title pt-3">قيد الإجراء</h5>
                                         </div>
                                     </div>
                                 </div>
-                            </div>                           
+                            </div>
                         </div>
 
                         <!-- Half Chart -->
                         <div class="half-chart-col notaries-half-chart-col d-none">
                             <div class="row justify-content-center">
+                                
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_expert_title0">
+                                        <div class="card-header bg-teal pr-3" id="half_guard_title0">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -531,7 +588,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_expert_title1">
+                                        <div class="card-header bg-cyan pr-3" id="half_guard_title1">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -543,7 +600,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="half_expert_title2">
+                                        <div class="card-header bg-light-red pr-3" id="half_guard_title2">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -553,53 +610,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3 lawyer0_hide">
-                                    <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="half_expert_title3">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no3"></canvas>
-                                                <span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3 lawyer0_hide lawyer1_hide">
-                                    <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="half_expert_title4">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no4"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3 lawyer0_hide lawyer1_hide lawyer3_hide">
-                                    <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="half_expert_title5">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no5"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3 lawyer0_hide lawyer1_hide lawyer3_hide">
+                                <div class="col-12 px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="half_expert_title6">
-                                            
+                                        <div class="card-header bg-warning">
+                                            حالة التوريد
                                         </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no6"></canvas>
-                                                <span></span>
-    
+                                        <div class="card-body text-center pb-0 px-0">
+                                            <img src="./assets/img/icons/JvcXM.png" 
+                                                width="108" height="108" class="rounded-circle mb-1" alt="avatar">
+                                            <h5 class="card-title pt-3">قيد الإجراء</h5>
                                         </div>
                                     </div>
                                 </div>
+                              
                             </div>
                         </div>
 
@@ -626,10 +649,11 @@
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/lawyers.js"></script>
+    <script src="./assets/js/servic_dev.js"></script>
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
+
 </body>
 
 </html>

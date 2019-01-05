@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
     // sidebar toggle
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $('#main_sidbar').toggleClass('active');
-    });
+    // $('#sidebarCollapse').on('click', function () {
+    //     $('#sidebar').toggleClass('active');
+       
+    // });
     // if ($(window).width() < 900){
     //     // $('#sidebar').addClass('active');
     //     // $('#content').addClass('active');
@@ -17,8 +17,8 @@ $(document).ready(function () {
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
-        $('#sidebar').toggleClass('active');
         $('#content').toggleClass('active');
+        $('#main_sidbar').toggleClass('active');
         $(this).toggleClass('active');
        
     });
