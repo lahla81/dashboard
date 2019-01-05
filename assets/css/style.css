@@ -2814,6 +2814,9 @@ input.custom-control-input {
 .zaid-img {
   margin-top: 60px; }
 
+.font-bold {
+  font-weight: bold; }
+
 #content {
   width: calc(100% - 308px);
   margin-right: 308px;
@@ -3384,11 +3387,6 @@ input#customCheck-bar:checked ~ #label-bar {
   margin-top: 32px;
   width: 99%; }
 
-.circle-chart-col,
-.half-chart-col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1); }
-
 .chart-small {
   box-shadow: 3px 3px 20px #6f42c1;
   border-radius: 14px; }
@@ -3447,18 +3445,12 @@ input#customCheck-bar:checked ~ #label-bar {
   display: none; }
 
 .chart-row.circleChart .bar_line_chart_col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.circleChart .bar-chart-col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.circleChart .line-chart-col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.circleChart .circle-chart-col {
@@ -3466,8 +3458,6 @@ input#customCheck-bar:checked ~ #label-bar {
   transform: scale(1); }
 
 .chart-row.circleChart .half-chart-col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.halfChart .bar_line_chart_col {
@@ -3803,11 +3793,19 @@ h2.trans-name {
 .h1_title {
   font-weight: bold; }
 
-.translater-container {
+.translater-container, .reg-container {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-template-rows: 1fr; }
+
+.translater-container {
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+
+.reg-container {
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+  .reg-container .card-header {
+    font-size: 14px; }
 
 .layer {
   position: fixed;

@@ -301,126 +301,30 @@
                 <!-- start of right-page-content -->
                 <div class="col-12 col-lg-8 content-header p-0 mt-1 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
-                        <div class="row">
-                            <h2 class="p-3 text-indigo">
-                                إسم مركز الخدمة
+                        <div class="row justify-content-center">
+                            <h2 class="p-3 text-secondary font-bold">
+                                إحصائية أعمال التوثيق في فترة معينة لجميع الفروع
                             </h2>
-                            <select class="h4 text-primary" name="service_center" id="">
-                                <option value="0" selected disabled>إختر مركز الخدمة</option>
-                                <option value="Infinty">انفنتي الدولية لخدمات إدارة المنشآت</option>
-                                <option value="servi">انجازات سرفيس ذ.م.م</option>
-                            </select>
                         </div>
                         
                         <form action="" class="form-group p-3">
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_veto">إعلانات واردة من محكمة النـقـض
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_veto" checked>
-                                    <span class="checkmark-main"></span>
-                                </label>
+                           
+                            <div class="">
+                                <h3 class="text-indigo h3 mb-3 mt-5 mr-2">حدد الفترة الزمنية</h3>
                             </div>
 
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_abu_inter">إعلانات المناطق الداخلية في محكمة أبــوظـبي
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_abu_inter">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_comerc">إعلانات واردة من المحكمة التجارية
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_comerc">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_workers">إعلانات واردة من المحكمة العـمالــية
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_workers">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_abu_extr">إعلانات المناطق الخارجية في محكمة أبوظبي (بنـي يـاس سابقاً)
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_abu_extr">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_rent">إعلانات واردة من لجنة فض المنازعات الإيجارية
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_rent">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_eye_adv">إعلانات وحدة الإعلان في محكمة العـيـن
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_eye_adv">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_yahr_adv">إعلانات وحدة الإعلان في محكمة الـيــحــر
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_yahr_adv">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_zafra_adv">إعلانات وحدة الإعلان في محكمة الظـفـرة
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_zafra_adv">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_roways_adv">إعلانات وحدة الإعلان في محكمة الرويس والسلع
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_roways_adv">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="form-group row">
-                                    <div class="col-12 mt-4 text-center">
-                                        <label class="text-primary" for="from-date">إحصائية عن شهر :</label>
-                                        <input type="month" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
-                                        <input type="submit" class="btn-primary px-3 py-1" value="تم">
+                            <div class="row text-center w-100 shadow-around rounded-lg p-3">
+                                <div class="form-group row w-100">
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-primary mt-2" for="from-date">من</label>
+                                        <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-light-red mt-2" for="to-date">إلي</label>
+                                        <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date">
                                     </div>
                                 </div>
+                                <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
                             </div>
 
                         </form>
@@ -431,7 +335,7 @@
                 <!-- start of left side -->
                 <div class="col-lg-4 col-12 content-left p-0 mt-2 my-lg-2 mx-0">
                     <div class="overlay h-100 mx-2 mx-md-2 ml-lg-3">
-                        <p>حدد طريقة العرض</p>
+                        <p class="text-teal">حدد طريقة العرض</p>
                         <div class="row text-center">
                             <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
                                 <div class="checkbox-small">
@@ -445,34 +349,12 @@
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small checkbox-small-bar">
-                                    <label class="custom-control-label label-sm label-bar mb-2"
-                                        for="customCheck-bar" id="label-bar">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input" value="bar"
-                                            id="customCheck-bar" checked>
-                                        <span class="checkmark-small"></span>
-                                    </label>     
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small">
-                                    <label class="custom-control-label label-sm label-line"
-                                        for="customCheck-line">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input" value="line"
-                                            id="customCheck-line">
-                                        <span class="checkmark-small"></span>
-                                    </label>     
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
                                 <div class="checkbox-small">
                                     <label class="custom-control-label label-sm label-circle"
                                         for="customCheck-circle">
                                         <input type="radio" name="checkbox-small"
                                             class="custom-control-input"
-                                            id="customCheck-circle">
+                                            id="customCheck-circle" checked>
                                         <span class="checkmark-small"></span>
                                     </label>     
                                 </div>
@@ -492,30 +374,14 @@
                     
                     <div class="col-12 px-3 mb-5 ">
 
-                        <!-- bar and line Chart start -->
-                        <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small"data-veto=      "[20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 25]"  
-                                                    data-abu_inter= "[25 , 12 , 8 , 20 , 22 , 14 , 17 , 19 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 26 , 22]" 
-                                                    data-comerc=    "[8 , 15 , 17 , 12 , 20 , 22 , 18 , 16 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 24 , 23]" 
-                                                    data-workers=   "[21 , 6 , 5 , 31 , 34 , 37 , 29 , 26 , 30 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 24]" 
-                                                    data-abu_extr=  "[23 , 6 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 14 , 18]"  
-                                                    data-rent=      "[22 , 6 , 5 , 31 , 34 , 37 , 29 , 26 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 26]" 
-                                                    data-eye_adv=   "[28 , 6 , 5 , 31 , 34 , 37 , 29 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 17]" 
-                                                    data-yahr_adv=  "[24 , 6 , 5 , 31 , 34 , 37 , 25 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 19]"
-                                                    data-zafra_adv= "[27 , 31 , 34 , 37 , 29 , 26 , 25 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 27]" 
-                                                    data-roways_adv="[26 , 6 , 5 , 31 , 29 , 26 , 25 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 29]"
-                                data-labels='[ "التوفيق والمصالحة" , "التوجيه الأسري" , "مدني" , "تجاري" , "عمالي" , "أمور مستعجلة" , "إداري", "أحوال شخصية" , "تركات" , "أمر على عريضة","إستئناف","تـنـفـيـذ","جــزائــي أوامر تكليف بالحضور","جــزائــي الأحكام الغيابية","فـض المنــازعــات الإيـجـاريـة","الإنـذارات العـدلـيـة","إلـغــاء وكـالـة","إنابة الإعلانات الخارجية الواردة من داخل الدولة","إنابة الإعلانات الخارجية الواردة من خارج الدولة","إنابة الإعلانات الجزائية الصادرة عن دائرة القضاء","إنابة الإعلانات المدنية الصادرة عن دائرة القضاء","الإعلانات بواسطة النشر","الــعـدد الإجـمـالي"]'>
-                                <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
-
-                            </div>
-                        </div>
-
                         <!-- Circle Chart -->
-                        <div class="circle-chart-col notaries-circle-chart-col d-none">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                        <div class="registeration circle-chart-col" data-registeration = "[20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 25 , 24 , 25 , 26 , 27 , 28 , 29 , 30 , 31 , 32 , 33]"
+                                                                                data-labels='[ "إقرار حاله وحضانة", "إقرار اعاله سكن" , "إقرار بعدم ممانعه" , "إقرار بنوه", "إقرار حاله" , "إقرار وصيه" , "إقرار دخول ", "اقرار هبه" , "قرار سكن " , "اقرار حضانة", "إقرار تغيير الاسم" , "إقرار صله قرابه" , "إقرار", "إقرار إعالة" , "رجوع في هبة" , "إلغاء وكالة", "إقرار حضانه و إعاله" , "إقرار بدين" , "إقرار وقف", "توكيل بالإرث" , "إعلان وراثة" , "إقرار إعاله وسكن", "توكيل بالزواج" , "توكيل بالطلاق" , "توكيل", "اثبات زواج" , "مشاركة في اعالة" , "حاله و اعاله سكن", "إقرار حاله وحضانه واعاله" , "إقرار حاله واعالة" , "استمرارية زواج", "إثبات رشد" , "المجموع"]'>
+                            <canvas height="1"  id="circle_chart"></canvas>
+                            <div class="reg-container justify-content-center">
+                                <div class="px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_guard_title0">
+                                        <div class="card-header bg-teal pr-3" id="circle_title0">
                                             
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
@@ -523,9 +389,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="circle_title1">
                                             
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
@@ -533,9 +399,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="circle_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="circle_title2">
                                             
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
@@ -543,9 +409,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="circle_guard_title3">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_title3">
                                             
                                         </div>
                                         <div id="circle-body-no3" class="card-body text-center my-2 p-2">
@@ -553,9 +419,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="circle_guard_title4">
+                                        <div class="card-header bg-indigo pr-3" id="circle_title4">
                                             
                                         </div>
                                         <div id="circle-body-no4" class="card-body text-center my-2 p-2">
@@ -563,9 +429,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 my-3">
+                                <div class="px-1 my-3">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="circle_guard_title5">
+                                        <div class="card-header bg-purple pr-3" id="circle_title5">
                                             
                                         </div>
                                         <div id="circle-body-no5" class="card-body text-center my-2 p-2">
@@ -573,9 +439,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="circle_guard_title6">
+                                        <div class="card-header bg-warning pr-3" id="circle_title6">
                                             
                                         </div>
                                         <div id="circle-body-no6" class="card-body text-center my-2 p-2">
@@ -583,9 +449,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="circle_guard_title7">
+                                        <div class="card-header bg-dark-green pr-3" id="circle_title7">
 
                                         </div>
                                         <div id="circle-body-no7" class="card-body text-center my-2 p-2">
@@ -593,9 +459,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="circle_guard_title8">
+                                        <div class="card-header bg-rose pr-3" id="circle_title8">
 
                                         </div>
                                         <div id="circle-body-no8" class="card-body text-center my-2 p-2">
@@ -603,9 +469,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="circle_guard_title9">
+                                        <div class="card-header bg-maron pr-3" id="circle_title9">
 
                                         </div>
                                         <div id="circle-body-no9" class="card-body text-center my-2 p-2">
@@ -613,9 +479,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="circle_guard_title10">
+                                        <div class="card-header bg-rody pr-3" id="circle_title10">
     
                                         </div>
                                         <div id="circle-body-no10" class="card-body text-center my-2 p-2">
@@ -624,9 +490,9 @@
                                     </div>
                                 </div>
 
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                         <div class="card card-teal">
-                                            <div class="card-header bg-teal pr-3" id="circle_guard_title11">
+                                            <div class="card-header bg-teal pr-3" id="circle_title11">
                                                 
                                             </div>
                                             <div id="circle-body-no11" class="card-body text-center my-2 p-2">
@@ -634,9 +500,9 @@
                                             </div>
                                         </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_guard_title12">
+                                        <div class="card-header bg-cyan pr-3" id="circle_title12">
                                             
                                         </div>
                                         <div id="circle-body-no12" class="card-body text-center my-2 p-2">
@@ -644,9 +510,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="circle_guard_title13">
+                                        <div class="card-header bg-light-red pr-3" id="circle_title13">
                                             
                                         </div>
                                         <div id="circle-body-no13" class="card-body text-center my-2 p-2">
@@ -654,9 +520,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="circle_guard_title14">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_title14">
                                             
                                         </div>
                                         <div id="circle-body-no14" class="card-body text-center my-2 p-2">
@@ -664,9 +530,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="circle_guard_title15">
+                                        <div class="card-header bg-indigo pr-3" id="circle_title15">
                                             
                                         </div>
                                         <div id="circle-body-no15" class="card-body text-center my-2 p-2">
@@ -674,9 +540,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 my-3">
+                                <div class="px-1 my-3">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="circle_guard_title16">
+                                        <div class="card-header bg-purple pr-3" id="circle_title16">
                                             
                                         </div>
                                         <div id="circle-body-no16" class="card-body text-center my-2 p-2">
@@ -684,9 +550,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="circle_guard_title17">
+                                        <div class="card-header bg-warning pr-3" id="circle_title17">
                                             
                                         </div>
                                         <div id="circle-body-no17" class="card-body text-center my-2 p-2">
@@ -694,9 +560,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="circle_guard_title18">
+                                        <div class="card-header bg-dark-green pr-3" id="circle_title18">
 
                                         </div>
                                         <div id="circle-body-no18" class="card-body text-center my-2 p-2">
@@ -704,9 +570,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="circle_guard_title19">
+                                        <div class="card-header bg-rose pr-3" id="circle_title19">
 
                                         </div>
                                         <div id="circle-body-no19" class="card-body text-center my-2 p-2">
@@ -714,9 +580,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="circle_guard_title20">
+                                        <div class="card-header bg-maron pr-3" id="circle_title20">
 
                                         </div>
                                         <div id="circle-body-no20" class="card-body text-center my-2 p-2">
@@ -724,9 +590,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="circle_guard_title21">
+                                        <div class="card-header bg-rody pr-3" id="circle_title21">
     
                                         </div>
                                         <div id="circle-body-no21" class="card-body text-center my-2 p-2">
@@ -734,9 +600,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
+
+                                <div class="px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_guard_title22">
+                                        <div class="card-header bg-teal pr-3" id="circle_title22">
                                             
                                         </div>
                                         <div id="circle-body-no22" class="card-body text-center my-2 p-2">
@@ -744,16 +611,116 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-cyan">
+                                        <div class="card-header bg-cyan pr-3" id="circle_title23">
+                                            
+                                        </div>
+                                        <div id="circle-body-no23" class="card-body text-center my-2 p-2">
+                                            <span class="text-cyan"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-light-red">
+                                        <div class="card-header bg-light-red pr-3" id="circle_title24">
+                                            
+                                        </div>
+                                        <div id="circle-body-no24" class="card-body text-center my-2 p-2">
+                                            <span class="text-light-red"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-dark-red">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_title25">
+                                            
+                                        </div>
+                                        <div id="circle-body-no25" class="card-body text-center my-2 p-2">
+                                            <span class="text-dark-red"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-indigo">
+                                        <div class="card-header bg-indigo pr-3" id="circle_title26">
+                                            
+                                        </div>
+                                        <div id="circle-body-no26" class="card-body text-center my-2 p-2">
+                                            <span class="text-indigo"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 my-3">
+                                    <div class="card card-purple">
+                                        <div class="card-header bg-purple pr-3" id="circle_title27">
+                                            
+                                        </div>
+                                        <div id="circle-body-no27" class="card-body text-center my-2 p-2">
+                                            <span class="text-purple"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-warning">
+                                        <div class="card-header bg-warning pr-3" id="circle_title28">
+                                            
+                                        </div>
+                                        <div id="circle-body-no28" class="card-body text-center my-2 p-2">
+                                            <span class="text-warning"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-dark-green">
+                                        <div class="card-header bg-dark-green pr-3" id="circle_title29">
+
+                                        </div>
+                                        <div id="circle-body-no29" class="card-body text-center my-2 p-2">
+                                            <span class="text-dark-green"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-rose">
+                                        <div class="card-header bg-rose pr-3" id="circle_title30">
+
+                                        </div>
+                                        <div id="circle-body-no30" class="card-body text-center my-2 p-2">
+                                            <span class="text-rose"></span> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-maron">
+                                        <div class="card-header bg-maron pr-3" id="circle_title31">
+
+                                        </div>
+                                        <div id="circle-body-no31" class="card-body text-center my-2 p-2">
+                                            <span class="text-maron"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-rody">
+                                        <div class="card-header bg-rody pr-3" id="circle_title32">
+    
+                                        </div>
+                                        <div id="circle-body-no32" class="card-body text-center my-2 p-2">
+                                            <span class="text-rody"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Half Chart -->
-                        <div class="half-chart-col notaries-half-chart-col d-none">
-                            <div class="row justify-content-center">
+                        <div class="half-chart-col registeration d-none">
+                            <div class="reg-container justify-content-center">
                                 
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title0">
+                                        <div class="card-header bg-teal pr-3" id="half_title0">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -762,9 +729,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="half_title1">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -774,9 +741,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="half_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="half_title2">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -786,9 +753,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="half_guard_title3">
+                                        <div class="card-header bg-dark-red pr-3" id="half_title3">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -797,9 +764,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="half_guard_title4">
+                                        <div class="card-header bg-indigo pr-3" id="half_title4">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -809,9 +776,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="half_guard_title5">
+                                        <div class="card-header bg-purple pr-3" id="half_title5">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -821,9 +788,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="half_guard_title6">
+                                        <div class="card-header bg-warning pr-3" id="half_title6">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -833,9 +800,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="half_guard_title7">
+                                        <div class="card-header bg-dark-green pr-3" id="half_title7">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -845,9 +812,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="half_guard_title8">
+                                        <div class="card-header bg-rose pr-3" id="half_title8">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -857,9 +824,9 @@
                                         </div>
                                     </div>
                                 </div>     
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="half_guard_title9">
+                                        <div class="card-header bg-maron pr-3" id="half_title9">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -869,9 +836,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="half_guard_title10">
+                                        <div class="card-header bg-rody pr-3" id="half_title10">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -882,9 +849,9 @@
                                     </div>
                                 </div>
 
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title11">
+                                        <div class="card-header bg-teal pr-3" id="half_title11">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -893,9 +860,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_guard_title12">
+                                        <div class="card-header bg-cyan pr-3" id="half_title12">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -905,9 +872,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="half_guard_title13">
+                                        <div class="card-header bg-light-red pr-3" id="half_title13">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -917,9 +884,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="half_guard_title14">
+                                        <div class="card-header bg-dark-red pr-3" id="half_title14">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -928,9 +895,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="half_guard_title15">
+                                        <div class="card-header bg-indigo pr-3" id="half_title15">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -940,9 +907,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="half_guard_title16">
+                                        <div class="card-header bg-purple pr-3" id="half_title16">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -952,9 +919,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="half_guard_title17">
+                                        <div class="card-header bg-warning pr-3" id="half_title17">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -964,9 +931,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="half_guard_title18">
+                                        <div class="card-header bg-dark-green pr-3" id="half_title18">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -976,9 +943,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="half_guard_title19">
+                                        <div class="card-header bg-rose pr-3" id="half_title19">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -988,9 +955,9 @@
                                         </div>
                                     </div>
                                 </div>     
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="half_guard_title20">
+                                        <div class="card-header bg-maron pr-3" id="half_title20">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -1000,9 +967,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="half_guard_title21">
+                                        <div class="card-header bg-rody pr-3" id="half_title21">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -1012,14 +979,133 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
+                                <div class="px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title22">
+                                        <div class="card-header bg-teal pr-3" id="half_title22">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas class="h-100 w-100" id="half_chart_no22"></canvas>
                                                 <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-cyan">
+                                        <div class="card-header bg-cyan pr-3" id="half_title23">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no23"></canvas>
+                                                <span></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-light-red">
+                                        <div class="card-header bg-light-red pr-3" id="half_title24">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no24"></canvas>
+                                                <span></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-dark-red">
+                                        <div class="card-header bg-dark-red pr-3" id="half_title25">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no25"></canvas>
+                                                <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-indigo">
+                                        <div class="card-header bg-indigo pr-3" id="half_title26">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no26"></canvas>
+                                                <span></span>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-purple">
+                                        <div class="card-header bg-purple pr-3" id="half_title27">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no27"></canvas>
+                                                <span></span>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-warning">
+                                        <div class="card-header bg-warning pr-3" id="half_title28">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no28"></canvas>
+                                                <span></span>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-dark-green">
+                                        <div class="card-header bg-dark-green pr-3" id="half_title29">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no29"></canvas>
+                                                <span></span>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-rose">
+                                        <div class="card-header bg-rose pr-3" id="half_title30">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no30"></canvas>
+                                                <span></span>
+    
+                                        </div>
+                                    </div>
+                                </div>     
+                                <div class="px-1 mt-3">
+                                    <div class="card card-maron">
+                                        <div class="card-header bg-maron pr-3" id="half_title31">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no31"></canvas>
+                                                <span></span>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-1 mt-3">
+                                    <div class="card card-rody">
+                                        <div class="card-header bg-rody pr-3" id="half_title32">
+                                            
+                                        </div>
+                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
+                                            <canvas class="h-100 w-100" id="half_chart_no32"></canvas>
+                                                <span></span>
+    
                                         </div>
                                     </div>
                                 </div>
@@ -1050,9 +1136,6 @@
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
     <script src="./assets/js/registeration.js"></script>
-
-    <!-- Main JS -->
-    <script src="./assets/js/main.js"></script>
 
 </body>
 
