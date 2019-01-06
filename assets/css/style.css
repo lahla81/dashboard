@@ -3760,11 +3760,20 @@ input#customCheck-bar:checked ~ #label-bar {
   display: block !important;
   opacity: 1; }
 
+.translater {
+  transition: 0.3 all;
+  -webkit-transition: 0.3 all;
+  -moz-transition: 0.3 all;
+  -o-transition: 0.3 all; }
+
 .trans-row {
   cursor: pointer;
   transition: 0.3s all;
   border: 2px solid #FFFFFF;
-  transition: 0.3s all; }
+  transition: 0.3s all;
+  -webkit-transition: 0.3 all;
+  -moz-transition: 0.3 all;
+  -o-transition: 0.3 all; }
   .trans-row img, .trans-row h2 {
     transition: 0.3s all; }
   .trans-row:hover, .trans-row:focus {
@@ -3783,7 +3792,11 @@ h2.trans-name {
   max-width: 80vw;
   display: none;
   z-index: 2;
-  right: 0; }
+  right: 0;
+  transition: 0.3 all;
+  -webkit-transition: 0.3 all;
+  -moz-transition: 0.3 all;
+  -o-transition: 0.3 all; }
   @media (max-width: 576px) {
     .trans-data {
       min-width: 90vw;
