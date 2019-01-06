@@ -3760,21 +3760,21 @@ input#customCheck-bar:checked ~ #label-bar {
   display: block !important;
   opacity: 1; }
 
-.translator {
-  border: 2px solid #FFFFFF;
-  transition: 0.3s all; }
-  .translator:hover, .translator:focus {
-    box-shadow: none;
-    border: 2px solid #F0F0F0; }
-    .translator:hover img, .translator:focus img {
-      box-shadow: none; }
-
 .trans-row {
   cursor: pointer;
+  transition: 0.3s all;
+  border: 2px solid #FFFFFF;
   transition: 0.3s all; }
+  .trans-row img, .trans-row h2 {
+    transition: 0.3s all; }
+  .trans-row:hover, .trans-row:focus {
+    box-shadow: none;
+    border: 2px solid #F0F0F0; }
+    .trans-row:hover img, .trans-row:focus img {
+      box-shadow: none; }
 
 h2.trans-name {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   padding-right: 5px; }
 
@@ -3792,9 +3792,6 @@ h2.trans-name {
 
 .col-9.row {
   align-items: center; }
-
-.h1_title {
-  font-weight: bold; }
 
 .translater-container, .reg-container, .law-container {
   display: grid;

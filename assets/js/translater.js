@@ -184,12 +184,12 @@ $(document).ready(function () {
         +$('#translater-data23').toggle();
     });
 
-    $('#translator23').click(function(){
+    $('#translator24').click(function(){
         $('.trans-data').hide();
         $('.layer').show();
         $('.trans-row').css({opacity : '0.3'});
         +$(this).css({opacity:'1'});
-        +$('#translater-data23').toggle();
+        +$('#translater-data24').toggle();
     });
 
     $('.layer').click(function(){

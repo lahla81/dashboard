@@ -96,6 +96,102 @@ $(document).ready(function () {
         +$('#translater-data12').toggle();
     });
 
+    $('#translator13').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data13').toggle();
+    });
+
+    $('#translator14').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data14').toggle();
+    });
+
+    $('#translator15').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data15').toggle();
+    });
+
+    $('#translator16').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data16').toggle();
+    });
+
+    $('#translator17').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data17').toggle();
+    });
+
+    $('#translator18').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data18').toggle();
+    });
+
+    $('#translator19').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data19').toggle();
+    });
+
+    $('#translator20').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data20').toggle();
+    });
+
+    $('#translator21').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data21').toggle();
+    });
+
+    $('#translator22').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data22').toggle();
+    });
+
+    $('#translator23').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data23').toggle();
+    });
+
+    $('#translator24').click(function(){
+        $('.trans-data').hide();
+        $('.layer').show();
+        $('.trans-row').css({opacity : '0.3'});
+        +$(this).css({opacity:'1'});
+        +$('#translater-data24').toggle();
+    });
+
     $('.layer').click(function(){
         $('.trans-data').hide();
         $('.trans-row').css({opacity:'1'});
