@@ -3788,20 +3788,14 @@ h2.trans-name {
   padding-right: 5px; }
 
 .trans-data {
-  min-width: 65vw;
-  max-width: 80vw;
   display: none;
   z-index: 2;
-  right: 0;
+  right: 10px;
+  left: 10px;
   transition: 0.3 all;
   -webkit-transition: 0.3 all;
   -moz-transition: 0.3 all;
   -o-transition: 0.3 all; }
-  @media (max-width: 576px) {
-    .trans-data {
-      min-width: 90vw;
-      max-width: 90vw;
-      right: 5vw; } }
 
 .col-9.row {
   align-items: center; }
