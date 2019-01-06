@@ -3761,16 +3761,17 @@ input#customCheck-bar:checked ~ #label-bar {
   opacity: 1; }
 
 .translator {
-  border: 2px solid #FFFFFF; }
+  border: 2px solid #FFFFFF;
+  transition: 0.3s all; }
   .translator:hover, .translator:focus {
     box-shadow: none;
     border: 2px solid #F0F0F0; }
     .translator:hover img, .translator:focus img {
-      box-shadow: none;
-      border: 2px solid #F0F0F0; }
+      box-shadow: none; }
 
 .trans-row {
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.3s all; }
 
 h2.trans-name {
   font-size: 20px;
@@ -3778,12 +3779,14 @@ h2.trans-name {
   padding-right: 5px; }
 
 .trans-data {
+  min-width: 65vw;
   max-width: 80vw;
   display: none;
   z-index: 2;
   right: 0; }
   @media (max-width: 576px) {
     .trans-data {
+      min-width: 90vw;
       max-width: 90vw;
       right: 5vw; } }
 
@@ -3793,19 +3796,30 @@ h2.trans-name {
 .h1_title {
   font-weight: bold; }
 
-.translater-container, .reg-container {
+.translater-container, .reg-container, .law-container {
   display: grid;
   grid-template-rows: 1fr; }
 
 .translater-container {
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
+.reg-container, .law-container {
+  grid-gap: 10px; }
+  .reg-container .card-header, .law-container .card-header {
+    font-size: 14px; }
+
+.law-container {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
 
 .reg-container {
-  grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
-  .reg-container .card-header {
-    font-size: 14px; }
+
+.wide {
+  grid-column: span 2; }
+  @media (max-width: 768px) {
+    .wide {
+      grid-column: span 1; } }
 
 .layer {
   position: fixed;
