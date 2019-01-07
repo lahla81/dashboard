@@ -316,60 +316,67 @@
                         <form action="" class="form-group p-3">
 
                             <div>
-                                <h2 class="text-primary h2 text-center mt-2">تصنيفات المحامين</h2>
+                                <h2 class="text-secondary font-bold text-center mt-2">تصنيفات المحامين</h2>
                             </div>
 
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="lawyer0">النوع
-                                    <input type="radio" name="notary"
-                                    class="custom-control-input"
-                                    id="lawyer0" checked>
-                                    <span class="checkmark-main"></span>
-                                </label>
+                            <div class="">
+                                <h3 class="text-indigo h3 mb-3 mt-5 mr-2">حدد الفترة الزمنية</h3>
                             </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="lawyer1">المستوى التعليمي
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="lawyer1">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="lawyer2">المنطقة
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="lawyer2">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="lawyer3">الفئات العمرية 
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="lawyer3">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="form-group row">
-                                    <div class="col-12 mt-4 text-center">
-                                        <label class="text-primary" for="from-date">إحصائية عن شهر :</label>
-                                        <input type="month" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
-                                        <input type="submit" class="btn-primary px-3 py-1" value="تم">
+                        
+                            <div class="text-center shadow-around rounded-lg p-3 m-2">
+                                <div class="form-group row w-100">
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-primary mt-2" for="from-date">من</label>
+                                        <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date" required>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-light-red mt-2" for="to-date">إلي</label>
+                                        <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date" required>
                                     </div>
                                 </div>
+                                <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
                             </div>
-
                         </form>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="lawyer0">النوع
+                                <input type="radio" name="notary"
+                                class="custom-control-input"
+                                id="lawyer0" checked>
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="lawyer1">المستوى التعليمي
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="lawyer1">
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="lawyer2">المنطقة
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="lawyer2">
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="lawyer3">الفئات العمرية 
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="lawyer3">
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
                     </div>
                     
                 </div>
@@ -535,7 +542,7 @@
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no0"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no0"></canvas>
                                                 <span></span>
                                         </div>
                                     </div>
@@ -546,7 +553,7 @@
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no1"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no1"></canvas>
                                                 <span></span>
 
                                         </div>
@@ -558,7 +565,7 @@
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no2"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no2"></canvas>
                                                 <span></span>
 
                                         </div>
@@ -570,7 +577,7 @@
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no3"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no3"></canvas>
                                                 <span></span>
                                         </div>
                                     </div>
@@ -581,7 +588,7 @@
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no4"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no4"></canvas>
                                                 <span></span>
     
                                         </div>
@@ -593,7 +600,7 @@
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no5"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no5"></canvas>
                                                 <span></span>
     
                                         </div>
@@ -605,7 +612,7 @@
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no6"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no6"></canvas>
                                                 <span></span>
     
                                         </div>

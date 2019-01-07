@@ -3001,7 +3001,7 @@ header.site-header {
   line-height: 40px; }
 
 .content-title h3 {
-  font-family: 'lubalingraphitcturner-boldarabic';
+  font-family: 'lubalingraphitcturner-boldarabic','JF-Flat-regular';
   font-size: 30px;
   line-height: 50px;
   margin-bottom: 140px;
@@ -3010,7 +3010,7 @@ header.site-header {
 .checkbox-main {
   margin-right: 75px; }
   .checkbox-main .custom-control-label {
-    font-family: 'lubalingraphitcturner-boldarabic';
+    font-family: 'lubalingraphitcturner-boldarabic','JF-Flat-regular';
     font-size: 25px;
     color: #FF6A6A;
     line-height: 33px;
@@ -3071,7 +3071,7 @@ header.site-header {
 .content-text {
   margin-right: 35px; }
   .content-text h4 {
-    font-family: 'lubalingraphitcturner-boldarabic';
+    font-family: 'lubalingraphitcturner-boldarabic','JF-Flat-regular';
     font-size: 20px;
     line-height: 45px;
     margin-bottom: 140px;

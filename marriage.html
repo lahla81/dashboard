@@ -313,90 +313,96 @@
                 <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
                         <div>
-                            <h2 class="text-primary h2 text-center mt-2">قسم عقود الزواج</h2>
+                            <h2 class="text-secondary font-bold text-center mt-2">قسم عقود الزواج</h2>
                         </div>
                         <form action="">
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_abu">محكمة ابوظبي الابتدائية 
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_abu" checked>
-                                    <span class="checkmark-main"></span>
-                                </label>
+                            <div class="">
+                                <h3 class="text-indigo h3 mb-3 mt-5 mr-2">حدد الفترة الزمنية</h3>
                             </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_eye">محكمة العين الرئيسية
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_eye">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_eye_md">محكمة العين/ وسط المدينة
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_eye_md">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_zafra">منطقة الظفرة الابتدائية
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_zafra">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_mrfa">محكمة المرفأ الابتدائية
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_mrfa">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_baea">محكمة بعية السلع الابتدائية
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_baea">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="checkbox-main">
-                                <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_total">اجمالي عقود الزواج 
-                                    <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_total">
-                                    <span class="checkmark-main"></span>
-                                </label>
-                            </div>
-
-                            <div class="row justify-content-center">
-                                <div class="form-group row">
-                                    <div class="col-12 mt-4 text-center">
-                                        <label class="text-primary" for="from-date">إحصائية عن شهر :</label>
-                                        <input type="month" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
-                                        <input type="submit" class="btn-primary px-3 py-1" value="تم">
+                            <div class="text-center shadow-around rounded-lg p-3 m-2">
+                                <div class="form-group row w-100">
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-primary mt-2" for="from-date">من</label>
+                                        <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date" required>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-light-red mt-2" for="to-date">إلي</label>
+                                        <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date" required>
                                     </div>
                                 </div>
+                                <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
                             </div>
-                           
                         </form>
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="customCheck_abu">محكمة ابوظبي الابتدائية 
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="customCheck_abu" checked>
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="customCheck_eye">محكمة العين الرئيسية
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="customCheck_eye">
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="customCheck_eye_md">محكمة العين/ وسط المدينة
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="customCheck_eye_md">
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="customCheck_zafra">منطقة الظفرة الابتدائية
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="customCheck_zafra">
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="customCheck_mrfa">محكمة المرفأ الابتدائية
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="customCheck_mrfa">
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="customCheck_baea">محكمة بعية السلع الابتدائية
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="customCheck_baea">
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-main">
+                            <label class="custom-control-label custom-control-label-notary my-3"
+                                for="customCheck_total">اجمالي عقود الزواج 
+                                <input type="radio" name="notary"
+                                    class="custom-control-input"
+                                    id="customCheck_total">
+                                <span class="checkmark-main"></span>
+                            </label>
+                        </div>
+
                     </div>
                     
                 </div>
@@ -539,7 +545,7 @@
                                             مواطن/مواطنة
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no0"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no0"></canvas>
                                                 <span></span>
                                         </div>
                                     </div>
@@ -550,7 +556,7 @@
                                             مواطن/وافدة
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no1"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no1"></canvas>
                                                 <span></span>
 
                                         </div>
@@ -562,7 +568,7 @@
                                             وافد/مواطنة
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no2"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no2"></canvas>
                                                 <span></span>
 
                                         </div>
@@ -574,7 +580,7 @@
                                             وافد/وافدة
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no3"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no3"></canvas>
                                                 <span></span>
                                         </div>
                                     </div>
@@ -585,7 +591,7 @@
                                             المجموع
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas class="h-100 w-100" id="half_chart_no4"></canvas>
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no4"></canvas>
                                                 <span></span>
 
                                         </div>
