@@ -312,43 +312,42 @@
                  <!-- start of right-page-content -->
                  <div class="col-12 col-lg-8 content-header p-0 mt-1 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
-                        <h2 class="text-secondary font-bold">
-                            إحصائية الترجمة الشفوية  
-                        </h2>
-
-                        <div class="row justify-content-center">
-                            <select class="h4 text-primary mw-100 mt-2" name="service_center" id="" required>
-                                <option value="" selected disabled>إختر الدائرة</option>
-                                <option value="abu-dahbi">دائرة أبوظبي</option>
-                                <option value="west">الدوائر الغربية</option>
-                                <option value="eye">الدوائر العين</option>
-                            </select>
-                        </div>
-
-                        <div class="">
-                            <h3 class="text-indigo h3 mb-3 mt-5 mr-2">حدد الفترة الزمنية</h3>
-                        </div>
-                    <form>
-                        <div class="text-center shadow-around rounded-lg p-3 m-2">
-                            <div class="form-group row w-100">
-                                <div class="col-12 col-sm-6">
-                                    <label class="text-primary mt-2" for="from-date">من</label>
-                                    <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label class="text-light-red mt-2" for="to-date">إلي</label>
-                                    <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date">
-                                </div>
+                        <form>
+                            <h2 class="text-secondary font-bold">
+                                إحصائية الترجمة الشفوية في الدوائر 
+                            </h2>
+                            <div class="row justify-content-center">
+                                <select class="h4 text-primary mw-100 mt-2" name="service_center" id="" required>
+                                    <option value="" selected disabled>إختر الدائرة</option>
+                                    <option value="abu-dahbi">دائرة أبوظبي</option>
+                                    <option value="west">الدوائر الغربية</option>
+                                    <option value="eye">الدوائر العين</option>
+                                </select>
                             </div>
-                            <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
-                        </div>
-                    </form>
+                            <div class="">
+                                <h3 class="text-indigo h3 mb-3 mt-5 mr-2">حدد الفترة الزمنية</h3>
+                            </div>
+                        
+                            <div class="text-center shadow-around rounded-lg p-3 m-2">
+                                <div class="form-group row w-100">
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-primary mt-2" for="from-date">من</label>
+                                        <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date" required>
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <label class="text-light-red mt-2" for="to-date">إلي</label>
+                                        <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date" required>
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
+                            </div>
+                        </form>
 
                         <div class="row translater-list">
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-teal w-100"
-                                data-value= "[20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 25 , 30]"
-                                data-label='[ "عدد اللغات التي يجيدها" , "عدد اللغات التي ترجم بها" , "اردو" , "انجليزي" , "بنغالي" , "بشتو" , "تاميل", "سنهالي" , "بلوشي" , "فارسي","ملباري","نيبالي","هندي","روسي","اِندونيسي","فلبيني","بنجابي","اثيوبي","صيني","إريتري","فرنسي","أسباني","المجموع"]'
+                                data-value= "[20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34]"
+                                data-label='[ "الدعاوى الجزائية" , "النيابات" , "دوائر الاستئناف" , "الدعوى العمالية" , "الدعوى التجارية" , "الدعوى الايجارية" , "دوائر الاحوال الشخصية", "الدعوى التنفيذية" , "دعاوي التركات" , "كاتب العدل والتوثيق +ع الزواج","ادارة الحلول البديلة (التوفيق والمصالحة والتوجية الاسري)","المساعدات القانونية","خدمة المتعاملين","التفتيش القضائي","مكتب النائب العام","الدعوي المدنية","محكمة البلدية","إدارة الدعوى +قاضي الامور المستعجلة","النقض","مشاركات داخلية واجتماعات","المجموع"]'
                                 for="customCheck_id0">
                                     <div class="col-3 p-0">
                                         <img class="box-teal rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -367,7 +366,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-cyan w-100"
-                                data-value= "[10 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 30 , 40 ]"
+                                data-value= "[10 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 ]"
                                     for="customCheck_id1">
                                     <div class="col-3 p-0">
                                         <img class="box-cyan rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -386,7 +385,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-light-red w-100"
-                                data-value= "[40 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 36 , 18 ]"
+                                data-value= "[40 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 ]"
                                     for="customCheck_id2">
                                     <div class="col-3 p-0">
                                         <img class="box-light-red rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -405,7 +404,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-red d-flex flex w-100"
-                                data-value= "[11 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 25 , 99]"
+                                data-value= "[11 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 ]"
                                     for="customCheck_id3">
                                     <div class="col-3 p-0">
                                         <img class="box-dark-red rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -424,7 +423,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-indigo d-flex flex w-100"
-                                data-value= "[40 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 34 , 21]"
+                                data-value= "[40 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 ]"
                                     for="customCheck_id4">
                                     <div class="col-3 p-0">
                                         <img class="box-indigo rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -443,7 +442,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-purple d-flex flex w-100"
-                                data-value= "[50 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 70 , 27 , 21]"
+                                data-value= "[50 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 70]"
                                     for="customCheck_id5">
                                     <div class="col-3 p-0">
                                             <img class="box-purple rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -462,7 +461,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-warning d-flex flex w-100"
-                                data-value= "[39 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 60 , 0 , 12]"
+                                data-value= "[39 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 60]"
                                     for="customCheck_id6">
                                     <div class="col-3 p-0">
                                         <img class="box-warning rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -481,7 +480,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-green d-flex flex w-100"
-                                data-value= "[45 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 35 , 15 , 14]"
+                                data-value= "[45 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 35]"
                                     for="customCheck_id7">
                                     <div class="col-3 p-0">
                                         <img class="box-dark-green rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -500,7 +499,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-rose d-flex flex w-100"
-                                data-value= "[36 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 26 , 16 , 10]"
+                                data-value= "[36 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 26]"
                                     for="customCheck_id8">
                                     <div class="col-3 p-0">
                                         <img class="box-rose rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -519,7 +518,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-maroon d-flex flex w-100"
-                                data-value= "[100 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 10 , 17 , 20]"
+                                data-value= "[100 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 10]"
                                     for="customCheck_id9">
                                     <div class="col-3 p-0">
                                         <img class="box-maroon rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -538,7 +537,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-rody d-flex flex w-100"
-                                data-value= "[45 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 35 , 5 , 8]"
+                                data-value= "[45 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 35]"
                                     for="customCheck_id10">
                                     <div class="col-3 p-0">
                                             <img class="box-rody rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -557,7 +556,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-teal d-flex flex w-100"
-                                data-value= "[36 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 26 , 24 , 16]"
+                                data-value= "[36 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 26]"
                                     for="customCheck_id11">
                                     <div class="col-3 p-0">
                                         <img class="box-teal rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -576,7 +575,7 @@
 
                             <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
                                 <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-cyan d-flex flex w-100"
-                                data-value= "[100 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 10 , 18 , 17]"
+                                data-value= "[100 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 10]"
                                     for="customCheck_id12">
                                     <div class="col-3 p-0">
                                         <img class="box-cyan rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
@@ -784,14 +783,14 @@
                                 </div>
 
                                 <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_guard_title11">
-                                            
+                                        <div class="card card-teal">
+                                            <div class="card-header bg-teal pr-3" id="circle_guard_title11">
+                                                
+                                            </div>
+                                            <div id="circle-body-no11" class="card-body text-center my-2 p-2">
+                                                <span class="text-teal"></span>                                    
+                                            </div>
                                         </div>
-                                        <div id="circle-body-no11" class="card-body text-center my-2 p-2">
-                                            <span class="text-teal"></span>                                    
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
@@ -880,27 +879,6 @@
                                         </div>
                                         <div id="circle-body-no20" class="card-body text-center my-2 p-2">
                                             <span class="text-maron"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="circle_guard_title21">
-    
-                                        </div>
-                                        <div id="circle-body-no21" class="card-body text-center my-2 p-2">
-                                            <span class="text-rody"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_guard_title22">
-                                            
-                                        </div>
-                                        <div id="circle-body-no22" class="card-body text-center my-2 p-2">
-                                            <span class="text-teal"></span>                                    
                                         </div>
                                     </div>
                                 </div>
@@ -1157,30 +1135,6 @@
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no20"></canvas>
                                                 <span></span>
     
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="half_guard_title21">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no21"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title22">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no22"></canvas>
-                                                <span></span>
                                         </div>
                                     </div>
                                 </div>

@@ -3225,42 +3225,68 @@ input#customCheck-bar:checked ~ #label-bar {
 
 .box-danger {
   box-shadow: 0 3px 20px #FF6A6A; }
+  .box-danger .checkmark-trans:after {
+    background-color: #FF6A6A; }
 
 .box-teal {
   box-shadow: 0 3px 20px #00BA81; }
+  .box-teal .checkmark-trans:after {
+    background-color: #00BA81; }
 
 .box-cyan {
   box-shadow: 0 3px 20px #3B86FF; }
+  .box-cyan .checkmark-trans:after {
+    background-color: #3B86FF; }
 
 .box-warning {
   box-shadow: 0 3px 20px #E5A100; }
+  .box-warning .checkmark-trans:after {
+    background-color: #E5A100; }
 
 .box-purple {
   box-shadow: 0 3px 20px #6f42c1; }
+  .box-purple .checkmark-trans:after {
+    background-color: #6f42c1; }
 
 .box-rose {
   box-shadow: 0 3px 20px #FF07A9; }
+  .box-rose .checkmark-trans:after {
+    background-color: #FF07A9; }
 
 .box-light-red {
   box-shadow: 0 3px 20px #FF6A6A; }
+  .box-light-red .checkmark-trans:after {
+    background-color: #FF6A6A; }
 
 .box-dark-red {
   box-shadow: 0 3px 20px #D9581F; }
+  .box-dark-red .checkmark-trans:after {
+    background-color: #D9581F; }
 
 .box-dark-green {
   box-shadow: 0 3px 20px #1A8162; }
+  .box-dark-green .checkmark-trans:after {
+    background-color: #1A8162; }
 
 .box-maron {
   box-shadow: 0 3px 20px #711466; }
+  .box-maron .checkmark-trans:after {
+    background-color: #711466; }
 
 .box-rody {
   box-shadow: 0 3px 20px #4D4F5C; }
+  .box-rody .checkmark-trans:after {
+    background-color: #4D4F5C; }
 
 .box-maroon {
   box-shadow: 0 3px 20px #B51E1E; }
+  .box-maroon .checkmark-trans:after {
+    background-color: #B51E1E; }
 
 .box-indigo {
   box-shadow: 0 3px 20px #3349F0; }
+  .box-indigo .checkmark-trans:after {
+    background-color: #3349F0; }
 
 .card-title {
   font-size: 20px;
@@ -3832,6 +3858,64 @@ h2.trans-name {
   top: 0;
   z-index: 1;
   display: none; }
+
+.checkbox-label {
+  cursor: pointer;
+  transition: 0.3s all;
+  border: 2px solid #FFFFFF;
+  transition: 0.3s all;
+  -webkit-transition: 0.3 all;
+  -moz-transition: 0.3 all;
+  -o-transition: 0.3 all; }
+  .checkbox-label:hover, .checkbox-label:focus, .checkbox-label:active {
+    box-shadow: none;
+    border: 2px solid #F0F0F0; }
+    .checkbox-label:hover img, .checkbox-label:focus img, .checkbox-label:active img {
+      box-shadow: none; }
+
+input.translater_input {
+  display: none; }
+
+/* Create a custom checkbox */
+.checkmark-small {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  opacity: 0.2;
+  height: 19px;
+  width: 19px;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.49);
+  background-color: #3B86FF; }
+
+.checkbox-trans {
+  position: relative; }
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-label input:checked ~ .checkmark-trans {
+  background: #FFFFFF;
+  opacity: 1; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-trans:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.checkbox-label input:checked ~ .checkmark-trans:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.checkbox-label .checkmark-trans:after {
+  right: 12px;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
 
 .table-responsive .modal {
   top: 50%;
