@@ -156,7 +156,15 @@
                                 <a href="law_assist.html">قسم المساعدات القانونية</a>
                             </li>
                             <li>
-                                <a href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
+                                <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#expertiser"href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
+                                <ul class="collapse list-unstyled" id="expertiser">
+                                    <li>
+                                        <a href="enroll_expert.html">إحصائية حسب نوع الخبرة</a>
+                                    </li>
+                                    <li>
+                                        <a href="enroll_expert_gudic.html">إحصائية حــســب المحاكم</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="guarding.html">قسم شؤون الحراسة والتصفية القضائية</a>
@@ -335,100 +343,111 @@
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_veto">إعلانات واردة من محكمة النـقـض
+                                    data-value="[20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 25]"  
+                                    data-label='[ "التوفيق والمصالحة" , "التوجيه الأسري" , "مدني" , "تجاري" , "عمالي" , "أمور مستعجلة" , "إداري", "أحوال شخصية" , "تركات" , "أمر على عريضة","إستئناف","تـنـفـيـذ","جــزائــي أوامر تكليف بالحضور","جــزائــي الأحكام الغيابية","فـض المنــازعــات الإيـجـاريـة","الإنـذارات العـدلـيـة","إلـغــاء وكـالـة","إنابة الإعلانات الخارجية الواردة من داخل الدولة","إنابة الإعلانات الخارجية الواردة من خارج الدولة","إنابة الإعلانات الجزائية الصادرة عن دائرة القضاء","إنابة الإعلانات المدنية الصادرة عن دائرة القضاء","الإعلانات بواسطة النشر","الــعـدد الإجـمـالي"]'
+                                    for="customCheck_id0">إعلانات واردة من محكمة النـقـض
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_veto" checked>
+                                        class="custom-control-input" value="0"
+                                        id="customCheck_id0" >
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_abu_inter">إعلانات المناطق الداخلية في محكمة أبــوظـبي
+                                    data-value= "[25 , 12 , 8 , 20 , 22 , 14 , 17 , 19 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 26 , 22]" 
+                                    for="customCheck_id1">إعلانات المناطق الداخلية في محكمة أبــوظـبي
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_abu_inter">
+                                        class="custom-control-input" value="1"
+                                        id="customCheck_id1">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_comerc">إعلانات واردة من المحكمة التجارية
+                                    data-value=    "[8 , 15 , 17 , 12 , 20 , 22 , 18 , 16 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 24 , 23]" 
+                                    for="customCheck_id2">إعلانات واردة من المحكمة التجارية
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_comerc">
+                                        class="custom-control-input" value="2"
+                                        id="customCheck_id2">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_workers">إعلانات واردة من المحكمة العـمالــية
+                                    data-value= "[21 , 6 , 5 , 31 , 34 , 37 , 29 , 26 , 30 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 24]" 
+                                    for="customCheck_id3">إعلانات واردة من المحكمة العـمالــية
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_workers">
+                                        class="custom-control-input" value="3"
+                                        id="customCheck_id3">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_abu_extr">إعلانات المناطق الخارجية في محكمة أبوظبي (بنـي يـاس سابقاً)
+                                    data-value= "[23 , 6 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 14 , 18]"  
+                                    for="customCheck_id4">إعلانات المناطق الخارجية في محكمة أبوظبي (بنـي يـاس سابقاً)
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_abu_extr">
+                                        class="custom-control-input" value="4"
+                                        id="customCheck_id4">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_rent">إعلانات واردة من لجنة فض المنازعات الإيجارية
+                                    data-value= "[22 , 6 , 5 , 31 , 34 , 37 , 29 , 26 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 26]" 
+                                    for="customCheck_id5">إعلانات واردة من لجنة فض المنازعات الإيجارية
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_rent">
+                                        class="custom-control-input" value="5"
+                                        id="customCheck_id5">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_eye_adv">إعلانات وحدة الإعلان في محكمة العـيـن
+                                    data-value=   "[28 , 6 , 5 , 31 , 34 , 37 , 29 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 17]" 
+                                    for="customCheck_id6">إعلانات وحدة الإعلان في محكمة العـيـن
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_eye_adv">
+                                        class="custom-control-input" value="6"
+                                        id="customCheck_id6">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_yahr_adv">إعلانات وحدة الإعلان في محكمة الـيــحــر
+                                    data-value=  "[24 , 6 , 5 , 31 , 34 , 37 , 25 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 19]"
+                                    for="customCheck_id7">إعلانات وحدة الإعلان في محكمة الـيــحــر
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_yahr_adv">
+                                        class="custom-control-input" value="7"
+                                        id="customCheck_id7">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_zafra_adv">إعلانات وحدة الإعلان في محكمة الظـفـرة
+                                    data-value= "[27 , 31 , 34 , 37 , 29 , 26 , 25 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 27]" 
+                                    for="customCheck_id8">إعلانات وحدة الإعلان في محكمة الظـفـرة
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_zafra_adv">
+                                        class="custom-control-input" value="8"
+                                        id="customCheck_id8">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_roways_adv">إعلانات وحدة الإعلان في محكمة الرويس والسلع
+                                    data-value="[26 , 6 , 5 , 31 , 29 , 26 , 25 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 29]"
+                                    for="customCheck_id9">إعلانات وحدة الإعلان في محكمة الرويس والسلع
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_roways_adv">
+                                        class="custom-control-input" value="9"
+                                        id="customCheck_id9">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
@@ -503,17 +522,7 @@
 
                         <!-- bar and line Chart start -->
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small"data-veto=      "[20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 25]"  
-                                                    data-abu_inter= "[25 , 12 , 8 , 20 , 22 , 14 , 17 , 19 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 26 , 22]" 
-                                                    data-comerc=    "[8 , 15 , 17 , 12 , 20 , 22 , 18 , 16 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 24 , 23]" 
-                                                    data-workers=   "[21 , 6 , 5 , 31 , 34 , 37 , 29 , 26 , 30 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 24]" 
-                                                    data-abu_extr=  "[23 , 6 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 20 , 6 , 31 , 34 , 37 , 14 , 18]"  
-                                                    data-rent=      "[22 , 6 , 5 , 31 , 34 , 37 , 29 , 26 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 26]" 
-                                                    data-eye_adv=   "[28 , 6 , 5 , 31 , 34 , 37 , 29 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 17]" 
-                                                    data-yahr_adv=  "[24 , 6 , 5 , 31 , 34 , 37 , 25 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 19]"
-                                                    data-zafra_adv= "[27 , 31 , 34 , 37 , 29 , 26 , 25 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 27]" 
-                                                    data-roways_adv="[26 , 6 , 5 , 31 , 29 , 26 , 25 , 32 , 5 , 31 , 34 , 37 , 29 , 26 , 6 , 31 , 34 , 37 , 29 , 26 , 25 , 29]"
-                                data-labels='[ "التوفيق والمصالحة" , "التوجيه الأسري" , "مدني" , "تجاري" , "عمالي" , "أمور مستعجلة" , "إداري", "أحوال شخصية" , "تركات" , "أمر على عريضة","إستئناف","تـنـفـيـذ","جــزائــي أوامر تكليف بالحضور","جــزائــي الأحكام الغيابية","فـض المنــازعــات الإيـجـاريـة","الإنـذارات العـدلـيـة","إلـغــاء وكـالـة","إنابة الإعلانات الخارجية الواردة من داخل الدولة","إنابة الإعلانات الخارجية الواردة من خارج الدولة","إنابة الإعلانات الجزائية الصادرة عن دائرة القضاء","إنابة الإعلانات المدنية الصادرة عن دائرة القضاء","الإعلانات بواسطة النشر","الــعـدد الإجـمـالي"]'>
+                            <div class="chart-small">
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
 
                             </div>
@@ -524,7 +533,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_guard_title0">
+                                        <div class="card-header bg-teal pr-3" id="circle_title0">
                                             
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
@@ -534,7 +543,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="circle_title1">
                                             
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
@@ -544,7 +553,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="circle_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="circle_title2">
                                             
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
@@ -554,7 +563,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="circle_guard_title3">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_title3">
                                             
                                         </div>
                                         <div id="circle-body-no3" class="card-body text-center my-2 p-2">
@@ -564,7 +573,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="circle_guard_title4">
+                                        <div class="card-header bg-indigo pr-3" id="circle_title4">
                                             
                                         </div>
                                         <div id="circle-body-no4" class="card-body text-center my-2 p-2">
@@ -574,7 +583,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 my-3">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="circle_guard_title5">
+                                        <div class="card-header bg-purple pr-3" id="circle_title5">
                                             
                                         </div>
                                         <div id="circle-body-no5" class="card-body text-center my-2 p-2">
@@ -584,7 +593,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="circle_guard_title6">
+                                        <div class="card-header bg-warning pr-3" id="circle_title6">
                                             
                                         </div>
                                         <div id="circle-body-no6" class="card-body text-center my-2 p-2">
@@ -594,7 +603,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="circle_guard_title7">
+                                        <div class="card-header bg-dark-green pr-3" id="circle_title7">
 
                                         </div>
                                         <div id="circle-body-no7" class="card-body text-center my-2 p-2">
@@ -604,7 +613,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="circle_guard_title8">
+                                        <div class="card-header bg-rose pr-3" id="circle_title8">
 
                                         </div>
                                         <div id="circle-body-no8" class="card-body text-center my-2 p-2">
@@ -614,7 +623,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="circle_guard_title9">
+                                        <div class="card-header bg-maron pr-3" id="circle_title9">
 
                                         </div>
                                         <div id="circle-body-no9" class="card-body text-center my-2 p-2">
@@ -624,7 +633,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="circle_guard_title10">
+                                        <div class="card-header bg-rody pr-3" id="circle_title10">
     
                                         </div>
                                         <div id="circle-body-no10" class="card-body text-center my-2 p-2">
@@ -635,7 +644,7 @@
 
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                         <div class="card card-teal">
-                                            <div class="card-header bg-teal pr-3" id="circle_guard_title11">
+                                            <div class="card-header bg-teal pr-3" id="circle_title11">
                                                 
                                             </div>
                                             <div id="circle-body-no11" class="card-body text-center my-2 p-2">
@@ -645,7 +654,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_guard_title12">
+                                        <div class="card-header bg-cyan pr-3" id="circle_title12">
                                             
                                         </div>
                                         <div id="circle-body-no12" class="card-body text-center my-2 p-2">
@@ -655,7 +664,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="circle_guard_title13">
+                                        <div class="card-header bg-light-red pr-3" id="circle_title13">
                                             
                                         </div>
                                         <div id="circle-body-no13" class="card-body text-center my-2 p-2">
@@ -665,7 +674,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="circle_guard_title14">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_title14">
                                             
                                         </div>
                                         <div id="circle-body-no14" class="card-body text-center my-2 p-2">
@@ -675,7 +684,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="circle_guard_title15">
+                                        <div class="card-header bg-indigo pr-3" id="circle_title15">
                                             
                                         </div>
                                         <div id="circle-body-no15" class="card-body text-center my-2 p-2">
@@ -685,7 +694,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 my-3">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="circle_guard_title16">
+                                        <div class="card-header bg-purple pr-3" id="circle_title16">
                                             
                                         </div>
                                         <div id="circle-body-no16" class="card-body text-center my-2 p-2">
@@ -695,7 +704,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="circle_guard_title17">
+                                        <div class="card-header bg-warning pr-3" id="circle_title17">
                                             
                                         </div>
                                         <div id="circle-body-no17" class="card-body text-center my-2 p-2">
@@ -705,7 +714,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="circle_guard_title18">
+                                        <div class="card-header bg-dark-green pr-3" id="circle_title18">
 
                                         </div>
                                         <div id="circle-body-no18" class="card-body text-center my-2 p-2">
@@ -715,7 +724,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="circle_guard_title19">
+                                        <div class="card-header bg-rose pr-3" id="circle_title19">
 
                                         </div>
                                         <div id="circle-body-no19" class="card-body text-center my-2 p-2">
@@ -725,7 +734,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="circle_guard_title20">
+                                        <div class="card-header bg-maron pr-3" id="circle_title20">
 
                                         </div>
                                         <div id="circle-body-no20" class="card-body text-center my-2 p-2">
@@ -735,7 +744,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="circle_guard_title21">
+                                        <div class="card-header bg-rody pr-3" id="circle_title21">
     
                                         </div>
                                         <div id="circle-body-no21" class="card-body text-center my-2 p-2">
@@ -745,7 +754,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_guard_title22">
+                                        <div class="card-header bg-teal pr-3" id="circle_title22">
                                             
                                         </div>
                                         <div id="circle-body-no22" class="card-body text-center my-2 p-2">
@@ -762,7 +771,7 @@
                                 
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title0">
+                                        <div class="card-header bg-teal pr-3" id="half_title0">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -773,7 +782,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="half_title1">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -785,7 +794,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="half_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="half_title2">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -797,7 +806,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="half_guard_title3">
+                                        <div class="card-header bg-dark-red pr-3" id="half_title3">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -808,7 +817,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="half_guard_title4">
+                                        <div class="card-header bg-indigo pr-3" id="half_title4">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -820,7 +829,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="half_guard_title5">
+                                        <div class="card-header bg-purple pr-3" id="half_title5">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -832,7 +841,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="half_guard_title6">
+                                        <div class="card-header bg-warning pr-3" id="half_title6">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -844,7 +853,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="half_guard_title7">
+                                        <div class="card-header bg-dark-green pr-3" id="half_title7">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -856,7 +865,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="half_guard_title8">
+                                        <div class="card-header bg-rose pr-3" id="half_title8">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -868,7 +877,7 @@
                                 </div>     
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="half_guard_title9">
+                                        <div class="card-header bg-maron pr-3" id="half_title9">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -880,7 +889,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="half_guard_title10">
+                                        <div class="card-header bg-rody pr-3" id="half_title10">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -893,7 +902,7 @@
 
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title11">
+                                        <div class="card-header bg-teal pr-3" id="half_title11">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -904,7 +913,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_guard_title12">
+                                        <div class="card-header bg-cyan pr-3" id="half_title12">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -916,7 +925,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="half_guard_title13">
+                                        <div class="card-header bg-light-red pr-3" id="half_title13">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -928,7 +937,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="half_guard_title14">
+                                        <div class="card-header bg-dark-red pr-3" id="half_title14">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -939,7 +948,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="half_guard_title15">
+                                        <div class="card-header bg-indigo pr-3" id="half_title15">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -951,7 +960,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="half_guard_title16">
+                                        <div class="card-header bg-purple pr-3" id="half_title16">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -963,7 +972,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="half_guard_title17">
+                                        <div class="card-header bg-warning pr-3" id="half_title17">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -975,7 +984,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="half_guard_title18">
+                                        <div class="card-header bg-dark-green pr-3" id="half_title18">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -987,7 +996,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="half_guard_title19">
+                                        <div class="card-header bg-rose pr-3" id="half_title19">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -999,7 +1008,7 @@
                                 </div>     
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="half_guard_title20">
+                                        <div class="card-header bg-maron pr-3" id="half_title20">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -1011,7 +1020,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-rody">
-                                        <div class="card-header bg-rody pr-3" id="half_guard_title21">
+                                        <div class="card-header bg-rody pr-3" id="half_title21">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -1023,7 +1032,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title22">
+                                        <div class="card-header bg-teal pr-3" id="half_title22">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -1058,7 +1067,7 @@
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/advertise_type.js"></script>
+    <script src="./assets/js/translater_oral.js"></script>
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>

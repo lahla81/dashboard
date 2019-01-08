@@ -156,7 +156,15 @@
                                 <a href="law_assist.html">قسم المساعدات القانونية</a>
                             </li>
                             <li>
-                                <a href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
+                                <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#expertiser"href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
+                                <ul class="collapse list-unstyled" id="expertiser">
+                                    <li>
+                                        <a href="enroll_expert.html">إحصائية حسب نوع الخبرة</a>
+                                    </li>
+                                    <li>
+                                        <a href="enroll_expert_gudic.html">إحصائية حــســب المحاكم</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="guarding.html">قسم شؤون الحراسة والتصفية القضائية</a>
@@ -335,70 +343,77 @@
                         </form>
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_abu">محكمة ابوظبي الابتدائية 
+                                data-value="[20 , 15 , 18 , 25]" 
+                                data-label='["مواطن/مواطنة" , "مواطن/وافدة","وافد/مواطنة","وافد/وافدة","المجموع"]'
+                                for="customCheck_id0">محكمة ابوظبي الابتدائية 
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_abu" checked>
+                                    id="customCheck_id0" value = "0">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_eye">محكمة العين الرئيسية
+                                data-value="[25 , 8 , 12 , 14]" 
+                                for="customCheck_id1">محكمة العين الرئيسية
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_eye">
+                                    id="customCheck_id1" value = "1">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_eye_md">محكمة العين/ وسط المدينة
+                                data-value="[30 , 20 , 25 , 15]"
+                                for="customCheck_id2">محكمة العين/ وسط المدينة
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_eye_md">
+                                    id="customCheck_id2" value = "2">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_zafra">منطقة الظفرة الابتدائية
+                            data-value="[7 , 5 , 8 , 5]" 
+                                for="customCheck_id3">منطقة الظفرة الابتدائية
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_zafra">
+                                    id="customCheck_id3" value = "3">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_mrfa">محكمة المرفأ الابتدائية
+                                data-value="[12 , 10 , 15 , 13]" 
+                                for="customCheck_id4">محكمة المرفأ الابتدائية
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_mrfa">
+                                    id="customCheck_id4" value = "4">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_baea">محكمة بعية السلع الابتدائية
+                                data-value="[14 , 10 , 9 , 8]"
+                                for="customCheck_id5">محكمة بعية السلع الابتدائية
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_baea">
+                                    id="customCheck_id5" value = "5">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_total">اجمالي عقود الزواج 
+                                for="customCheck_id6">اجمالي عقود الزواج 
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_total">
+                                    id="customCheck_id6" value = "sum_all">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
@@ -472,11 +487,8 @@
 
                         <!-- bar and line Chart start -->
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small" data-abu="[20 , 15 , 18 , 25]" data-eye="[25 , 8 , 12 , 14]" data-eye_md="[30 , 20 , 25 , 15]"
-                                                     data-zafra="[7 , 5 , 8 , 5]" data-mrfa="[12 , 10 , 15 , 13]" data-baea="[14 , 10 , 9 , 8]"
-                                data-labels='["مواطن/مواطنة" , "مواطن/وافدة","وافد/مواطنة","وافد/وافدة","المجموع"]'>
+                            <div class="chart-small">
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
-
                             </div>
                         </div>
 
@@ -485,8 +497,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                            مواطن/مواطنة
+                                        <div class="card-header bg-teal pr-3" id="circle_title0">
+                                            
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
                                             <span class="text-teal"></span>                                    
@@ -495,8 +507,8 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3">
-                                            مواطن/وافدة
+                                        <div class="card-header bg-cyan pr-3" id="circle_title1">
+                                          
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
                                             <span class="text-cyan"></span> 
@@ -505,8 +517,8 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3">
-                                            وافد/مواطنة
+                                        <div class="card-header bg-light-red pr-3" id="circle_title2">
+                                      
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
                                             <span class="text-light-red"></span>                                    
@@ -515,8 +527,8 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3">
-                                            وافد/وافدة
+                                        <div class="card-header bg-dark-red pr-3" id="circle_title3">
+                                         
                                         </div>
                                         <div id="circle-body-no3" class="card-body text-center my-2 p-2">
                                             <span class="text-dark-red"></span>                                    
@@ -525,8 +537,8 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3">
-                                            المجموع
+                                        <div class="card-header bg-indigo pr-3" id="circle_title4">
+                                           
                                         </div>
                                         <div id="circle-body-no4" class="card-body text-center my-2 p-2">
                                             <span class="text-indigo"></span> 
@@ -541,8 +553,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                            مواطن/مواطنة
+                                        <div class="card-header bg-teal pr-3" id="half_title0">
+                                          
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no0"></canvas>
@@ -552,8 +564,8 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3">
-                                            مواطن/وافدة
+                                        <div class="card-header bg-cyan pr-3" id="half_title1">
+                                           
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no1"></canvas>
@@ -564,8 +576,8 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3">
-                                            وافد/مواطنة
+                                        <div class="card-header bg-light-red pr-3" id="half_title2">
+                                           
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no2"></canvas>
@@ -576,8 +588,8 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3">
-                                            وافد/وافدة
+                                        <div class="card-header bg-dark-red pr-3" id="half_title3">
+                                           
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no3"></canvas>
@@ -587,8 +599,8 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3">
-                                            المجموع
+                                        <div class="card-header bg-indigo pr-3" id="half_title4">
+                                          
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no4"></canvas>
@@ -623,7 +635,7 @@
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/marriage.js"></script>
+    <script src="./assets/js/marriage1.js"></script>
 
     
     <!-- Main JS -->

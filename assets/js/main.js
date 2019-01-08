@@ -5,8 +5,10 @@ $(document).ready(function () {
         $('#content').toggleClass('active');
         $('#main_sidbar').toggleClass('active');
         $(this).toggleClass('active');
-       
     });
+    if ($(window).width() < 992){
+        $('#sidebarCollapse').addClass('active');
+    };
 
     (function(){
         // left check box changee label-background and its chart

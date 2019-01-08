@@ -171,8 +171,13 @@ $(document).ready(function () {
             { 
                 count += data[i]; 
             }
+        
+    
+        data.push(count);
 
-        data.push(count)
+        var persent = (data[1] * 100 / count);
+        persent = Math.round(persent);
+        data.push(persent);
         
         
 

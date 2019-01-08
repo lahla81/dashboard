@@ -166,13 +166,10 @@ $(document).ready(function () {
         customCheck = document.getElementsByName("notary")[checked];
         const data   = JSON.parse(customCheck.parentElement.dataset.value);
         
-        var count = 0;
-        for(var i=0, n=data.length; i < n; i++) 
-            { 
-                count += data[i]; 
-            }
-
-        data.push(count)
+        var persentage = 0;
+        persentage = data[1] * 100 / data[0];
+        persentage = Math.round(persentage);
+        data.push(persentage);
         
         
 

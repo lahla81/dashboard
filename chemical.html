@@ -156,7 +156,15 @@
                                 <a href="law_assist.html">قسم المساعدات القانونية</a>
                             </li>
                             <li>
-                                <a href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
+                                <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#expertiser"href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
+                                <ul class="collapse list-unstyled" id="expertiser">
+                                    <li>
+                                        <a href="enroll_expert.html">إحصائية حسب نوع الخبرة</a>
+                                    </li>
+                                    <li>
+                                        <a href="enroll_expert_gudic.html">إحصائية حــســب المحاكم</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="guarding.html">قسم شؤون الحراسة والتصفية القضائية</a>
@@ -337,65 +345,72 @@
                         <div class="row justify-content-start justify-content-md-around">
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_simple">محلي بسيط
+                                    data-value="[20 , 6]" 
+                                    data-label='["المحدد" , "المنجز","المجموع","النسبة"]'
+                                    for="customCheck_id0">محلي بسيط
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_simple" checked>
+                                        class="custom-control-input" value="0"
+                                        id="customCheck_id0">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_complicate">محلي معقد
+                                    data-value="[25 , 8]" 
+                                    for="customCheck_id1">محلي معقد
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_complicate">
+                                        class="custom-control-input" value="1"
+                                        id="customCheck_id1">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_union">اتحادي
+                                    data-value="[30 , 20]"                                  
+                                    for="customCheck_id2">اتحادي
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_union">
+                                        class="custom-control-input" value="2"
+                                        id="customCheck_id2">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
                         </div>
 
                         <div>
-                            <h2 class="text-light-red h2 text-center mt-4">وحدة السموم الشرعية</h2>
+                            <h2 class="text-secondary font-bold text-center mt-4">وحدة السموم الشرعية</h2>
                         </div>
                         <div class="row justify-content-start justify-content-md-around">
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_legel_simple">شرعي بسيط
+                                    data-value="[40 , 5]" 
+                                    for="customCheck_id3">شرعي بسيط
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_legel_simple">
+                                        class="custom-control-input" value="3"
+                                        id="customCheck_id3">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_legel_complicate">شرعي معقد
+                                    data-value="[55 , 5]" 
+                                    for="customCheck_id4">شرعي معقد
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_legel_complicate">
+                                        class="custom-control-input" value="4"
+                                        id="customCheck_id4">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
 
                             <div class="checkbox-main">
                                 <label class="custom-control-label custom-control-label-notary my-3"
-                                    for="customCheck_legel_others">فحوصات اخرى
+                                    data-value="[60 , 10]"
+                                    for="customCheck_id5">فحوصات اخرى
                                     <input type="radio" name="notary"
-                                        class="custom-control-input"
-                                        id="customCheck_legel_others">
+                                        class="custom-control-input" value="5"
+                                        id="customCheck_id5">
                                     <span class="checkmark-main"></span>
                                 </label>
                             </div>
@@ -469,9 +484,7 @@
 
                         <!-- bar and line Chart start -->
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small" data-sLocal="[20 , 6]" data-clocal="[25 , 8]" data-ulocal="[30 , 20]"
-                                                     data-slegel="[40 , 5]" data-clegel="[55 , 5]" data-ulegel="[60 , 10]"
-                                data-labels='["المحدد" , "المنجز","المجموع","النسبة"]'>
+                            <div class="chart-small">
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
 
                             </div>
@@ -482,8 +495,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                            المحدد
+                                        <div class="card-header bg-teal pr-3" id="circle_title0">
+                                         
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
                                             <span class="text-teal"></span>                                    
@@ -492,8 +505,8 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3">
-                                            المنجز
+                                        <div class="card-header bg-cyan pr-3" id="circle_title1">
+                                          
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
                                             <span class="text-cyan"></span> 
@@ -502,8 +515,8 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3">
-                                            المجموع
+                                        <div class="card-header bg-light-red pr-3" id="circle_title2">
+                                           
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
                                             <span class="text-light-red"></span>                                    
@@ -511,12 +524,12 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                            النسبة
+                                    <div class="card card-dark-red">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_title3">
+                                          
                                         </div>
                                         <div id="circle-body-no3" class="card-body text-center my-2 p-2">
-                                            <span class="text-teal"></span>                                    
+                                            <span class="text-dark-red"></span>                                    
                                         </div>
                                     </div>
                                 </div>
@@ -528,8 +541,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                            المحدد
+                                        <div class="card-header bg-teal pr-3" id="half_title0">
+                                          
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no0"></canvas>
@@ -539,8 +552,8 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3">
-                                            المنجز
+                                        <div class="card-header bg-cyan pr-3" id="half_title1">
+                                       
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no1"></canvas>
@@ -551,8 +564,8 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3">
-                                            المجموع
+                                        <div class="card-header bg-light-red pr-3" id="half_title2">
+                                          
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no2"></canvas>
@@ -562,9 +575,9 @@
                                     </div>
                                 </div>
                                 <div class="col-12 px-1 mt-3">
-                                    <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                            النسبة
+                                    <div class="card card-dark-red">
+                                        <div class="card-header bg-dark-red pr-3" id="half_title3">
+                                        
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no3"></canvas>
@@ -598,7 +611,7 @@
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/chemical.js"></script>
+    <script src="./assets/js/chemical1.js"></script>
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>

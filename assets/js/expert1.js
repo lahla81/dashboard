@@ -1,9 +1,4 @@
 $(document).ready(function () {
-
-    var customCheck =  document.getElementsByName("notary")[0];
-    const labels = JSON.parse(customCheck.parentElement.dataset.label);
-    
-    var myChart;
    
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
@@ -163,17 +158,162 @@ $(document).ready(function () {
     $('input[name="notary"]').click(function(){
 
         var checked = $('input[name="notary"]:checked').val();
-        customCheck = document.getElementsByName("notary")[checked];
-        const data   = JSON.parse(customCheck.parentElement.dataset.value);
+        if(checked == 0){
+            $('.type-hd').css({display:'block'});
+            $('.type-block').css({display:'block'});
+            $('.sum').css({display:'block'});
+        }else if(checked == 1){
+            $('.type-hd').css({display:'block'});
+            $('.type-block').css({display:'block'});
+            $('.sum').css({display:'block'});
+        }else if(checked == 2){
+            $('.type-hd').css({display:'block'});
+            $('.type-block').css({display:'block'});
+            $('.sum').css({display:'block'});
+        }else if(checked == 3){
+            $('.type-hd').css({display:'block'});
+            $('.type-block').css({display:'block'});
+            $('.sum').css({display:'block'});
+        }else if(checked == 4){
+            $('.sum').css({display:'block'});
+            $('.type-hd').css({display:'none'});
+        }else if(checked == 5){
+            $('.type-hd').css({display:'none'});
+            $('.type-block').css({display:'block'});
+            $('.sum').css({display:'block'});
+        }else if(checked == 6){
+            $('.type-hd').css({display:'none'});
+            $('.type-block').css({display:'block'});
+            $('.sum').css({display:'block'});
+        }else if(checked == 7){
+            $('.type-hd').css({display:'none'});
+            $('.sum').css({display:'none'});
+            $('.type-block').css({display:'none'});
+        }
         
-        var count = 0;
-        for(var i=0, n=data.length; i < n; i++) 
-            { 
-                count += data[i]; 
+        if(checked == 0 || checked == 1 || checked == 2){
+            customCheck = document.getElementsByName("notary")[checked];
+            var data   = JSON.parse(customCheck.parentElement.dataset.value);
+            var labels   = JSON.parse(customCheck.parentElement.dataset.label);
+
+            var count1 = 0;
+            for(var i=0, n=3; i < n; i++) 
+                { 
+                    count1 += data[i]; 
+                }
+            data.splice(3, 0, count1);
+
+            var person2 = 0;
+            person2 = count1 - data[4];
+
+            data.splice(5, 0, person2);
+
+            var count2 = 0;
+            for(var i=6, n=9; i < n; i++) 
+                { 
+                    count2 += data[i]; 
+                }
+            data.splice(9, 0, count2);
+
+            data[10] = data[5] - data[9];
+            data[11] = data[4];
+            data[12] = data[11] + data[10];
+            persentage = data[9] *100 / data[5];
+            data[13] = Math.round(persentage);
+        
+        }else if(checked == 3){
+            customCheck = document.getElementsByName("notary")[checked];
+            var labels   = JSON.parse(customCheck.parentElement.dataset.label);
+
+            customCheck0 = document.getElementsByName("notary")[0];
+            const data0   = JSON.parse(customCheck0.parentElement.dataset.value);
+
+            customCheck1 = document.getElementsByName("notary")[1];
+            const data1   = JSON.parse(customCheck1.parentElement.dataset.value);
+
+            customCheck2 = document.getElementsByName("notary")[2];
+            const data2   = JSON.parse(customCheck2.parentElement.dataset.value);
+
+            var data =[];
+            var sum;
+            for(var i = 0 , n = data1.length; i < n ; i++){
+                sum = data0[i] + data1[i] + data2[i]
+                data.push(sum);
             }
 
-        data.push(count)
-        
+            var count1 = 0;
+            for(var i=0, n=3; i < n; i++) 
+                { 
+                    count1 += data[i]; 
+                }
+            data.splice(3, 0, count1);
+
+            var person2 = 0;
+            person2 = count1 - data[4];
+
+            data.splice(5, 0, person2);
+
+            var count2 = 0;
+            for(var i=6, n=9; i < n; i++) 
+                { 
+                    count2 += data[i]; 
+                }
+            data.splice(9, 0, count2);
+
+            data[10] = data[5] - data[9];
+            data[11] = data[4];
+            data[12] = data[11] + data[10];
+            persentage = data[9] *100 / data[5];
+            data[13] = Math.round(persentage);
+
+        }else if(checked == 7){
+            customCheck = document.getElementsByName("notary")[checked];
+            var labels   = JSON.parse(customCheck.parentElement.dataset.label);
+
+            customCheck4 = document.getElementsByName("notary")[4];
+            var data4   = JSON.parse(customCheck4.parentElement.dataset.value);
+
+            var count4 = 0;
+            for(var i=0, n=data4.length; i < n; i++) 
+            { 
+                count4 += data4[i] ; 
+            }
+
+            customCheck5 = document.getElementsByName("notary")[5];
+            var data5   = JSON.parse(customCheck5.parentElement.dataset.value);
+
+            var count5 = 0;
+            for(var i=0, n=data5.length; i < n; i++) 
+            { 
+                count5 += data5[i] ; 
+            }
+
+            customCheck6 = document.getElementsByName("notary")[6];
+            var data6   = JSON.parse(customCheck6.parentElement.dataset.value);
+
+            data=[];
+            var count6 = 0;
+            for(var i=0, n=data6.length; i < n; i++) 
+            { 
+                count6 += data6[i] ; 
+            }
+
+            var sum = count4 + count5 + count6;
+           
+            data.push(sum);
+
+        }else {
+            customCheck = document.getElementsByName("notary")[checked];
+            var data   = JSON.parse(customCheck.parentElement.dataset.value);
+            var labels   = JSON.parse(customCheck.parentElement.dataset.label);
+
+            var count = 0;
+            for(var i=0, n=data.length; i < n; i++) 
+                { 
+                    count += data[i]; 
+                }
+            data.push(count);
+        }
         
 
         for (i = 0; i < data.length ; i++) {

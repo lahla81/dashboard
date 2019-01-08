@@ -1,9 +1,4 @@
 $(document).ready(function () {
-
-    var customCheck =  document.getElementsByName("notary")[0];
-    const labels = JSON.parse(customCheck.parentElement.dataset.label);
-    
-    var myChart;
    
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
@@ -163,8 +158,24 @@ $(document).ready(function () {
     $('input[name="notary"]').click(function(){
 
         var checked = $('input[name="notary"]:checked').val();
+        if(checked == 0){
+            $('.lawyer0_hide').css({display:'none'});
+        }else if(checked == 1){
+            $('.lawyer0_hide').css({display:'block'});
+            $('.lawyer1_hide').css({display:'none'});
+        }else if(checked == 2){
+            $('.lawyer0_hide').css({display:'block'});
+            $('.lawyer1_hide').css({display:'block'});
+            $('.lawyer2_hide').css({display:'none'});
+        }else if(checked == 3){
+            $('.lawyer0_hide').css({display:'block'});
+            $('.lawyer1_hide').css({display:'block'});
+            $('.lawyer2_hide').css({display:'block'});
+            $('.lawyer3_hide').css({display:'none'});
+        }
         customCheck = document.getElementsByName("notary")[checked];
         const data   = JSON.parse(customCheck.parentElement.dataset.value);
+        const labels   = JSON.parse(customCheck.parentElement.dataset.label);
         
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 

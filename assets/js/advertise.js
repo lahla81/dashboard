@@ -164,18 +164,25 @@ $(document).ready(function () {
 
         var checked = $('input[name="notary"]:checked').val();
         customCheck = document.getElementsByName("notary")[checked];
-        const data   = JSON.parse(customCheck.parentElement.dataset.value);
+        const value   = JSON.parse(customCheck.parentElement.dataset.value);
         
-        var count = 0;
-        for(var i=0, n=data.length; i < n; i++) 
+        var count1 = 0;
+        for(var i=0, n=2; i < n; i++) 
             { 
-                count += data[i]; 
+                count1 += value[i]; 
             }
+            value.splice(2, 0, count1);
 
-        data.push(count)
+        var count2 = 0;
+        for(var i=2, n=4; i < n; i++) 
+            { 
+                count2 += value[i]; 
+            }
+            value.splice(4, 0, count2);
+    
+        data = value;
         
         
-
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
             document.getElementById(titleId).innerHTML = labels[i];

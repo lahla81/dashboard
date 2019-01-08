@@ -2,9 +2,7 @@ $(document).ready(function () {
 
     var customCheck =  document.getElementsByName("notary")[0];
     const labels = JSON.parse(customCheck.parentElement.dataset.label);
-    
-    var myChart;
-   
+ 
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
 
@@ -161,11 +159,31 @@ $(document).ready(function () {
     var chart_options;
 
     $('input[name="notary"]').click(function(){
-
+        var radioLength = document.getElementsByName("notary").length;
         var checked = $('input[name="notary"]:checked').val();
-        customCheck = document.getElementsByName("notary")[checked];
-        const data   = JSON.parse(customCheck.parentElement.dataset.value);
+
+        customCheck = document.getElementsByName("notary")[0];
+        var z = JSON.parse(customCheck.parentElement.dataset.value);
+        var total = [];
+        while (total.length < z.length) {
+            total.push(0)
+        }
         
+        if(checked == "sum_all"){
+            for(var i=0, n = radioLength; i < n-1; i++){
+                customCheck = document.getElementsByName("notary")[i];
+                var data   = JSON.parse(customCheck.parentElement.dataset.value);
+
+                for(var x=0, m = data.length; x < m; x++){
+                    total[x] += data[x];
+                }
+            }
+            data = total;
+
+        }else{
+            customCheck = document.getElementsByName("notary")[checked];
+            var data   = JSON.parse(customCheck.parentElement.dataset.value);
+        }
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 
             { 
@@ -173,7 +191,6 @@ $(document).ready(function () {
             }
 
         data.push(count)
-        
         
 
         for (i = 0; i < data.length ; i++) {

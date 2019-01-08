@@ -3,7 +3,6 @@ $(document).ready(function () {
     var customCheck =  document.getElementsByName("notary")[0];
     const labels = JSON.parse(customCheck.parentElement.dataset.label);
     
-    var myChart;
    
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
@@ -163,8 +162,11 @@ $(document).ready(function () {
     $('input[name="notary"]').click(function(){
 
         var checked = $('input[name="notary"]:checked').val();
-        customCheck = document.getElementsByName("notary")[checked];
-        const data   = JSON.parse(customCheck.parentElement.dataset.value);
+        // if (checked === 2){
+            customCheck = document.getElementsByName("notary")[checked];
+            const data   = JSON.parse(customCheck.parentElement.dataset.value);
+        // }
+
         
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 
@@ -413,7 +415,6 @@ $(document).ready(function () {
             circle();
         });
 
-        
     
         // half Charts
         half();

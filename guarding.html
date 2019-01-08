@@ -156,7 +156,15 @@
                                 <a href="law_assist.html">قسم المساعدات القانونية</a>
                             </li>
                             <li>
-                                <a href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
+                                <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#expertiser"href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
+                                <ul class="collapse list-unstyled" id="expertiser">
+                                    <li>
+                                        <a href="enroll_expert.html">إحصائية حسب نوع الخبرة</a>
+                                    </li>
+                                    <li>
+                                        <a href="enroll_expert_gudic.html">إحصائية حــســب المحاكم</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="guarding.html">قسم شؤون الحراسة والتصفية القضائية</a>
@@ -312,9 +320,7 @@
                 <!-- start of right-page-content -->
                 <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
-                        <div>
-                            <h2 class="text-secondary font-bold text-center mt-2">احصائية ملفات الحراسة والتصفية القضائية المتداولة حسب نوعها</h2>
-                        </div>
+    
                         <form action="" class="form-group p-3">
                             <div class="">
                                 <h3 class="text-indigo h3 mb-3 mt-5 mr-2">حدد الفترة الزمنية</h3>
@@ -333,42 +339,54 @@
                                 <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
                             </div>
                         </form>
+
+                        <div>
+                            <h2 class="text-secondary font-bold text-center mt-2">احصائية ملفات الحراسة والتصفية القضائية المتداولة حسب نوعها</h2>
+                        </div>
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_all_type">احصائية جميع المناطق
+                                data-value="[9 , 13 , 16 , 35 , 27 , 32]"
+                                data-label='[ "مدني" , "تجاري" , "تنفيذ" , "إيجارات" , "جزئي" , "إداري" , "المجموع" ]'
+                                for="customCheck_id0">احصائية جميع المناطق
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_all_type" checked>
+                                    id="customCheck_id0"  value = "0">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_abu_type">احصائية منطقة أبو ظبي
+                                data-value="[47 , 40 , 48 , 38 , 50 , 42]" 
+                                data-label='[ "مدني" , "تجاري" , "تنفيذ" , "إيجارات" , "جزئي" , "إداري" , "المجموع" ]'
+                                for="customCheck_id1">احصائية منطقة أبو ظبي
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_abu_type">
+                                    id="customCheck_id1" value = "1">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_eye_type">احصائية المنطقة الشرقية-العين
+                                data-value="[31 , 34 , 37 , 29 , 26 , 25]"
+                                data-label='[ "مدني" , "تجاري" , "تنفيذ" , "إيجارات" , "جزئي" , "إداري" , "المجموع" ]'
+                                for="customCheck_id2">احصائية المنطقة الشرقية-العين
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_eye_type">
+                                    id="customCheck_id2" value = "2">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_west_type">احصائية المنطقة الغربية
+                                data-value="[15 , 38 , 19 , 14 , 22 , 23]" 
+                                data-label='[ "مدني" , "تجاري" , "تنفيذ" , "إيجارات" , "جزئي" , "إداري" , "المجموع" ]'
+                                for="customCheck_id3">احصائية المنطقة الغربية
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_west_type">
+                                    id="customCheck_id3" value = "3">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
@@ -379,30 +397,36 @@
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_all_month">احصائية جميع المناطق
+                                data-value="[25 , 12 , 8 ]"
+                                data-label='[ "الجديدة المقيدة" , "مجموع الملفات المنتهية" , "مجموع الملفات المتبقية","نسبة الإنجاز المنتهية الى المتداولة  %" ]'
+                                for="customCheck_id4">احصائية جميع المناطق
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_all_month">
+                                    id="customCheck_id4" value = "4">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_abu_month">احصائية منطقة أبو ظبي
+                                data-value="[20 , 6 , 5 ]"
+                                data-label='[ "الجديدة المقيدة" , "مجموع الملفات المنتهية" , "مجموع الملفات المتبقية","نسبة الإنجاز المنتهية الى المتداولة  %" ]'
+                                for="customCheck_id5">احصائية منطقة أبو ظبي
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_abu_month">
+                                    id="customCheck_id5" value = "5">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_eye_month">احصائية المنطقة الشرقية-العين
+                                data-value="[8 , 15 , 17 ]"
+                                data-label='[ "الجديدة المقيدة" , "مجموع الملفات المنتهية" , "مجموع الملفات المتبقية","نسبة الإنجاز المنتهية الى المتداولة  %" ]'
+                                for="customCheck_id6">احصائية المنطقة الشرقية-العين
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_eye_month">
+                                    id="customCheck_id6" value = "6">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
@@ -476,14 +500,8 @@
 
                         <!-- bar and line Chart start -->
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small" data-all_month="[20 , 6 , 5 ]"  data-abu_month="[25 , 12 , 8 ]" 
-                                                     data-eye_month="[8 , 15 , 17 ]" data-west_type="[15 , 38 , 19 , 14 , 22 , 23]" 
-                                                     data-all_type="[9 , 13 , 16 , 35 , 27 , 32]"  data-abu_type="[47 , 40 , 48 , 38 , 50 , 42]" 
-                                                     data-eye_type="[31 , 34 , 37 , 29 , 26 , 25]"
-                                data-type_labels='[ "مدني" , "تجاري" , "تنفيذ" , "إيجارات" , "جزئي" , "إداري" , "المجموع" ]'
-                                data-month_labels='[ "الجديدة المقيدة" , "مجموع الملفات المنتهية" , "مجموع الملفات المتبقية","نسبة الإنجاز المنتهية الى المتداولة  %" ]'>
+                            <div class="chart-small">
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
-
                             </div>
                         </div>
 
@@ -492,7 +510,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_guard_title0">
+                                        <div class="card-header bg-teal pr-3" id="circle_title0">
                                             
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
@@ -502,7 +520,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="circle_title1">
                                             
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
@@ -512,7 +530,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="circle_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="circle_title2">
                                             
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
@@ -522,7 +540,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="circle_guard_title3">
+                                        <div class="card-header bg-dark-red pr-3" id="circle_title3">
                                             
                                         </div>
                                         <div id="circle-body-no3" class="card-body text-center my-2 p-2">
@@ -532,7 +550,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3 month_circle">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="circle_guard_title4">
+                                        <div class="card-header bg-indigo pr-3" id="circle_title4">
                                             
                                         </div>
                                         <div id="circle-body-no4" class="card-body text-center my-2 p-2">
@@ -542,7 +560,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3 month_circle">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="circle_guard_title5">
+                                        <div class="card-header bg-purple pr-3" id="circle_title5">
                                             
                                         </div>
                                         <div id="circle-body-no5" class="card-body text-center my-2 p-2">
@@ -552,7 +570,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3 month_circle">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="circle_guard_title6">
+                                        <div class="card-header bg-warning pr-3" id="circle_title6">
                                             
                                         </div>
                                         <div id="circle-body-no6" class="card-body text-center my-2 p-2">
@@ -568,7 +586,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title0">
+                                        <div class="card-header bg-teal pr-3" id="half_title0">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -579,7 +597,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="half_title1">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -591,7 +609,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="half_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="half_title2">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -603,7 +621,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="half_guard_title3">
+                                        <div class="card-header bg-dark-red pr-3" id="half_title3">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -614,7 +632,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3 month_half">
                                     <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="half_guard_title4">
+                                        <div class="card-header bg-indigo pr-3" id="half_title4">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -626,7 +644,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3 month_half">
                                     <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="half_guard_title5">
+                                        <div class="card-header bg-purple pr-3" id="half_title5">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -638,7 +656,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3 month_half">
                                     <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="half_guard_title6">
+                                        <div class="card-header bg-warning pr-3" id="half_title6">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -674,7 +692,7 @@
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/guarding.js"></script>
+    <script src="./assets/js/guarding1.js"></script>
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>

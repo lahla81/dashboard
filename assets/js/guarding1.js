@@ -1,9 +1,4 @@
 $(document).ready(function () {
-
-    var customCheck =  document.getElementsByName("notary")[0];
-    const labels = JSON.parse(customCheck.parentElement.dataset.label);
-    
-    var myChart;
    
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
@@ -163,17 +158,35 @@ $(document).ready(function () {
     $('input[name="notary"]').click(function(){
 
         var checked = $('input[name="notary"]:checked').val();
-        customCheck = document.getElementsByName("notary")[checked];
-        const data   = JSON.parse(customCheck.parentElement.dataset.value);
+        if(checked == 0 || checked == 1 || checked == 2 || checked == 3){
+            $('.month_half').css({display:'block'});
+            $('.month_circle').css({display:'block'});
+        }else if(checked == 4 || checked == 5 || checked == 6){
+            $('.month_half').css({display:'none'});
+            $('.month_circle').css({display:'none'});
+        }
         
-        var count = 0;
-        for(var i=0, n=data.length; i < n; i++) 
-            { 
-                count += data[i]; 
-            }
+        if(checked == 0 || checked == 1 || checked == 2 || checked == 3){
+            customCheck = document.getElementsByName("notary")[checked];
+            var data   = JSON.parse(customCheck.parentElement.dataset.value);
+            var labels   = JSON.parse(customCheck.parentElement.dataset.label);
 
-        data.push(count)
-        
+            var count = 0;
+            for(var i=0, n=data.length; i < n; i++) 
+                { 
+                    count += data[i]; 
+                }
+            data.push(count);
+
+        }else{
+            customCheck = document.getElementsByName("notary")[checked];
+            var labels   = JSON.parse(customCheck.parentElement.dataset.label);
+            var data   = JSON.parse(customCheck.parentElement.dataset.value);
+
+            persentage = data[1] * 100 / data[2];
+            persentage = Math.round(persentage);
+            data.push(persentage);
+        }
         
 
         for (i = 0; i < data.length ; i++) {

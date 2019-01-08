@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <title>مركز رؤية المحضونين</title>
+    <title>إدارة شؤون المحاماة والخبراء  | قسم القيد ومتابعة شؤون الخبرة</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
@@ -72,7 +72,7 @@
                 </li>
 
                 <!-- مركز رؤية المحضونين -->
-                <li class="active">
+                <li>
                     <a href="look.html">
                         <img src="./assets/img/icons/Union_9.png" alt="">
                         <span>مركز رؤية المحضونين</span>
@@ -143,7 +143,7 @@
                 </li>
 
                 <!-- ادارة شؤون المحاماة والخبراء -->
-                <li>
+                <li class="active">
                     <a href="#lawyer" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <img src="./assets/img/icons/Path_149.png" alt="">
                         <span>ادارة شؤون المحاماة والخبراء</span>
@@ -192,7 +192,7 @@
                             <a href="registration.html">قسم التوثيق العام</a>
                         </li>
                         <li>
-                            <a href="marriage.html">قسم عقود الزواج</a>
+                            <a href="notaries.html">قسم عقود الزواج</a>
                         </li>
                         <li>
                             <a href="notaries.html">قسم إشهار الإسلام</a>
@@ -317,62 +317,290 @@
 
             <div class="row content-top-row">
 
-                <!-- start of right-page-content -->
-                <div class="col-12 col-lg-8 content-header p-0 mt-1 my-lg-2 mx-0">
+                 <!-- start of right-page-content -->
+                 <div class="col-12 col-lg-8 content-header p-0 mt-1 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
-                        <form action="">
-                            <div class="">
-                                <h3 class="text-indigo h3 mb-3 mt-5 mr-2">حدد الفترة الزمنية</h3>
-                            </div>
-                            <div class="text-center shadow-around rounded-lg p-3 m-2">
-                                <div class="form-group row w-100">
-                                    <div class="col-12 col-sm-6">
-                                        <label class="text-primary mt-2" for="from-date">من</label>
-                                        <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date" required>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label class="text-light-red mt-2" for="to-date">إلي</label>
-                                        <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date" required>
-                                    </div>
+                        <h2 class="text-secondary font-bold">
+                            الاحصائية الشهرية حسب نوع المحاكم
+                        </h2>
+
+                        <div class="row justify-content-center">
+                            <select class="h4 text-primary mw-100 mt-2" name="service_center" id="" required>
+                                <option value="" selected disabled>إختر الدائرة</option>
+                                <option value="abu-dahbi">دائرة أبوظبي</option>
+                                <option value="west">الدوائر الغربية</option>
+                                <option value="eye">الدوائر العين</option>
+                            </select>
+                        </div>
+
+                        <div class="">
+                            <h3 class="text-indigo h3 mb-3 mt-5 mr-2">حدد الفترة الزمنية</h3>
+                        </div>
+                    <form>
+                        <div class="text-center shadow-around rounded-lg p-3 m-2">
+                            <div class="form-group row w-100">
+                                <div class="col-12 col-sm-6">
+                                    <label class="text-primary mt-2" for="from-date">من</label>
+                                    <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date">
                                 </div>
-                                <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
+                                <div class="col-12 col-sm-6">
+                                    <label class="text-light-red mt-2" for="to-date">إلي</label>
+                                    <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date">
+                                </div>
                             </div>
-                        </form>
-
-                        <div class="checkbox-main">
-                            <label class="custom-control-label custom-control-label-notary"
-                                data-value="[50 , 10]"
-                                data-label='["اجمالي الملفات المتداولة" , "اجمالي الملفات الغير متداولة" , "العدد الاجمالي للملفات"]'
-                                for="customCheck_id0">  مركز الرؤية  -  فرع ابوظبي
-                                <input type="radio" name="notary"
-                                    class="custom-control-input" value="0"
-                                    id="customCheck_id0" >
-                                <span class="checkmark-main"></span>
-                            </label>
+                            <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
                         </div>
+                    </form>
 
-                        <div class="checkbox-main">
-                            <label class="custom-control-label custom-control-label-notary"
-                                data-value="[40 , 12]"
-                                for="customCheck_id1">مركز الرؤية -  فرع العين 
-                                <input type="radio" name="notary" value="1"
-                                    class="custom-control-input"
-                                    id="customCheck_id1">
-                                <span class="checkmark-main"></span>
-                            </label>
+                        <div class="row translater-list">
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-teal w-100"
+                                data-value= "[20 , 6 ]"
+                                data-label='["الدعاوي الواردة","الدعاوي المنجزة","نسبة القضايا المنجزة إلي الواردة%"]'
+                                for="customCheck_id0">
+                                    <div class="col-3 p-0">
+                                        <img class="box-teal rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-teal trans-name">
+                                            الجهة رقم 1
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="0"
+                                        id="customCheck_id0">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-cyan w-100"
+                                data-value= "[31 , 34 ]"
+                                    for="customCheck_id1">
+                                    <div class="col-3 p-0">
+                                        <img class="box-cyan rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-cyan trans-name">
+                                            الجهة رقم 2
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="1"
+                                        id="customCheck_id1">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-light-red w-100"
+                                data-value= "[ 37 , 29 ]"
+                                    for="customCheck_id2">
+                                    <div class="col-3 p-0">
+                                        <img class="box-light-red rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-light-red trans-name">
+                                            الجهة رقم 3
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="2"
+                                        id="customCheck_id2">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-red d-flex flex w-100"
+                                data-value= "[11 , 6 ]"
+                                    for="customCheck_id3">
+                                    <div class="col-3 p-0">
+                                        <img class="box-dark-red rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-dark-red trans-name">
+                                            الجهة رقم 4
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="3"
+                                        id="customCheck_id3">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-indigo d-flex flex w-100"
+                                data-value= "[40 , 6 ]"
+                                    for="customCheck_id4">
+                                    <div class="col-3 p-0">
+                                        <img class="box-indigo rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-indigo trans-name">
+                                                الجهة رقم 5
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="4"
+                                        id="customCheck_id4">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-purple d-flex flex w-100"
+                                data-value= "[50 , 6 ]"
+                                    for="customCheck_id5">
+                                    <div class="col-3 p-0">
+                                            <img class="box-purple rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                        </div>
+                                        <div class="col-9 row">
+                                            <h2 class="text-purple trans-name">
+                                                    الجهة رقم 6
+                                            </h2>
+                                        </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="5"
+                                        id="customCheck_id5">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-warning d-flex flex w-100"
+                                data-value= "[ 10 , 12 ]"
+                                    for="customCheck_id6">
+                                    <div class="col-3 p-0">
+                                        <img class="box-warning rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-warning trans-name">
+                                                الجهة رقم 7
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="6"
+                                        id="customCheck_id6">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-green d-flex flex w-100"
+                                data-value= "[45 , 6 ]"
+                                    for="customCheck_id7">
+                                    <div class="col-3 p-0">
+                                        <img class="box-dark-green rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-dark-green trans-name">
+                                                الجهة رقم 8
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="7"
+                                        id="customCheck_id7">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-rose d-flex flex w-100"
+                                data-value= "[ 29 , 26 ]"
+                                    for="customCheck_id8">
+                                    <div class="col-3 p-0">
+                                        <img class="box-rose rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-rose trans-name">
+                                                الجهة رقم 9
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="8"
+                                        id="customCheck_id8">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-maroon d-flex flex w-100"
+                                data-value= "[ 31 , 34 ]"
+                                    for="customCheck_id9">
+                                    <div class="col-3 p-0">
+                                        <img class="box-maroon rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-maroon trans-name">
+                                                الجهة رقم 10
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="9"
+                                        id="customCheck_id9">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-rody d-flex flex w-100"
+                                data-value= "[45 , 6 ]"
+                                    for="customCheck_id10">
+                                    <div class="col-3 p-0">
+                                            <img class="box-rody rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                        </div>
+                                        <div class="col-9 row">
+                                            <h2 class="text-rody trans-name">
+                                                    الجهة رقم 11
+                                            </h2>
+                                        </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="10"
+                                        id="customCheck_id10">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-teal d-flex flex w-100"
+                                data-value= "[36 , 6 ]"
+                                    for="customCheck_id11">
+                                    <div class="col-3 p-0">
+                                        <img class="box-teal rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-teal trans-name">
+                                                الجهة رقم 12
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="11"
+                                        id="customCheck_id11">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
+
+                            <div class="checkbox-trans col-12 col-sm-6 col-xl-4 translater rounded-lg my-1 p-2">
+                                <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-cyan d-flex flex w-100"
+                                data-value= "[100 , 6 ]"
+                                    for="customCheck_id12">
+                                    <div class="col-3 p-0">
+                                        <img class="box-cyan rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
+                                    </div>
+                                    <div class="col-9 row">
+                                        <h2 class="text-cyan trans-name">
+                                                الجهة رقم 13
+                                        </h2>
+                                    </div>
+                                    <input type="radio" name="notary"
+                                        class="translater_input" value="12"
+                                        id="customCheck_id12">
+                                    <span class="checkmark-trans"></span>
+                                </label>
+                            </div>
                         </div>
-
-                        <div class="checkbox-main">
-                            <label class="custom-control-label custom-control-label-notary"
-                                data-value="[90 , 22]"
-                                for="customCheck_id2">الإجمالي
-                                <input type="radio" name="notary"
-                                    class="custom-control-input" value="2"
-                                    id="customCheck_id2">
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
-
                     </div>
                     
                 </div>
@@ -427,6 +655,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
@@ -444,6 +673,7 @@
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
                             <div class="chart-small">
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
+
                             </div>
                         </div>
 
@@ -453,7 +683,7 @@
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
                                         <div class="card-header bg-teal pr-3" id="circle_title0">
-                                          
+                                            
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
                                             <span class="text-teal"></span>                                    
@@ -463,7 +693,7 @@
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
                                         <div class="card-header bg-cyan pr-3" id="circle_title1">
-                           
+                                            
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
                                             <span class="text-cyan"></span> 
@@ -473,7 +703,7 @@
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
                                         <div class="card-header bg-light-red pr-3" id="circle_title2">
-      
+                                            
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
                                             <span class="text-light-red"></span>                                    
@@ -486,10 +716,11 @@
                         <!-- Half Chart -->
                         <div class="half-chart-col notaries-half-chart-col d-none">
                             <div class="row justify-content-center">
+                                
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
                                         <div class="card-header bg-teal pr-3" id="half_title0">
-                                           
+                                            
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no0"></canvas>
@@ -521,6 +752,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
 
@@ -528,6 +760,8 @@
                     
                 </div>
 
+            </div>
+               
             </div>
 
         </div>
@@ -542,17 +776,14 @@
     </script>
     <script src="./assets/js/vendor/bootstrap.min.js"></script>
 
-
     <!-- CHART JS -->
     <script src="./assets/js/vendor/Chart.min.js"></script>
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/translater_oral.js"></script>
-    
-    <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
-    
+    <script src="./assets/js/experiser.js"></script>
+
 </body>
 
 </html>
