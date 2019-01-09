@@ -2,8 +2,7 @@ $(document).ready(function () {
 
     var customCheck =  document.getElementsByName("notary")[0];
     const labels = JSON.parse(customCheck.parentElement.dataset.label);
-    
-   
+ 
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
 
@@ -158,24 +157,41 @@ $(document).ready(function () {
        
     var chart_data;
     var chart_options;
+    var chart_type;
+    var myChart;
+    
 
     $('input[name="notary"]').click(function(){
-
+      
+        var radioLength = document.getElementsByName("notary").length;
         var checked = $('input[name="notary"]:checked').val();
-        // if (checked === 2){
-            customCheck = document.getElementsByName("notary")[checked];
-            const data   = JSON.parse(customCheck.parentElement.dataset.value);
-        // }
 
+        customCheck = document.getElementsByName("notary")[0];
+        var z = JSON.parse(customCheck.parentElement.dataset.value);
+        var total = [];
+        while (total.length < z.length) {
+            total.push(0)
+        }
         
-        var count = 0;
-        for(var i=0, n=data.length; i < n; i++) 
-            { 
-                count += data[i]; 
+        if(checked == "sum_all"){
+            
+            for(var i=0, n = radioLength; i < n-1; i++){
+                customCheck = document.getElementsByName("notary")[i];
+                var data   = JSON.parse(customCheck.parentElement.dataset.value);
+
+                for(var x=0, m = data.length; x < m; x++){
+                    total[x] += data[x];
+                }
             }
+            data = total;
+           
 
-        data.push(count)
-        
+        }else{
+            customCheck = document.getElementsByName("notary")[checked];
+            var data   = JSON.parse(customCheck.parentElement.dataset.value);
+            var status   = JSON.parse(customCheck.parentElement.dataset.status);
+            document.getElementById('status').innerHTML = status;
+        }
         
 
         for (i = 0; i < data.length ; i++) {
@@ -415,16 +431,33 @@ $(document).ready(function () {
             circle();
         });
 
-    
+        init();
+        
+        function init(){          
+            // Remove the old chart and all its event handles
+            if (myChart) {
+              myChart.destroy();
+            }
+            
+            myChart = new Chart(ctx, {
+                type: chart_type,
+                data: chart_data,
+                options: chart_options,
+            });
+            
+        };
+        
+       
         // half Charts
         half();
+
         function half(){
             for (i = 0; i < data.length ; i++) {
+    
                 var id = "half_chart_no" + i;
                 var ctx = document.getElementById(id).getContext('2d');
                 const ctx_fillstyle = halfShadowColor[i];
-
-                var myChart = new Chart(ctx, {
+                halfChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
                         datasets: [{
@@ -485,6 +518,7 @@ $(document).ready(function () {
                         }
                     },
                 })
+                // halfChart.update();
             };
         };
 
@@ -507,18 +541,6 @@ $(document).ready(function () {
                     $(this).find('span').html(Math.round(stepvalue * 100));
                 });
             }
-        };
-
-        init();
-        function init(){
-            if (myChart) {
-                myChart.destroy();
-              }
-            myChart = new Chart(ctx, {
-                type: chart_type,
-                data: chart_data,
-                options: chart_options,
-            });
         };
 
     });

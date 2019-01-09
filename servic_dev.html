@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <title>إدارة خدمة المحاكم | قسم المعلنين</title>
+    <title>إدارة خدمة المتعاملين | وحدة تطوير الخدمات</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
@@ -357,100 +357,119 @@
                         
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_veto">طلب تسوية المنازعات صلحا
+                                data-value= "[20 , 6 , 31 ]"
+                                data-label='[ "إجمالي المعاملات" , "إجمالي الإيرادات" , "المبلغ المستحق للدائرة"]'
+                                data-status = '["قيد الإجراء"]'
+                                for="customCheck_id0">طلب تسوية المنازعات صلحا
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_veto" checked>
+                                    id="customCheck_id0" value="0">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_abu_inter">طلب قيد صحيفة دعوى ابتدائية عمالية
+                                data-value= "[25 , 12 , 8 ]"
+                                data-status = '["قيد الإجراء"]'
+                                for="customCheck_id1">طلب قيد صحيفة دعوى ابتدائية عمالية
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_abu_inter">
+                                    id="customCheck_id1" value="1">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_comerc">طلب قيد صحيفة دعوى ابتدائية ايجارات
+                                data-value= "[8 , 15 , 17 ]"
+                                data-status = '["قيد الإجراء"]'
+                                for="customCheck_id2">طلب قيد صحيفة دعوى ابتدائية ايجارات
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_comerc">
+                                    id="customCheck_id2" value="2">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_workers">طلب قيد ملف تنفيذ "ما عدا العمالي"
+                                data-value= "[21 , 6 , 5 ]"
+                                data-status = '["قيد الإجراء"]'
+                                for="customCheck_id3">طلب قيد ملف تنفيذ "ما عدا العمالي"
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_workers">
+                                    id="customCheck_id3" value="3">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_abu_extr">طلب قيد ملف تنفيذ "عمالي"
+                                data-value= "[23 , 6 , 5 ]"
+                                data-status = '["لم يبدأ"]'
+                                for="customCheck_id4">طلب قيد ملف تنفيذ "عمالي"
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_abu_extr">
+                                    id="customCheck_id4" value="4">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_rent">قيد الدعاوي المدنية الإبتدائية
+                                data-value= "[22 , 6 , 5 ]"
+                                data-status = '["تم التنفيذ"]'
+                                for="customCheck_id5">قيد الدعاوي المدنية الإبتدائية
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_rent">
+                                    id="customCheck_id5" value="5">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_eye_adv">قيد الدعاوي التجارية الإبتدائية
+                                data-value= "[28 , 6 , 5 ]"
+                                data-status = '["قيد الإجراء"]'
+                                for="customCheck_id6">قيد الدعاوي التجارية الإبتدائية
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_eye_adv">
+                                    id="customCheck_id6" value="6">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_yahr_adv">قيد صحيفة استئناف عمالية 
+                                data-value= "[24 , 6 , 5 ]"
+                                data-status = '["قيد الإجراء"]'
+                                for="customCheck_id7">قيد صحيفة استئناف عمالية 
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_yahr_adv">
+                                    id="customCheck_id7" value="7">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_zafra_adv">قيد الدعاوي الاستئناف " ما عدا العمالي "
+                                data-value= "[27 , 31 , 34 ]"
+                                data-status = '["قيد الإجراء"]'
+                                for="customCheck_id8">قيد الدعاوي الاستئناف " ما عدا العمالي "
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_zafra_adv">
+                                    id="customCheck_id8" value="8">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary my-3"
-                                for="customCheck_roways_adv">الإجـمـالي
+                                for="customCheck_id9">الإجـمـالي
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_roways_adv">
+                                    id="customCheck_id9" value="sum_all">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
@@ -524,16 +543,7 @@
 
                         <!-- bar and line Chart start -->
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small"data-veto=      "[20 , 6 , 31 ]"
-                                                    data-abu_inter= "[25 , 12 , 8 ]"
-                                                    data-comerc=    "[8 , 15 , 17 ]"
-                                                    data-workers=   "[21 , 6 , 5 ]"
-                                                    data-abu_extr=  "[23 , 6 , 5 ]"
-                                                    data-rent=      "[22 , 6 , 5 ]"
-                                                    data-eye_adv=   "[28 , 6 , 5 ]"
-                                                    data-yahr_adv=  "[24 , 6 , 5 ]"
-                                                    data-zafra_adv= "[27 , 31 , 34 ]"
-                                data-labels='[ "إجمالي المعاملات" , "إجمالي الإيرادات" , "المبلغ المستحق للدائرة"]'>
+                            <div class="chart-small">
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
                                 <div class="row justify-content-center">
                                     <div class="col-12 col-sm-6 col-md-4 px-1 my-3">
@@ -544,7 +554,7 @@
                                             <div class="card-body text-center pb-0 px-0">
                                                 <img src="./assets/img/icons/JvcXM.png" 
                                                     width="108" height="108" class="rounded-circle box-indigo mb-1" alt="avatar">
-                                                <h5 class="card-title pt-3">قيد الإجراء</h5>
+                                                <h5 class="card-title pt-3" id="status"> </h5>
                                             </div>
                                         </div>
                                     </div>
@@ -557,7 +567,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_guard_title0">
+                                        <div class="card-header bg-teal pr-3" id="circle_title0">
                                             
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
@@ -567,7 +577,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="circle_title1">
                                             
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
@@ -577,7 +587,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="circle_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="circle_title2">
                                             
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
@@ -606,7 +616,7 @@
                                 
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_guard_title0">
+                                        <div class="card-header bg-teal pr-3" id="half_title0">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -617,7 +627,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_guard_title1">
+                                        <div class="card-header bg-cyan pr-3" id="half_title1">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -629,7 +639,7 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="half_guard_title2">
+                                        <div class="card-header bg-light-red pr-3" id="half_title2">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
@@ -678,7 +688,7 @@
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
-    <script src="./assets/js/servic_dev.js"></script>
+    <script src="./assets/js/servic_dev1.js"></script>
 
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>

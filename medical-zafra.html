@@ -177,7 +177,7 @@
                             </li>
                         </ul>
                 </li>
-
+                
                 <!-- ادارة الكاتب العدل والتوثيق -->
                 <li>
                     <a href="#auth" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -308,7 +308,7 @@
                     </nav>
                 <!-- </div> -->
             </header><!-- .site-header -->
-            
+
             <button type="button" id="sidebarCollapse" class="navbar-btn m-2 bg-white rounded-lg">
                 <span></span>
                 <span></span>
@@ -318,9 +318,10 @@
             <div class="row content-top-row">
 
                 <!-- start of right-page-content -->
-                <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2">
+                <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
                         <h2 class="text-secondary font-bold text-center mt-2">قسم الطب الشرعي بالظفرة</h2>
+                        
                         <form action="">
                             <div class="">
                                 <h3 class="text-indigo h3 mb-3 mt-5 mr-2">حدد الفترة الزمنية</h3>
@@ -342,40 +343,44 @@
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary"
-                                for="customCheck_clinical">عدد الحالات السريرية
+                                data-value="[60 , 9]" 
+                                data-label='["عدد القضايا" , "عدد القضايا الغير منجزة" , "نسبة الإنجاز"]'
+                                for="customCheck_id0">عدد الحالات السريرية
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_clinical" checked>
+                                    id="customCheck_id0" value = "0">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary"
-                                for="customCheck_death">عدد حالات الوفاة
+                                data-value="[70 , 15]"
+                                data-label='["عدد القضايا" , "عدد القضايا الغير منجزة" , "نسبة الإنجاز"]'
+                                for="customCheck_id1">عدد حالات الوفاة
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_death">
+                                    id="customCheck_id1" value = "1">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
 
                         <div class="checkbox-main">
                             <label class="custom-control-label custom-control-label-notary"
-                                for="customCheck_sum">المجموع
+                            data-labels='["عدد القضايا" , "عدد القضايا الغير منجزة" , "نسبة الإنجاز"]'
+                                for="customCheck_id2">المجموع
                                 <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck_sum">
+                                    id="customCheck_id2" value = "sum_all">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
-
                     </div>
                     
                 </div>
 
                 <!-- start of left side -->
-                <div class="col-lg-4 col-12 content-left p-0 mt-2 my-lg-2">
+                <div class="col-lg-4 col-12 content-left p-0 mt-2 my-lg-2 mx-0">
                     <div class="overlay h-100 mx-2 mx-md-2 ml-lg-3">
                         <p>حدد طريقة العرض</p>
                         <div class="row text-center">
@@ -430,7 +435,7 @@
             </div>
 
             <!-- start of bottom section -->
-            <div class="w-100 chart-row">
+            <div class="chart-row">
                 
                 <!-- start of transaction -->
                 <div class="row transaction justify-content-center w-100">
@@ -439,10 +444,8 @@
 
                         <!-- bar and line Chart start -->
                         <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small" data-all="[60 , 9]" data-death="[70 , 15]"
-                                data-labels='["عدد القضايا" , "عدد القضايا الغير منجزة" , "نسبة الإنجاز"]'>
+                            <div class="chart-small">
                                 <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
-
                             </div>
                         </div>
 
@@ -451,8 +454,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                                عدد القضايا
+                                        <div class="card-header bg-teal pr-3" id="circle_title0">
+                                               
                                         </div>
                                         <div id="circle-body-no0" class="card-body text-center my-2 p-2">
                                             <span class="text-teal"></span>                                    
@@ -461,8 +464,8 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3">
-                                            عدد القضايا الغير منجزة
+                                        <div class="card-header bg-cyan pr-3" id="circle_title1">
+                                           
                                         </div>
                                         <div id="circle-body-no1" class="card-body text-center my-2 p-2">
                                             <span class="text-cyan"></span> 
@@ -471,8 +474,8 @@
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3">
-                                            نسبة الإنجاز
+                                        <div class="card-header bg-light-red pr-3" id="circle_title2">
+                                           
                                         </div>
                                         <div id="circle-body-no2" class="card-body text-center my-2 p-2">
                                             <span class="text-light-red"></span>                                    
@@ -487,8 +490,8 @@
                             <div class="row justify-content-center">
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3">
-                                                عدد القضايا
+                                        <div class="card-header bg-teal pr-3" id="half_title0">
+                                               
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no0"></canvas>
@@ -498,8 +501,8 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3">
-                                                عدد القضايا الغير منجزة
+                                        <div class="card-header bg-cyan pr-3" id="half_title1">
+                                               
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no1"></canvas>
@@ -510,8 +513,8 @@
                                 </div>
                                 <div class="col-12 px-1 mt-3">
                                     <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3">
-                                                نسبة الإنجاز
+                                        <div class="card-header bg-light-red pr-3" id="half_title2">
+                                               
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">
                                             <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no2"></canvas>
@@ -541,13 +544,17 @@
     </script>
     <script src="./assets/js/vendor/bootstrap.min.js"></script>
 
+    <!-- <script src="./assets/js/vendor/jquery.js"></script> -->
+
+    <!-- <script src="./assets/js/vendor/jquery-ui.min.js"></script> -->
+
     <!-- CHART JS -->
     <script src="./assets/js/vendor/Chart.min.js"></script>
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
     <script src="./assets/js/clinical.js"></script>
-   
+    
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
     

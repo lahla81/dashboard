@@ -507,6 +507,9 @@ $(document).ready(function () {
 
         init();
         function init(){
+            if (myChart) {
+                myChart.destroy();
+              }
             myChart = new Chart(ctx, {
                 type: chart_type,
                 data: chart_data,

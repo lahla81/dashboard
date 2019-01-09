@@ -320,10 +320,12 @@
                         </div>
                         <div class="checkbox-main">
                             <label class="custom-control-label"
-                                for="customCheck1">مشروع تنزيل نظام الجابر على أجهزة المترجمين
-                                <input type="checkbox"
+                                data-value="[88 , 50]"
+                                data-label = '[" نسبة الإنجاز السابقة" , "نسبة الإنجاز الحالية"]'
+                                for="customCheck_id0">مشروع تنزيل نظام الجابر على أجهزة المترجمين
+                                <input type="radio" name="notary"
                                     class="custom-control-input"
-                                    id="customCheck1">
+                                    id="customCheck_id0" value="0">
                                 <span class="checkmark-main"></span>
                             </label>
                         </div>
@@ -444,18 +446,10 @@
                     </div>
                 </div>
 
-                <!-- bar Chart start -->
-                <div class="col-12 col-lg-6 px-3 mb-5 bar-chart-col">
-                    <div class="chart-small h-100 w-100 py-4" data-values="[88 , 50]">
+                <!-- bar and Line Chart start -->
+                <div class="col-12 col-lg-6 px-3 mb-5 mediacl-bar-chart bar_line_chart_col">
+                    <div class="chart-small h-100 w-100 py-4">
                         <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
-
-                    </div>
-                </div>
-
-                <!-- Line Chart -->
-                <div class="col-12 col-lg-6 px-3 mb-5 line-chart-col d-none">
-                    <div class="chart-small h-100 w-100 py-4" data-values="[0 , 88 , 0 , 50 , 0]">
-                        <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="line-chart"></canvas>
 
                     </div>
                 </div>
@@ -465,20 +459,20 @@
                     <div class="row">
                         <div class="col-12 col-md-6 px-1 mt-3">
                             <div class="card card-purple">
-                                <div class="card-header bg-purple pr-5">
-                                    نسبة الإنجاز السابقة
+                                <div class="card-header bg-purple pr-5" id="circle_title0">
+                                   
                                 </div>
-                                <div id="prev-circle-body" class="card-body text-center my-2 p-2">
+                                <div id="circle-body-no0" class="card-body text-center my-2 p-2">
                                     <span class="text-purple"></span>                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 px-1 mt-3">
                             <div class="card card-rose">
-                                <div class="card-header bg-rose pr-5">
-                                    نسبة الإنجاز الحالية
+                                <div class="card-header bg-rose pr-5" id="circle_title1">
+                                 
                                 </div>
-                                <div id="next-circle-body" class="card-body text-center my-2 p-2">
+                                <div id="circle-body-no1" class="card-body text-center my-2 p-2">
                                     <span class="text-rose"></span> 
                                 </div>
                             </div>
@@ -491,24 +485,23 @@
                     <div class="row">
                         <div class="col-12 col-xl-6 px-1 mt-3">
                             <div class="card card-purple">
-                                <div class="card-header bg-purple pr-5">
-                                    نسبة الإنجاز السابقة
+                                <div class="card-header bg-purple pr-5" id="half_title0">
+                                    
                                 </div>
                                 <div id="brev-half-body" class="card-body text-center my-2 p-2" value="50">
-                                    <canvas width="80" height="50" class="mh-100 mw-100" id="prev-half-chart"></canvas>
+                                    <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no0"></canvas>
                                         <span></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-xl-6 px-1 mt-3">
                             <div class="card card-rose">
-                                <div class="card-header bg-rose pr-5">
-                                    نسبة الإنجاز الحالية
+                                <div class="card-header bg-rose pr-5" id="half_title1">
+                                   
                                 </div>
                                 <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                    <canvas width="80" height="50" class="mh-100 mw-100" id="next-half-chart"></canvas>
+                                    <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no1"></canvas>
                                         <span></span>
-
                                 </div>
                             </div>
                         </div>
@@ -535,7 +528,7 @@
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
 
     
-    <script src="./assets/js/projectCharts.js"></script>
+    <script src="./assets/js/projectCharts1.js"></script>
 
 
     <!-- Main JS -->
