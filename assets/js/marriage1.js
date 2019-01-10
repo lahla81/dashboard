@@ -157,6 +157,8 @@ $(document).ready(function () {
        
     var chart_data;
     var chart_options;
+    var chart_type;
+    var myChart;
 
     $('input[name="notary"]').click(function(){
         var radioLength = document.getElementsByName("notary").length;

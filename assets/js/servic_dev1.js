@@ -159,10 +159,11 @@ $(document).ready(function () {
     var chart_options;
     var chart_type;
     var myChart;
-    
+    $('.supply_status').css({display:'none'});
 
     $('input[name="notary"]').click(function(){
       
+        $('.supply_status').css({display:'block'});
         var radioLength = document.getElementsByName("notary").length;
         var checked = $('input[name="notary"]:checked').val();
 
@@ -174,7 +175,7 @@ $(document).ready(function () {
         }
         
         if(checked == "sum_all"){
-            
+            $('.supply_status').css({display:'none'});
             for(var i=0, n = radioLength; i < n-1; i++){
                 customCheck = document.getElementsByName("notary")[i];
                 var data   = JSON.parse(customCheck.parentElement.dataset.value);
