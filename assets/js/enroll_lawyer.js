@@ -154,6 +154,8 @@ $(document).ready(function () {
        
     var chart_data;
     var chart_options;
+    var myChart;
+    var chart_data;
 
     $('input[name="notary"]').click(function(){
 

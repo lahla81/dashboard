@@ -74,6 +74,12 @@ $(document).ready(function () {
         var checked = $('input[name="notary"]:checked').val();
         customCheck = document.getElementsByName("notary")[checked];
         var data   = JSON.parse(customCheck.parentElement.dataset.value);
+        var project   = JSON.parse(customCheck.parentElement.dataset.project);
+
+        for (i = 0; i < project.length ; i++) {
+            var titleId = "project_data" + i;
+            document.getElementById(titleId).innerHTML = project[i];
+        }
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
@@ -126,7 +132,7 @@ $(document).ready(function () {
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(line, index) {
-                    var data = dataset.data[index];
+                    var data = dataset.data[index] + "%";
                     ctx.fillText(data, line._model.x, line._model.y + 5);
                     });
                 });
@@ -210,7 +216,7 @@ $(document).ready(function () {
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(bar, index) {
-                    var data = dataset.data[index];
+                    var data = dataset.data[index] + "%";
                     ctx.fillText(data, bar._model.x, bar._model.y + 5);
                     });
                 });
@@ -347,7 +353,7 @@ $(document).ready(function () {
                                 this.data.datasets.forEach(function(dataset, i) {
                                 var meta = chartInstance.controller.getDatasetMeta(i);
                                 meta.data.forEach(function(half, index) {
-                                var data = dataset.data[0];
+                                var data = dataset.data[0] + "%";
                                 ctx.fillText(data, half._model.x, half._model.y + 15);
                                 });
                             });
@@ -380,7 +386,8 @@ $(document).ready(function () {
                     animationStartValue: 0,
                     fill: halfShadowColor[i],
                 }).on('circle-animation-progress', function(event, progress, stepvalue){
-                    $(this).find('span').html(Math.round(stepvalue * 100));
+
+                    $(this).find('span').html(Math.round(stepvalue * 100) + "%");
                 });
             }
         };
