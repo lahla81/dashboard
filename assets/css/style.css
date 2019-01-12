@@ -2890,11 +2890,11 @@ input.custom-control-input {
   margin-right: -308px; }
 
 #sidebar::-webkit-scrollbar {
-  background: #e6e6e6;
+  background: transparent;
   width: 8px; }
 
 #sidebar::-webkit-scrollbar-thumb {
-  background: #b3b3b3;
+  background: #37B26F;
   width: 8px; }
 
 .sidebar-header {
@@ -3006,6 +3006,10 @@ header.site-header {
   line-height: 50px;
   margin-bottom: 70px;
   margin-top: 30px; }
+
+.content_img {
+  align-items: center;
+  height: 75vh; }
 
 .checkbox-main {
   margin-right: 75px; }
@@ -3424,59 +3428,21 @@ input#customCheck-bar:checked ~ #label-bar {
 .chart-row {
   transition: 1s all ease-in; }
 
-.chart-row.lineChart .bar_line_chart_col {
+.chart-row.lineChart .bar_line_chart_col, .chart-row.barChart .bar_line_chart_col {
   display: block !important;
   transform: scale(1); }
 
-.chart-row.lineChart .bar-chart-col {
+.chart-row.lineChart .circle-chart-col, .chart-row.barChart .circle-chart-col {
   transform: scale(0);
   transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
-.chart-row.lineChart .line-chart-col {
-  display: block !important;
-  transform: scale(1); }
-
-.chart-row.lineChart .circle-chart-col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
-  display: none; }
-
-.chart-row.lineChart .half-chart-col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
-  display: none; }
-
-.chart-row.barChart .bar_line_chart_col {
-  display: block !important;
-  transform: scale(1); }
-
-.chart-row.barChart .line-chart-col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
-  display: none; }
-
-.chart-row.barChart .bar-chart-col {
-  display: block !important;
-  transform: scale(1); }
-
-.chart-row.barChart .circle-chart-col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
-  display: none; }
-
-.chart-row.barChart .half-chart-col {
+.chart-row.lineChart .half-chart-col, .chart-row.barChart .half-chart-col {
   transform: scale(0);
   transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
 
 .chart-row.circleChart .bar_line_chart_col {
-  display: none; }
-
-.chart-row.circleChart .bar-chart-col {
-  display: none; }
-
-.chart-row.circleChart .line-chart-col {
   display: none; }
 
 .chart-row.circleChart .circle-chart-col {
@@ -3487,17 +3453,6 @@ input#customCheck-bar:checked ~ #label-bar {
   display: none; }
 
 .chart-row.halfChart .bar_line_chart_col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
-  display: none; }
-
-.chart-row.halfChart .bar-chart-col {
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
-  display: none; }
-
-.chart-row.halfChart .line-chart-col {
-  display: none;
   transform: scale(0);
   transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
   display: none; }
@@ -3521,270 +3476,15 @@ input#customCheck-bar:checked ~ #label-bar {
     right: 50%;
     transform: translate(50%, -50%); }
 
-.transaction,
-.employStat,
-.elecStat,
-.employLate,
-.transactionTypes,
-.digital_platform,
-.digital_platform_eye {
-  transition: 0.5s all ease-in; }
-
-.chart-row.transaction .transaction {
-  display: block !important;
-  opacity: 1; }
-
-.chart-row.transaction .employStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transaction .elecStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transaction .employLate {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transaction .transactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transaction .employeTransactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transaction .digital_platform {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transaction .digital_platform_eye {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employStat .transaction {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employStat .employStat {
-  display: block !important;
-  opacity: 1; }
-
-.chart-row.employStat .elecStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employStat .employLate {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employStat .transactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employStat .employeTransactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employStat .digital_platform {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employStat .digital_platform_eye {
-  display: none;
-  opacity: 0; }
-
-.chart-row.elecStat .transaction {
-  display: none;
-  opacity: 0; }
-
-.chart-row.elecStat .employStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.elecStat .elecStat {
-  display: block !important;
-  opacity: 1; }
-
-.chart-row.elecStat .employLate {
-  display: none;
-  opacity: 0; }
-
-.chart-row.elecStat .transactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.elecStat .employeTransactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.elecStat .digital_platform {
-  display: none;
-  opacity: 0; }
-
-.chart-row.elecStat .digital_platform_eye {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employLate .transaction {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employLate .employStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employLate .elecStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employLate .employLate {
-  display: block !important;
-  opacity: 1; }
-
-.chart-row.employLate .transactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employLate .employeTransactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employLate .digital_platform {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employLate .digital_platform_eye {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transactionTypes .transaction {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transactionTypes .employStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transactionTypes .elecStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transactionTypes .employLate {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transactionTypes .transactionTypes {
-  display: block !important;
-  opacity: 1; }
-
-.chart-row.transactionTypes .employeTransactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transactionTypes .digital_platform {
-  display: none;
-  opacity: 0; }
-
-.chart-row.transactionTypes .digital_platform_eye {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employeTransactionTypes .transaction {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employeTransactionTypes .employStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employeTransactionTypes .elecStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employeTransactionTypes .employLate {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employeTransactionTypes .transactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employeTransactionTypes .employeTransactionTypes {
-  display: block !important;
-  opacity: 1; }
-
-.chart-row.employeTransactionTypes .digital_platform {
-  display: none;
-  opacity: 0; }
-
-.chart-row.employeTransactionTypes .digital_platform_eye {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform .transaction {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform .employStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform .elecStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform .employLate {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform .transactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform .employeTransactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform .digital_platform {
-  display: block !important;
-  opacity: 1; }
-
-.chart-row.digital_platform .digital_platform_eye {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform_eye .transaction {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform_eye .employStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform_eye .elecStat {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform_eye .employLate {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform_eye .transactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform_eye .employeTransactionTypes {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform_eye .digital_platform {
-  display: none;
-  opacity: 0; }
-
-.chart-row.digital_platform_eye .digital_platform_eye {
-  display: block !important;
-  opacity: 1; }
+#employlate {
+  position: relative; }
+  #employlate span {
+    font-family: 'SourceSansPro Bold';
+    font-size: 39px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%); }
 
 .translater {
   transition: 0.3 all;
