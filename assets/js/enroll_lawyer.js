@@ -1,5 +1,7 @@
 $(document).ready(function () {
    
+    $('.chart-row').css({opacity:'0'});
+    
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
 
@@ -157,6 +159,8 @@ $(document).ready(function () {
     var myChart;
 
     $('input[name="notary"]').click(function(){
+
+        $('.chart-row').css({opacity:'1'});
 
         var checked = $('input[name="notary"]:checked').val();
         if(checked == 0){

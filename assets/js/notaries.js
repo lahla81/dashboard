@@ -1,5 +1,8 @@
 $(document).ready(function () {
    
+    $('.employe').css({display:'none'});
+    $('.bar_line_circle_half').css({display:'none'});
+
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
 
@@ -115,6 +118,11 @@ $(document).ready(function () {
     gradhalf10.addColorStop(0.5, '#000000');
     gradhalf10.addColorStop(0, '#4D4F5C');
 
+    grad1 = ctx.createLinearGradient(0, 0, 0, 400);
+    grad1.addColorStop(1, '#000000');
+    grad1.addColorStop(0.5, '#000000');
+    grad1.addColorStop(0, '#7B0ED9');
+
 
     bgColor = [ gradhalf0,gradhalf1,gradhalf2,gradhalf3,
                 gradhalf4,gradhalf5,gradhalf6,gradhalf7,
@@ -149,451 +157,23 @@ $(document).ready(function () {
         Chart.defaults.global.defaultFontSize = 8;
         ctx_font = Chart.helpers.fontString(14, 600, Chart.defaults.global.defaultFontFamily);
     };
-    
-    $('.employe').css({display:'none'});
-    $('.bar_line_circle_half').css({display:'none'});
-       
+
     var chart_data;
     var chart_options;
     var myChart;
 
-    $('input[name="notary"]').click(function(){
-
-        var checked = $('input[name="notary"]:checked').val();
-        customCheck = document.getElementsByName("notary")[checked];
-        const data   = JSON.parse(customCheck.parentElement.dataset.value);
-        const labels   = JSON.parse(customCheck.parentElement.dataset.label);
-        if(checked == 0){
-            $('.employe').css({display:'none'});
-            $('.bar_line_circle_half').css({display:'block'});
-            $('.hide_07').css({display:'block'});
-            $('.hide_01').css({display:'block'});
-            $('.hide_02').css({display:'block'});
-            $('.hide_00').css({display:'none'});
-
-            var line_data =  {
-                labels: labels,
-                datasets: [{
-                    data: data,
-                    backgroundColor: gradient1,
-                    borderColor: gradient14,
-                    borderWidth: 5,
-                    lineTension : 0.1
-                }]
-            };
-            
-            var bar_data =  {
-                labels: labels,
-                datasets: [{
-                    // label: '# of Votes',
-                    data: data,
-                    backgroundColor: [ 
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                        
-                    ], 
-                    hoverBackgroundColor: [
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                    ],
-    
-                    shadowOffsetX: 3,
-                    shadowOffsetY: 3,
-                    shadowBlur: 20,
-                    shadowColor: [  '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C',
-                                    '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C','#FF07A9']
-                }]
-            };
-
-        }else if(checked == 1){
-            $('.employe').css({display:'none'});
-            $('.bar_line_circle_half').css({display:'block'});
-            $('.employe_name').css({display:'block'});
-            $('.hide_07').css({display:'block'});
-            $('.hide_00').css({display:'block'});
-            $('.hide_02').css({display:'block'});
-            $('.hide_01').css({display:'none'});
-            
-            var data1 = [,,,,,,,,,,data[11]];
-            var employee = JSON.parse(customCheck.parentElement.dataset.employee);
-            for (i = 0; i < employee.length ; i++){
-                var titleId = "employee" + i;
-                document.getElementById(titleId).innerHTML = employee[i];
-            }
-            var line_data =  {
-                labels: labels,
-                datasets: [{
-                    data: data1,
-                    backgroundColor: gradient5,
-                    borderColor: gradient2,
-                    borderWidth: 5,
-                    lineTension : 0.1
-                },{
-                    data: data,
-                    backgroundColor: gradient1,
-                    borderColor: gradient14,
-                    borderWidth: 5,
-                    lineTension : 0.1
-                }]
-            };
-
-            var bar_data =  {
-                labels: labels,
-                datasets: [{
-                    data: data1,
-                    backgroundColor: gradient11, 
-                    hoverBackgroundColor: gradient11,
-
-                    shadowOffsetX: 3,
-                    shadowOffsetY: 3,
-                    shadowBlur: 20,
-                    shadowColor: '#4D4F5C',
-                
-                },{
-                    data: data,
-                    backgroundColor: [ 
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient9,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                        
-                    ], 
-                    hoverBackgroundColor: [
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient9,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                    ],
-    
-                    shadowOffsetX: 3,
-                    shadowOffsetY: 3,
-                    shadowBlur: 20,
-                    shadowColor: [  '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#00BA81',
-                                    '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C','#FF07A9']
-                }]
-            };
-            
-        }else if(checked == 2){
-            $('.bar_line_circle_half').css({display:'block'});
-            $('.employe_name').css({display:'block'});
-            $('.hide_07').css({display:'block'});
-            $('.hide_00').css({display:'block'});
-            $('.hide_01').css({display:'block'});
-            $('.hide_02').css({display:'none'});
-            $('.employe').css({display:'none'});
-            
-            var count = 0;
-            for(var i=0, n=data.length; i < n; i++) 
-                { 
-                    count += data[i]; 
-                }
-
-            data.push(count)
-
-            var line_data =  {
-                labels: labels,
-                datasets: [{
-                    data: data,
-                    backgroundColor: gradient1,
-                    borderColor: gradient14,
-                    borderWidth: 5,
-                    lineTension : 0.1
-                }]
-            };
-            
-            var bar_data =  {
-                labels: labels,
-                datasets: [{
-                    // label: '# of Votes',
-                    data: data,
-                    backgroundColor: [ 
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                        
-                    ], 
-                    hoverBackgroundColor: [
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                    ],
-    
-                    shadowOffsetX: 3,
-                    shadowOffsetY: 3,
-                    shadowBlur: 20,
-                    shadowColor: [  '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C',
-                                    '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C','#FF07A9']
-                }]
-            };
-
-        }else if(checked == 3){
-            $('.employe').css({display:'block'});
-            $('.bar_line_circle_half').css({display:'none'});
-
-            var employee = JSON.parse(customCheck.parentElement.dataset.employee);
-            for (i = 0; i < employee.length ; i++){
-                var titleId = "employee" + i;
-                document.getElementById(titleId).innerHTML = employee[i];
-            }
-        }else if(checked == 4){
-            $('.bar_line_circle_half').css({display:'block'});
-            $('.employe').css({display:'none'});
-            $('.hide_02').css({display:'block'});
-            $('.hide_07').css({display:'block'});
-            $('.hide_00').css({display:'block'});
-            $('.hide_01').css({display:'block'});
-            
-            var count = 0;
-            for(var i=0, n=data.length; i < n; i++) 
-                { 
-                    count += data[i]; 
-                }
-
-            data.push(count)
-
-            var line_data =  {
-                labels: labels,
-                datasets: [{
-                    data: data,
-                    backgroundColor: gradient1,
-                    borderColor: gradient14,
-                    borderWidth: 5,
-                    lineTension : 0.1
-                }]
-            };
-            
-            var bar_data =  {
-                labels: labels,
-                datasets: [{
-                    // label: '# of Votes',
-                    data: data,
-                    backgroundColor: [ 
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                        
-                    ], 
-                    hoverBackgroundColor: [
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                    ],
-    
-                    shadowOffsetX: 3,
-                    shadowOffsetY: 3,
-                    shadowBlur: 20,
-                    shadowColor: [  '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C',
-                                    '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C','#FF07A9']
-                }]
-            };
-           
-        }else if(checked == 5){
-            $('.employe').css({display:'none'});
-            $('.bar_line_circle_half').css({display:'block'});
-            $('.employe_name').css({display:'block'});
-            $('.hide_02').css({display:'block'});
-            $('.hide_07').css({display:'block'});
-            $('.hide_00').css({display:'block'});
-            $('.hide_01').css({display:'block'});
-            
-            var count = 0;
-            for(var i=0, n=data.length; i < n; i++) 
-                { 
-                    count += data[i]; 
-                }
-
-            data.push(count)
-
-            var line_data =  {
-                labels: labels,
-                datasets: [{
-                    data: data,
-                    backgroundColor: gradient1,
-                    borderColor: gradient14,
-                    borderWidth: 5,
-                    lineTension : 0.1
-                }]
-            };
-            
-            var bar_data =  {
-                labels: labels,
-                datasets: [{
-                    // label: '# of Votes',
-                    data: data,
-                    backgroundColor: [ 
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                        
-                    ], 
-                    hoverBackgroundColor: [
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                    ],
-    
-                    shadowOffsetX: 3,
-                    shadowOffsetY: 3,
-                    shadowBlur: 20,
-                    shadowColor: [  '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C',
-                                    '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C','#FF07A9']
-                }]
-            };
-
-            var employee = JSON.parse(customCheck.parentElement.dataset.employee);
-            for (i = 0; i < employee.length ; i++){
-                var titleId = "employee" + i;
-                document.getElementById(titleId).innerHTML = employee[i];
-            }
-        }else if(checked == 6 || checked == 7){
-            $('.employe').css({display:'none'});
-            $('.bar_line_circle_half').css({display:'block'});
-            $('.hide_01').css({display:'block'});
-            $('.hide_00').css({display:'block'});
-            $('.hide_02').css({display:'block'});
-            $('.hide_07').css({display:'none'});
-            
-            var count = 0;
-            for(var i=0, n=data.length; i < n; i++) 
-                { 
-                    count += data[i]; 
-                }
-
-            data.push(count)
-
-            var line_data =  {
-                labels: labels,
-                datasets: [{
-                    data: data,
-                    backgroundColor: gradient1,
-                    borderColor: gradient14,
-                    borderWidth: 5,
-                    lineTension : 0.1
-                }]
-            };
-            
-            var bar_data =  {
-                labels: labels,
-                datasets: [{
-                    // label: '# of Votes',
-                    data: data,
-                    backgroundColor: [ 
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                        
-                    ], 
-                    hoverBackgroundColor: [
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,
-                        gradient1,gradient2,gradient3,
-                        gradient4,gradient5,gradient6,
-                        gradient7,gradient8,gradient9,
-                        gradient10,gradient11,gradient1
-                    ],
-    
-                    shadowOffsetX: 3,
-                    shadowOffsetY: 3,
-                    shadowBlur: 20,
-                    shadowColor: [  '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C',
-                                    '#FF07A9','#1A8162','#E5A100',
-                                    '#850CED','#3349F0','#D9581F',
-                                    '#FF6A6A','#3B86FF','#00BA81',
-                                    '#9F4242','#4D4F5C','#FF07A9']
-                }]
-            };
-        }
-        
+    $('#customCheck_id0').click(function(){
+        $('.employe').css({display:'none'});
+        $('.bar_line_circle_half').css({display:'block'});
+        $('.hide_07').css({display:'block'});
+        $('.hide_01').css({display:'block'});
+        $('.hide_02').css({display:'block'});
+        $('.hide_00').css({display:'none'});
+        $('.hide_employee_circle').css({display:'none'});
+        $('.hide_circle_no10').css({display:'block'});
+        var statistics_data = document.getElementById("customCheck_id0");
+        const data   = JSON.parse(statistics_data.parentElement.dataset.value);
+        const labels   = JSON.parse(statistics_data.parentElement.dataset.label);
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
@@ -604,7 +184,18 @@ $(document).ready(function () {
             var circle_titleId = "circle_title" + i;
             document.getElementById(circle_titleId).innerHTML = labels[i];
         }
-       
+
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+
         var line_options = {
             layout: {
                 padding: {
@@ -672,6 +263,47 @@ $(document).ready(function () {
             tooltips: {
                 enabled: false
             }          
+        };
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                    
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                ],
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
+            }]
         };
 
         var bar_options = {
@@ -857,47 +489,604 @@ $(document).ready(function () {
         // circle Charts
         circle();
         function circle(){
-            if(checked == 1){
-                for (var i = 0 , n = data.length-2; i < n ; i++) {
-                    var id = "#circle-body-no" + i;
-                
-                    $(id).circleProgress({
-                        value: data[i]/100,
-                        size: 146,
-                        startAngle: 0,
-                        reverse: true,
-                        emptyFill: emptyFill[i],
-                        animationStartValue: 0,
-                        fill: halfShadowColor[i],
-                    }).on('circle-animation-progress', function(event, progress, stepvalue){
-                        $(this).find('span').html(Math.round(stepvalue * 100));
-                    });
-                }
-            }else{
-                for (var i = 0 , n = data.length; i < n ; i++) {
-                    var id = "#circle-body-no" + i;
-                
-                    $(id).circleProgress({
-                        value: data[i]/100,
-                        size: 146,
-                        startAngle: 0,
-                        reverse: true,
-                        emptyFill: emptyFill[i],
-                        animationStartValue: 0,
-                        fill: halfShadowColor[i],
-                    }).on('circle-animation-progress', function(event, progress, stepvalue){
-                        $(this).find('span').html(Math.round(stepvalue * 100));
-                    });
-                }
-            }
+            // circle Charts
+            for (i = 0; i < data.length ; i++) {
+                var id = "#circle-body-no" + i;
             
+                $(id).circleProgress({
+                    value: data[i]/100,
+                    size: 146,
+                    startAngle: 0,
+                    reverse: true,
+                    emptyFill: emptyFill[i],
+                    animationStartValue: 0,
+                    fill: halfShadowColor[i],
+                }).on('circle-animation-progress', function(event, progress, stepvalue){
+                    $(this).find('span').html(Math.round(stepvalue * 100));
+                });
+            }
         };
 
         init();
         function init(){
             if (myChart) {
                 myChart.destroy();
-              }
+                }
+            myChart = new Chart(ctx, {
+                type: chart_type,
+                data: chart_data,
+                options: chart_options,
+            });
+        };
+    });
+    $('#customCheck_id1').click(function(){
+        $('.employe').css({display:'none'});
+        $('.bar_line_circle_half').css({display:'block'});
+        $('.hide_employee_circle').css({display:'block'});
+        $('.hide_circle_no10').css({display:'none'});
+        $('.employe_name').css({display:'block'});
+        $('.hide_07').css({display:'block'});
+        $('.hide_00').css({display:'block'});
+        $('.hide_02').css({display:'block'});
+        $('.hide_01').css({display:'none'});
+        var elec_statistics = document.getElementById("customCheck_id1");
+        const data   = JSON.parse(elec_statistics.parentElement.dataset.value);
+        const labels   = JSON.parse(elec_statistics.parentElement.dataset.label);
+        var employee = JSON.parse(elec_statistics.parentElement.dataset.employee);
+            for (i = 0; i < employee.length ; i++){
+                var titleId = "employee" + i;
+                document.getElementById(titleId).innerHTML = employee[i];
+            }
+
+        var first_dat = [,,,,,,,,,,data[11]];
+
+        for (i = 0; i < data.length ; i++) {
+            var titleId = "half_title" + i;
+            document.getElementById(titleId).innerHTML = labels[i];
+        }
+
+        for (i = 0; i < data.length ; i++) {
+            var circle_titleId = "circle_title" + i;
+            document.getElementById(circle_titleId).innerHTML = labels[i];
+        }
+
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                label: 'second',
+                data: first_dat,
+                backgroundColor: gradient11, 
+                hoverBackgroundColor: gradient11,
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: '#4D4F5C',
+            
+        },{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                data: first_dat,
+                backgroundColor: gradient11, 
+                hoverBackgroundColor: gradient11,
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: '#4D4F5C',
+            
+            },{
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient9,
+                    
+                    
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient9
+                ],
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#00BA81',]
+            }]
+        };
+
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.5
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        }
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        }
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+        }
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+        }
+
+        $('#customCheck-bar:input').click(function(){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        });
+        $('#customCheck-line:input').click(function(){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        });
+        $('#customCheck-half:input').click(function() {
+            half();
+        });
+        $('#customCheck-circle:input').click(function(){
+            circle();
+        });
+
+        
+    
+        // half Charts
+        half();
+        function half(){
+            for (i = 0; i < data.length-2 ; i++) {
+                var id = "half_chart_no" + i;
+                var ctx = document.getElementById(id).getContext('2d');
+                const ctx_fillstyle = halfShadowColor[i];
+
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [data[i],100-data[i]],
+                            backgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            hoverBackgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderColor:'#F0F2F8',
+                            hoverBorderColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderWidth: 2,
+                            shadowOffsetX: 0,
+                            shadowOffsetY: 6,
+                            shadowBlur: 6,
+                            shadowColor: halfShadowColor[i],
+                        }]
+                    },
+                    options: {
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 0,
+                                bottom: 0
+                            }
+                        },
+                        animation: {
+                            duration: 500,
+                            onComplete: function() {
+                                var chartInstance = this.chart;
+                                ctx = chartInstance.ctx;
+
+                                ctx.font = ctx_font;
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'bottom';
+                                ctx.fillStyle = ctx_fillstyle;
+                                
+                                this.data.datasets.forEach(function(dataset, i) {
+                                var meta = chartInstance.controller.getDatasetMeta(i);
+                                meta.data.forEach(function(half, index) {
+                                var data = dataset.data[0];
+                                ctx.fillText(data, half._model.x, half._model.y + 15);
+                                });
+                            });
+                            }
+                        },
+                        legend: {
+                            display : false
+                        },
+                        tooltips: {
+                            enabled: false
+                        }
+                    },
+                })
+            }
+
+            var ctx = document.getElementById("half_chart_no10").getContext('2d');
+
+            const data1 = data[10];
+            const data2 = 100 - data1;
+            const data3 = data[11];
+
+            var right_half_label = 75;
+            if ($(window).width() < 1800){
+                var right_half_label = 65;
+            };
+            if ($(window).width() < 1700){
+                var right_half_label = 55;
+            };
+            if ($(window).width() < 1600){
+                var right_half_label = 45;
+            };
+
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Red"],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [data1,data2,data3],
+                        text: "ff",
+                        backgroundColor: [
+                            gradhalf0,'#F0F2F8',gradhalf2,
+                        ],
+                        hoverBackgroundColor: [
+                            gradhalf0,'#F0F2F8',gradhalf2,
+                        ],
+                        borderColor:'#F0F2F8',
+                        hoverBorderColor: [
+                            gradhalf0,'#F0F2F8',gradhalf2,
+                        ],
+                        borderWidth: 2,
+                        shadowOffsetX: 0,
+                        shadowOffsetY: 6,
+                        shadowBlur: 6,
+                        shadowColor: '#4D4F5C'
+                    }]
+                },
+                options: {
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    layout: {
+                        padding: {
+                            left: 10,
+                            right: 10,
+                            top: 10,
+                            bottom: 40
+                        }
+                    },
+                    "animation": {
+                        "duration": 1,
+                        "onComplete": function() {
+                        var chartInstance = this.chart,
+                            ctx = chartInstance.ctx;
+                
+                        ctx.font = ctx_font;
+                        ctx.textAlign = 'center';
+                        ctx.textBaseline = 'bottom';
+                        ctx.fillStyle = '#00B27C';
+                
+                        this.data.datasets.forEach(function(dataset, i) {
+                            var meta = chartInstance.controller.getDatasetMeta(i);
+                            meta.data.forEach(function(line, index) {
+                            var finshed_data = dataset.data[0]+'%';
+                            //   var unfinshed_data = dataset.data[2]+'%';
+                            ctx.fillText(finshed_data, line._model.x - right_half_label, line._model.y + 40);
+                            //   ctx.fillText(unfinshed_data, line._model.x + right_half_label, line._model.y + 40);
+                            });
+                        });
+                            var chartInst = this.chart,
+                            ctxR = chartInst.ctx;
+                    
+                            ctxR.font = ctx_font;
+                            ctxR.textAlign = 'center';
+                            ctxR.textBaseline = 'bottom';
+                            ctxR.fillStyle = '#FF6A6A';
+                    
+                            this.data.datasets.forEach(function(dataset, i) {
+                            var meta = chartInst.controller.getDatasetMeta(i);
+                            meta.data.forEach(function(line, index) {
+                                // var finshed_data = dataset.data[0]+'%';
+                                var unfinshed_data = dataset.data[2]+'%';
+                                // ctx.fillText(finshed_data, line._model.x - right_half_label, line._model.y + 40);
+                                ctx.fillText(unfinshed_data, line._model.x + right_half_label, line._model.y + 40);
+                            });
+                            });
+                        },
+                    },
+                    legend: {
+                        display : false
+                    },
+                    tooltips: {
+                        enabled: false
+                    }
+                }
+            })
+
+        };
+
+        // circle Charts
+        circle();
+        function circle(){
+            // circle Charts
+            for (i = 0; i < data.length-2 ; i++) {
+                var id = "#circle-body-no" + i;
+            
+                $(id).circleProgress({
+                    value: data[i]/100,
+                    size: 146,
+                    startAngle: 0,
+                    reverse: true,
+                    emptyFill: emptyFill[i],
+                    animationStartValue: 0,
+                    fill: halfShadowColor[i],
+                }).on('circle-animation-progress', function(event, progress, stepvalue){
+                    $(this).find('span').html(Math.round(stepvalue * 100));
+                });
+            }
+            const data1 = data[10];
+            const data2 = 100 - data1;
+            const data3 = data[11];
+            const data4 = 100 - data3
+
+            var ctx = document.getElementById('half-body-no10').getContext('2d');
+
+            var right_half_label = 75;
+            if ($(window).width() < 1800){
+                var right_half_label = 65;
+            };
+            if ($(window).width() < 1700){
+                var right_half_label = 55;
+            };
+            if ($(window).width() < 1600){
+                var right_half_label = 45;
+            };
+
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Red"],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [data1,data2,data3,data4],
+                        text: "ff",
+                        backgroundColor: [
+                            gradhalf0,'#F0F2F8',gradhalf2,'#F0F2F8'
+                        ],
+                        hoverBackgroundColor: [
+                            gradhalf0,'#F0F2F8',gradhalf2,'#F0F2F8'
+                        ],
+                        borderColor:'#F0F2F8',
+                        hoverBorderColor: [
+                            gradhalf0,'#F0F2F8',gradhalf2,'#F0F2F8'
+                        ],
+                        borderWidth: 1,
+                        shadowOffsetX: 0,
+                        shadowOffsetY: 6,
+                        shadowBlur: 6,
+                        shadowColor: '#4D4F5C'
+                    }]
+                },
+                options: {
+                    rotation: 1 * Math.PI,
+                    circumference: 2 * Math.PI,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 10
+                        }
+                    },
+                    "animation": {
+                        "duration": 1,
+                        "onComplete": function() {
+                        var chartInstance = this.chart,
+                            ctx = chartInstance.ctx;
+                
+                        ctx.font = ctx_font;
+                        ctx.textAlign = 'right';
+                        ctx.textBaseline = 'bottom';
+                        ctx.fillStyle = '#00B27C';
+                
+                        this.data.datasets.forEach(function(dataset, i) {
+                            var meta = chartInstance.controller.getDatasetMeta(i);
+                            meta.data.forEach(function(line, index) {
+                            var finshed_data = dataset.data[0]+'%';
+                            ctx.fillText(finshed_data, line._model.x - right_half_label, line._model.y + 40);
+                            });
+                        });
+                            var chartInst = this.chart,
+                            ctxR = chartInst.ctx;
+                    
+                            ctxR.font = ctx_font;
+                            ctxR.textAlign = 'left';
+                            ctxR.textBaseline = 'top';
+                            ctxR.fillStyle = '#FF6A6A';
+                    
+                            this.data.datasets.forEach(function(dataset, i) {
+                            var meta = chartInst.controller.getDatasetMeta(i);
+                            meta.data.forEach(function(line, index) {
+                                // var finshed_data = dataset.data[0]+'%';
+                                var unfinshed_data = dataset.data[2]+'%';
+                                // ctx.fillText(finshed_data, line._model.x - right_half_label, line._model.y + 40);
+                                ctx.fillText(unfinshed_data, line._model.x + right_half_label , line._model.y - 40);
+                            });
+                            });
+                        },
+                    },
+                    legend: {
+                        display : false
+                    },
+                    tooltips: {
+                        enabled: false
+                    }
+                }
+            })
+        };
+
+        init();
+        function init(){
+            if (myChart) {
+                myChart.destroy();
+                }
             myChart = new Chart(ctx, {
                 type: chart_type,
                 data: chart_data,
@@ -906,4 +1095,2254 @@ $(document).ready(function () {
         };
 
     });
+    $('#customCheck_id2').click(function(){
+        $('.bar_line_circle_half').css({display:'block'});
+        $('.employe_name').css({display:'block'});
+        $('.hide_07').css({display:'block'});
+        $('.hide_00').css({display:'block'});
+        $('.hide_01').css({display:'block'});
+        $('.hide_02').css({display:'none'});
+        $('.employe').css({display:'none'});
+        $('.hide_employee_circle').css({display:'none'});
+        $('.hide_circle_no10').css({display:'block'});
+        var week_data = document.getElementById("customCheck_id2");
+        const data   = JSON.parse(week_data.parentElement.dataset.value);
+        const labels   = JSON.parse(week_data.parentElement.dataset.label);
+
+        var count = 0;
+        for(var i=0, n=data.length; i < n; i++) 
+            { 
+                count += data[i]; 
+            }
+
+        data.push(count)
+
+        for (i = 0; i < data.length ; i++) {
+            var titleId = "half_title" + i;
+            document.getElementById(titleId).innerHTML = labels[i];
+        }
+
+        for (i = 0; i < data.length ; i++) {
+            var circle_titleId = "circle_title" + i;
+            document.getElementById(circle_titleId).innerHTML = labels[i];
+        }
+
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                    
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                ],
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
+            }]
+        };
+
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.4
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        }
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        }
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+        }
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+        }
+
+        $('#customCheck-bar:input').click(function(){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        });
+        $('#customCheck-line:input').click(function(){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        });
+        $('#customCheck-half:input').click(function() {
+            half();
+        });
+        $('#customCheck-circle:input').click(function(){
+            circle();
+        });
+    
+        // half Charts
+        half();
+        function half(){
+            for (i = 0; i < data.length ; i++) {
+                var id = "half_chart_no" + i;
+                var ctx = document.getElementById(id).getContext('2d');
+                const ctx_fillstyle = halfShadowColor[i];
+
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [data[i],100-data[i]],
+                            backgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            hoverBackgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderColor:'#F0F2F8',
+                            hoverBorderColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderWidth: 2,
+                            shadowOffsetX: 0,
+                            shadowOffsetY: 6,
+                            shadowBlur: 6,
+                            shadowColor: halfShadowColor[i],
+                        }]
+                    },
+                    options: {
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 0,
+                                bottom: 0
+                            }
+                        },
+                        animation: {
+                            duration: 500,
+                            onComplete: function() {
+                                var chartInstance = this.chart;
+                                ctx = chartInstance.ctx;
+
+                                ctx.font = ctx_font;
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'bottom';
+                                ctx.fillStyle = ctx_fillstyle;
+                                
+                                this.data.datasets.forEach(function(dataset, i) {
+                                var meta = chartInstance.controller.getDatasetMeta(i);
+                                meta.data.forEach(function(half, index) {
+                                var data = dataset.data[0];
+                                ctx.fillText(data, half._model.x, half._model.y + 15);
+                                });
+                            });
+                            }
+                        },
+                        legend: {
+                            display : false
+                        },
+                        tooltips: {
+                            enabled: false
+                        }
+                    },
+                })
+            };
+        };
+
+        // circle Charts
+        circle();
+        function circle(){
+            // circle Charts
+            for (i = 0; i < data.length ; i++) {
+                var id = "#circle-body-no" + i;
+            
+                $(id).circleProgress({
+                    value: data[i]/100,
+                    size: 146,
+                    startAngle: 0,
+                    reverse: true,
+                    emptyFill: emptyFill[i],
+                    animationStartValue: 0,
+                    fill: halfShadowColor[i],
+                }).on('circle-animation-progress', function(event, progress, stepvalue){
+                    $(this).find('span').html(Math.round(stepvalue * 100));
+                });
+            }
+        };
+
+        init();
+        function init(){
+            if (myChart) {
+                myChart.destroy();
+                }
+            myChart = new Chart(ctx, {
+                type: chart_type,
+                data: chart_data,
+                options: chart_options,
+            });
+        };
+        
+    });
+    $('#customCheck_id3').click(function(){
+        $('.employe').css({display:'block'});
+        $('.bar_line_circle_half').css({display:'none'});
+        var late_data = document.getElementById("customCheck_id3");
+        const values   = JSON.parse(late_data.parentElement.dataset.value);
+        var employeLates = document.getElementById("employeeLate");
+        var employee = JSON.parse(late_data.parentElement.dataset.employee);
+            for (i = 0; i < employee.length ; i++){
+                var titleId = "employee" + i;
+                document.getElementById(titleId).innerHTML = employee[i];
+            }
+        const linValue = [0,values,0];
+    
+        const labels = [""];
+        const lineLabels = [ "", "" , "" ];
+     
+        const data1 = values[0];
+
+        var ctx = employeLates.getContext('2d');
+    
+    
+        const font30 = Chart.helpers.fontString(30, 700, Chart.defaults.global.defaultFontFamily);
+        const fillStylewhite = 'white';
+
+        var animation40white = {
+            duration: 500,
+            onComplete: function() {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+
+            ctx.font = font30;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = fillStylewhite;
+
+            this.data.datasets.forEach(function(dataset, i) {
+                var meta = chartInstance.controller.getDatasetMeta(i);
+                meta.data.forEach(function(bar, index) {
+                var data = dataset.data[index];
+                ctx.fillText(data, bar._model.x, bar._model.y + 40);
+                });
+            });
+            }
+        };
+
+        var animation28purple = {
+            duration: 500,
+            onComplete: function() {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+
+            ctx.font = Chart.helpers.fontString(18, 700, Chart.defaults.global.defaultFontFamily);
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "#9102FC";
+
+            this.data.datasets.forEach(function(dataset, i) {
+                var meta = chartInstance.controller.getDatasetMeta(i);
+                meta.data.forEach(function(bar, index) {
+                var data = dataset.data[0];
+                ctx.fillText(data, bar._model.x, bar._model.y + 20);
+                });
+            });
+            }
+        };
+        
+        
+        var chartType = 'bar';
+        var latesChart;
+        
+        var data = {
+            labels: labels,
+            datasets: [{
+                label: '',
+                fill: true,
+                lineTension: 0.2,
+                backgroundColor: [ 
+                    gradient4
+                ],
+                hoverBackgroundColor: [
+                    gradient4
+                ],
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: ['#850CED'],
+                borderColor: "green", // The main line color
+                borderCapStyle: 'square',
+                pointBorderColor: "white",
+                pointBackgroundColor: "green",
+                pointBorderWidth: 1,
+                pointHoverRadius: 8,
+                pointHoverBackgroundColor: "yellow",
+                pointHoverBorderColor: "green",
+                pointHoverBorderWidth: 2,
+                pointRadius: 4,
+                pointHitRadius: 10,
+                data: values,
+                spanGaps: true,
+            }]
+        };
+
+        var options = {
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 0
+                }
+            },
+            legend: {
+                display : false
+            },
+        scales: {
+            yAxes: [{
+            ticks: {
+                beginAtZero: true,
+                display: false,
+            },
+            gridLines: {
+                color: '#E2E2E2',
+                zeroLineColor: '#707070',
+                zeroLineWidth: 1
+            },
+            }],
+            xAxes: [{
+                ticks: {
+                    fontColor: '#FF07A9'
+                },
+                gridLines: {
+                    display:false,
+                    zeroLineWidth: 4,
+                },
+                barPercentage: 1.0,
+                categoryPercentage: 0.3
+            }]
+        },
+        tooltips: {
+            enabled: false
+        },
+        "animation": animation40white,
+        };
+
+        var barData = {
+            labels: labels,
+            datasets: [{
+            label: '',
+            fill: true,
+            lineTension: 0.2,
+            backgroundColor: [ 
+                gradient4
+            ],
+            hoverBackgroundColor: [
+                gradient4
+            ],
+    
+            shadowOffsetX: 3,
+            shadowOffsetY: 3,
+            shadowBlur: 20,
+            shadowColor: ['#850CED'],
+            borderColor: "green", // The main line color
+            borderCapStyle: 'square',
+            pointBorderColor: "white",
+            pointBackgroundColor: "green",
+            pointBorderWidth: 1,
+            pointHoverRadius: 8,
+            pointHoverBackgroundColor: "yellow",
+            pointHoverBorderColor: "green",
+            pointHoverBorderWidth: 2,
+            pointRadius: 4,
+            pointHitRadius: 10,
+            data: values,
+            spanGaps: true,
+            }]
+        };
+
+        var barOptions = {
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 0
+                }
+            },
+            legend: {
+                display : false
+            },
+        scales: {
+            yAxes: [{
+            ticks: {
+                beginAtZero: true,
+                display: false,
+            },
+            gridLines: {
+                color: '#E2E2E2',
+                zeroLineColor: '#707070',
+                zeroLineWidth: 1
+            },
+            }],
+            xAxes: [{
+                ticks: {
+                    fontColor: '#FF07A9'
+                },
+                gridLines: {
+                    display:false,
+                    zeroLineWidth: 4,
+                },
+                barPercentage: 1.0,
+                categoryPercentage: 0.3
+            }]
+        },
+        tooltips: {
+            enabled: false
+        },
+        "animation": animation40white,
+        };
+
+        var lineData= {
+            labels: lineLabels,
+            datasets: [{
+                // label: '# of Votes',
+                data: linValue,
+                backgroundColor: gradient5,
+                borderColor: gradient4,
+                borderWidth: 10,
+                lineTension : 0.1
+            }]
+        };
+
+        var lineOptions= {
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 0
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            "animation": animation40white,
+            scales: {
+                pointLabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9'
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+        
+        var halfData = {
+            labels: ["Red"],
+            datasets: [{
+                label: '# of Votes',
+                data: [data1,40],
+                text: "ff",
+                backgroundColor: [
+                    grad1,'#F0F2F8'
+                ],
+                hoverBackgroundColor: [
+                    grad1,'#F0F2F8'
+                ],
+                borderColor: '#F0F2F8',
+                hoverBorderColor: [
+                    grad1,'#F0F2F8'
+                ],
+                borderWidth: 2,
+                shadowOffsetX: 0,
+                shadowOffsetY: 6,
+                shadowBlur: 6,
+                shadowColor: '#7B0ED9'
+            }]
+        };
+    
+        var halfOptions= {
+            rotation: 1 * Math.PI,
+            circumference: 1 * Math.PI,
+            layout: {
+                padding: {
+                    left: 30,
+                    right: 30,
+                    top: 10,
+                    bottom: 10
+                }
+            },
+            "animation": animation28purple,
+            legend: {
+                display : false
+            },
+            tooltips: {
+                enabled: false
+            }
+        };
+
+        var circleOptions= {
+            rotation: 1 * Math.PI,
+            circumference: 2 * Math.PI,
+            layout: {
+                padding: {
+                    left: 10,
+                    right: 10,
+                    top: 10,
+                    bottom: 10
+                }
+            },
+            "animation": {
+                "duration": 1,
+                "onComplete": function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = Chart.helpers.fontString(28, 700, Chart.defaults.global.defaultFontFamily);
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = '#9102FC';
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[0];
+                    ctx.fillText(data, line._model.x, line._model.y + 20);
+                    });
+                });
+                }
+            },
+            legend: {
+                display : false
+            },
+            tooltips: {
+                enabled: false
+            }
+        };    
+
+        $('#customCheck-line:input').click(function(){
+            latesChart.destroy();
+            //change chart type: 
+            chartType = 'line';
+            data = lineData;
+            options = lineOptions;
+            //restart chart:
+            init();
+        });
+    
+        $('#customCheck-bar:input').click(function(){
+            latesChart.destroy();
+            //change chart type: 
+            chartType = 'bar';
+            data = barData;
+            options = barOptions;
+    
+            //restart chart:
+            init();
+        });
+    
+        $('#customCheck-half:input').click(function(){
+            latesChart.destroy();
+            //change chart type: 
+            chartType = 'doughnut';
+            data = halfData;
+            options = halfOptions;
+            //restart chart:
+            init();
+        });
+    
+        $('#customCheck-circle:input').click(function(){
+            latesChart.destroy();
+            //change chart type: 
+            chartType = 'doughnut';
+            data = halfData;
+            options = circleOptions;
+            //restart chart:
+            init();
+        });
+        
+        init();
+        
+        function init() {
+          // Chart declaration:
+          latesChart = new Chart(ctx, {
+            type: chartType,
+            data: data,
+            options: options,
+          });
+        }
+    });
+    $('#customCheck_id4').click(function(){
+        $('.bar_line_circle_half').css({display:'block'});
+        $('.employe').css({display:'none'});
+        $('.hide_02').css({display:'block'});
+        $('.hide_07').css({display:'block'});
+        $('.hide_00').css({display:'block'});
+        $('.hide_01').css({display:'block'});
+        $('.hide_employee_circle').css({display:'none'});
+        $('.hide_circle_no10').css({display:'block'});
+        var statistics_type_data = document.getElementById("customCheck_id4");
+        const data   = JSON.parse(statistics_type_data.parentElement.dataset.value);
+        const labels   = JSON.parse(statistics_type_data.parentElement.dataset.label);
+
+        var count = 0;
+        for(var i=0, n=data.length; i < n; i++) 
+            { 
+                count += data[i]; 
+            }
+
+        data.push(count)
+
+        for (i = 0; i < data.length ; i++) {
+            var titleId = "half_title" + i;
+            document.getElementById(titleId).innerHTML = labels[i];
+        }
+
+        for (i = 0; i < data.length ; i++) {
+            var circle_titleId = "circle_title" + i;
+            document.getElementById(circle_titleId).innerHTML = labels[i];
+        }
+
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                    
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                ],
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
+            }]
+        };
+
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.4
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        }
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        }
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+        }
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+        }
+
+        $('#customCheck-bar:input').click(function(){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        });
+        $('#customCheck-line:input').click(function(){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        });
+        $('#customCheck-half:input').click(function() {
+            half();
+        });
+        $('#customCheck-circle:input').click(function(){
+            circle();
+        });
+
+        
+    
+        // half Charts
+        half();
+        function half(){
+            for (i = 0; i < data.length ; i++) {
+                var id = "half_chart_no" + i;
+                var ctx = document.getElementById(id).getContext('2d');
+                const ctx_fillstyle = halfShadowColor[i];
+
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [data[i],100-data[i]],
+                            backgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            hoverBackgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderColor:'#F0F2F8',
+                            hoverBorderColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderWidth: 2,
+                            shadowOffsetX: 0,
+                            shadowOffsetY: 6,
+                            shadowBlur: 6,
+                            shadowColor: halfShadowColor[i],
+                        }]
+                    },
+                    options: {
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 0,
+                                bottom: 0
+                            }
+                        },
+                        animation: {
+                            duration: 500,
+                            onComplete: function() {
+                                var chartInstance = this.chart;
+                                ctx = chartInstance.ctx;
+
+                                ctx.font = ctx_font;
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'bottom';
+                                ctx.fillStyle = ctx_fillstyle;
+                                
+                                this.data.datasets.forEach(function(dataset, i) {
+                                var meta = chartInstance.controller.getDatasetMeta(i);
+                                meta.data.forEach(function(half, index) {
+                                var data = dataset.data[0];
+                                ctx.fillText(data, half._model.x, half._model.y + 15);
+                                });
+                            });
+                            }
+                        },
+                        legend: {
+                            display : false
+                        },
+                        tooltips: {
+                            enabled: false
+                        }
+                    },
+                })
+            };
+        };
+
+        // circle Charts
+        circle();
+        function circle(){
+            // circle Charts
+            for (i = 0; i < data.length ; i++) {
+                var id = "#circle-body-no" + i;
+            
+                $(id).circleProgress({
+                    value: data[i]/100,
+                    size: 146,
+                    startAngle: 0,
+                    reverse: true,
+                    emptyFill: emptyFill[i],
+                    animationStartValue: 0,
+                    fill: halfShadowColor[i],
+                }).on('circle-animation-progress', function(event, progress, stepvalue){
+                    $(this).find('span').html(Math.round(stepvalue * 100));
+                });
+            }
+        };
+
+        init();
+        function init(){
+            if (myChart) {
+                myChart.destroy();
+                }
+            myChart = new Chart(ctx, {
+                type: chart_type,
+                data: chart_data,
+                options: chart_options,
+            });
+        };
+
+    });
+    $('#customCheck_id5').click(function(){
+        $('.employe').css({display:'none'});
+        $('.bar_line_circle_half').css({display:'block'});
+        $('.employe_name').css({display:'block'});
+        $('.hide_02').css({display:'block'});
+        $('.hide_07').css({display:'block'});
+        $('.hide_00').css({display:'block'});
+        $('.hide_01').css({display:'block'});
+        $('.hide_employee_circle').css({display:'none'});
+        $('.hide_circle_no10').css({display:'block'});
+        var employee_statistics_type_data = document.getElementById("customCheck_id5");
+        const data   = JSON.parse(employee_statistics_type_data.parentElement.dataset.value);
+        const labels   = JSON.parse(employee_statistics_type_data.parentElement.dataset.label);
+        var employee = JSON.parse(employee_statistics_type_data.parentElement.dataset.employee);
+            for (i = 0; i < employee.length ; i++){
+                var titleId = "employee" + i;
+                document.getElementById(titleId).innerHTML = employee[i];
+            }
+
+        var count = 0;
+        for(var i=0, n=data.length; i < n; i++) 
+            { 
+                count += data[i]; 
+            }
+
+        data.push(count)
+
+        for (i = 0; i < data.length ; i++) {
+            var titleId = "half_title" + i;
+            document.getElementById(titleId).innerHTML = labels[i];
+        }
+
+        for (i = 0; i < data.length ; i++) {
+            var circle_titleId = "circle_title" + i;
+            document.getElementById(circle_titleId).innerHTML = labels[i];
+        }
+
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                    
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                ],
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
+            }]
+        };
+
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.4
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        }
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        }
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+        }
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+        }
+
+        $('#customCheck-bar:input').click(function(){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        });
+        $('#customCheck-line:input').click(function(){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        });
+        $('#customCheck-half:input').click(function() {
+            half();
+        });
+        $('#customCheck-circle:input').click(function(){
+            circle();
+        });
+
+        
+    
+        // half Charts
+        half();
+        function half(){
+            for (i = 0; i < data.length ; i++) {
+                var id = "half_chart_no" + i;
+                var ctx = document.getElementById(id).getContext('2d');
+                const ctx_fillstyle = halfShadowColor[i];
+
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [data[i],100-data[i]],
+                            backgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            hoverBackgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderColor:'#F0F2F8',
+                            hoverBorderColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderWidth: 2,
+                            shadowOffsetX: 0,
+                            shadowOffsetY: 6,
+                            shadowBlur: 6,
+                            shadowColor: halfShadowColor[i],
+                        }]
+                    },
+                    options: {
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 0,
+                                bottom: 0
+                            }
+                        },
+                        animation: {
+                            duration: 500,
+                            onComplete: function() {
+                                var chartInstance = this.chart;
+                                ctx = chartInstance.ctx;
+
+                                ctx.font = ctx_font;
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'bottom';
+                                ctx.fillStyle = ctx_fillstyle;
+                                
+                                this.data.datasets.forEach(function(dataset, i) {
+                                var meta = chartInstance.controller.getDatasetMeta(i);
+                                meta.data.forEach(function(half, index) {
+                                var data = dataset.data[0];
+                                ctx.fillText(data, half._model.x, half._model.y + 15);
+                                });
+                            });
+                            }
+                        },
+                        legend: {
+                            display : false
+                        },
+                        tooltips: {
+                            enabled: false
+                        }
+                    },
+                })
+            };
+        };
+
+        // circle Charts
+        circle();
+        function circle(){
+            // circle Charts
+            for (i = 0; i < data.length ; i++) {
+                var id = "#circle-body-no" + i;
+            
+                $(id).circleProgress({
+                    value: data[i]/100,
+                    size: 146,
+                    startAngle: 0,
+                    reverse: true,
+                    emptyFill: emptyFill[i],
+                    animationStartValue: 0,
+                    fill: halfShadowColor[i],
+                }).on('circle-animation-progress', function(event, progress, stepvalue){
+                    $(this).find('span').html(Math.round(stepvalue * 100));
+                });
+            }
+        };
+
+        init();
+        function init(){
+            if (myChart) {
+                myChart.destroy();
+                }
+            myChart = new Chart(ctx, {
+                type: chart_type,
+                data: chart_data,
+                options: chart_options,
+            });
+        };
+
+    });
+    $('#customCheck_id6').click(function(){
+        $('.employe').css({display:'none'});
+        $('.bar_line_circle_half').css({display:'block'});
+        $('.hide_01').css({display:'block'});
+        $('.hide_00').css({display:'block'});
+        $('.hide_02').css({display:'block'});
+        $('.hide_07').css({display:'none'});
+        $('.hide_employee_circle').css({display:'none'});
+        $('.hide_circle_no10').css({display:'block'});
+        var number_main_data = document.getElementById("customCheck_id6");
+        const data   = JSON.parse(number_main_data.parentElement.dataset.value);
+        const labels   = JSON.parse(number_main_data.parentElement.dataset.label);
+
+        var count = 0;
+        for(var i=0, n=data.length; i < n; i++) 
+            { 
+                count += data[i]; 
+            }
+
+        data.push(count)
+
+        for (i = 0; i < data.length ; i++) {
+            var titleId = "half_title" + i;
+            document.getElementById(titleId).innerHTML = labels[i];
+        }
+
+        for (i = 0; i < data.length ; i++) {
+            var circle_titleId = "circle_title" + i;
+            document.getElementById(circle_titleId).innerHTML = labels[i];
+        }
+
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                    
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                ],
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
+            }]
+        };
+
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.4
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        }
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        }
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+        }
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+        }
+
+        $('#customCheck-bar:input').click(function(){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        });
+        $('#customCheck-line:input').click(function(){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        });
+        $('#customCheck-half:input').click(function() {
+            half();
+        });
+        $('#customCheck-circle:input').click(function(){
+            circle();
+        });
+
+        
+    
+        // half Charts
+        half();
+        function half(){
+            for (i = 0; i < data.length ; i++) {
+                var id = "half_chart_no" + i;
+                var ctx = document.getElementById(id).getContext('2d');
+                const ctx_fillstyle = halfShadowColor[i];
+
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [data[i],100-data[i]],
+                            backgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            hoverBackgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderColor:'#F0F2F8',
+                            hoverBorderColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderWidth: 2,
+                            shadowOffsetX: 0,
+                            shadowOffsetY: 6,
+                            shadowBlur: 6,
+                            shadowColor: halfShadowColor[i],
+                        }]
+                    },
+                    options: {
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 0,
+                                bottom: 0
+                            }
+                        },
+                        animation: {
+                            duration: 500,
+                            onComplete: function() {
+                                var chartInstance = this.chart;
+                                ctx = chartInstance.ctx;
+
+                                ctx.font = ctx_font;
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'bottom';
+                                ctx.fillStyle = ctx_fillstyle;
+                                
+                                this.data.datasets.forEach(function(dataset, i) {
+                                var meta = chartInstance.controller.getDatasetMeta(i);
+                                meta.data.forEach(function(half, index) {
+                                var data = dataset.data[0];
+                                ctx.fillText(data, half._model.x, half._model.y + 15);
+                                });
+                            });
+                            }
+                        },
+                        legend: {
+                            display : false
+                        },
+                        tooltips: {
+                            enabled: false
+                        }
+                    },
+                })
+            };
+        };
+
+        // circle Charts
+        circle();
+        function circle(){
+            // circle Charts
+            for (i = 0; i < data.length ; i++) {
+                var id = "#circle-body-no" + i;
+            
+                $(id).circleProgress({
+                    value: data[i]/100,
+                    size: 146,
+                    startAngle: 0,
+                    reverse: true,
+                    emptyFill: emptyFill[i],
+                    animationStartValue: 0,
+                    fill: halfShadowColor[i],
+                }).on('circle-animation-progress', function(event, progress, stepvalue){
+                    $(this).find('span').html(Math.round(stepvalue * 100));
+                });
+            }
+        };
+
+        init();
+        function init(){
+            if (myChart) {
+                myChart.destroy();
+                }
+            myChart = new Chart(ctx, {
+                type: chart_type,
+                data: chart_data,
+                options: chart_options,
+            });
+        };
+
+    });
+    $('#customCheck_id7').click(function(){
+        $('.employe').css({display:'none'});
+        $('.bar_line_circle_half').css({display:'block'});
+        $('.hide_01').css({display:'block'});
+        $('.hide_00').css({display:'block'});
+        $('.hide_02').css({display:'block'});
+        $('.hide_07').css({display:'none'});
+        $('.hide_employee_circle').css({display:'none'});
+        $('.hide_circle_no10').css({display:'block'});
+        var number_eye_data = document.getElementById("customCheck_id7");
+        const data   = JSON.parse(number_eye_data.parentElement.dataset.value);
+        const labels   = JSON.parse(number_eye_data.parentElement.dataset.label);
+
+        var count = 0;
+        for(var i=0, n=data.length; i < n; i++) 
+            { 
+                count += data[i]; 
+            }
+
+        data.push(count)
+
+        for (i = 0; i < data.length ; i++) {
+            var titleId = "half_title" + i;
+            document.getElementById(titleId).innerHTML = labels[i];
+        }
+
+        for (i = 0; i < data.length ; i++) {
+            var circle_titleId = "circle_title" + i;
+            document.getElementById(circle_titleId).innerHTML = labels[i];
+        }
+
+        var line_data =  {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: gradient1,
+                borderColor: gradient14,
+                borderWidth: 5,
+                lineTension : 0.1
+            }]
+        };
+
+        var line_options = {
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            plugins: {
+                
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+
+                ctx.font = ctx_font;
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(line, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        var bar_data =  {
+            labels: labels,
+            datasets: [{
+                // label: '# of Votes',
+                data: data,
+                backgroundColor: [ 
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                    
+                ], 
+                hoverBackgroundColor: [
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,
+                    gradient1,gradient2,gradient3,
+                    gradient4,gradient5,gradient6,
+                    gradient7,gradient8,gradient9,
+                    gradient10,gradient11,gradient1
+                ],
+
+                shadowOffsetX: 3,
+                shadowOffsetY: 3,
+                shadowBlur: 20,
+                shadowColor: [  '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C',
+                                '#FF07A9','#1A8162','#E5A100',
+                                '#850CED','#3349F0','#D9581F',
+                                '#FF6A6A','#3B86FF','#00BA81',
+                                '#9F4242','#4D4F5C','#FF07A9']
+            }]
+        };
+
+        var bar_options = {
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 30,
+                    bottom: 10
+                }
+            },
+            legend: {
+                display : false
+            },
+            animation: {
+                duration: 500,
+                onComplete: function() {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+        
+                ctx.font = ctx_font;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillStyle = "#FF07A9";
+        
+                this.data.datasets.forEach(function(dataset, i) {
+                    var meta = chartInstance.controller.getDatasetMeta(i);
+                    meta.data.forEach(function(bar, index) {
+                    var data = dataset.data[index];
+                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    });
+                });
+                }
+            },
+            scales: {
+                pointlabels :{
+                    fontColor: "red",
+                },
+                yAxes: [{
+                    ticks: {
+                        display: false,
+                        beginAtZero:true
+                    },
+                    gridLines: {
+                        color: '#E2E2E2',
+                        zeroLineColor: '#707070',
+                        zeroLineWidth: 1
+                    }
+                }],
+                xAxes: [{
+                    ticks: {
+                        fontColor: '#FF07A9',
+                        stepSize: 1,
+                        min: 0,
+                        autoSkip: false,
+                        
+                    },
+                    gridLines: {
+                        display:false,
+                        zeroLineWidth: 4,
+                    },
+                    barPercentage: 1.0,
+                    categoryPercentage: 0.4
+                }]
+            },
+            tooltips: {
+                enabled: false
+            }          
+        };
+
+        if(document.getElementById("customCheck-line").checked === true){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        }
+        if(document.getElementById("customCheck-bar").checked === true){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        }
+        if(document.getElementById("customCheck-circle").checked === true){
+            circle();
+        }
+        if(document.getElementById("customCheck-half").checked === true){
+            half();
+        }
+
+        $('#customCheck-bar:input').click(function(){
+            chart_type = 'bar';
+            chart_data = bar_data;
+            chart_options = bar_options;
+            init();
+        });
+        $('#customCheck-line:input').click(function(){
+            chart_type = 'line';
+            chart_data = line_data;
+            chart_options = line_options;
+            init();
+        });
+        $('#customCheck-half:input').click(function() {
+            half();
+        });
+        $('#customCheck-circle:input').click(function(){
+            circle();
+        });
+
+        
+    
+        // half Charts
+        half();
+        function half(){
+            for (i = 0; i < data.length ; i++) {
+                var id = "half_chart_no" + i;
+                var ctx = document.getElementById(id).getContext('2d');
+                const ctx_fillstyle = halfShadowColor[i];
+
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [data[i],100-data[i]],
+                            backgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            hoverBackgroundColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderColor:'#F0F2F8',
+                            hoverBorderColor: [
+                                bgColor[i],'#F0F2F8'
+                            ],
+                            borderWidth: 2,
+                            shadowOffsetX: 0,
+                            shadowOffsetY: 6,
+                            shadowBlur: 6,
+                            shadowColor: halfShadowColor[i],
+                        }]
+                    },
+                    options: {
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        layout: {
+                            padding: {
+                                left: 10,
+                                right: 10,
+                                top: 0,
+                                bottom: 0
+                            }
+                        },
+                        animation: {
+                            duration: 500,
+                            onComplete: function() {
+                                var chartInstance = this.chart;
+                                ctx = chartInstance.ctx;
+
+                                ctx.font = ctx_font;
+                                ctx.textAlign = 'center';
+                                ctx.textBaseline = 'bottom';
+                                ctx.fillStyle = ctx_fillstyle;
+                                
+                                this.data.datasets.forEach(function(dataset, i) {
+                                var meta = chartInstance.controller.getDatasetMeta(i);
+                                meta.data.forEach(function(half, index) {
+                                var data = dataset.data[0];
+                                ctx.fillText(data, half._model.x, half._model.y + 15);
+                                });
+                            });
+                            }
+                        },
+                        legend: {
+                            display : false
+                        },
+                        tooltips: {
+                            enabled: false
+                        }
+                    },
+                })
+            };
+        };
+
+        // circle Charts
+        circle();
+        function circle(){
+            // circle Charts
+            for (i = 0; i < data.length ; i++) {
+                var id = "#circle-body-no" + i;
+            
+                $(id).circleProgress({
+                    value: data[i]/100,
+                    size: 146,
+                    startAngle: 0,
+                    reverse: true,
+                    emptyFill: emptyFill[i],
+                    animationStartValue: 0,
+                    fill: halfShadowColor[i],
+                }).on('circle-animation-progress', function(event, progress, stepvalue){
+                    $(this).find('span').html(Math.round(stepvalue * 100));
+                });
+            }
+        };
+
+        init();
+        function init(){
+            if (myChart) {
+                myChart.destroy();
+                }
+            myChart = new Chart(ctx, {
+                type: chart_type,
+                data: chart_data,
+                options: chart_options,
+            });
+        };
+
+
+    });
+
 });

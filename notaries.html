@@ -110,7 +110,7 @@
                             <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#trans_section">قسم الترجمة</a>
                             <ul class="collapse list-unstyled" id="trans_section">
                                 <li>
-                                    <a href="translater.html">قسم الترجمة الإحصائية التحريرية</a>
+                                    <a href="translater1.html">قسم الترجمة الإحصائية التحريرية</a>
                                 </li>
                                 <li>
                                     <a href="translater_oral_circle.html">قسم الترجمة الإحصائية الشفوية للدوائر</a>
@@ -153,7 +153,7 @@
                                 <a href="enroll_lawyer.html">قسم قيد ومتابعة شؤون المحامين</a>
                             </li>
                             <li>
-                                <a href="law_assist.html">قسم المساعدات القانونية</a>
+                                <a href="law_assist1.html">قسم المساعدات القانونية</a>
                             </li>
                             <li>
                                 <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#expertiser"href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
@@ -562,7 +562,7 @@
                                             عدد أيام التأخير
                                         </div>
                                         <div class="card-body text-center pb-0 px-0" id="employee_chart">
-                                            <canvas class="w-100" height="200" id="employlate"></canvas>
+                                            <canvas class="w-100" height="200" id="employeeLate"></canvas>
                                                 
                                         </div>
                                     </div>
@@ -688,37 +688,42 @@
                                         <div class="card-header bg-rody pr-3" id="circle_title10">
 
                                         </div>
-                                        <div id="circle-body-no10" class="card-body text-center my-2 p-2">
+                                        <div id="circle-body-no10" class="card-body text-center my-2 p-2 hide_circle_no10">
                                             <span class="text-rody"></span>                                    
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3 hide_07 hide_02 hide_00 hide_01">
-                                    <div class="card card-maroon">
-                                        <div class="card-header bg-maroon pr-3" id="circle_title11">
-
-                                        </div>
-                                        <div id="circle-body-no11" class="card-body text-center my-2 p-2">
-                                            <span class="text-maroon"></span>                                    
+                                        <div id="brev-half-body" class="card-body text-center my-2 p-2 hide_employee_circle">
+                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half-body-no10"></canvas>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3 hide_07 hide_02 hide_00 hide_01">
                                     <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_title12">
+                                        <div class="card-header bg-teal pr-3" id="circle_title11">
 
                                         </div>
-                                        <div id="circle-body-no12" class="card-body text-center my-2 p-2">
+                                        <div id="circle-body-no11" class="card-body text-center my-2 p-2">
                                             <span class="text-teal"></span>                                    
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 px-1 mt-3 hide_07 hide_02 hide_00 hide_01">
                                     <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_title13">
+                                        <div class="card-header bg-cyan pr-3" id="circle_title12">
 
                                         </div>
-                                        <canvas id="circle-body-no13" class="card-body text-center my-2 p-2"></canvas>
+                                        <div id="circle-body-no12" class="card-body text-center my-2 p-2">
+                                            <span class="text-cyan"></span>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 px-1 mt-3 hide_07 hide_02 hide_00 hide_01">
+                                    <div class="card card-light-red">
+                                        <div class="card-header bg-light-red pr-3" id="circle_title13">
+
+                                        </div>
+                                        <div id="circle-body-no13" class="card-body text-center my-2 p-2">
+                                            <span class="text-light-red"></span> 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -861,8 +866,8 @@
                                 </div>
 
                                 <div class="col-12 px-1 mt-3 hide_07 hide_02 hide_00 hide_01">
-                                    <div class="card card-maroon">
-                                        <div class="card-header bg-maroon pr-3" id="half_title11">
+                                    <div class="card card-teal">
+                                        <div class="card-header bg-teal pr-3" id="half_title11">
                                         
                                         </div>
                                         <div id="brev-half-body" class="card-body text-center my-2 p-2">
@@ -873,8 +878,8 @@
                                 </div>
 
                                 <div class="col-12 px-1 mt-3 hide_07 hide_02 hide_00 hide_01">
-                                    <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_title12">
+                                    <div class="card card-cyan">
+                                        <div class="card-header bg-cyan pr-3" id="half_title12">
                                         
                                         </div>
                                         <div id="brev-half-body" class="card-body text-center my-2 p-2">
@@ -884,8 +889,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12 px-1 mt-3 hide_07 hide_02 hide_00 hide_01">
-                                    <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_title13">
+                                    <div class="card card-light-red">
+                                        <div class="card-header bg-light-red pr-3" id="half_title13">
                                             
                                         </div>
                                         <div id="next-half-body" class="card-body text-center my-2 p-2">

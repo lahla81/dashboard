@@ -1,8 +1,11 @@
 $(document).ready(function () {
 
+    $('.chart-row').css({opacity:'0'});
+    
     var customCheck =  document.getElementsByName("notary")[0];
     const labels = JSON.parse(customCheck.parentElement.dataset.label);
     
+    var myChart;
    
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
@@ -161,20 +164,25 @@ $(document).ready(function () {
 
     $('input[name="notary"]').click(function(){
 
-        var checked = $('input[name="notary"]:checked').val();
-        // if (checked === 2){
-            customCheck = document.getElementsByName("notary")[checked];
-            const data   = JSON.parse(customCheck.parentElement.dataset.value);
-        // }
+        $('.chart-row').css({opacity:'1'});
 
+        var checked = $('input[name="notary"]:checked').val();
+        customCheck = document.getElementsByName("notary")[checked];
+        const data   = JSON.parse(customCheck.parentElement.dataset.value);
         
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 
             { 
                 count += data[i]; 
             }
+        var persent1 = (data[0] * 100 / count);
+        persent1 = Math.round(persent1);
+        data.push(persent1);
+    
 
-        data.push(count)
+        var persent2 = (data[1] * 100 / count);
+        persent2 = Math.round(persent2);
+        data.push(persent2);
         
         
 
@@ -415,6 +423,7 @@ $(document).ready(function () {
             circle();
         });
 
+        
     
         // half Charts
         half();
@@ -511,9 +520,9 @@ $(document).ready(function () {
 
         init();
         function init(){
-            if (myChart) {
+            if(myChart){
                 myChart.destroy();
-              }
+            }
             myChart = new Chart(ctx, {
                 type: chart_type,
                 data: chart_data,

@@ -1,8 +1,7 @@
 $(document).ready(function () {
-
-    var customCheck =  document.getElementsByName("notary")[0];
-    const labels = JSON.parse(customCheck.parentElement.dataset.label);
- 
+   
+    $('.chart-row').css({opacity:'0'});
+    
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
 
@@ -157,41 +156,42 @@ $(document).ready(function () {
        
     var chart_data;
     var chart_options;
-    var chart_type;
     var myChart;
-    $('.supply_status').css({display:'none'});
+    var chart_data;
 
     $('input[name="notary"]').click(function(){
-      
-        $('.supply_status').css({display:'block'});
-        var radioLength = document.getElementsByName("notary").length;
-        var checked = $('input[name="notary"]:checked').val();
 
-        customCheck = document.getElementsByName("notary")[0];
-        var z = JSON.parse(customCheck.parentElement.dataset.value);
-        var total = [];
-        while (total.length < z.length) {
-            total.push(0)
+        $('.chart-row').css({opacity:'1'});
+
+        var checked = $('input[name="notary"]:checked').val();
+        if(checked == 0 || checked == 1 || checked == 2 || checked == 3){
+            $('.month_half').css({display:'block'});
+            $('.month_circle').css({display:'block'});
+        }else if(checked == 4 || checked == 5 || checked == 6){
+            $('.month_half').css({display:'none'});
+            $('.month_circle').css({display:'none'});
         }
         
-        if(checked == "sum_all"){
-            $('.supply_status').css({display:'none'});
-            for(var i=0, n = radioLength; i < n-1; i++){
-                customCheck = document.getElementsByName("notary")[i];
-                var data   = JSON.parse(customCheck.parentElement.dataset.value);
+        if(checked == 0 || checked == 1 || checked == 2 || checked == 3){
+            customCheck = document.getElementsByName("notary")[checked];
+            var data   = JSON.parse(customCheck.parentElement.dataset.value);
+            var labels   = JSON.parse(customCheck.parentElement.dataset.label);
 
-                for(var x=0, m = data.length; x < m; x++){
-                    total[x] += data[x];
+            var count = 0;
+            for(var i=0, n=data.length; i < n; i++) 
+                { 
+                    count += data[i]; 
                 }
-            }
-            data = total;
-           
+            data.push(count);
 
         }else{
             customCheck = document.getElementsByName("notary")[checked];
+            var labels   = JSON.parse(customCheck.parentElement.dataset.label);
             var data   = JSON.parse(customCheck.parentElement.dataset.value);
-            var status   = JSON.parse(customCheck.parentElement.dataset.status);
-            document.getElementById('status').innerHTML = status;
+
+            persentage = data[1] * 100 / data[2];
+            persentage = Math.round(persentage);
+            data.push(persentage);
         }
         
 
@@ -432,33 +432,17 @@ $(document).ready(function () {
             circle();
         });
 
-        init();
         
-        function init(){          
-            // Remove the old chart and all its event handles
-            if (myChart) {
-              myChart.destroy();
-            }
-            
-            myChart = new Chart(ctx, {
-                type: chart_type,
-                data: chart_data,
-                options: chart_options,
-            });
-            
-        };
-        
-       
+    
         // half Charts
         half();
-
         function half(){
             for (i = 0; i < data.length ; i++) {
-    
                 var id = "half_chart_no" + i;
                 var ctx = document.getElementById(id).getContext('2d');
                 const ctx_fillstyle = halfShadowColor[i];
-                halfChart = new Chart(ctx, {
+
+                var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
                         datasets: [{
@@ -519,7 +503,6 @@ $(document).ready(function () {
                         }
                     },
                 })
-                // halfChart.update();
             };
         };
 
@@ -542,6 +525,18 @@ $(document).ready(function () {
                     $(this).find('span').html(Math.round(stepvalue * 100));
                 });
             }
+        };
+
+        init();
+        function init(){
+            if (myChart) {
+                myChart.destroy();
+              }
+            myChart = new Chart(ctx, {
+                type: chart_type,
+                data: chart_data,
+                options: chart_options,
+            });
         };
 
     });

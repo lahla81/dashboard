@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    $('.chart-row').css({opacity:'0'});
+    
     var customCheck =  document.getElementsByName("notary")[0];
     const labels = JSON.parse(customCheck.parentElement.dataset.label);
     
@@ -161,6 +163,8 @@ $(document).ready(function () {
     var chart_options;
 
     $('input[name="notary"]').click(function(){
+
+        $('.chart-row').css({opacity:'1'});
 
         var checked = $('input[name="notary"]:checked').val();
         customCheck = document.getElementsByName("notary")[checked];

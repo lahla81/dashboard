@@ -1,17 +1,18 @@
 $(document).ready(function () {
 
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $('#content').toggleClass('active');
-        $('#main_sidbar').toggleClass('active');
-        $(this).toggleClass('active');
+    // $('#sidebarCollapse').on('click', function () {
+    //     $('#sidebar').toggleClass('active');
+    //     $('#content').toggleClass('active');
+    //     $('#main_sidbar').toggleClass('active');
+    //     $(this).toggleClass('active');
         
-    });
+    // });
 
     (function(){
         // left check box changee label-background and its chart
         $('.checkbox-small').addClass("checked-circle");
         $('#customCheck-half:input').click(function(){
+
             $('.checkbox-small').addClass("checked-half");
             $('.checkbox-small').removeClass("checked-circle");
             $('.chart-row').addClass("halfChart");
@@ -19,6 +20,7 @@ $(document).ready(function () {
         });
 
         $('#customCheck-circle:input').click(function(){
+
             $('.checkbox-small').addClass("checked-circle");
             $('.checkbox-small').removeClass("checked-half");
             $('.chart-row').addClass("circleChart");
