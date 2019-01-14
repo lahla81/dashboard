@@ -182,15 +182,19 @@ $(document).ready(function () {
         const data   = JSON.parse(customCheck.parentElement.dataset.value);
         const labels   = JSON.parse(customCheck.parentElement.dataset.label);
         
-        var count = 0;
-        for(var i=0, n=data.length; i < n; i++) 
-            { 
-                count += data[i]; 
-            }
+        var reversed_labels = labels.slice().reverse(); 
 
-        data.push(count)
-        
-        
+        if(!(checked == 3)){
+            var count = 0;
+            for(var i=0, n=data.length; i < n; i++) 
+                { 
+                    count += data[i]; 
+                }
+    
+            data.push(count)
+        }
+       
+        var reversed_data = data.slice().reverse();
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
@@ -203,9 +207,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -283,10 +287,10 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 // label: '# of Votes',
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,

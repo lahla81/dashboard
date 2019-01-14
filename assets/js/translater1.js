@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+   
     $('#trans_data').css({opacity: '0'});
     $('.chart-row').css({opacity:'0'});
 

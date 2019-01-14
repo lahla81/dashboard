@@ -4,7 +4,9 @@ $(document).ready(function () {
 
     var customCheck =  document.getElementsByName("notary")[0];
     const labels = JSON.parse(customCheck.parentElement.dataset.label);
- 
+
+    var reversed_labels = labels.slice().reverse();
+
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
 
@@ -29,20 +31,15 @@ $(document).ready(function () {
     gradient14.addColorStop(0.9, '#BE72FF');
     gradient14.addColorStop(1.0, '#44F2BD');
 
-    
     gradhalf0 = ctx.createLinearGradient(0, 0, 0, 400);
     gradhalf0.addColorStop(1, '#000000');
     gradhalf0.addColorStop(0.5, '#000000');
     gradhalf0.addColorStop(0, '#850CED');
 
-
     gradhalf1 = ctx.createLinearGradient(0, 0, 0, 400);
     gradhalf1.addColorStop(1, '#000000');
     gradhalf1.addColorStop(0.5, '#000000');
     gradhalf1.addColorStop(0, '#FF07A9');
-
-   
-
 
     bgColor = [ gradhalf0,gradhalf1];
 
@@ -65,8 +62,6 @@ $(document).ready(function () {
         ctx_font = Chart.helpers.fontString(14, 600, Chart.defaults.global.defaultFontFamily);
     };
     
-   
-       
     var chart_data;
     var myChart;
     var chart_options;
@@ -81,6 +76,10 @@ $(document).ready(function () {
         var data   = JSON.parse(customCheck.parentElement.dataset.value);
         var project   = JSON.parse(customCheck.parentElement.dataset.project);
 
+        var reversed_data = data.slice().reverse();
+        
+        var data_line = [ 0,reversed_data[0], 0,reversed_data[1],0];
+        var label_line = [ , reversed_labels[0],,reversed_labels[1], ,];
         for (i = 0; i < project.length ; i++) {
             var titleId = "project_data" + i;
             document.getElementById(titleId).innerHTML = project[i];
@@ -97,9 +96,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: label_line,
             datasets: [{
-                data: data,
+                data: data_line,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -131,14 +130,14 @@ $(document).ready(function () {
                 ctx.font = ctx_font;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
-                ctx.fillStyle = "#FF07A9";
+                ctx.fillStyle = "#ffffff";
 
                 ctx.font = ctx_font;
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(line, index) {
                     var data = dataset.data[index] + "%";
-                    ctx.fillText(data, line._model.x, line._model.y + 5);
+                    ctx.fillText(data, line._model.x, line._model.y + 30);
                     });
                 });
                 }
@@ -177,9 +176,9 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2
                     
@@ -216,13 +215,13 @@ $(document).ready(function () {
                 ctx.font = ctx_font;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'bottom';
-                ctx.fillStyle = "#FF07A9";
+                ctx.fillStyle = "#ffffff";
         
                 this.data.datasets.forEach(function(dataset, i) {
                     var meta = chartInstance.controller.getDatasetMeta(i);
                     meta.data.forEach(function(bar, index) {
                     var data = dataset.data[index] + "%";
-                    ctx.fillText(data, bar._model.x, bar._model.y + 5);
+                    ctx.fillText(data, bar._model.x, bar._model.y + 30);
                     });
                 });
                 }

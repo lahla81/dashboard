@@ -5,6 +5,8 @@ $(document).ready(function () {
     var customCheck =  document.getElementsByName("notary")[0];
     const labels = JSON.parse(customCheck.parentElement.dataset.label);
  
+    var reversed_labels = labels.slice().reverse();
+
     var advertise_data = document.getElementById("bar-chart");
     var ctx =  advertise_data.getContext('2d');
 
@@ -191,6 +193,7 @@ $(document).ready(function () {
             customCheck = document.getElementsByName("notary")[checked];
             var data   = JSON.parse(customCheck.parentElement.dataset.value);
         }
+        
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 
             { 
@@ -198,6 +201,8 @@ $(document).ready(function () {
             }
 
         data.push(count)
+        
+        var reversed_data = data.slice().reverse();
         
 
         for (i = 0; i < data.length ; i++) {
@@ -211,9 +216,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -291,10 +296,10 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 // label: '# of Votes',
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,

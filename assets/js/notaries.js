@@ -175,6 +175,8 @@ $(document).ready(function () {
         const data   = JSON.parse(statistics_data.parentElement.dataset.value);
         const labels   = JSON.parse(statistics_data.parentElement.dataset.label);
 
+        var reversed_data = data.slice().reverse();
+        var reversed_labels = labels.slice().reverse();
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
             document.getElementById(titleId).innerHTML = labels[i];
@@ -186,9 +188,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -266,10 +268,10 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 // label: '# of Votes',
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -533,12 +535,18 @@ $(document).ready(function () {
         const data   = JSON.parse(elec_statistics.parentElement.dataset.value);
         const labels   = JSON.parse(elec_statistics.parentElement.dataset.label);
         var employee = JSON.parse(elec_statistics.parentElement.dataset.employee);
+
             for (i = 0; i < employee.length ; i++){
                 var titleId = "employee" + i;
                 document.getElementById(titleId).innerHTML = employee[i];
             }
 
-        var first_dat = [,,,,,,,,,,data[11]];
+        var first_data = [,,,,,,,,,,data[11]];
+
+        var reversed_first_data = first_data.slice().reverse();
+        var reversed_data = data.slice().reverse();
+        reversed_data.shift();
+        var reversed_labels = labels.slice().reverse();
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
@@ -551,10 +559,10 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 label: 'second',
-                data: first_dat,
+                data: reversed_first_data,
                 backgroundColor: gradient11, 
                 hoverBackgroundColor: gradient11,
 
@@ -564,7 +572,7 @@ $(document).ready(function () {
                 shadowColor: '#4D4F5C',
             
         },{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -642,9 +650,9 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: first_dat,
+                data: reversed_first_data,
                 backgroundColor: gradient11, 
                 hoverBackgroundColor: gradient11,
 
@@ -654,7 +662,7 @@ $(document).ready(function () {
                 shadowColor: '#4D4F5C',
             
             },{
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -1109,6 +1117,8 @@ $(document).ready(function () {
         const data   = JSON.parse(week_data.parentElement.dataset.value);
         const labels   = JSON.parse(week_data.parentElement.dataset.label);
 
+        var reversed_labels = labels.slice().reverse();
+
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 
             { 
@@ -1116,6 +1126,8 @@ $(document).ready(function () {
             }
 
         data.push(count)
+
+        var reversed_data = data.slice().reverse();
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
@@ -1128,9 +1140,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -1208,10 +1220,10 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 // label: '# of Votes',
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -1885,7 +1897,7 @@ $(document).ready(function () {
         var statistics_type_data = document.getElementById("customCheck_id4");
         const data   = JSON.parse(statistics_type_data.parentElement.dataset.value);
         const labels   = JSON.parse(statistics_type_data.parentElement.dataset.label);
-
+        var reversed_labels = labels.slice().reverse();
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 
             { 
@@ -1893,6 +1905,8 @@ $(document).ready(function () {
             }
 
         data.push(count)
+
+        var reversed_data = data.slice().reverse();
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
@@ -1905,9 +1919,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -1985,10 +1999,10 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 // label: '# of Votes',
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -2252,6 +2266,8 @@ $(document).ready(function () {
         var employee_statistics_type_data = document.getElementById("customCheck_id5");
         const data   = JSON.parse(employee_statistics_type_data.parentElement.dataset.value);
         const labels   = JSON.parse(employee_statistics_type_data.parentElement.dataset.label);
+        var reversed_labels = labels.slice().reverse();
+
         var employee = JSON.parse(employee_statistics_type_data.parentElement.dataset.employee);
             for (i = 0; i < employee.length ; i++){
                 var titleId = "employee" + i;
@@ -2266,6 +2282,8 @@ $(document).ready(function () {
 
         data.push(count)
 
+        var reversed_data = data.slice().reverse();
+
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
             document.getElementById(titleId).innerHTML = labels[i];
@@ -2277,9 +2295,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -2357,10 +2375,10 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 // label: '# of Votes',
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -2624,6 +2642,8 @@ $(document).ready(function () {
         const data   = JSON.parse(number_main_data.parentElement.dataset.value);
         const labels   = JSON.parse(number_main_data.parentElement.dataset.label);
 
+        var reversed_labels = labels.slice().reverse();
+
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 
             { 
@@ -2631,6 +2651,8 @@ $(document).ready(function () {
             }
 
         data.push(count)
+
+        var reversed_data = data.slice().reverse();
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
@@ -2643,9 +2665,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -2723,10 +2745,10 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 // label: '# of Votes',
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
@@ -2990,6 +3012,8 @@ $(document).ready(function () {
         const data   = JSON.parse(number_eye_data.parentElement.dataset.value);
         const labels   = JSON.parse(number_eye_data.parentElement.dataset.label);
 
+        var reversed_labels = labels.slice().reverse();
+
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 
             { 
@@ -2997,6 +3021,8 @@ $(document).ready(function () {
             }
 
         data.push(count)
+
+        var reversed_data = data.slice().reverse();
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
@@ -3009,9 +3035,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -3089,10 +3115,10 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 // label: '# of Votes',
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,

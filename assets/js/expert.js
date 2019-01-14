@@ -201,7 +201,6 @@ $(document).ready(function () {
             customCheck = document.getElementsByName("notary")[checked];
             var data   = JSON.parse(customCheck.parentElement.dataset.value);
             var labels   = JSON.parse(customCheck.parentElement.dataset.label);
-
             var count1 = 0;
             for(var i=0, n=3; i < n; i++) 
                 { 
@@ -226,6 +225,7 @@ $(document).ready(function () {
             data[12] = data[11] + data[10];
             persentage = data[9] *100 / data[5];
             data[13] = Math.round(persentage);
+            
         
         }else if(checked == 3){
             customCheck = document.getElementsByName("notary")[checked];
@@ -321,6 +321,8 @@ $(document).ready(function () {
             data.push(count);
         }
         
+        var reversed_data = data.slice().reverse();
+        var reversed_labels = labels.slice().reverse();
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
@@ -333,9 +335,9 @@ $(document).ready(function () {
         }
 
         var line_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
-                data: data,
+                data: reversed_data,
                 backgroundColor: gradient1,
                 borderColor: gradient14,
                 borderWidth: 5,
@@ -413,10 +415,10 @@ $(document).ready(function () {
         };
 
         var bar_data =  {
-            labels: labels,
+            labels: reversed_labels,
             datasets: [{
                 // label: '# of Votes',
-                data: data,
+                data: reversed_data,
                 backgroundColor: [ 
                     gradient1,gradient2,gradient3,
                     gradient4,gradient5,gradient6,
