@@ -163,6 +163,7 @@ $(document).ready(function () {
     var chart_options;
     var chart_type;
     var myChart;
+    var halfChart;
 
     $('input[name="notary"]').click(function(){
 
@@ -193,7 +194,7 @@ $(document).ready(function () {
             customCheck = document.getElementsByName("notary")[checked];
             var data   = JSON.parse(customCheck.parentElement.dataset.value);
         }
-        
+
         var count = 0;
         for(var i=0, n=data.length; i < n; i++) 
             { 
@@ -447,12 +448,15 @@ $(document).ready(function () {
         // half Charts
         half();
         function half(){
+            
             for (i = 0; i < data.length ; i++) {
                 var id = "half_chart_no" + i;
+                // $('#half_chart_no +').remove(); // this is my <canvas> element
+                // $('#graph-container').append('<canvas id="results-graph"><canvas>');
                 var ctx = document.getElementById(id).getContext('2d');
                 const ctx_fillstyle = halfShadowColor[i];
 
-                var myChart = new Chart(ctx, {
+                var halfChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
                         datasets: [{

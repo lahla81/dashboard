@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <title>إدارة الطب الشرعي | قسم المختبر الكيميائي</title>
+    <title>قطاع مساندة المحاكم والمتعاملين || مركز رؤية المحضونين</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
@@ -64,7 +64,7 @@
                 </li>
 
                 <!-- مكتب التنسيق الاداري -->
-                <li>
+                <li class="active">
                     <a href="arrange.html">
                         <img src="./assets/img/icons/Path_102.png" alt="">
                         <span>مكتب التنسيق الاداري</span>
@@ -207,7 +207,7 @@
                 </li>
 
                 <!-- ادارة الطب الشرعي -->
-                <li class="active">
+                <li>
                     <a href="#medicin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <i class="fas fa-prescription-bottle" style="width:14px;"></i>
                         <span>ادارة الطب الشرعي</span>
@@ -225,7 +225,7 @@
                         <li>
                             <a href="chemical.html">قسم المختبر الكيميائي</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="elec_medical.html">قسم المختبر الإلكتروني</a>
                         </li>
                     </ul>
@@ -315,247 +315,16 @@
                 <span></span>
             </button>
 
-            <div class="row content-top-row">
+            <div class="row justify-content-center">
 
                 <!-- start of right-page-content -->
-                <div class="col-12 col-lg-8 content-header p-0 mt-5 my-lg-2 mx-0">
-                    <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
-                                             
+                <div class="col-12 col-md-6 col-lg-4 h-100 content-header p-0 mt-1 my-lg-2 mx-0">
+                    <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3">
                         <div class="text-center">
-                            <h2 class="text-secondary font-bold"> قسم المختبر الإلكتروني</h2>
-                        </div>
-                        
-                        <form action="">
-                            <div class="">
-                                <h3 class="text-indigo font-bold mb-3 mt-3 mr-2">حدد الفترة الزمنية</h3>
-                            </div>
-                        
-                            <div class="text-center shadow-around rounded-lg p-3 m-2">
-                                <div class="form-group row w-100">
-                                    <div class="col-12 col-sm-6">
-                                        <label class="text-primary mt-2" for="from-date">من</label>
-                                        <input type="date" class="text-primary border-primary rounded-lg form-control mb-3" id="from-date" required>
-                                    </div>
-                                    <div class="col-12 col-sm-6">
-                                        <label class="text-light-red mt-2" for="to-date">إلي</label>
-                                        <input type="date" class="text-light-red border-light-red rounded-lg form-control mb-3" id="to-date" required>
-                                    </div>
-                                </div>
-                                <input type="submit" class="btn-primary btn m-3 mr-auto rounded-lg" value="تم التحديد">
-                            </div>
-                        </form>
-                        <h4 class="text-primary my-3 font-bold mr-3">نوع القضية</h4>
-                        <div class="checkbox-main">
-                            <label class="custom-control-label my-3"
-                                data-value="[90 , 20]"
-                                data-label='["عدد القضايا المنجزة" , "عدد القضايا غير المنجزة","نسبة القضايا المنجزة","نسبة القضايا غير المنجزة"]'
-                                for="customCheck_id0">A
-                                <input type="radio" name="notary" value="0"
-                                    class="custom-control-input"
-                                    id="customCheck_id0">
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
-
-                        <div class="checkbox-main">
-                            <label class="custom-control-label my-3"
-                                data-value="[80 , 15]"
-                                for="customCheck_id1">B
-                                <input type="radio" name="notary" value="1"
-                                    class="custom-control-input"
-                                    id="customCheck_id1">
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
-
-                        <div class="checkbox-main">
-                            <label class="custom-control-label my-3"
-                                data-value="[70 , 10]"
-                                for="customCheck_id2">D
-                                <input type="radio" name="notary" value="2"
-                                    class="custom-control-input"
-                                    id="customCheck_id2">
-                                <span class="checkmark-main"></span>
-                            </label>
-                        </div>
-
-                    </div>
-                    
-                </div>
-
-                <!-- start of left side -->
-                <div class="col-lg-4 col-12 content-left p-0 mt-2 my-lg-2 mx-0">
-                    <div class="overlay h-100 mx-2 mx-md-2 ml-lg-3">
-                        <p>حدد طريقة العرض</p>
-                        <div class="row text-center">
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small">
-                                    <label class="custom-control-label label-sm label-half mb-2"
-                                        for="customCheck-half">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input"
-                                            id="customCheck-half">
-                                        <span class="checkmark-small"></span>
-                                    </label>                                            
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small checkbox-small-bar">
-                                    <label class="custom-control-label label-sm label-bar mb-2"
-                                        for="customCheck-bar" id="label-bar">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input" value="bar"
-                                            id="customCheck-bar" checked>
-                                        <span class="checkmark-small"></span>
-                                    </label>     
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small">
-                                    <label class="custom-control-label label-sm label-line"
-                                        for="customCheck-line">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input" value="line"
-                                            id="customCheck-line">
-                                        <span class="checkmark-small"></span>
-                                    </label>     
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-12 col-xl-6 p-1">
-                                <div class="checkbox-small">
-                                    <label class="custom-control-label label-sm label-circle"
-                                        for="customCheck-circle">
-                                        <input type="radio" name="checkbox-small"
-                                            class="custom-control-input"
-                                            id="customCheck-circle">
-                                        <span class="checkmark-small"></span>
-                                    </label>     
-                                </div>
-                            </div>
+                            <h2 class="text-secondary py-3 font-bold font-bold m-0">مركز التنسيق الإداري</h2>
                         </div>
                     </div>
                 </div>
-
-            </div>
-
-            <!-- start of bottom section -->
-            <div class="chart-row">
-                
-                <!-- start of transaction -->
-                <div class="row transaction justify-content-center w-100">
-                    
-                    <div class="col-12 px-3 mb-5 ">
-
-                        <!-- bar and line Chart start -->
-                        <div class="h-100 py-4 mediacl-bar-chart bar_line_chart_col">
-                            <div class="chart-small">
-                                <canvas width="1103" height="450" style="display: block; height: 441px; width: 883px;" id="bar-chart"></canvas>
-
-                            </div>
-                        </div>
-
-                        <!-- Circle Chart -->
-                        <div class="circle-chart-col notaries-circle-chart-col d-none">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="circle_title0">
-                                            
-                                        </div>
-                                        <div id="circle-body-no0" class="card-body text-center my-2 p-2">
-                                            <span class="text-teal"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="circle_title1">
-                                           
-                                        </div>
-                                        <div id="circle-body-no1" class="card-body text-center my-2 p-2">
-                                            <span class="text-cyan"></span> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="circle_title2">
-                                              
-                                        </div>
-                                        <div id="circle-body-no2" class="card-body text-center my-2 p-2">
-                                            <span class="text-light-red"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="circle_title3">
-                                            
-                                        </div>
-                                        <div id="circle-body-no3" class="card-body text-center my-2 p-2">
-                                            <span class="text-dark-red"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Half Chart -->
-                        <div class="half-chart-col notaries-half-chart-col d-none">
-                            <div class="row justify-content-center">
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-teal">
-                                        <div class="card-header bg-teal pr-3" id="half_title0">
-                                           
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no0"></canvas>
-                                                <span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-cyan">
-                                        <div class="card-header bg-cyan pr-3" id="half_title1">
-                                           
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no1"></canvas>
-                                                <span></span>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-light-red">
-                                        <div class="card-header bg-light-red pr-3" id="half_title2">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no2"></canvas>
-                                                <span></span>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="half_title3">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no3"></canvas>
-                                                <span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    
-                </div>
-
             </div>
 
         </div>
@@ -570,15 +339,11 @@
     </script>
     <script src="./assets/js/vendor/bootstrap.min.js"></script>
 
+
     <!-- CHART JS -->
     <script src="./assets/js/vendor/Chart.min.js"></script>
     <script src="./assets/js/vendor/chartjs-plugin-style.min.js"></script>
     <script src="./assets/js/vendor/circle-progress.min.js"></script>
-
-    <script src="./assets/js/elec_medical.js"></script>
-
-    <!-- sidebar collapse -->
-    <script src="./assets/js/sidebar/medical-abu.js"></script>
     
     <!-- Main JS -->
     <script src="./assets/js/main.js"></script>
