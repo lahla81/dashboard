@@ -186,7 +186,6 @@ $(document).ready(function () {
                 for(var x=0, m = data.length; x < m; x++){
                     total[x] += data[x];
                 }
-                console.log(total)
             }
             data = total;
 
@@ -550,4 +549,5 @@ $(document).ready(function () {
         };
 
     });
+
 });

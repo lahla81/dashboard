@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <title>الدعاوي المتداولة بالمحاكم الابتدائية والاستئنافية | رؤساء الدوائر</title>
+    <title>قطاع مساندة المحاكم والمتعاملين || مركز رؤية المحضونين</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
@@ -25,7 +25,7 @@
 </head>
 
 <body class="front-page font-body page-template">
-
+    
     <div class="layer"></div>
     <div class="wrapper">
 
@@ -78,7 +78,7 @@
                 </li>
 
                 <!-- ادارة خدمات المحاكم -->
-                <li>
+                <li class="active">
                     <a href="#services" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                         <img src="./assets/img/icons/Union_10.png" alt="">
                         <span>ادارة خدمات المحاكم</span>
@@ -90,7 +90,7 @@
                                 <li>
                                     <a href="inspection.html">تقرير الدعاوى المتداوله في المحاكم</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="experts_report.html">تقرير الخبرة</a>
                                 </li>
                             </ul>
@@ -155,33 +155,33 @@
                         <span>ادارة شؤون المحاماة والخبراء</span>
                     </a>
                     <ul class="collapse list-unstyled" id="lawyer">
-                            <li>
-                                <a href="enroll_lawyer.html">قسم قيد ومتابعة شؤون المحامين</a>
-                            </li>
-                            <li>
-                                <a href="law_assist1.html">قسم المساعدات القانونية</a>
-                            </li>
-                            <li>
-                                <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#expertiser"href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
-                                <ul class="collapse list-unstyled" id="expertiser">
-                                    <li>
-                                        <a href="enroll_expert.html">إحصائية حسب نوع الخبرة</a>
-                                    </li>
-                                    <li>
-                                        <a href="enroll_expert_gudic.html">إحصائية حــســب المحاكم</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="guarding.html">قسم شؤون الحراسة والتصفية القضائية</a>
-                            </li>
-                            <li>
-                                <a href="experts.html">قسم شؤون لجان الخبرة المتخصصة</a>
-                            </li>
-                            <li>
-                                <a href="expert_tech.html">المكتب الفني لأعمال الخبرة</a>
-                            </li>
-                        </ul>
+                        <li>
+                            <a href="enroll_lawyer.html">قسم قيد ومتابعة شؤون المحامين</a>
+                        </li>
+                        <li>
+                            <a href="law_assist1.html">قسم المساعدات القانونية</a>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" href="#expertiser"href="enroll_expert.html">قسم القيد ومتابعة شؤون الخبراء</a>
+                            <ul class="collapse list-unstyled" id="expertiser">
+                                <li>
+                                    <a href="enroll_expert.html">إحصائية حسب نوع الخبرة</a>
+                                </li>
+                                <li>
+                                    <a href="enroll_expert_gudic.html">إحصائية حــســب المحاكم</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="guarding.html">قسم شؤون الحراسة والتصفية القضائية</a>
+                        </li>
+                        <li>
+                            <a href="experts.html">قسم شؤون لجان الخبرة المتخصصة</a>
+                        </li>
+                        <li>
+                            <a href="expert_tech.html">المكتب الفني لأعمال الخبرة</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <!-- ادارة الكاتب العدل والتوثيق -->
@@ -333,37 +333,39 @@
             <div class="row justify-content-center">
 
                 <div class="position-relative upper_button">
-                    <button class="btn bg-white text-primary shadow-around font-bold border-primary m-2 rounded-lg" id="inspection_summary">الملخص</button>
+                    <button class="btn active bg-white shadow-around font-bold navbar-btn m-2 rounded-lg" id="inspection_summary">تقارير الخبره</button>
                     <div class="popup position-absolute shadow-around rounded-lg bg-white" id="inspection_list">
                         <ul class="list-unstyled m-1 p-1 rounded-lg">
                             <li class="p-1 shadow-around m-2 rounded-lg">
-                                <a href="inspection.html">المحكمة وسنة القيد</a>
+                                <a href="experts_report.html">فئات الانتداب</a>
                             </li>
                             <li class="p-1 shadow-around m-2 rounded-lg">
-                                <a href="claims_type.html">نوع الدعوى وسنة القيد</a>
+                                <a href="experts_report_type.html">حسب نوع الخبره</a>
+                            </li>
+                            <li class="p-1 active shadow-around m-2 rounded-lg">
+                                <a class="active" href="#">حسب نوع الدعوي</a>
                             </li>
                             <li class="p-1 shadow-around m-2 rounded-lg">
-                                <a href="claims_stage.html">المرحلة وسنة القيد</a>
+                                <a href="experts_report_jud.html">توزيع الخبرة بالمحاكم</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="upper_button">
-                    <a class="btn active shadow-around font-bold m-2 rounded-lg" href="#">رؤساء الدوائر</a>
-                </div>
                 <div>
-                    <a class="btn shadow-around font-bold border-primary m-2 rounded-lg" href="circles_report.html">تقرير الدوائر</a>
+                    <a class="btn shadow-around font-bold border-primary navbar-btn m-2 rounded-lg" href="experts_achiev.html">انجاز الخبراء</a>
                 </div>
 
             </div>
+                       
+
             <div class="row content-top-row">
 
-                 <!-- start of right-page-content -->
-                 <div class="col-12 col-lg-8 content-header p-0 mt-1 my-lg-2 mx-0">
+                <!-- start of right-page-content -->
+                <div class="col-12 col-lg-8 content-header p-0 mt-1 my-lg-2 mx-0">
                     <div class="overlay mx-2 mx-md-2 ml-lg-2 mr-lg-3 mb-5 h-100">
                         <div class="text-center">
-                            <h2 class="text-secondary font-bold">الدعاوي المتداولة بالمحاكم الابتدائية والاستئنافية</h2>
-                            <h4 class="text-primary mb-4 font-bold rounded-lg">رؤساء الدوائر</h4>
+                            <h2 class="text-secondary font-bold">تقرير الخبرة</h2>
+                            <h4 class="text-primary mb-4 font-bold rounded-lg">حسب نوع الدعوي</h4>
                         </div>
 
                         <div class="">
@@ -449,15 +451,13 @@
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
                     <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-teal w-100"
-                    data-value= "[1 , 1 , 0 , 2 , 1 , 2 , 9 , 9 , 67]"
-                    data-label='[ "2009","2010","2011","2012","2013","2014","2015","2016","2017","الإجمالي"]'
+                    data-value= "[2979 , 572]"
+                    data-label='[ "المقدم","المتداول","الإجمالي"]'
                     for="customCheck_id0">
-                        <div class="col-3 p-0">
-                            <img class="box-teal rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-teal trans-name">
-                                صبحي صالح
+                       
+                        <div class="col-12">
+                            <h2 class="text-teal mb-0 trans-name">
+                                تجاري كلي
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -469,14 +469,12 @@
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
                     <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-cyan w-100"
-                    data-value= "[0 , 0 , 0 , 2 , 1 , 1 , 7 , 11 , 64]"
+                    data-value= "[1988 , 233]"
                         for="customCheck_id1">
-                        <div class="col-3 p-0">
-                            <img class="box-cyan rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-cyan trans-name">
-                                مدينه عامر العامري
+                        
+                        <div class="col-12">
+                            <h2 class="text-cyan mb-0 trans-name">
+                                تجاري جزئي
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -488,14 +486,12 @@
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
                     <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-light-red w-100"
-                    data-value= "[ 0 , 0 , 0 , 0 , 0 , 0 , 6 , 11 , 54 ]"
+                    data-value= "[1346 , 144]"
                         for="customCheck_id2">
-                        <div class="col-3 p-0">
-                            <img class="box-light-red rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-light-red trans-name">
-                                وليد عبدالرؤوف المندراوي
+                        
+                        <div class="col-12">
+                            <h2 class="text-light-red mb-0 trans-name">
+                                عمالى جزئي
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -507,14 +503,12 @@
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
                     <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-red d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 0 , 1 , 2 , 1 , 8 , 36 ]"
+                    data-value= "[576 , 111]"
                         for="customCheck_id3">
-                        <div class="col-3 p-0">
-                            <img class="box-dark-red rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-dark-red trans-name">
-                                ناصر حلمي المحمودي 
+            
+                        <div class="col-12">
+                            <h2 class="text-dark-red mb-0 trans-name">
+                                استئناف تجاري
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -526,14 +520,12 @@
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
                     <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-indigo d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 0 , 0 , 0 , 3 , 10 , 33]"
+                    data-value= "[448 , 34]"
                         for="customCheck_id4">
-                        <div class="col-3 p-0">
-                            <img class="box-indigo rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-indigo trans-name">
-                                سعيد عبدالله البادي
+        
+                        <div class="col-12">
+                            <h2 class="text-indigo mb-0 trans-name">
+                                إيجاري
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -545,16 +537,14 @@
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
                     <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-purple d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 1 , 0 , 0 , 1 , 2 , 39]"
+                    data-value= "[353 , 29]"
                         for="customCheck_id5">
-                        <div class="col-3 p-0">
-                                <img class="box-purple rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                            </div>
-                            <div class="col-9 row">
-                                <h2 class="text-purple trans-name">
-                                    محمد عبدالله عامر الحميري
-                                </h2>
-                            </div>
+                        
+                        <div class="col-12">
+                            <h2 class="text-purple mb-0 trans-name">
+                                مدني جزئي
+                            </h2>
+                        </div>
                         <input type="radio" name="notary"
                             class="translater_input" value="5"
                             id="customCheck_id5">
@@ -564,14 +554,12 @@
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
                     <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-warning d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 0 , 0 , 0 , 0 , 2 , 40]"
+                    data-value= "[301 , 47]"
                         for="customCheck_id6">
-                        <div class="col-3 p-0">
-                            <img class="box-warning rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-warning trans-name">
-                                عبدالهادي حسين الريح
+                       
+                        <div class="col-12">
+                            <h2 class="text-warning mb-0 trans-name">
+                                عمالي كلي
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -583,14 +571,12 @@
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
                     <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-green d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 0 , 0 , 0 , 1 , 0 , 40]"
+                    data-value= "[270 , 48]"
                         for="customCheck_id7">
-                        <div class="col-3 p-0">
-                            <img class="box-dark-green rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-dark-green trans-name">
-                                محمد ناجي
+                        
+                        <div class="col-12">
+                            <h2 class="text-dark-green mb-0 trans-name">
+                                استئناف عمالي
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -602,14 +588,12 @@
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
                     <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-rose d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 37]"
+                    data-value= "[253 , 54]"
                         for="customCheck_id8">
-                        <div class="col-3 p-0">
-                            <img class="box-rose rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-rose trans-name">
-                                محمد الإدريسي
+                        
+                        <div class="col-12">
+                            <h2 class="text-rose mb-0 trans-name">
+                                مدني كلي
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -620,15 +604,13 @@
                 </div>
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
-                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-maroon d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 0 , 0 , 0 , 2 , 3 , 31]"
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-maron d-flex flex w-100"
+                    data-value= "[127 , 15]"
                         for="customCheck_id9">
-                        <div class="col-3 p-0">
-                            <img class="box-maroon rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-maroon trans-name">
-                                د.محمد الصعيدي  
+                        
+                        <div class="col-12">
+                            <h2 class="text-maron mb-0 trans-name">
+                                المستعجل
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -639,17 +621,15 @@
                 </div>
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
-                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-rody d-flex flex w-100"
-                    data-value= "[0 , 0 , 2 , 1 , 1 , 2 , 7 , 15 , 0]"
-                        for="customCheck_id10">
-                        <div class="col-3 p-0">
-                                <img class="box-rody rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                            </div>
-                            <div class="col-9 row">
-                                <h2 class="text-rody trans-name">
-                                    احمد محمود
-                                </h2>
-                            </div>
+                    <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-teal w-100"
+                    data-value= "[102 , 0]"
+                    for="customCheck_id10">
+                        
+                        <div class="col-12">
+                            <h2 class="text-teal mb-0 trans-name">
+                                إيجاري مستعجل
+                            </h2>
+                        </div>
                         <input type="radio" name="notary"
                             class="translater_input" value="10"
                             id="customCheck_id10">
@@ -658,15 +638,13 @@
                 </div>
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
-                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-teal d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 1 , 1 , 0 , 1 , 7 , 18]"
+                    <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-cyan w-100"
+                    data-value= "[75 , 13]"
                         for="customCheck_id11">
-                        <div class="col-3 p-0">
-                            <img class="box-teal rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-teal trans-name">
-                                عمرو كرامه العامري
+                        
+                        <div class="col-12">
+                            <h2 class="text-cyan mb-0 trans-name">
+                                إداري
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -677,15 +655,13 @@
                 </div>
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
-                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-cyan d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 0 , 0 , 0 , 1 , 4 , 22]"
+                    <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-light-red w-100"
+                    data-value= "[66 , 2]"
                         for="customCheck_id12">
-                        <div class="col-3 p-0">
-                            <img class="box-cyan rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-cyan trans-name">
-                                احمد  البوهالي
+                        
+                        <div class="col-12">
+                            <h2 class="text-light-red mb-0 trans-name">
+                                استئناف إيجاري
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -696,15 +672,13 @@
                 </div>
 
                 <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
-                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-light-red d-flex flex w-100"
-                    data-value= "[0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 23]"
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-red d-flex flex w-100"
+                    data-value= "[57 , 10]"
                         for="customCheck_id13">
-                        <div class="col-3 p-0">
-                            <img class="box-light-red rounded-circle w-100 p-2" src="./assets/img/projects/Avatar.png" alt="">
-                        </div>
-                        <div class="col-9 row">
-                            <h2 class="text-light-red trans-name">
-                                محمد خليفة الكتبي
+            
+                        <div class="col-12">
+                            <h2 class="text-dark-red mb-0 trans-name">
+                                تجاري
                             </h2>
                         </div>
                         <input type="radio" name="notary"
@@ -713,21 +687,344 @@
                         <span class="checkmark-trans"></span>
                     </label>
                 </div>
-            </div>
 
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-indigo d-flex flex w-100"
+                    data-value= "[57 , 7]"
+                        for="customCheck_id14">
+        
+                        <div class="col-12">
+                            <h2 class="text-indigo mb-0 trans-name">
+                                إيجاري
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="14"
+                            id="customCheck_id14">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-purple d-flex flex w-100"
+                    data-value= "[56 , 8]"
+                        for="customCheck_id15">
+                        
+                        <div class="col-12">
+                            <h2 class="text-purple mb-0 trans-name">
+                                استئناف مدني
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="15"
+                            id="customCheck_id15">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-warning d-flex flex w-100"
+                    data-value= "[54 , 1]"
+                        for="customCheck_id16">
+                        
+                        <div class="col-12">
+                            <h2 class="text-warning mb-0 trans-name">
+                                تنفيذ إيجاري
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="16"
+                            id="customCheck_id16">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+                
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-green d-flex flex w-100"
+                    data-value= "[20 , 2]"
+                        for="customCheck_id17">
+                        
+                        <div class="col-12">
+                            <h2 class="text-dark-green mb-0 trans-name">
+                                تنفيذ تجاري
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="17"
+                            id="customCheck_id17">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-rose d-flex flex w-100"
+                    data-value= "[15 , 1]"
+                        for="customCheck_id18">
+                        
+                        <div class="col-12">
+                            <h2 class="text-rose mb-0 trans-name">
+                                تنفيذ عمالي
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="18"
+                            id="customCheck_id18">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-maron d-flex flex w-100"
+                    data-value= "[14 , 1]"
+                        for="customCheck_id19">
+                        
+                        <div class="col-12">
+                            <h2 class="text-maron mb-0 trans-name">
+                                عمالي
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="19"
+                            id="customCheck_id19">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+    
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-teal w-100"
+                    data-value= "[7 , 6]"
+                    for="customCheck_id20">
+                        
+                        <div class="col-12">
+                            <h2 class="text-teal mb-0 trans-name">
+                                أمر علي عريضة إيجاري
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="20"
+                            id="customCheck_id20">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-cyan w-100"
+                    data-value= "[9 , 1]"
+                        for="customCheck_id21">
+                        
+                        <div class="col-12">
+                            <h2 class="text-cyan mb-0 trans-name">
+                                مدني
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="21"
+                            id="customCheck_id21">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-light-red w-100"
+                    data-value= "[7 , 2]"
+                        for="customCheck_id22">
+                        
+                        <div class="col-12">
+                            <h2 class="text-light-red mb-0 trans-name">
+                                عام
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="22"
+                            id="customCheck_id22">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-red d-flex flex w-100"
+                    data-value= "[7 , 1]"
+                        for="customCheck_id23">
+            
+                        <div class="col-12">
+                            <h2 class="text-dark-red mb-0 trans-name">
+                                استئناف اداري
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="23"
+                            id="customCheck_id23">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-indigo d-flex flex w-100"
+                    data-value= "[7 , 0]"
+                        for="customCheck_id24">
+        
+                        <div class="col-12">
+                            <h2 class="text-indigo mb-0 trans-name">
+                                تنفيذ عام
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="24"
+                            id="customCheck_id24">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-purple d-flex flex w-100"
+                    data-value= "[5 , 1]"
+                        for="customCheck_id25">
+                        
+                        <div class="col-12">
+                            <h2 class="text-purple mb-0 trans-name">
+                                تركة
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="25"
+                            id="customCheck_id25">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-warning d-flex flex w-100"
+                    data-value= "[5 , 1]"
+                        for="customCheck_id26">
+                        
+                        <div class="col-12">
+                            <h2 class="text-warning mb-0 trans-name">
+                                داخلي
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="26"
+                            id="customCheck_id26">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+                
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-dark-green d-flex flex w-100"
+                    data-value= "[4 , 1]"
+                        for="customCheck_id27">
+                        
+                        <div class="col-12">
+                            <h2 class="text-dark-green mb-0 trans-name">
+                                اغفال طلبات
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="27"
+                            id="customCheck_id27">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-rose d-flex flex w-100"
+                    data-value= "[2 , 1]"
+                        for="customCheck_id28">
+                        
+                        <div class="col-12">
+                            <h2 class="text-rose mb-0 trans-name">
+                                تنفيذ أحوال شخصية
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="28"
+                            id="customCheck_id28">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="checkbox-label px-1 py-2 rounded-lg trans-row box-maron d-flex flex w-100"
+                    data-value= "[2 , 0]"
+                        for="customCheck_id29">
+                        
+                        <div class="col-12">
+                            <h2 class="text-maron mb-0 trans-name">
+                                إلتماس إعادة النظر
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="29"
+                            id="customCheck_id29">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+    
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-teal w-100"
+                    data-value= "[1 , 0]"
+                    for="customCheck_id30">
+                        
+                        <div class="col-12">
+                            <h2 class="text-teal mb-0 trans-name">
+                                تظلم
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="30"
+                            id="customCheck_id30">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-cyan w-100"
+                    data-value= "[1 , 0]"
+                        for="customCheck_id31">
+                        
+                        <div class="col-12">
+                            <h2 class="text-cyan mb-0 trans-name">
+                                استئناف أحوال شخصية
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="31"
+                            id="customCheck_id31">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-trans col-12 col-sm-6 col-md-4 col-xl-3 translater rounded-lg my-1 p-2">
+                    <label class="d-flex flex checkbox-label px-1 py-2 rounded-lg trans-row box-light-red w-100"
+                    data-value= "[0 , 1]"
+                        for="customCheck_id32">
+                        
+                        <div class="col-12">
+                            <h2 class="text-light-red mb-0 trans-name">
+                                احوال
+                            </h2>
+                        </div>
+                        <input type="radio" name="notary"
+                            class="translater_input" value="32"
+                            id="customCheck_id32">
+                        <span class="checkmark-trans"></span>
+                    </label>
+                </div>
+
+            </div>
             <div class="checkbox-trans text-center translater mt-4 rounded-lg my-1">
                 <label class=" btn rounded-lg btn-maron py-3 px-3 box-maron"
-                    for="customCheck_id14">
+                    for="customCheck_id33">
                         <h2 class="mb-0 trans-name">
                             الإجمالي الكلي
                         </h2>
                     <input type="radio" name="notary"
                         class="translater_input" value="sum_all"
-                        id="customCheck_id14">
+                        id="customCheck_id33">
                     <span class="checkmark-trans"></span>
                 </label>
             </div>
-            
+
             <!-- start of bottom section -->
             <div class="chart-row">
                 
@@ -777,77 +1074,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="circle_title3">
-                                            
-                                        </div>
-                                        <div id="circle-body-no3" class="card-body text-center my-2 p-2">
-                                            <span class="text-dark-red"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="circle_title4">
-                                            
-                                        </div>
-                                        <div id="circle-body-no4" class="card-body text-center my-2 p-2">
-                                            <span class="text-indigo"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 my-3">
-                                    <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="circle_title5">
-                                            
-                                        </div>
-                                        <div id="circle-body-no5" class="card-body text-center my-2 p-2">
-                                            <span class="text-purple"></span> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="circle_title6">
-                                            
-                                        </div>
-                                        <div id="circle-body-no6" class="card-body text-center my-2 p-2">
-                                            <span class="text-warning"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="circle_title7">
-
-                                        </div>
-                                        <div id="circle-body-no7" class="card-body text-center my-2 p-2">
-                                            <span class="text-dark-green"></span> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="circle_title8">
-
-                                        </div>
-                                        <div id="circle-body-no8" class="card-body text-center my-2 p-2">
-                                            <span class="text-rose"></span> 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 px-1 mt-3">
-                                    <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="circle_title9">
-
-                                        </div>
-                                        <div id="circle-body-no9" class="card-body text-center my-2 p-2">
-                                            <span class="text-maron"></span>                                    
-                                        </div>
-                                    </div>
-                                </div>
-
+                               
                             </div>
                         </div>
 
@@ -890,89 +1117,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-dark-red">
-                                        <div class="card-header bg-dark-red pr-3" id="half_title3">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no3"></canvas>
-                                                <span></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-indigo">
-                                        <div class="card-header bg-indigo pr-3" id="half_title4">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no4"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-purple">
-                                        <div class="card-header bg-purple pr-3" id="half_title5">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no5"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-warning">
-                                        <div class="card-header bg-warning pr-3" id="half_title6">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no6"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-dark-green">
-                                        <div class="card-header bg-dark-green pr-3" id="half_title7">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no7"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-rose">
-                                        <div class="card-header bg-rose pr-3" id="half_title8">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no8"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>     
-                                <div class="col-12 px-1 mt-3">
-                                    <div class="card card-maron">
-                                        <div class="card-header bg-maron pr-3" id="half_title9">
-                                            
-                                        </div>
-                                        <div id="next-half-body" class="card-body text-center my-2 p-2">
-                                            <canvas width="80" height="50" class="mh-100 mw-100" id="half_chart_no9"></canvas>
-                                                <span></span>
-    
-                                        </div>
-                                    </div>
-                                </div>    
+                                    
                             </div>
                         </div>
 
@@ -981,7 +1126,7 @@
                 </div>
 
             </div>
-               
+                
         </div>
 
     </div>
@@ -1008,10 +1153,11 @@
         })
     </script>
 
-    <script src="./assets/js/main.js"></script>
-
     <script src="./assets/js/translater_oral.js"></script>
 
+    <!-- Main JS -->
+    <script src="./assets/js/main.js"></script>
+    
 </body>
 
 </html>

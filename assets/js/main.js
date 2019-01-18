@@ -10,6 +10,17 @@ $(document).ready(function () {
         $('#sidebarCollapse').addClass('active');
     };
 
+    $('#inspection_summary').click(function(){
+        $('.popup').hide();
+        $('.layer').show();
+        $('#inspection_list').toggle();
+    });
+
+    $('.layer').click(function(){
+        $('.popup').hide();
+        $('.layer').hide();
+    });
+
     (function(){
         // left check box changee label-background and its chart
         $('.checkbox-small').addClass("checked-bar");

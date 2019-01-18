@@ -1464,7 +1464,7 @@ select.form-control:focus::-ms-value {
   padding-top: calc(0.5rem + 1px);
   padding-bottom: calc(0.5rem + 1px);
   font-size: 1.25rem;
-  line-height: 1.5; }
+  line-height: 2; }
 
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
@@ -1519,7 +1519,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-append > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 2;
   border-radius: 0.3rem; }
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]),
@@ -1527,7 +1527,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
-  height: calc(2.875rem + 2px); }
+  height: calc(3.5rem + 2px); }
 
 .form-group {
   margin-bottom: 1rem; }
@@ -2798,7 +2798,7 @@ fieldset:disabled a.btn {
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 2;
   border-radius: 0.3rem; }
 
 .btn-sm, .btn-group-sm > .btn {
@@ -3338,7 +3338,7 @@ input[type="button"].btn-block {
   font-size: 75%; }
 
 .custom-select-lg {
-  height: calc(2.875rem + 2px);
+  height: calc(3.5rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 125%; }
@@ -4059,7 +4059,7 @@ input[type="button"].btn-block {
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
-  line-height: 1.5; }
+  line-height: 2; }
 
 .pagination-lg .page-item:first-child .page-link {
   border-top-left-radius: 0.3rem;
