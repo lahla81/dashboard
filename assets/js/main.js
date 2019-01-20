@@ -3,6 +3,7 @@ $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
         $('#content').toggleClass('active');
+        $('#index_content').toggleClass('active');
         $('#main_sidbar').toggleClass('active');
         $(this).toggleClass('active');
     });
@@ -14,6 +15,11 @@ $(document).ready(function () {
         $('.popup').hide();
         $('.layer').show();
         $('#inspection_list').toggle();
+    });
+    $('#expert_achiev_btn').click(function(){
+        $('.popup').hide();
+        $('.layer').show();
+        $('#expert_achiev_list').toggle();
     });
 
     $('.layer').click(function(){
