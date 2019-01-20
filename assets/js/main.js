@@ -7,9 +7,19 @@ $(document).ready(function () {
         $('#main_sidbar').toggleClass('active');
         $(this).toggleClass('active');
     });
+
+    $('#main_sidebarCollapse').on('click', function () {
+        $('#index_content').toggleClass('active');
+        $('#main_sidbar').toggleClass('active');
+        $(this).toggleClass('active');
+    });
+
     if ($(window).width() < 992){
         $('#sidebarCollapse').addClass('active');
+        $('#main_sidebarCollapse').removeClass('active');
     };
+
+   
 
     $('#inspection_summary').click(function(){
         $('.popup').hide();

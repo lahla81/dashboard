@@ -198,18 +198,25 @@ $(document).ready(function () {
                 { 
                     count1 += value[i]; 
                 }
-                
-            persentage1 = value[0] * 100 /count1;
-            persentage1 = Math.round(persentage1);
+            if(count1 == 0){
+                persentage1 = 0;
+            }else{
+                persentage1 = value[0] * 100 /count1;
+                persentage1 = Math.round(persentage1);
+            }
             
             var count2 = 0;
             for(var i=2, n=4; i < n; i++) 
                 { 
                     count2 += value[i]; 
                 }
-               
-            persentage2 = value[2] * 100 /count2;
-            persentage2 = Math.round(persentage2);
+
+            if(count2 == 0){
+                persentage2 = 0;
+            }else{
+                persentage2 = value[2] * 100 /count2;
+                persentage2 = Math.round(persentage2);
+            }
 
             count3 = value[0] + value[2];
             count4 = value[1] + value[3];
