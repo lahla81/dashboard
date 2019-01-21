@@ -166,9 +166,30 @@ $(document).ready(function () {
 
         $('.chart-row').css({opacity:'1'});
 
+        var radioLength = document.getElementsByName("notary").length;
         var checked = $('input[name="notary"]:checked').val();
-        customCheck = document.getElementsByName("notary")[checked];
-        const data   = JSON.parse(customCheck.parentElement.dataset.value);
+        
+        customCheck = document.getElementsByName("notary")[0];
+        var z = JSON.parse(customCheck.parentElement.dataset.value);
+        var total = [];
+        while (total.length < z.length) {
+            total.push(0)
+        }
+        if(checked == "sum_all"){
+            for(var i=0, n = radioLength; i < n-1; i++){
+                customCheck = document.getElementsByName("notary")[i];
+                var value   = JSON.parse(customCheck.parentElement.dataset.value);
+
+                for(var x=0, m = value.length; x < m; x++){
+                    total[x] += value[x];
+                }
+            }
+            data = total;
+        }else{
+            customCheck = document.getElementsByName("notary")[checked];
+            var data   = JSON.parse(customCheck.parentElement.dataset.value);
+        }
+       
         
         var persentage = 0;
         persentage = data[1] * 100 / data[0];
@@ -176,6 +197,7 @@ $(document).ready(function () {
         data.push(persentage);
         
         var reversed_data = data.slice().reverse();
+
 
         for (i = 0; i < data.length ; i++) {
             var titleId = "half_title" + i;
